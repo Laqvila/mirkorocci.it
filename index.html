@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ===== Security ===== -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+
+<!-- ===== SEO ===== -->
+<title>Mirko Rocci, Ph.D. — Physicist | Quantum &amp; Space Technologies</title>
+<meta name="description" content="Mirko Rocci, Ph.D. — Fisico e tecnologo. Tecnologie quantistiche, superconduttività, nanotecnologie e tecnologie per lo spazio. MIT · Scuola Normale Superiore · Thales Alenia Space. CTO di Clair Clinique, Open Innovation DAAB." />
+<meta name="keywords" content="Mirko Rocci, fisico, physicist, quantum technologies, superconductivity, nanotechnology, spintronics, Thales Alenia Space, MIT, Scuola Normale Superiore, Clair Clinique, DAAB, Innovalley, L'Aquila" />
+<meta name="author" content="Mirko Rocci" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://mirkorocci.it/" />
+<link rel="alternate" hreflang="it" href="https://mirkorocci.it/" />
+<link rel="alternate" hreflang="en" href="https://mirkorocci.com/" />
+<link rel="alternate" hreflang="es" href="https://mirkorocci.it/?lang=es" />
+<link rel="alternate" hreflang="fr" href="https://mirkorocci.it/?lang=fr" />
+<link rel="alternate" hreflang="x-default" href="https://mirkorocci.it/" />
+
+<!-- ===== Open Graph / Twitter ===== -->
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Mirko Rocci, Ph.D. — Physicist" />
+<meta property="og:description" content="Tecnologie quantistiche, superconduttività e nanotecnologie per lo spazio." />
+<meta property="og:image" content="https://mirkorocci.it/assets/mirko.jpg" />
+<meta property="og:url" content="https://mirkorocci.it/" />
+<meta property="og:site_name" content="Mirko Rocci" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Mirko Rocci, Ph.D. — Physicist" />
+<meta name="twitter:description" content="Quantum &amp; space technologies, superconductivity and nanotechnology." />
+<meta name="twitter:image" content="https://mirkorocci.it/assets/mirko.jpg" />
+
+<!-- ===== Icons / theme ===== -->
+<meta name="theme-color" content="#05060c" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="manifest" href="site.webmanifest" />
+
+<!-- ===== Fonts ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+
+<!-- ===== Structured data (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mirko Rocci",
+  "honorificSuffix": "Ph.D.",
+  "jobTitle": "Physicist · Technologist",
+  "url": "https://mirkorocci.it/",
+  "image": "https://mirkorocci.it/assets/mirko.jpg",
+  "sameAs": [
+    "https://orcid.org/0000-0002-3907-5275",
+    "https://scholar.google.com/citations?user=vZlXhbkAAAAJ",
+    "https://www.linkedin.com/in/mirko-rocci/",
+    "https://www.researchgate.net/profile/Mirko-Rocci"
+  ],
+  "worksFor": { "@type": "Organization", "name": "Thales Alenia Space Italia" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Massachusetts Institute of Technology" },
+    { "@type": "CollegeOrUniversity", "name": "Scuola Normale Superiore" },
+    { "@type": "CollegeOrUniversity", "name": "Universidad Complutense de Madrid" },
+    { "@type": "CollegeOrUniversity", "name": "Universidad Politécnica de Madrid" },
+    { "@type": "CollegeOrUniversity", "name": "Università degli Studi dell'Aquila" }
+  ],
+  "knowsAbout": ["Quantum Technologies","Superconductivity","Nanotechnology","Spintronics","Space Technologies","Open Innovation"],
+  "address": { "@type": "PostalAddress", "addressLocality": "L'Aquila", "addressCountry": "IT" }
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#about" data-en="Skip to content" data-es="Saltar al contenido" data-fr="Aller au contenu">Vai al contenuto</a>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- Navbar -->
+<header id="navbar">
+  <a href="#hero" class="brand">
+    <span class="brand-mark">MR</span>
+    <span class="brand-name">Mirko&nbsp;Rocci<span class="brand-dot">.</span></span>
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#about" data-en="About" data-es="Perfil" data-fr="Profil">Profilo</a>
+    <a href="#research" data-en="Research" data-es="Investigación" data-fr="Recherche">Ricerca</a>
+    <a href="#news" data-en="News" data-es="Novedades" data-fr="Actus">News</a>
+    <a href="#publications" data-en="Publications" data-es="Publicaciones" data-fr="Publications">Pubblicazioni</a>
+    <a href="#ventures" data-en="Ventures" data-es="Empresas" data-fr="Entreprises">Imprese</a>
+    <a href="#assoc333" data-en="Association 3:33" data-es="Asociación 3:33" data-fr="Association 3:33">3:33</a>
+    <a href="#career" data-en="Career" data-es="Trayectoria" data-fr="Parcours">Percorso</a>
+    <a href="#contact" class="nav-cta" data-en="Contact" data-es="Contacto" data-fr="Contact">Contatti</a>
+  </nav>
+  <div class="nav-tools">
+    <div class="lang-switch" id="lang-switch">
+      <button class="lang-current" id="lang-current" aria-haspopup="true" aria-expanded="false">IT <span class="caret">▾</span></button>
+      <ul class="lang-menu" id="lang-menu" role="menu">
+        <li><button data-lang="it" role="menuitem">Italiano</button></li>
+        <li><button data-lang="en" role="menuitem">English</button></li>
+        <li><button data-lang="es" role="menuitem">Español</button></li>
+        <li><button data-lang="fr" role="menuitem">Français</button></li>
+      </ul>
+    </div>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-kicker reveal" data-en="Physicist · Ph.D. · Innovator" data-es="Físico · Ph.D. · Innovador" data-fr="Physicien · Ph.D. · Innovateur">Fisico · Ph.D. · Innovatore</p>
+      <h1 class="hero-title reveal">Mirko Rocci</h1>
+      <p class="hero-sub reveal" data-en="I build the bridge between fundamental quantum physics and the technologies that reach space." data-es="Construyo el puente entre la física cuántica fundamental y las tecnologías que llegan al espacio." data-fr="Je construis le pont entre la physique quantique fondamentale et les technologies qui atteignent l'espace.">
+        Costruisco il ponte tra la fisica quantistica fondamentale e le tecnologie che arrivano nello spazio.
+      </p>
+      <div class="hero-tags reveal">
+        <span data-en="Quantum Technologies" data-es="Tecnologías Cuánticas" data-fr="Technologies Quantiques">Tecnologie Quantistiche</span>
+        <span data-en="Superconductivity" data-es="Superconductividad" data-fr="Supraconductivité">Superconduttività</span>
+        <span data-en="Nanotechnology" data-es="Nanotecnología" data-fr="Nanotechnologie">Nanotecnologie</span>
+        <span data-en="Space Hardware" data-es="Hardware Espacial" data-fr="Matériel Spatial">Hardware Spaziale</span>
+      </div>
+      <div class="hero-cta reveal">
+        <a href="#publications" class="btn btn-primary" data-en="Explore the research" data-es="Explora la investigación" data-fr="Explorer la recherche">Esplora la ricerca</a>
+        <a href="#contact" class="btn btn-ghost" data-en="Get in touch" data-es="Contacto" data-fr="Me contacter">Mettiti in contatto</a>
+      </div>
+      <div class="hero-affil reveal">
+        <span>Massachusetts Institute of Technology</span><i></i><span>Scuola Normale Superiore</span><i></i><span>Thales Alenia Space</span>
+      </div>
+    </div>
+    <div class="hero-photo reveal">
+      <div class="photo-glow"></div>
+      <div class="photo-frame"><img src="assets/mirko.jpg" alt="Mirko Rocci, Ph.D." width="540" height="720" /></div>
+      <div class="photo-ring"></div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-hint" aria-label="Scroll">
+    <span data-en="Scroll" data-es="Desliza" data-fr="Défiler">Scorri</span>
+    <div class="mouse"><div class="wheel"></div></div>
+  </a>
+</section>
+
+<!-- INSTITUTIONS MARQUEE -->
+<section id="institutions" aria-label="Institutions">
+  <div class="marquee" id="marquee"><div class="marquee-track" id="marquee-track"></div></div>
+</section>
+
+<!-- STATS -->
+<section id="stats" class="section-narrow">
+  <div class="stats-grid">
+    <div class="stat reveal"><div class="stat-num" data-count="28" data-suffix="+">0</div><div class="stat-label" data-en="Peer-reviewed publications" data-es="Publicaciones revisadas por pares" data-fr="Publications évaluées par les pairs">Pubblicazioni peer-reviewed</div></div>
+    <div class="stat reveal"><div class="stat-num" data-count="15" data-suffix="+">0</div><div class="stat-label" data-en="Years in advanced research" data-es="Años en investigación avanzada" data-fr="Années de recherche avancée">Anni di ricerca avanzata</div></div>
+    <div class="stat reveal"><div class="stat-num" data-count="3" data-prefix="€" data-suffix="M">0</div><div class="stat-label" data-en="EU funding led / co-led" data-es="Fondos UE liderados / coliderados" data-fr="Fonds UE dirigés / codirigés">Fondi UE gestiti / co-gestiti</div></div>
+    <div class="stat reveal"><div class="stat-num" data-count="4" data-suffix="×">0</div><div class="stat-label" data-en="Innovation Awards (1st place)" data-es="Innovation Awards (1.º puesto)" data-fr="Innovation Awards (1re place)">Innovation Award (1° posto)</div></div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow" data-en="Latest news" data-es="Novedades" data-fr="Actualités">Ultime novità</span>
+    <h2 data-en="What I'm working on" data-es="En qué estoy trabajando" data-fr="Ce sur quoi je travaille">A cosa sto lavorando</h2>
+    <p class="section-intro" data-en="Recent highlights — awards, talks, papers and milestones." data-es="Lo más reciente — premios, charlas, artículos e hitos." data-fr="Faits marquants récents — prix, conférences, articles et étapes clés.">
+      Aggiornamenti recenti — premi, talk, pubblicazioni e traguardi.
+    </p>
+  </div>
+  <div class="news-grid" id="news-grid"></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow" data-en="Profile" data-es="Perfil" data-fr="Profil">Profilo</span>
+    <h2 data-en="A physicist between the lab and the orbit" data-es="Un físico entre el laboratorio y la órbita" data-fr="Un physicien entre le laboratoire et l'orbite">Un fisico tra il laboratorio e l'orbita</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-lead reveal">
+      <p data-en="I am Mirko Rocci, Ph.D. in Condensed Matter Physics. My work lives at the frontier where quantum phenomena become real-world technology — from superconducting nano-devices to the flight hardware that powers satellites." data-es="Soy Mirko Rocci, Ph.D. en Física de la Materia Condensada. Mi trabajo vive en la frontera donde los fenómenos cuánticos se convierten en tecnología real, desde nanodispositivos superconductores hasta el hardware de vuelo que alimenta los satélites." data-fr="Je suis Mirko Rocci, Ph.D. en physique de la matière condensée. Mon travail se situe à la frontière où les phénomènes quantiques deviennent des technologies concrètes — des nanodispositifs supraconducteurs au matériel de vol qui alimente les satellites.">
+        Sono Mirko Rocci, Ph.D. in Fisica della Materia Condensata. Il mio lavoro vive sulla frontiera in cui i fenomeni quantistici diventano tecnologia reale — dai nano-dispositivi superconduttivi all'hardware di volo che alimenta i satelliti.
+      </p>
+      <p data-en="Trained at the Massachusetts Institute of Technology, the Scuola Normale Superiore and in Madrid, today I lead innovation in space technologies at Thales Alenia Space, designing hardware that goes beyond the state of the art." data-es="Formado en el Massachusetts Institute of Technology, la Scuola Normale Superiore y en Madrid, hoy lidero la innovación en tecnologías espaciales en Thales Alenia Space, diseñando hardware que va más allá del estado del arte." data-fr="Formé au Massachusetts Institute of Technology, à la Scuola Normale Superiore et à Madrid, je dirige aujourd'hui l'innovation en technologies spatiales chez Thales Alenia Space, en concevant du matériel au-delà de l'état de l'art.">
+        Formato al Massachusetts Institute of Technology, alla Scuola Normale Superiore e a Madrid, oggi guido l'innovazione nelle tecnologie spaziali in Thales Alenia Space, progettando hardware oltre lo stato dell'arte.
+      </p>
+      <p data-en="I believe excellence is built by people: I mentor PhD students, bring science to schools and the public, and lead a cultural association that turns talent into opportunity." data-es="Creo que la excelencia la construyen las personas: tutorizo a doctorandos, llevo la ciencia a las escuelas y al público, y presido una asociación cultural que transforma el talento en oportunidad." data-fr="Je crois que l'excellence se construit avec les gens : j'encadre des doctorants, je porte la science dans les écoles et auprès du public, et je préside une association culturelle qui transforme le talent en opportunité.">
+        Credo che l'eccellenza si costruisca con le persone: seguo dottorandi, porto la scienza nelle scuole e al grande pubblico e guido un'associazione culturale che trasforma il talento in opportunità.
+      </p>
+    </div>
+    <ul class="about-facts reveal">
+      <li><span class="fact-k" data-en="Role" data-es="Cargo" data-fr="Rôle">Ruolo</span><span class="fact-v" data-en="Technologist" data-es="Tecnólogo" data-fr="Technologue">Tecnologo</span></li>
+      <li><span class="fact-k" data-en="Organisation" data-es="Entidad" data-fr="Organisation">Ente</span><span class="fact-v"><a href="https://www.thalesaleniaspace.com/" target="_blank" rel="noopener noreferrer">Thales Alenia Space Italia</a></span></li>
+      <li><span class="fact-k" data-en="Doctorate" data-es="Doctorado" data-fr="Doctorat">Dottorato</span><span class="fact-v" data-en="Ph.D. Physics" data-es="Ph.D. Física" data-fr="Ph.D. Physique">Ph.D. Fisica</span></li>
+      <li><span class="fact-k" data-en="Qualification" data-es="Habilitación" data-fr="Qualification">Abilitazione</span><span class="fact-v" data-en="National Scientific Qualification (02/B1)" data-es="Habilitación Científica Nacional (02/B1)" data-fr="Qualification Scientifique Nationale (02/B1)">Abilitazione Scientifica Nazionale (02/B1)</span></li>
+      <li><span class="fact-k" data-en="Based in" data-es="Sede" data-fr="Basé à">Sede</span><span class="fact-v">L'Aquila, Italia</span></li>
+      <li><span class="fact-k" data-en="Professional order" data-es="Colegio profesional" data-fr="Ordre professionnel">Ordine professionale</span><span class="fact-v"><a href="https://www.chimicifisici.roma.it/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=44&amp;Itemid=17" target="_blank" rel="noopener noreferrer">Ordine dei Chimici e dei Fisici (LUAM)</a></span></li>
+      <li><span class="fact-k">ORCID</span><span class="fact-v"><a href="https://orcid.org/0000-0002-3907-5275" target="_blank" rel="noopener noreferrer">0000-0002-3907-5275</a></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow" data-en="Research" data-es="Investigación" data-fr="Recherche">Ricerca</span>
+    <h2 data-en="Fields of interest" data-es="Campos de interés" data-fr="Domaines d'intérêt">Campi di interesse</h2>
+    <p class="section-intro" data-en="Hybrid nanotechnologies and quantum technologies — from fundamental physics to industrial space hardware." data-es="Nanotecnologías híbridas y tecnologías cuánticas — de la física fundamental al hardware espacial industrial." data-fr="Nanotechnologies hybrides et technologies quantiques — de la physique fondamentale au matériel spatial industriel.">
+      Nanotecnologie ibride e tecnologie quantistiche — dalla fisica fondamentale all'hardware spaziale industriale.
+    </p>
+  </div>
+  <div class="cards-grid">
+    <article class="rcard reveal tilt" data-icon="quantum">
+      <div class="rcard-icon"></div>
+      <h3 data-en="Quantum &amp; Superconducting Technologies" data-es="Tecnologías Cuánticas y Superconductoras" data-fr="Technologies Quantiques et Supraconductrices">Tecnologie Quantistiche &amp; Superconduttive</h3>
+      <p data-en="Hybrid nanotechnologies for classical and quantum supercomputers, including superconducting magnetic memories." data-es="Nanotecnologías híbridas para supercomputadoras clásicas y cuánticas, incluidas memorias magnéticas superconductoras." data-fr="Nanotechnologies hybrides pour superordinateurs classiques et quantiques, dont les mémoires magnétiques supraconductrices.">
+        Nanotecnologie ibride per supercomputer classici e quantistici, incluse memorie magnetiche superconduttive.
+      </p>
+    </article>
+    <article class="rcard reveal tilt" data-icon="spin">
+      <div class="rcard-icon"></div>
+      <h3 data-en="Spintronics &amp; Unconventional Superconductivity" data-es="Espintrónica y Superconductividad no convencional" data-fr="Spintronique et Supraconductivité non conventionnelle">Spintronica &amp; Superconduttività non convenzionale</h3>
+      <p data-en="The competition between ferromagnetism and superconductivity at the nanoscale, and spin-triplet supercurrents." data-es="La competencia entre ferromagnetismo y superconductividad a nanoescala, y las supercorrientes de espín-triplete." data-fr="La compétition entre ferromagnétisme et supraconductivité à l'échelle nanométrique, et les supercourants spin-triplet.">
+        La competizione tra ferromagnetismo e superconduttività alla nanoscala e le supercorrenti a spin-tripletto.
+      </p>
+    </article>
+    <article class="rcard reveal tilt" data-icon="wire">
+      <div class="rcard-icon"></div>
+      <h3 data-en="Hybrid Quantum Nanodevices" data-es="Nanodispositivos cuánticos híbridos" data-fr="Nanodispositifs quantiques hybrides">Nanodispositivi quantistici ibridi</h3>
+      <p data-en="Semiconductor &amp; superconductor nanowires, suspended and gated, for frontier nanoelectronics." data-es="Nanohilos semiconductores y superconductores, suspendidos y con puerta, para nanoelectrónica de frontera." data-fr="Nanofils semiconducteurs et supraconducteurs, suspendus et à grille, pour la nanoélectronique de pointe.">
+        Nanofili semiconduttori e superconduttori, sospesi e gated, per nanoelettronica di frontiera.
+      </p>
+    </article>
+    <article class="rcard reveal tilt" data-icon="twod">
+      <div class="rcard-icon"></div>
+      <h3 data-en="2D Materials" data-es="Materiales 2D" data-fr="Matériaux 2D">Materiali 2D</h3>
+      <p data-en="Graphene, h-BN and Cr₂Te₃ engineered into devices and protective coatings for extreme environments." data-es="Grafeno, h-BN y Cr₂Te₃ integrados en dispositivos y recubrimientos protectores para entornos extremos." data-fr="Graphène, h-BN et Cr₂Te₃ intégrés dans des dispositifs et des revêtements protecteurs pour environnements extrêmes.">
+        Grafene, h-BN e Cr₂Te₃ ingegnerizzati in dispositivi e rivestimenti protettivi per ambienti estremi.
+      </p>
+    </article>
+    <article class="rcard reveal tilt" data-icon="space">
+      <div class="rcard-icon"></div>
+      <h3 data-en="Space Technologies" data-es="Tecnologías Espaciales" data-fr="Technologies Spatiales">Tecnologie per lo Spazio</h3>
+      <p data-en="Satellite systems for telecom, geolocation, defence and Earth observation; flight hardware beyond the state of the art." data-es="Sistemas satelitales para telecomunicaciones, geolocalización, defensa y observación de la Tierra; hardware de vuelo más allá del estado del arte." data-fr="Systèmes satellitaires pour télécommunications, géolocalisation, défense et observation de la Terre ; matériel de vol au-delà de l'état de l'art.">
+        Sistemi satellitari per telecomunicazioni, geolocalizzazione, difesa e osservazione terrestre; hardware di volo oltre lo stato dell'arte.
+      </p>
+    </article>
+    <article class="rcard reveal tilt" data-icon="open">
+      <div class="rcard-icon"></div>
+      <h3 data-en="Open Science &amp; Innovation" data-es="Open Science e Innovación" data-fr="Open Science et Innovation">Open Science &amp; Innovazione</h3>
+      <p data-en="Leading European and industrial R&amp;D projects, mentoring researchers and championing open innovation." data-es="Dirección de proyectos europeos e industriales de I+D, mentoría de investigadores y promoción de la open innovation." data-fr="Direction de projets de R&amp;D européens et industriels, mentorat de chercheurs et promotion de l'open innovation.">
+        Direzione di progetti di R&amp;S europei e industriali, mentoring di ricercatori e promozione dell'open innovation.
+      </p>
+    </article>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow" data-en="Selected publications" data-es="Publicaciones seleccionadas" data-fr="Publications choisies">Pubblicazioni selezionate</span>
+    <h2 data-en="Science that made the news" data-es="Ciencia que fue noticia" data-fr="La science qui a fait l'actualité">Scienza che ha fatto notizia</h2>
+    <p class="section-intro" data-en="A selection from 28 peer-reviewed papers, published in Nature Materials, Nature Nanotechnology, Nano Letters, ACS Nano and more." data-es="Una selección de 28 artículos revisados por pares, publicados en Nature Materials, Nature Nanotechnology, Nano Letters, ACS Nano y más." data-fr="Une sélection parmi 28 articles évalués par les pairs, publiés dans Nature Materials, Nature Nanotechnology, Nano Letters, ACS Nano et d'autres.">
+      Una selezione dalle 28 pubblicazioni peer-reviewed, su Nature Materials, Nature Nanotechnology, Nano Letters, ACS Nano e altre.
+    </p>
+  </div>
+  <div class="pub-grid collapsed" id="pub-grid"></div>
+  <div class="more-wrap reveal"><button class="btn btn-ghost more-btn" id="pub-more" data-more="6"
+    data-en="Show more papers" data-es="Ver más artículos" data-fr="Voir plus d'articles"
+    data-less-it="Mostra meno" data-less-en="Show less" data-less-es="Ver menos" data-less-fr="Voir moins">Mostra altri articoli</button></div>
+  <div class="pub-foot reveal">
+    <a href="https://scholar.google.com/citations?user=vZlXhbkAAAAJ&amp;hl=en" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-en="Google Scholar" data-es="Google Scholar" data-fr="Google Scholar">Google Scholar</a>
+    <a href="https://orcid.org/0000-0002-3907-5275" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-en="View ORCID record" data-es="Ver perfil ORCID" data-fr="Voir le profil ORCID">Vedi il profilo ORCID</a>
+  </div>
+</section>
+
+<!-- VENTURES -->
+<section id="ventures" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow" data-en="Ventures &amp; roles" data-es="Empresas y cargos" data-fr="Entreprises et rôles">Imprese &amp; ruoli</span>
+    <h2 data-en="Building innovation, beyond research" data-es="Construir innovación, más allá de la investigación" data-fr="Construire l'innovation, au-delà de la recherche">Costruire innovazione, oltre la ricerca</h2>
+    <p class="section-intro" data-en="From deep-tech startups to the aerospace district: turning science into ventures and ecosystems." data-es="De las startups deep-tech al distrito aeroespacial: convertir la ciencia en empresas y ecosistemas." data-fr="Des startups deep-tech au district aérospatial : transformer la science en entreprises et écosystèmes.">
+      Dalle startup deep-tech al distretto aerospaziale: trasformare la scienza in imprese ed ecosistemi.
+    </p>
+  </div>
+  <div class="ventures-grid" id="ventures-grid"></div>
+  <div class="ventures-contact reveal" id="ventures-contact"></div>
+</section>
+
+<!-- ASSOCIATION 3:33 -->
+<section id="assoc333" class="section">
+  <div class="assoc-hero reveal">
+    <div class="assoc-head">
+      <img class="assoc-logo" id="assoc-logo" alt="Associazione 3:33" />
+      <div>
+        <span class="eyebrow" data-en="Social commitment" data-es="Compromiso social" data-fr="Engagement social">Impegno sociale</span>
+        <h2 data-en="Association 3:33 — turning talent into opportunity" data-es="Asociación 3:33 — el talento que se vuelve oportunidad" data-fr="Association 3:33 — le talent qui devient opportunité">Associazione 3:33 — il talento che diventa opportunità</h2>
+      </div>
+    </div>
+    <p class="assoc-lead" data-en="As founder and president of the cultural association 3:33, I bring science, technology and civic energy to L'Aquila. The name recalls 3:32 — the moment of the 2009 earthquake — and stands for rebirth and openness to the future." data-es="Como fundador y presidente de la asociación cultural 3:33, llevo ciencia, tecnología y energía cívica a L'Aquila. El nombre recuerda las 3:32, el instante del terremoto de 2009, y simboliza renacimiento y apertura al futuro." data-fr="En tant que fondateur et président de l'association culturelle 3:33, j'apporte science, technologie et énergie civique à L'Aquila. Le nom rappelle 3h32 — l'instant du séisme de 2009 — et symbolise la renaissance et l'ouverture à l'avenir.">
+      Come fondatore e presidente dell'associazione culturale 3:33 porto scienza, tecnologia ed energia civica a L'Aquila. Il nome richiama le 3:32, l'istante del terremoto del 2009, e rappresenta rinascita e apertura al futuro.
+    </p>
+  </div>
+  <div class="assoc-gallery" id="assoc-gallery"></div>
+  <div class="assoc-grid" id="assoc-grid"></div>
+  <div class="assoc-press" id="assoc-press"></div>
+  <div class="assoc-foot reveal">
+    <a href="https://www.3e33.it/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-en="Visit 3e33.it" data-es="Visita 3e33.it" data-fr="Visiter 3e33.it">Visita 3e33.it</a>
+  </div>
+</section>
+
+<!-- CAREER -->
+<section id="career" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow" data-en="Career &amp; education" data-es="Trayectoria y formación" data-fr="Parcours et formation">Percorso &amp; formazione</span>
+    <h2 data-en="A path across three countries" data-es="Un recorrido por tres países" data-fr="Un parcours à travers trois pays">Un percorso tra tre Paesi</h2>
+  </div>
+  <div class="timeline" id="timeline"></div>
+</section>
+
+<!-- ACTIVITIES -->
+<section id="activities" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow" data-en="Beyond the lab" data-es="Más allá del laboratorio" data-fr="Au-delà du laboratoire">Oltre il laboratorio</span>
+    <h2 data-en="Activities &amp; engagement" data-es="Actividades y compromiso" data-fr="Activités et engagement">Attività &amp; impegno</h2>
+  </div>
+  <div class="act-grid">
+    <article class="act reveal">
+      <h3 data-en="Editor &amp; Peer Reviewer" data-es="Editor y Revisor" data-fr="Éditeur et Relecteur">Editor &amp; Revisore scientifico</h3>
+      <p data-en="Topic Editor for Micromachines (MDPI) and Frontiers in Control Engineering; referee for Nano Letters (ACS) and other indexed journals." data-es="Topic Editor de Micromachines (MDPI) y Frontiers in Control Engineering; revisor de Nano Letters (ACS) y otras revistas indexadas." data-fr="Topic Editor pour Micromachines (MDPI) et Frontiers in Control Engineering ; relecteur pour Nano Letters (ACS) et d'autres revues indexées.">
+        Topic Editor per Micromachines (MDPI) e Frontiers in Control Engineering; referee per Nano Letters (ACS) e altre riviste indicizzate.
+      </p>
+    </article>
+    <article class="act reveal">
+      <h3 data-en="Mentoring &amp; Teaching" data-es="Mentoría y Docencia" data-fr="Mentorat et Enseignement">Mentoring &amp; Didattica</h3>
+      <p data-en="Supervisor of industrial and academic PhD candidates and master/high-school students at MIT, SNS Pisa and Madrid; teaching assistant in physics laboratories." data-es="Supervisor de doctorandos industriales y académicos y de estudiantes de máster y secundaria en el MIT, la SNS de Pisa y Madrid; profesor ayudante en laboratorios de física." data-fr="Encadrant de doctorants industriels et académiques et d'étudiants en master/lycée au MIT, à la SNS de Pise et à Madrid ; assistant d'enseignement en laboratoires de physique.">
+        Supervisore di dottorandi industriali e accademici e di studenti magistrali e di liceo al MIT, alla SNS di Pisa e a Madrid; assistente di laboratorio in fisica.
+      </p>
+    </article>
+    <article class="act reveal">
+      <h3 data-en="Science communication" data-es="Divulgación científica" data-fr="Vulgarisation scientifique">Divulgazione scientifica</h3>
+      <p data-en="Featured on RAI 3 'Memex', RAI Scuola and the Internet Festival; invited speaker bringing frontier physics from the lab to the public and to schools." data-es="Presente en RAI 3 «Memex», RAI Scuola y el Internet Festival; ponente invitado que lleva la física de frontera del laboratorio al público y a las escuelas." data-fr="Présent sur RAI 3 « Memex », RAI Scuola et l'Internet Festival ; conférencier invité portant la physique de pointe du laboratoire vers le public et les écoles.">
+        Protagonista su RAI 3 «Memex», RAI Scuola e all'Internet Festival; relatore invitato che porta la fisica di frontiera dal laboratorio al pubblico e alle scuole.
+      </p>
+    </article>
+    <article class="act reveal">
+      <h3 data-en="Advisory &amp; expert roles" data-es="Cargos consultivos y periciales" data-fr="Rôles consultatifs et d'expertise">Ruoli consultivi &amp; peritali</h3>
+      <p data-en="Member of the Industrial Advisory Board of the Horizon Europe Pathfinder 'ATYPIQUAL'; EU project evaluator (Marie Skłodowska-Curie); Technical Court Expert (CTU), Court of L'Aquila." data-es="Miembro del Industrial Advisory Board del Horizon Europe Pathfinder «ATYPIQUAL»; evaluador de proyectos UE (Marie Skłodowska-Curie); Perito Técnico Judicial (CTU), Tribunal de L'Aquila." data-fr="Membre de l'Industrial Advisory Board du Horizon Europe Pathfinder « ATYPIQUAL » ; évaluateur de projets UE (Marie Skłodowska-Curie) ; Expert Technique Judiciaire (CTU), Tribunal de L'Aquila.">
+        Membro dell'Industrial Advisory Board del progetto Horizon Europe Pathfinder «ATYPIQUAL»; valutatore di progetti UE (Marie Skłodowska-Curie); Consulente Tecnico d'Ufficio (CTU) presso il Tribunale dell'Aquila.
+      </p>
+    </article>
+    <article class="act reveal">
+      <h3 data-en="Patents" data-es="Patentes" data-fr="Brevets">Brevetti</h3>
+      <p data-en="Inventor on a European patent application (EP25154627), translating research results into protected intellectual property." data-es="Inventor en una solicitud de patente europea (EP25154627), convirtiendo resultados de investigación en propiedad intelectual protegida." data-fr="Inventeur sur une demande de brevet européen (EP25154627), transformant les résultats de recherche en propriété intellectuelle protégée.">
+        Inventore in una domanda di brevetto europeo (EP25154627), trasformando i risultati della ricerca in proprietà intellettuale protetta.
+      </p>
+    </article>
+    <article class="act reveal">
+      <h3 data-en="Curiosity off-duty" data-es="Curiosidad fuera del trabajo" data-fr="Curiosité hors du travail">Curiosità fuori dal lavoro</h3>
+      <p data-en="Certified FISAR sommelier and student of non-verbal communication — because understanding people matters as much as understanding physics." data-es="Sommelier certificado FISAR y estudioso de la comunicación no verbal — porque entender a las personas importa tanto como entender la física." data-fr="Sommelier certifié FISAR et passionné de communication non verbale — car comprendre les gens compte autant que comprendre la physique.">
+        Sommelier certificato FISAR e studioso di comunicazione non verbale — perché capire le persone conta quanto capire la fisica.
+      </p>
+    </article>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards" class="section section-narrow">
+  <div class="section-head reveal">
+    <span class="eyebrow" data-en="Recognition" data-es="Reconocimientos" data-fr="Distinctions">Riconoscimenti</span>
+    <h2 data-en="Awards &amp; honours" data-es="Premios y distinciones" data-fr="Prix et distinctions">Premi &amp; onorificenze</h2>
+  </div>
+  <ul class="awards-list" id="awards-list"></ul>
+</section>
+
+<!-- PRESS -->
+<section id="press" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow" data-en="In the media" data-es="En los medios" data-fr="Dans les médias">Rassegna stampa</span>
+    <h2 data-en="Press &amp; media" data-es="Prensa y medios" data-fr="Presse et médias">Stampa &amp; media</h2>
+    <p class="section-intro" data-en="From Repubblica to Physics World, science and society coverage of the work." data-es="De Repubblica a Physics World, la cobertura científica y social del trabajo." data-fr="De Repubblica à Physics World, la couverture scientifique et sociale du travail.">
+      Da Repubblica a Physics World, la copertura mediatica del lavoro scientifico e sociale.
+    </p>
+  </div>
+  <div class="press-grid collapsed" id="press-grid"></div>
+  <div class="more-wrap reveal"><button class="btn btn-ghost more-btn" id="press-more" data-more="6"
+    data-en="Show more press" data-es="Ver más prensa" data-fr="Voir plus de presse"
+    data-less-it="Mostra meno" data-less-en="Show less" data-less-es="Ver menos" data-less-fr="Voir moins">Mostra altra stampa</button></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="contact-wrap reveal">
+    <span class="eyebrow" data-en="Contact" data-es="Contacto" data-fr="Contact">Contatti</span>
+    <h2 data-en="Let's build something beyond the state of the art" data-es="Construyamos algo más allá del estado del arte" data-fr="Construisons quelque chose au-delà de l'état de l'art">Costruiamo qualcosa oltre lo stato dell'arte</h2>
+    <p class="section-intro" data-en="Research collaborations, talks, mentoring or media — I'd love to hear from you." data-es="Colaboraciones de investigación, charlas, mentoría o medios — me encantará leerte." data-fr="Collaborations de recherche, conférences, mentorat ou médias — écrivez-moi avec plaisir.">
+      Collaborazioni di ricerca, talk, mentoring o media — scrivimi, sarò felice di risponderti.
+    </p>
+    <div class="contact-actions">
+      <a href="mailto:mirko.rocci@gmail.com" class="btn btn-primary">mirko.rocci@gmail.com</a>
+    </div>
+    <div class="contact-emails">
+      <a href="mailto:mirko.rocci@innovalleycube.com">mirko.rocci@innovalleycube.com</a>
+      <a href="mailto:mirko.rocci@clairclinique.com">mirko.rocci@clairclinique.com</a>
+      <a href="mailto:rocci@mit.edu">rocci@mit.edu</a>
+      <a href="mailto:mirko.rocci@thalesaleniaspace.com">mirko.rocci@thalesaleniaspace.com</a>
+    </div>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/mirko-rocci/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=vZlXhbkAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      <a href="https://orcid.org/0000-0002-3907-5275" target="_blank" rel="noopener noreferrer">ORCID</a>
+      <a href="https://www.researchgate.net/profile/Mirko-Rocci" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+      <a href="https://www.managementtalks.it/2024/06/02/un-racconto-che-parla-di-eccellenza/" target="_blank" rel="noopener noreferrer">Blog</a>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="foot-inner">
+    <span class="foot-brand">Mirko Rocci<span class="brand-dot">.</span></span>
+    <span class="foot-copy">© <span id="year"></span> Mirko Rocci — L'Aquila, Italia ·
+      <a href="#" id="cookie-prefs" data-en="Cookie preferences" data-es="Preferencias de cookies" data-fr="Préférences cookies">Preferenze cookie</a>
+    </span>
+    <button class="to-top" id="to-top" aria-label="Back to top">↑</button>
+  </div>
+</footer>
+
+<!-- COOKIE CONSENT -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+  <p class="cookie-text" data-en="This site uses only technical cookies. With your consent we also use Google Analytics to understand traffic. You can change your choice anytime." data-es="Este sitio usa solo cookies técnicas. Con tu consentimiento usamos también Google Analytics para entender el tráfico. Puedes cambiar tu elección cuando quieras." data-fr="Ce site n'utilise que des cookies techniques. Avec votre consentement, nous utilisons aussi Google Analytics pour comprendre le trafic. Vous pouvez modifier votre choix à tout moment.">
+    Questo sito usa solo cookie tecnici. Con il tuo consenso usiamo anche Google Analytics per capire il traffico. Puoi cambiare la tua scelta quando vuoi.
+  </p>
+  <div class="cookie-actions">
+    <button class="btn btn-ghost cookie-btn" id="cookie-reject" data-en="Reject" data-es="Rechazar" data-fr="Refuser">Rifiuta</button>
+    <button class="btn btn-primary cookie-btn" id="cookie-accept" data-en="Accept" data-es="Aceptar" data-fr="Accepter">Accetta</button>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
