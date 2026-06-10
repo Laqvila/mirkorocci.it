@@ -18,9 +18,10 @@ const esc = s => String(s)
   .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
   .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 
-/* build the data-en/es/fr attribute string + return base IT */
-function L(o){ return `data-en="${esc(o.en)}" data-es="${esc(o.es)}" data-fr="${esc(o.fr)}"`; }
-function Lhtml(o){ return `data-en-html="${esc(o.en)}" data-es-html="${esc(o.es)}" data-fr-html="${esc(o.fr)}"`; }
+/* attributi multilingua con fallback automatico all'italiano
+   (così in contenuti.js basta scrivere il solo campo it:"...") */
+function L(o){ const i=o.it||""; return `data-en="${esc(o.en||i)}" data-es="${esc(o.es||i)}" data-fr="${esc(o.fr||i)}"`; }
+function Lhtml(o){ const i=o.it||""; return `data-en-html="${esc(o.en||i)}" data-es-html="${esc(o.es||i)}" data-fr-html="${esc(o.fr||i)}"`; }
 
 /* =========================================================
    1. SVG COVER GENERATOR (original conceptual artwork)
@@ -192,6 +193,67 @@ function renderVenturesContact(){
 }
 
 /* =========================================================
+   INTERACTIVE MAP
+   ========================================================= */
+function renderMap(){
+  const host=$("#map-canvas"); if(!host||typeof LOCATIONS==="undefined") return;
+  const C=MAP_CROP, RL=C.lonMax-C.lonMin, RT=C.latMax-C.latMin, loc=id=>LOCATIONS.find(l=>l.id===id);
+  const px=lon=>(lon-C.lonMin)/RL*100, py=lat=>(C.latMax-lat)/RT*100;
+  const clAnchor=l=>[ l.cl[0]>60 ? l.cl[0] : l.cl[0]+5, l.cl[1]+6 ];
+
+  // world background placement (full equirectangular -180..180 / -90..90)
+  const wW=360/RL*100, wH=180/RT*100, wL=-(C.lonMin+180)/RL*100, wT=-(90-C.latMax)/RT*100;
+
+  // journey arcs + connector lines (svg 0..100, non-uniform)
+  let arcs="";
+  MAP_ARCS.forEach((pair,i)=>{ const a=loc(pair[0]),b=loc(pair[1]); if(!a||!b) return;
+    const ax=px(a.ll[0]),ay=py(a.ll[1]),bx=px(b.ll[0]),by=py(b.ll[1]);
+    const mx=(ax+bx)/2, my=(ay+by)/2-Math.abs(bx-ax)*0.18;
+    arcs+=`<path class="map-arc" style="--i:${i}" d="M${ax.toFixed(2)},${ay.toFixed(2)} Q${mx.toFixed(2)},${my.toFixed(2)} ${bx.toFixed(2)},${by.toFixed(2)}"/>`;
+  });
+  let conns="";
+  LOCATIONS.forEach(l=>{ const cx=px(l.ll[0]),cy=py(l.ll[1]),a=clAnchor(l);
+    conns+=`<line class="map-conn" data-id="${l.id}" x1="${cx.toFixed(2)}" y1="${cy.toFixed(2)}" x2="${a[0].toFixed(2)}" y2="${a[1].toFixed(2)}"/>`; });
+
+  // city dots
+  const dots=LOCATIONS.map(l=>`
+    <button class="map-city${l.id==="laquila"?" lbl-below":""}" data-id="${l.id}" style="left:${px(l.ll[0]).toFixed(2)}%;top:${py(l.ll[1]).toFixed(2)}%" aria-label="${esc(l.city)}">
+      <span class="city-pulse"></span><span class="city-dot"></span><span class="city-name">${esc(l.city)}</span>
+    </button>`).join("");
+
+  // clickable logo-chip clusters
+  const clusters=LOCATIONS.map(l=>{
+    const right=l.cl[0]>60;
+    const pos=right?`right:${(100-l.cl[0]).toFixed(2)}%;top:${l.cl[1]}%`:`left:${l.cl[0]}%;top:${l.cl[1]}%`;
+    const chips=l.insts.map(it=>{
+      const inner=it.logo?`<span class="chip-logo"><img src="${it.logo}" alt="${esc(it.n)}" loading="lazy"></span>`:`<span class="chip-abbr">${esc(it.abbr||it.n)}</span>`;
+      return `<a class="map-chip${it.logo?"":" is-text"}" href="${it.u}" target="_blank" rel="noopener noreferrer" title="${esc(it.n)}">${inner}<span class="chip-name">${esc(it.n)}</span></a>`;
+    }).join("");
+    return `<div class="map-cluster${right?" cl-right":""}" data-id="${l.id}" style="${pos}">${chips}</div>`;
+  }).join("");
+
+  host.innerHTML=`
+    <div class="map-world"><img src="assets/maps/earth.jpg" alt="" style="width:${wW.toFixed(2)}%;height:${wH.toFixed(2)}%;left:${wL.toFixed(2)}%;top:${wT.toFixed(2)}%"></div>
+    <div class="map-tint"></div>
+    <div class="map-grid"></div>
+    <svg class="map-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      <g class="map-conns">${conns}</g>
+      <g class="map-arcs">${arcs}</g>
+    </svg>
+    <div class="map-dots">${dots}</div>
+    <div class="map-clusters">${clusters}</div>`;
+
+  const setActive=id=>{
+    $$(".map-city",host).forEach(c=>c.classList.toggle("active",c.dataset.id===id));
+    $$(".map-cluster",host).forEach(c=>c.classList.toggle("active",c.dataset.id===id));
+    $$(".map-conn",host).forEach(c=>c.classList.toggle("active",c.dataset.id===id));
+  };
+  $$(".map-city",host).forEach(c=>{ ["mouseenter","focus","click"].forEach(ev=>c.addEventListener(ev,()=>setActive(c.dataset.id))); });
+  $$(".map-cluster",host).forEach(c=>c.addEventListener("mouseenter",()=>setActive(c.dataset.id)));
+  setActive("madrid");
+}
+
+/* =========================================================
    3. LANGUAGE
    ========================================================= */
 function applyLang(l){
@@ -340,6 +402,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   renderMarquee();
   renderNews();
   renderVenturesContact();
+  renderMap();
   initShowMore();
   initReveal();
   initLang();
