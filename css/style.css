@@ -21,15 +21,19 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+/* niente scroll orizzontale (fix smartphone: serve anche su html, non solo su body) */
+html{scroll-behavior:smooth;scroll-padding-top:86px;overflow-x:hidden;overflow-x:clip;width:100%}
 body{
   font-family:'Inter',system-ui,sans-serif;
   background:var(--bg);
   color:var(--txt);
   line-height:1.6;
   overflow-x:hidden;
+  overflow-x:clip;
+  width:100%;
   -webkit-font-smoothing:antialiased;
 }
+h2{text-wrap:balance}
 h1,h2,h3,.brand-name,.hero-title{font-family:'Sora',sans-serif;font-weight:700;line-height:1.1;letter-spacing:-.02em}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
@@ -276,13 +280,18 @@ body::before{
 /* ---------- press ---------- */
 .press-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .press{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--panel-brd);
-  border-radius:14px;padding:22px;transition:.4s var(--ease);min-height:150px}
+  border-radius:14px;overflow:hidden;transition:.4s var(--ease);min-height:150px}
 .press:hover{transform:translateY(-6px);border-color:rgba(255,206,107,.4);background:rgba(255,206,107,.04)}
+.press-body{display:flex;flex-direction:column;flex:1;padding:22px}
+.press-photo{aspect-ratio:16/9;overflow:hidden;border-bottom:1px solid var(--panel-brd)}
+.press-photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.press:hover .press-photo img{transform:scale(1.06)}
 .press-outlet{font-family:'Sora';font-weight:700;font-size:1.02rem;margin-bottom:4px}
 .press-year{color:var(--accent-3);font-size:12px;font-weight:600;margin-bottom:12px}
 .press-quote{color:var(--txt-dim);font-size:.92rem;flex:1}
 .press-arrow{color:var(--txt-faint);font-size:13px;margin-top:14px;display:flex;align-items:center;gap:6px;transition:.3s}
 .press:hover .press-arrow{color:var(--accent-3);gap:10px}
+.press-print span{font-style:italic}
 
 /* ---------- contact ---------- */
 #contact .contact-wrap{max-width:760px;margin:0 auto;text-align:center;
@@ -590,6 +599,17 @@ body::before{
   .map-canvas{min-width:720px}
   .aw-row{gap:14px}
   .foot-inner{flex-direction:column;text-align:center}
+  /* rifiniture mobile */
+  .photo-ring{inset:-12px;border-radius:28px}
+  .hero-photo{width:min(320px,78vw)}
+  .marq-logo img{height:24px;max-width:130px}
+  .marquee-track{gap:34px}
+  .contact-emails{flex-direction:column;align-items:center;gap:8px}
+  .vc-mails{flex-direction:column;align-items:center;gap:8px}
+  .cookie-banner{flex-direction:column;align-items:stretch;text-align:center}
+  .cookie-actions{justify-content:center}
+  .about-facts li{flex-direction:column;gap:2px}
+  .fact-v{text-align:left}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}

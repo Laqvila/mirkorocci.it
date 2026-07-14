@@ -156,13 +156,24 @@ function renderAwards(){
 
 function renderPress(){
   const g=$("#press-grid"); if(!g) return;
-  g.innerHTML = PRESS.map(p=>`
-    <a class="press reveal" href="${p.url}" target="_blank" rel="noopener noreferrer">
-      <div class="press-outlet">${esc(p.outlet)}</div>
-      <div class="press-year">${p.year}</div>
-      <p class="press-quote" ${L(p.q)}>${esc(p.q.it)}</p>
-      <div class="press-arrow"><span ${L({en:"Open",es:"Abrir",fr:"Ouvrir"})}>Apri</span> →</div>
-    </a>`).join("");
+  g.innerHTML = PRESS.map(p=>{
+    const clickable = p.url && p.url !== "";
+    const tag = clickable ? "a" : "div";
+    const attrs = clickable ? ` href="${p.url}" target="_blank" rel="noopener noreferrer"` : "";
+    const photo = p.img ? `<div class="press-photo"><img src="${p.img}" alt="" loading="lazy"></div>` : "";
+    const arrow = clickable
+      ? `<div class="press-arrow"><span ${L({en:"Open",es:"Abrir",fr:"Ouvrir"})}>Apri</span> →</div>`
+      : `<div class="press-arrow press-print"><span ${L({en:"Print edition",es:"Edición impresa",fr:"Édition papier"})}>Edizione cartacea</span></div>`;
+    return `<${tag} class="press reveal${p.img?" has-photo":""}"${attrs}>
+      ${photo}
+      <div class="press-body">
+        <div class="press-outlet">${esc(p.outlet)}</div>
+        <div class="press-year">${p.year}</div>
+        <p class="press-quote" ${L(p.q)}>${esc(p.q.it)}</p>
+        ${arrow}
+      </div>
+    </${tag}>`;
+  }).join("");
 }
 
 function renderMarquee(){
