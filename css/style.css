@@ -594,6 +594,11 @@ body.menu-open{overflow:hidden}
    sotto i 1100px (telefoni anche in orizzontale, tablet, "sito
    desktop" degli smartphone) si usa il drawer. */
 @media(max-width:1100px){
+  /* FIX CRITICO: il backdrop-filter sulla navbar la rende "containing block"
+     del drawer fixed (che collassava a una striscia alta ~80px dopo lo
+     scroll). Su schermi piccoli: sfondo pieno, niente blur. */
+  #navbar.scrolled{background:rgba(7,9,17,.96);backdrop-filter:none;-webkit-backdrop-filter:none}
+  body.menu-open #navbar{background:rgba(7,9,17,.96);backdrop-filter:none;-webkit-backdrop-filter:none}
   .nav-links{position:fixed;inset:0 0 0 auto;width:min(84vw,360px);flex-direction:column;align-items:stretch;
     justify-content:flex-start;gap:4px;padding:96px 22px calc(30px + env(safe-area-inset-bottom));
     background:linear-gradient(160deg,#111830 0%,#0a0818 100%);
