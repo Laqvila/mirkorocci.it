@@ -326,9 +326,8 @@ body::before{
 .nav-links a.active-link:not(.nav-cta)::after{transform:scaleX(1)}
 
 /* backdrop del menu mobile + blocco scroll quando aperto */
-.nav-backdrop{position:fixed;inset:0;z-index:76;background:rgba(4,5,10,.6);
-  backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);
-  opacity:0;visibility:hidden;transition:opacity .35s var(--ease),visibility .35s}
+.nav-backdrop{position:fixed;inset:0;z-index:76;background:rgba(4,5,10,.72);
+  opacity:0;visibility:hidden;transition:opacity .3s var(--ease),visibility .3s}
 .nav-backdrop.show{opacity:1;visibility:visible}
 body.menu-open{overflow:hidden}
 
@@ -590,43 +589,53 @@ body.menu-open{overflow:hidden}
   .assoc-gallery{grid-template-columns:1fr 1fr}
   .assoc-press{grid-template-columns:1fr}
 }
-@media(max-width:680px){
-  /* ---- menu mobile ridisegnato: drawer glass + voci numerate a cascata ---- */
+/* ====== MENU A PANNELLO (hamburger) — fino a 1100px ======
+   Con 9 voci la barra inline sta comoda solo su schermi larghi:
+   sotto i 1100px (telefoni anche in orizzontale, tablet, "sito
+   desktop" degli smartphone) si usa il drawer. */
+@media(max-width:1100px){
   .nav-links{position:fixed;inset:0 0 0 auto;width:min(84vw,360px);flex-direction:column;align-items:stretch;
     justify-content:flex-start;gap:4px;padding:96px 22px calc(30px + env(safe-area-inset-bottom));
-    background:linear-gradient(160deg,rgba(13,18,36,.97),rgba(9,7,20,.97));
-    backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
-    transform:translateX(100%);transition:transform .45s var(--ease);z-index:80;
-    border-left:1px solid rgba(91,140,255,.22);
-    box-shadow:-30px 0 80px rgba(0,0,0,.6);overflow-y:auto;counter-reset:navi}
+    background:linear-gradient(160deg,#111830 0%,#0a0818 100%);
+    transform:translateX(100%);transition:transform .38s var(--ease),visibility 0s .38s;z-index:80;
+    border-left:1px solid rgba(91,140,255,.25);
+    box-shadow:-30px 0 80px rgba(0,0,0,.65);overflow-y:auto;counter-reset:navi;
+    visibility:hidden}
+  .nav-links.open{transform:none;visibility:visible;transition:transform .38s var(--ease),visibility 0s 0s}
   .nav-links::before{content:"";position:absolute;top:0;left:0;right:0;height:120px;pointer-events:none;
     background:radial-gradient(90% 100% at 100% 0%,rgba(91,140,255,.16),transparent 70%)}
-  .nav-links.open{transform:none}
   .nav-links a{font-family:'Sora';font-size:19px;font-weight:600;width:100%;padding:13px 14px;
     border-radius:13px;display:flex;align-items:center;gap:14px;color:var(--txt-dim);
-    opacity:0;transform:translateX(28px);transition:opacity .4s var(--ease),transform .4s var(--ease),
-    background .25s,color .25s}
+    touch-action:manipulation;-webkit-tap-highlight-color:transparent;
+    opacity:0;transform:translateX(20px);transition:opacity .3s var(--ease),transform .3s var(--ease),
+    background .2s,color .2s}
   .nav-links a:not(.nav-cta)::before{counter-increment:navi;content:counter(navi,decimal-leading-zero);
     font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--accent);opacity:.85;min-width:22px}
   .nav-links a:not(.nav-cta)::after{display:none}
-  .nav-links a:active,.nav-links a.active-link{background:rgba(91,140,255,.12);color:#fff}
+  .nav-links a:active,.nav-links a.active-link{background:rgba(91,140,255,.14);color:#fff}
   .nav-links.open a{opacity:1;transform:none}
-  .nav-links.open a:nth-child(1){transition-delay:.05s}.nav-links.open a:nth-child(2){transition-delay:.09s}
-  .nav-links.open a:nth-child(3){transition-delay:.13s}.nav-links.open a:nth-child(4){transition-delay:.17s}
-  .nav-links.open a:nth-child(5){transition-delay:.21s}.nav-links.open a:nth-child(6){transition-delay:.25s}
-  .nav-links.open a:nth-child(7){transition-delay:.29s}.nav-links.open a:nth-child(8){transition-delay:.33s}
-  .nav-links.open a:nth-child(9){transition-delay:.37s}
+  .nav-links.open a:nth-child(1){transition-delay:.03s}.nav-links.open a:nth-child(2){transition-delay:.06s}
+  .nav-links.open a:nth-child(3){transition-delay:.09s}.nav-links.open a:nth-child(4){transition-delay:.12s}
+  .nav-links.open a:nth-child(5){transition-delay:.15s}.nav-links.open a:nth-child(6){transition-delay:.18s}
+  .nav-links.open a:nth-child(7){transition-delay:.21s}.nav-links.open a:nth-child(8){transition-delay:.24s}
+  .nav-links.open a:nth-child(9){transition-delay:.27s}
   .nav-links .nav-cta{margin-top:18px;justify-content:center;text-align:center;color:#fff!important;
     box-shadow:0 10px 26px rgba(91,140,255,.35)}
   .menu-toggle{display:flex;width:44px;height:44px;align-items:center;justify-content:center;
     gap:0;border-radius:12px;background:var(--panel);border:1px solid var(--panel-brd);
-    flex-direction:column;z-index:95;transition:border-color .3s}
+    flex-direction:column;z-index:95;transition:border-color .3s;
+    touch-action:manipulation;-webkit-tap-highlight-color:transparent}
   .menu-toggle span{display:block;margin:2.5px 0;transition:.35s var(--ease)}
   .menu-toggle.open{border-color:rgba(91,140,255,.5)}
   .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .menu-toggle.open span:nth-child(2){opacity:0}
   .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  body.menu-open #navbar{background:rgba(7,9,17,.92);backdrop-filter:blur(18px)}
+  body.menu-open #navbar{background:rgba(7,9,17,.96)}
+  /* prestazioni: a menu aperto fermo lo sfondo animato */
+  body.menu-open #bg-canvas{visibility:hidden}
+}
+
+@media(max-width:680px){
   .cards-grid,.pub-grid,.act-grid,.press-grid,.stats-grid{grid-template-columns:1fr}
   .assoc-grid,.assoc-gallery,.news-grid{grid-template-columns:1fr}
   .map-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--r)}
