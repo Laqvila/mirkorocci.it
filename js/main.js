@@ -338,9 +338,23 @@ function initChrome(){
   const nav=$("#navbar"),prog=$("#scroll-progress"),toTop=$("#to-top");
   const onScroll=()=>{const y=window.scrollY;nav.classList.toggle("scrolled",y>30);const h=document.documentElement.scrollHeight-window.innerHeight;prog.style.width=(h>0?(y/h*100):0)+"%";toTop.style.opacity=y>600?"1":"0";};
   window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+  /* --- menu mobile: drawer + backdrop + scroll lock --- */
   const menu=$("#menu-toggle"),links=$(".nav-links");
-  menu.addEventListener("click",()=>{menu.classList.toggle("open");links.classList.toggle("open");});
-  $$(".nav-links a").forEach(a=>a.addEventListener("click",()=>{menu.classList.remove("open");links.classList.remove("open");}));
+  const backdrop=document.createElement("div");
+  backdrop.className="nav-backdrop";
+  document.body.appendChild(backdrop);
+  menu.setAttribute("aria-expanded","false");
+  const setMenu=(open)=>{
+    menu.classList.toggle("open",open);
+    links.classList.toggle("open",open);
+    backdrop.classList.toggle("show",open);
+    document.body.classList.toggle("menu-open",open);
+    menu.setAttribute("aria-expanded",open?"true":"false");
+  };
+  menu.addEventListener("click",()=>setMenu(!links.classList.contains("open")));
+  backdrop.addEventListener("click",()=>setMenu(false));
+  document.addEventListener("keydown",e=>{ if(e.key==="Escape") setMenu(false); });
+  $$(".nav-links a").forEach(a=>a.addEventListener("click",()=>setMenu(false)));
   toTop.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
   $("#year").textContent=new Date().getFullYear();
   const navMap={};$$(".nav-links a").forEach(a=>navMap[a.getAttribute("href")]=a);
