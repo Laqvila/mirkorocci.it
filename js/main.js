@@ -112,15 +112,26 @@ function renderAssoc333(){
       <h4 ${L(h.t)}>${esc(h.t.it)}</h4>
       <p ${L(h.d)}>${esc(h.d.it)}</p>
     </article>`).join("");
-  const press=$("#assoc-press");
-  if(press) press.innerHTML =
-    `<div class="assoc-press-title" data-en="In the press" data-es="En la prensa" data-fr="Dans la presse">Sulla stampa</div>` +
-    ASSOC333.press.map(p=>`
-      <a class="assoc-press-item reveal" href="${p.url}" target="_blank" rel="noopener noreferrer">
-        <span class="app-outlet">${esc(p.outlet)}</span>
-        <span class="app-quote" ${L(p.q)}>${esc(p.q.it)}</span>
-        <span class="app-arrow">→</span>
-      </a>`).join("");
+  const pg=$("#assoc-press-grid");
+  if(pg && typeof ASSOC_PRESS!=="undefined") pg.innerHTML = ASSOC_PRESS.map(pressCard).join("");
+}
+
+function renderFeatured(){
+  const g=$("#featured-grid"); if(!g||typeof FEATURED==="undefined") return;
+  g.innerHTML = FEATURED.map(f=>{
+    const internal = f.url && f.url.charAt(0)==="#";
+    const attrs = internal ? ` href="${f.url}"` : ` href="${f.url}" target="_blank" rel="noopener noreferrer"`;
+    return `<a class="feat reveal"${attrs}>
+      <div class="feat-photo"><img src="${f.img}" alt="" loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-top"><span class="news-tag" ${L(f.tag)}>${esc(f.tag.it)}</span>
+          <span class="feat-date" ${L(f.date)}>${esc(f.date.it)}</span></div>
+        <h3 class="feat-title" ${L(f.t)}>${esc(f.t.it)}</h3>
+        <p class="feat-desc" ${L(f.d)}>${esc(f.d.it)}</p>
+        <span class="feat-link"><span ${L({en:"Find out more",es:"Descubre más",fr:"En savoir plus"})}>Scopri di più</span>${ext}</span>
+      </div>
+    </a>`;
+  }).join("");
 }
 
 function renderTimeline(){
@@ -296,7 +307,8 @@ function updateMoreLabels(){
 }
 function initShowMore(){
   $$(".more-btn").forEach(b=>{
-    const grid = b.id==="pub-more" ? $("#pub-grid") : $("#press-grid");
+    const grid = b.dataset.target ? $(b.dataset.target)
+      : (b.id==="pub-more" ? $("#pub-grid") : $("#press-grid"));
     if(!grid) return;
     b.dataset.expanded="0";
     b.addEventListener("click",()=>{
@@ -431,6 +443,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   renderAwards();
   renderPress();
   renderInno99();
+  renderFeatured();
   renderMarquee();
   renderNews();
   renderVenturesContact();

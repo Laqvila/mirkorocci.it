@@ -45,11 +45,12 @@ const VENTURES_CONTACT = {
 const INSTITUTIONS_LOGOS = [
   { n:"Massachusetts Institute of Technology", l:"assets/logos/mit.svg", u:"https://www.mit.edu/" },
   { n:"Harvard University", l:"assets/logos/harvard2.svg", u:"https://www.harvard.edu/" },
-  { n:"Scuola Normale Superiore", l:"assets/logos/sns.svg", u:"https://www.sns.it/" },
-  { n:"Thales Alenia Space", l:"assets/logos/thales.svg", u:"https://www.thalesaleniaspace.com/" },
+  { n:"Scuola Normale Superiore", l:"assets/logos/sns-color.png", u:"https://www.sns.it/" },
+  { n:"Thales Alenia Space", l:"assets/logos/thales-color.svg", u:"https://www.thalesaleniaspace.com/" },
   { n:"Universidad Complutense de Madrid", l:"assets/logos/ucm.svg", u:"https://www.ucm.es/" },
   { n:"Universidad Politécnica de Madrid", l:"assets/logos/upm.png", u:"https://www.upm.es/" },
-  { n:"Università degli Studi dell'Aquila", l:"assets/logos/univaq.svg", u:"https://www.univaq.it/" }
+  { n:"Università degli Studi dell'Aquila", l:"assets/logos/univaq.svg", u:"https://www.univaq.it/" },
+  { n:"CNR — Consiglio Nazionale delle Ricerche", l:"assets/logos/cnr-color.svg", u:"https://www.cnr.it/" }
 ];
 
 /* ---------- MAP LOCATIONS (interactive geographic map) ----------
@@ -63,13 +64,13 @@ const LOCATIONS = [
     insts:[
       { n:"Universidad Complutense de Madrid", u:"https://www.ucm.es/", logo:"assets/logos/ucm.svg" },
       { n:"Universidad Politécnica de Madrid", u:"https://www.upm.es/", logo:"assets/logos/upm.png" },
-      { n:"Campus de Excelencia Internacional Moncloa", u:"http://www.campusmoncloa.es/", abbr:"Campus Moncloa" },
-      { n:"ICMM — CSIC", u:"https://www.icmm.csic.es/", abbr:"ICMM · CSIC" }
+      { n:"Campus de Excelencia Internacional Moncloa", u:"http://www.campusmoncloa.es/", logo:"assets/logos/moncloa.gif" },
+      { n:"ICMM — CSIC", u:"https://www.icmm.csic.es/", logo:"assets/logos/csic-color.svg" }
     ] },
   { id:"pisa", ll:[10.40,43.72], cl:[55,6], city:"Pisa", country:{ it:"Italia", en:"Italy", es:"Italia", fr:"Italie" }, years:"2015 — 2021",
     insts:[
-      { n:"NEST — Scuola Normale Superiore", u:"https://www.sns.it/", logo:"assets/logos/sns.svg" },
-      { n:"CNR Nano — NEST", u:"https://www.nano.cnr.it/", logo:"assets/logos/cnr.png" }
+      { n:"NEST — Scuola Normale Superiore", u:"https://www.sns.it/", logo:"assets/logos/sns-color.png" },
+      { n:"CNR Nano — NEST", u:"https://www.nano.cnr.it/", logo:"assets/logos/cnr-color.svg" }
     ] },
   { id:"laquila", ll:[13.40,42.35], cl:[87,74], city:"L'Aquila", country:{ it:"Italia", en:"Italy", es:"Italia", fr:"Italie" }, years:"2002 — 2009 · 2021 —",
     insts:[ { n:"Università degli Studi dell'Aquila", u:"https://www.univaq.it/", logo:"assets/logos/univaq.svg" } ] }
@@ -96,13 +97,6 @@ const ASSOC333 = {
     { icon:"rocket", t:{ it:"Visione tecnologica", en:"Technological vision", es:"Visión tecnológica", fr:"Vision technologique" },
       d:{ it:"La proposta «far adottare L'Aquila a Elon Musk» come laboratorio di rivoluzione tecnologica ha avuto eco nazionale.", en:"The proposal to 'have Elon Musk adopt L'Aquila' as a lab for technological revolution echoed nationwide.", es:"La propuesta de «que Elon Musk adopte L'Aquila» como laboratorio de revolución tecnológica tuvo eco nacional.", fr:"La proposition de « faire adopter L'Aquila par Elon Musk » comme laboratoire de révolution technologique a eu un écho national." } }
   ],
-  press:[
-    { outlet:"L'Aquila Blog", url:"https://www.laquilablog.it/alliis-daosta-presentata-la-masterclass-2026/", q:{ it:"All'IIS d'Aosta presentata la Masterclass 2026", en:"Masterclass 2026 unveiled at IIS d'Aosta", es:"Presentada la Masterclass 2026 en el IIS d'Aosta", fr:"Présentation de la Masterclass 2026 à l'IIS d'Aosta" } },
-    { outlet:"Abruzzoweb", url:"https://abruzzoweb.it/facciamo-adottare-laquila-da-elon-musk-per-laboratorio-rivoluzione-tecnologica-la-proposta-di-3-33/", q:{ it:"«Facciamo adottare L'Aquila da Elon Musk»", en:"'Let's have Elon Musk adopt L'Aquila'", es:"«Que Elon Musk adopte L'Aquila»", fr:"« Faisons adopter L'Aquila par Elon Musk »" } },
-    { outlet:"Radio L'Aquila 1", url:"https://www.radiolaquila1.it/2025/01/16/amlaquila-masterclass-2025-al-via-la-terza-edizione/", q:{ it:"Masterclass 2025: al via la terza edizione", en:"Masterclass 2025: the third edition begins", es:"Masterclass 2025: arranca la tercera edición", fr:"Masterclass 2025 : lancement de la troisième édition" } },
-    { outlet:"L'Aquila Blog", url:"https://www.laquilablog.it/a-laquila-la-prima-masterclass-di-associazione-333-e-centro-studi-la-meta/", q:{ it:"La prima Masterclass dell'associazione 3:33", en:"Association 3:33's first Masterclass", es:"La primera Masterclass de la asociación 3:33", fr:"La première Masterclass de l'association 3:33" } },
-    { outlet:"Abruzzoweb", url:"https://abruzzoweb.it/associazione-3-33-da-laquila-progetto-sociale-di-rinascita-concorso-in-memoria-dottor-zaraket/", q:{ it:"Progetto sociale di rinascita e concorso in memoria del dott. Zaraket", en:"A social rebirth project and prize in memory of Dr. Zaraket", es:"Proyecto social de renacimiento y concurso en memoria del dr. Zaraket", fr:"Projet social de renaissance et concours en mémoire du Dr Zaraket" } }
-  ]
 };
 
 /* ---------- CAREER TIMELINE ---------- */

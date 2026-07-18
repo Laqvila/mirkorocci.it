@@ -153,6 +153,15 @@
   <div class="marquee" id="marquee"><div class="marquee-track" id="marquee-track"></div></div>
 </section>
 
+<!-- IN PRIMO PIANO -->
+<section id="featured" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow" data-en="Spotlight" data-es="En portada" data-fr="À la une">In primo piano</span>
+    <h2 data-en="Latest news &amp; events" data-es="Últimas noticias y eventos" data-fr="Dernières actualités et événements">Le ultime notizie ed eventi</h2>
+  </div>
+  <div class="featured-grid" id="featured-grid"></div>
+</section>
+
 <!-- STATS -->
 <section id="stats" class="section-narrow">
   <div class="stats-grid">
@@ -270,7 +279,7 @@
     </p>
   </div>
   <div class="pub-grid collapsed" id="pub-grid"></div>
-  <div class="more-wrap reveal"><button class="btn btn-ghost more-btn" id="pub-more" data-more="6"
+  <div class="more-wrap reveal"><button class="btn btn-ghost more-btn" id="pub-more" data-target="#pub-grid" data-more="6"
     data-en="Show more papers" data-es="Ver más artículos" data-fr="Voir plus d'articles"
     data-less-it="Mostra meno" data-less-en="Show less" data-less-es="Ver menos" data-less-fr="Voir moins">Mostra altri articoli</button></div>
   <div class="pub-foot reveal">
@@ -308,7 +317,11 @@
   </div>
   <div class="assoc-gallery" id="assoc-gallery"></div>
   <div class="assoc-grid" id="assoc-grid"></div>
-  <div class="assoc-press" id="assoc-press"></div>
+  <div class="assoc-press-title reveal" data-en="In the press" data-es="En la prensa" data-fr="Dans la presse">Sulla stampa</div>
+  <div class="press-grid collapsed" id="assoc-press-grid"></div>
+  <div class="more-wrap reveal"><button class="btn btn-ghost more-btn" id="assoc-more" data-target="#assoc-press-grid" data-more="6"
+    data-en="Show all press" data-es="Ver toda la prensa" data-fr="Voir toute la presse"
+    data-less-it="Mostra meno" data-less-en="Show less" data-less-es="Ver menos" data-less-fr="Voir moins">Mostra tutta la rassegna</button></div>
   <div class="assoc-foot reveal">
     <a href="https://www.3e33.it/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-en="Visit 3e33.it" data-es="Visita 3e33.it" data-fr="Visiter 3e33.it">Visita 3e33.it</a>
   </div>
@@ -325,7 +338,7 @@
   </div>
   <div class="press-grid inno99-grid" id="inno99-grid"></div>
   <div class="assoc-foot reveal">
-    <a href="https://www.inno-valley.it/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-en="Discover Innovalley" data-es="Descubre Innovalley" data-fr="Découvrir Innovalley">Scopri Innovalley</a>
+    <a href="https://inno99.it/" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-en="Visit inno99.it" data-es="Visita inno99.it" data-fr="Visiter inno99.it">Visita inno99.it</a>
   </div>
 </section>
 
@@ -417,7 +430,7 @@
     </p>
   </div>
   <div class="press-grid collapsed" id="press-grid"></div>
-  <div class="more-wrap reveal"><button class="btn btn-ghost more-btn" id="press-more" data-more="6"
+  <div class="more-wrap reveal"><button class="btn btn-ghost more-btn" id="press-more" data-target="#press-grid" data-more="6"
     data-en="Show more press" data-es="Ver más prensa" data-fr="Voir plus de presse"
     data-less-it="Mostra meno" data-less-en="Show less" data-less-es="Ver menos" data-less-fr="Voir moins">Mostra altra stampa</button></div>
 </section>
