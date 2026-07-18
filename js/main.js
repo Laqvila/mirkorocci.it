@@ -154,26 +154,31 @@ function renderAwards(){
   }).join("");
 }
 
+function pressCard(p){
+  const clickable = p.url && p.url !== "";
+  const tag = clickable ? "a" : "div";
+  const attrs = clickable ? ` href="${p.url}" target="_blank" rel="noopener noreferrer"` : "";
+  const photo = p.img ? `<div class="press-photo"><img src="${p.img}" alt="" loading="lazy"></div>` : "";
+  const arrow = clickable
+    ? `<div class="press-arrow"><span ${L({en:"Open",es:"Abrir",fr:"Ouvrir"})}>Apri</span> →</div>`
+    : `<div class="press-arrow press-print"><span ${L({en:"Print edition",es:"Edición impresa",fr:"Édition papier"})}>Edizione cartacea</span></div>`;
+  return `<${tag} class="press reveal${p.img?" has-photo":""}"${attrs}>
+    ${photo}
+    <div class="press-body">
+      <div class="press-outlet">${esc(p.outlet)}</div>
+      <div class="press-year">${p.year}</div>
+      <p class="press-quote" ${L(p.q)}>${esc(p.q.it)}</p>
+      ${arrow}
+    </div>
+  </${tag}>`;
+}
 function renderPress(){
   const g=$("#press-grid"); if(!g) return;
-  g.innerHTML = PRESS.map(p=>{
-    const clickable = p.url && p.url !== "";
-    const tag = clickable ? "a" : "div";
-    const attrs = clickable ? ` href="${p.url}" target="_blank" rel="noopener noreferrer"` : "";
-    const photo = p.img ? `<div class="press-photo"><img src="${p.img}" alt="" loading="lazy"></div>` : "";
-    const arrow = clickable
-      ? `<div class="press-arrow"><span ${L({en:"Open",es:"Abrir",fr:"Ouvrir"})}>Apri</span> →</div>`
-      : `<div class="press-arrow press-print"><span ${L({en:"Print edition",es:"Edición impresa",fr:"Édition papier"})}>Edizione cartacea</span></div>`;
-    return `<${tag} class="press reveal${p.img?" has-photo":""}"${attrs}>
-      ${photo}
-      <div class="press-body">
-        <div class="press-outlet">${esc(p.outlet)}</div>
-        <div class="press-year">${p.year}</div>
-        <p class="press-quote" ${L(p.q)}>${esc(p.q.it)}</p>
-        ${arrow}
-      </div>
-    </${tag}>`;
-  }).join("");
+  g.innerHTML = PRESS.map(pressCard).join("");
+}
+function renderInno99(){
+  const g=$("#inno99-grid"); if(!g||typeof INNO99==="undefined") return;
+  g.innerHTML = INNO99.map(pressCard).join("");
 }
 
 function renderMarquee(){
@@ -186,7 +191,8 @@ function renderMarquee(){
 function renderNews(){
   const g=$("#news-grid"); if(!g||typeof NEWS==="undefined") return;
   g.innerHTML = NEWS.map(n=>`
-    <article class="news reveal tilt">
+    <article class="news reveal tilt${n.img?" has-photo":""}">
+      ${n.img?`<div class="news-photo"><img src="${n.img}" alt="" loading="lazy"></div>`:""}
       <div class="news-top">
         <span class="news-date" ${L(n.date)}>${esc(n.date.it)}</span>
         <span class="news-tag" ${L(n.tag)}>${esc(n.tag.it)}</span>
@@ -424,6 +430,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   renderTimeline();
   renderAwards();
   renderPress();
+  renderInno99();
   renderMarquee();
   renderNews();
   renderVenturesContact();

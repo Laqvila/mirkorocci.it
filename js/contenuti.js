@@ -39,8 +39,13 @@
      t    : titolo della novità
      d    : descrizione breve
 
+   img  : foto della card (SEMPRE consigliata quando c'è un link: usa la foto
+          principale dell'articolo, salvata in assets/press/). Senza img la
+          card è solo testo.
+
    ▼ MODELLO DA COPIARE (togli il // davanti alle righe per attivarlo):
    // { date:{ it:"Mese Anno" }, tag:NTAG.award, url:"https://...",
+   //   img:"assets/press/foto.jpg",
    //   t:{ it:"Titolo della novità" },
    //   d:{ it:"Descrizione in una o due frasi." } },
    ============================================================================ */
@@ -54,20 +59,18 @@ const NTAG = {
 
 const NEWS = [
 
-  /* ▼▼▼ AGGIUNGI QUI LE NUOVE NOVITÀ (la più recente in alto) ▼▼▼ */
-
-  { date:{ it:"Lug 2026", en:"Jul 2026", es:"Jul 2026", fr:"Juil. 2026" }, tag:NTAG.social,
-    url:"https://www.laquilablog.it/inno99-debutta-allaquila-sala-gremita-per-il-primo-inno-talk/",
-    t:{ it:"Inno99 debutta all'Aquila: tutto esaurito al primo Inno Talk", en:"Inno99 debuts in L'Aquila: sold-out first Inno Talk", es:"Inno99 debuta en L'Aquila: lleno total en el primer Inno Talk", fr:"Inno99 débute à L'Aquila : salle comble pour le premier Inno Talk" },
-    d:{ it:"Il 2 luglio, come co-ideatore e curatore del ciclo di Innovalley, ho condotto il primo seminario-aperitivo dell'innovazione: sala gremita e grande eco sulla stampa, da Il Centro alle testate online.", en:"On 2 July, as co-creator and curator of Innovalley's series, I hosted the first innovation aperitif-seminar: packed house and wide press coverage, from Il Centro to online outlets.", es:"El 2 de julio, como coideador y curador del ciclo de Innovalley, conduje el primer seminario-aperitivo de la innovación: sala llena y gran eco en la prensa.", fr:"Le 2 juillet, en tant que co-créateur et curateur du cycle d'Innovalley, j'ai animé le premier séminaire-apéritif de l'innovation : salle comble et large écho dans la presse." } },
+  /* ▼▼▼ AGGIUNGI QUI LE NUOVE NOVITÀ (la più recente in alto) ▼▼▼
+     (le notizie di Inno99 NON vanno qui: mettile nel blocco INNO99 più sotto) */
 
   { date:{ it:"2026", en:"2026", es:"2026", fr:"2026" }, tag:NTAG.social,
     url:"https://www.laquilablog.it/alliis-daosta-presentata-la-masterclass-2026/",
+    img:"assets/press/masterclass2026.jpg",
     t:{ it:"Presentata la Masterclass 2026 all'IIS d'Aosta", en:"Masterclass 2026 unveiled at IIS d'Aosta", es:"Presentada la Masterclass 2026 en el IIS d'Aosta", fr:"Présentation de la Masterclass 2026 à l'IIS d'Aosta" },
     d:{ it:"Quarta edizione del percorso formativo dell'associazione 3:33 per gli studenti delle scuole superiori dell'Aquila.", en:"Fourth edition of association 3:33's training programme for high-school students in L'Aquila.", es:"Cuarta edición del itinerario formativo de la asociación 3:33 para estudiantes de secundaria de L'Aquila.", fr:"Quatrième édition du parcours de formation de l'association 3:33 pour les lycéens de L'Aquila." } },
 
   { date:{ it:"Gen 2026", en:"Jan 2026", es:"Ene 2026", fr:"Janv. 2026" }, tag:NTAG.award,
     url:"https://news-town.it/2026/03/09/persone/allaquilano-mirko-rocci-una-menzione-speciale-nellinnovation-award-di-leonardo/",
+    img:"assets/press/newstown-leonardo.jpg",
     t:{ it:"Menzione Speciale ai Leonardo Innovation Awards con il progetto G-DEPM", en:"Special Mention at the Leonardo Innovation Awards with the G-DEPM project", es:"Mención Especial en los Leonardo Innovation Awards con el proyecto G-DEPM", fr:"Mention Spéciale aux Leonardo Innovation Awards avec le projet G-DEPM" },
     d:{ it:"Unica menzione speciale assegnata a Thales Alenia Space, premio consegnato dall'AD Roberto Cingolani.", en:"The only special mention awarded to Thales Alenia Space, presented by CEO Roberto Cingolani.", es:"La única mención especial otorgada a Thales Alenia Space, entregada por el CEO Roberto Cingolani.", fr:"La seule mention spéciale décernée à Thales Alenia Space, remise par le PDG Roberto Cingolani." } },
 
@@ -84,6 +87,7 @@ const NEWS = [
     d:{ it:"Università Sapienza, Roma. Talk sulle tecnologie SiP avanzate per lo spazio e sui materiali 2D.", en:"Sapienza University, Rome. Talk on advanced SiP space technologies and 2D materials.", es:"Universidad Sapienza, Roma. Charla sobre tecnologías SiP avanzadas para el espacio y materiales 2D.", fr:"Université Sapienza, Rome. Conférence sur les technologies SiP avancées pour l'espace et les matériaux 2D." } },
 
   { date:{ it:"2025", en:"2025", es:"2025", fr:"2025" }, tag:NTAG.pub, url:"https://doi.org/10.1088/1361-6633/add9c5",
+    img:"assets/press/rpp-cover.jpg",
     t:{ it:"Nuovo articolo su Reports on Progress in Physics", en:"New paper in Reports on Progress in Physics", es:"Nuevo artículo en Reports on Progress in Physics", fr:"Nouvel article dans Reports on Progress in Physics" },
     d:{ it:"Ferromagnetismo potenziato in monostrati 2D di Cr₂Te₃ accoppiati a un isolante topologico.", en:"Enhanced ferromagnetism in 2D Cr₂Te₃ monolayers coupled to a topological insulator.", es:"Ferromagnetismo potenciado en monocapas 2D de Cr₂Te₃ acopladas a un aislante topológico.", fr:"Ferromagnétisme renforcé dans des monocouches 2D de Cr₂Te₃ couplées à un isolant topologique." } },
 
@@ -115,18 +119,9 @@ const NEWS = [
    ============================================================================ */
 const PRESS = [
 
-  /* ▼▼▼ AGGIUNGI QUI I NUOVI ARTICOLI (il più recente in alto) ▼▼▼ */
+  /* ▼▼▼ AGGIUNGI QUI I NUOVI ARTICOLI (il più recente in alto) ▼▼▼
+     (gli articoli su Inno99 NON vanno qui: mettili nel blocco INNO99 più sotto) */
 
-  { outlet:"Il Centro", year:"2026", url:"", img:"",
-    q:{ it:"«Inno Talk sbarca in città e segna il tutto esaurito» — edizione cartacea del 4 luglio 2026.", en:"'Inno Talk lands in town and sells out' — print edition, 4 July 2026.", es:"«Inno Talk llega a la ciudad y agota las entradas» — edición impresa del 4 de julio de 2026.", fr:"« Inno Talk débarque en ville et affiche complet » — édition papier du 4 juillet 2026." } },
-  { outlet:"StreamingWorld TV", year:"2026", url:"https://streamingworldtv.it/le-idee-migliori-nascono-davanti-a-un-aperitivo-il-primo-inno-talk-conquista-laquila-sala-gremita-per-il-debutto-di-inno99/", img:"assets/press/innotalk-streamingworld.jpg",
-    q:{ it:"«Le idee migliori nascono davanti a un aperitivo»: il primo Inno Talk conquista L'Aquila.", en:"'The best ideas are born over an aperitif': the first Inno Talk wins over L'Aquila.", es:"«Las mejores ideas nacen ante un aperitivo»: el primer Inno Talk conquista L'Aquila.", fr:"« Les meilleures idées naissent autour d'un apéritif » : le premier Inno Talk conquiert L'Aquila." } },
-  { outlet:"L'Aquila Blog", year:"2026", url:"https://www.laquilablog.it/inno99-debutta-allaquila-sala-gremita-per-il-primo-inno-talk/", img:"assets/press/innotalk-laquilablog.jpg",
-    q:{ it:"Inno99 debutta all'Aquila: sala gremita per il primo Inno Talk.", en:"Inno99 debuts in L'Aquila: packed house for the first Inno Talk.", es:"Inno99 debuta en L'Aquila: sala llena en el primer Inno Talk.", fr:"Inno99 débute à L'Aquila : salle comble pour le premier Inno Talk." } },
-  { outlet:"Abruzzosera", year:"2026", url:"https://abruzzosera.it/cultura-e-societa/laquila-debutta-inno99-gli-aperitivi-dellinnovazione-aprono-il-programma-di-innovalley/", img:"assets/press/innotalk-abruzzosera.jpg",
-    q:{ it:"A L'Aquila debutta Inno99: gli «aperitivi dell'innovazione» aprono il programma di Innovalley.", en:"Inno99 debuts in L'Aquila: the 'innovation aperitifs' open Innovalley's programme.", es:"Debuta Inno99 en L'Aquila: los «aperitivos de la innovación» abren el programa de Innovalley.", fr:"Inno99 débute à L'Aquila : les « apéritifs de l'innovation » ouvrent le programme d'Innovalley." } },
-  { outlet:"L'Aquila Blog", year:"2026", url:"https://www.laquilablog.it/inno99-porta-linnovazione-allaquila-primo-talk-il-2-luglio/", img:"assets/press/innotalk-annuncio.jpg",
-    q:{ it:"Inno99 porta l'innovazione all'Aquila: primo talk il 2 luglio.", en:"Inno99 brings innovation to L'Aquila: first talk on 2 July.", es:"Inno99 lleva la innovación a L'Aquila: primer talk el 2 de julio.", fr:"Inno99 apporte l'innovation à L'Aquila : premier talk le 2 juillet." } },
   { outlet:"L'Aquila Blog", year:"2026", url:"https://www.laquilablog.it/alliis-daosta-presentata-la-masterclass-2026/", img:"assets/press/masterclass2026.jpg", q:{ it:"All'IIS d'Aosta presentata la Masterclass 2026.", en:"Masterclass 2026 unveiled at IIS d'Aosta.", es:"Presentada la Masterclass 2026 en el IIS d'Aosta.", fr:"Présentation de la Masterclass 2026 à l'IIS d'Aosta." } },
   { outlet:"News-Town", year:"2026", url:"https://news-town.it/2026/03/09/persone/allaquilano-mirko-rocci-una-menzione-speciale-nellinnovation-award-di-leonardo/", img:"assets/press/newstown-leonardo.jpg", q:{ it:"«All'aquilano Mirko Rocci una menzione speciale nell'Innovation Award di Leonardo.»", en:"'L'Aquila's Mirko Rocci receives a special mention at Leonardo's Innovation Award.'", es:"«Al aquilano Mirko Rocci una mención especial en el Innovation Award de Leonardo.»", fr:"« Le natif de L'Aquila Mirko Rocci reçoit une mention spéciale à l'Innovation Award de Leonardo. »" } },
   { outlet:"Leonardo", year:"2025", url:"https://www.leonardo.com/en/news-and-stories-detail/-/detail/innovation-award-2025-edizione-record", img:"assets/press/leonardo-award.png", q:{ it:"Innovation Award 2025: edizione record, il progetto G-DEPM tra i protagonisti.", en:"Innovation Award 2025: a record edition, with the G-DEPM project among the protagonists.", es:"Innovation Award 2025: edición récord, con el proyecto G-DEPM entre los protagonistas.", fr:"Innovation Award 2025 : édition record, avec le projet G-DEPM parmi les protagonistes." } },
@@ -140,6 +135,37 @@ const PRESS = [
   { outlet:"N3ws Today", year:"2020", url:"https://n3ws.today/categories/science/first-quantum-phase-supercurrent-battery-ever-developed", q:{ it:"«First quantum phase 'supercurrent' battery ever developed.»", en:"'First quantum phase ‘supercurrent’ battery ever developed.'", es:"«First quantum phase ‘supercurrent’ battery ever developed.»", fr:"« First quantum phase ‘supercurrent’ battery ever developed. »" } },
   { outlet:"RAI 3 — Memex", year:"2017", url:"https://normalenews.sns.it/memex-i-luoghi-della-scienza-parla-di-pisa-e-del-laboratorio-nest", img:"assets/press/sns-memex.jpg", q:{ it:"«Memex — I luoghi della Scienza»: dal laboratorio NEST della Scuola Normale.", en:"'Memex — Places of Science': from the NEST lab of the Scuola Normale.", es:"«Memex — Los lugares de la Ciencia»: desde el laboratorio NEST de la Scuola Normale.", fr:"« Memex — Les lieux de la Science » : depuis le laboratoire NEST de la Scuola Normale." } },
   { outlet:"RAI Scuola", year:"2015", url:"http://www.laboratorionest.it/nestinternet-festival-2015/", img:"assets/press/nest-festival.jpg", q:{ it:"«Lo Spazio nel Nanomondo» — Internet Festival.", en:"'Space in the Nanoworld' — Internet Festival.", es:"«El Espacio en el Nanomundo» — Internet Festival.", fr:"« L'Espace dans le Nanomonde » — Internet Festival." } }
+
+];
+
+
+/* ============================================================================
+   2-bis) INNO99  ►  sezione "Inno99 — gli aperitivi dell'innovazione"
+   ----------------------------------------------------------------------------
+   TUTTE le notizie e gli articoli su Inno99 / Inno-Talks vanno QUI (non in
+   NEWS né in PRESS). Stesso formato delle voci della rassegna stampa:
+   outlet, year, url (url:"" se cartaceo), img (foto principale
+   dell'articolo, salvata in assets/press/), q (titolo/citazione).
+   Le voci più recenti in alto.
+
+   ▼ MODELLO DA COPIARE:
+   // { outlet:"Nome Testata", year:"2026", url:"https://...", img:"assets/press/foto.jpg",
+   //   q:{ it:"Titolo o citazione dell'articolo." } },
+   ============================================================================ */
+const INNO99 = [
+
+  /* ▼▼▼ AGGIUNGI QUI LE NUOVE NOTIZIE DI INNO99 (la più recente in alto) ▼▼▼ */
+
+  { outlet:"Il Centro", year:"2026", url:"", img:"",
+    q:{ it:"«Inno Talk sbarca in città e segna il tutto esaurito» — edizione cartacea del 4 luglio 2026.", en:"'Inno Talk lands in town and sells out' — print edition, 4 July 2026.", es:"«Inno Talk llega a la ciudad y agota las entradas» — edición impresa del 4 de julio de 2026.", fr:"« Inno Talk débarque en ville et affiche complet » — édition papier du 4 juillet 2026." } },
+  { outlet:"StreamingWorld TV", year:"2026", url:"https://streamingworldtv.it/le-idee-migliori-nascono-davanti-a-un-aperitivo-il-primo-inno-talk-conquista-laquila-sala-gremita-per-il-debutto-di-inno99/", img:"assets/press/innotalk-streamingworld.jpg",
+    q:{ it:"«Le idee migliori nascono davanti a un aperitivo»: il primo Inno Talk conquista L'Aquila.", en:"'The best ideas are born over an aperitif': the first Inno Talk wins over L'Aquila.", es:"«Las mejores ideas nacen ante un aperitivo»: el primer Inno Talk conquista L'Aquila.", fr:"« Les meilleures idées naissent autour d'un apéritif » : le premier Inno Talk conquiert L'Aquila." } },
+  { outlet:"L'Aquila Blog", year:"2026", url:"https://www.laquilablog.it/inno99-debutta-allaquila-sala-gremita-per-il-primo-inno-talk/", img:"assets/press/innotalk-laquilablog.jpg",
+    q:{ it:"Inno99 debutta all'Aquila: sala gremita per il primo Inno Talk.", en:"Inno99 debuts in L'Aquila: packed house for the first Inno Talk.", es:"Inno99 debuta en L'Aquila: sala llena en el primer Inno Talk.", fr:"Inno99 débute à L'Aquila : salle comble pour le premier Inno Talk." } },
+  { outlet:"Abruzzosera", year:"2026", url:"https://abruzzosera.it/cultura-e-societa/laquila-debutta-inno99-gli-aperitivi-dellinnovazione-aprono-il-programma-di-innovalley/", img:"assets/press/innotalk-abruzzosera.jpg",
+    q:{ it:"A L'Aquila debutta Inno99: gli «aperitivi dell'innovazione» aprono il programma di Innovalley.", en:"Inno99 debuts in L'Aquila: the 'innovation aperitifs' open Innovalley's programme.", es:"Debuta Inno99 en L'Aquila: los «aperitivos de la innovación» abren el programa de Innovalley.", fr:"Inno99 débute à L'Aquila : les « apéritifs de l'innovation » ouvrent le programme d'Innovalley." } },
+  { outlet:"L'Aquila Blog", year:"2026", url:"https://www.laquilablog.it/inno99-porta-linnovazione-allaquila-primo-talk-il-2-luglio/", img:"assets/press/innotalk-annuncio.jpg",
+    q:{ it:"Inno99 porta l'innovazione all'Aquila: primo talk il 2 luglio.", en:"Inno99 brings innovation to L'Aquila: first talk on 2 July.", es:"Inno99 lleva la innovación a L'Aquila: primer talk el 2 de julio.", fr:"Inno99 apporte l'innovation à L'Aquila : premier talk le 2 juillet." } }
 
 ];
 
