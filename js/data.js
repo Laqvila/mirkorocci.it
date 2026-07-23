@@ -45,7 +45,7 @@ const VENTURES_CONTACT = {
 const INSTITUTIONS_LOGOS = [
   { n:"Massachusetts Institute of Technology", l:"assets/logos/mit.svg", u:"https://www.mit.edu/" },
   { n:"Harvard University", l:"assets/logos/harvard2.svg", u:"https://www.harvard.edu/" },
-  { n:"Scuola Normale Superiore", l:"assets/logos/sns-color.png", u:"https://www.sns.it/" },
+  { n:"NEST — Scuola Normale Superiore", l:"assets/logos/nest-color.png", u:"https://www.laboratorionest.it/" },
   { n:"Thales Alenia Space", l:"assets/logos/thales-color.svg", u:"https://www.thalesaleniaspace.com/" },
   { n:"Universidad Complutense de Madrid", l:"assets/logos/ucm.svg", u:"https://www.ucm.es/" },
   { n:"Universidad Politécnica de Madrid", l:"assets/logos/upm.png", u:"https://www.upm.es/" },
@@ -69,7 +69,7 @@ const LOCATIONS = [
     ] },
   { id:"pisa", ll:[10.40,43.72], cl:[55,6], city:"Pisa", country:{ it:"Italia", en:"Italy", es:"Italia", fr:"Italie" }, years:"2015 — 2021",
     insts:[
-      { n:"NEST — Scuola Normale Superiore", u:"https://www.sns.it/", logo:"assets/logos/sns-color.png" },
+      { n:"NEST — Scuola Normale Superiore", u:"https://www.laboratorionest.it/", logo:"assets/logos/nest-color.png" },
       { n:"CNR Nano — NEST", u:"https://www.nano.cnr.it/", logo:"assets/logos/cnr-color.svg" }
     ] },
   { id:"laquila", ll:[13.40,42.35], cl:[87,74], city:"L'Aquila", country:{ it:"Italia", en:"Italy", es:"Italia", fr:"Italie" }, years:"2002 — 2009 · 2021 —",
