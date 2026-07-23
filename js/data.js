@@ -47,7 +47,7 @@ const INSTITUTIONS_LOGOS = [
   { n:"Harvard University", l:"assets/logos/harvard2.svg", u:"https://www.harvard.edu/" },
   { n:"NEST — Scuola Normale Superiore", l:"assets/logos/nest-color.png", u:"https://www.laboratorionest.it/" },
   { n:"Thales Alenia Space", l:"assets/logos/thales-color.svg", u:"https://www.thalesaleniaspace.com/" },
-  { n:"Universidad Complutense de Madrid", l:"assets/logos/ucm.svg", u:"https://www.ucm.es/" },
+  { n:"Universidad Complutense de Madrid", l:"assets/logos/ucm-color.png", u:"https://www.ucm.es/" },
   { n:"Universidad Politécnica de Madrid", l:"assets/logos/upm.png", u:"https://www.upm.es/" },
   { n:"Università degli Studi dell'Aquila", l:"assets/logos/univaq.svg", u:"https://www.univaq.it/" },
   { n:"CNR — Consiglio Nazionale delle Ricerche", l:"assets/logos/cnr-color.svg", u:"https://www.cnr.it/" }
@@ -60,9 +60,9 @@ const MAP_CROP = { lonMin:-90, lonMax:25, latMin:22, latMax:58 };
 const LOCATIONS = [
   { id:"cambridge", ll:[-71.06,42.36], cl:[7,66], city:"Cambridge, MA", country:{ it:"Stati Uniti", en:"United States", es:"Estados Unidos", fr:"États-Unis" }, years:"2017 — 2021",
     insts:[ { n:"Massachusetts Institute of Technology", u:"https://www.mit.edu/", logo:"assets/logos/mit.svg" } ] },
-  { id:"madrid", ll:[-3.70,40.42], cl:[28,40], city:"Madrid", country:{ it:"Spagna", en:"Spain", es:"España", fr:"Espagne" }, years:"2009 — 2016",
+  { id:"madrid", ll:[-3.70,40.42], cl:[46,60], city:"Madrid", country:{ it:"Spagna", en:"Spain", es:"España", fr:"Espagne" }, years:"2009 — 2016",
     insts:[
-      { n:"Universidad Complutense de Madrid", u:"https://www.ucm.es/", logo:"assets/logos/ucm.svg" },
+      { n:"Universidad Complutense de Madrid", u:"https://www.ucm.es/", logo:"assets/logos/ucm-color.png" },
       { n:"Universidad Politécnica de Madrid", u:"https://www.upm.es/", logo:"assets/logos/upm.png" },
       { n:"Campus de Excelencia Internacional Moncloa", u:"http://www.campusmoncloa.es/", logo:"assets/logos/moncloa.gif" },
       { n:"ICMM — CSIC", u:"https://www.icmm.csic.es/", logo:"assets/logos/csic-color.svg" }
