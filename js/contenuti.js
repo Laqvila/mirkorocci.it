@@ -62,6 +62,12 @@ const NEWS = [
   /* ▼▼▼ AGGIUNGI QUI LE NUOVE NOVITÀ (la più recente in alto) ▼▼▼
      (le notizie di Inno99 NON vanno qui: mettile nel blocco INNO99 più sotto) */
 
+  { date:{ it:"Ago 2026", en:"Aug 2026", es:"Ago 2026", fr:"Août 2026" }, tag:NTAG.social,
+    url:"https://mirkorocci.it/laquilive",
+    img:"assets/press/laquilive-icona.png",
+    t:{ it:"L'AquiLive è su Google Play e App Store", en:"L'AquiLive is live on Google Play and the App Store", es:"L'AquiLive ya está en Google Play y App Store", fr:"L'AquiLive est sur Google Play et l'App Store" },
+    d:{ it:"L'app gratuita che ho ideato e sviluppato per gli eventi dell'Aquila e provincia è pubblica: eventi in tempo reale, mappa, news, trasporti e una sezione sconti per le attività del territorio.", en:"The free app I designed and developed for events in L'Aquila and its province is now public: real-time events, map, news, transport and a discounts section for local businesses.", es:"La app gratuita que ideé y desarrollé para los eventos de L'Aquila ya es pública: eventos en tiempo real, mapa, noticias, transporte y descuentos locales.", fr:"L'appli gratuite que j'ai conçue et développée pour les événements de L'Aquila est désormais publique : événements en temps réel, carte, actualités, transports et réductions locales." } },
+
   { date:{ it:"2026", en:"2026", es:"2026", fr:"2026" }, tag:NTAG.social,
     url:"https://www.laquilablog.it/alliis-daosta-presentata-la-masterclass-2026/",
     img:"assets/press/masterclass2026.jpg",
@@ -112,6 +118,12 @@ const NEWS = [
    spostale/lasciale in NEWS e aggiorna queste card.
    ============================================================================ */
 const FEATURED = [
+
+  { img:"assets/press/laquilive-icona.png", tag:NTAG.social,
+    date:{ it:"19 agosto 2026", en:"19 August 2026", es:"19 de agosto de 2026", fr:"19 août 2026" },
+    t:{ it:"È nata L'AquiLive: l'app gratuita degli eventi dell'Aquila", en:"Introducing L'AquiLive: the free events app for L'Aquila", es:"Nace L'AquiLive: la app gratuita de eventos de L'Aquila", fr:"Voici L'AquiLive : l'appli gratuite des événements de L'Aquila" },
+    d:{ it:"Ho ideato e costruito l'app che raccoglie tutti gli eventi dell'Aquila e provincia: concerti, teatro, sagre, cinema, Perdonanza, news locali, mappa e trasporti. Gratuita, in 6 lingue, senza pubblicità, ora su Google Play e App Store: il mio modo di restituire qualcosa alla città.", en:"I designed and built the app that gathers every event in L'Aquila and its province: concerts, theatre, festivals, cinema, Perdonanza, local news, map and transport. Free, in 6 languages, ad-free, now on Google Play and the App Store — my way of giving something back to the city.", es:"Ideé y construí la app que reúne todos los eventos de L'Aquila y su provincia: conciertos, teatro, fiestas, cine, Perdonanza, noticias locales, mapa y transporte. Gratuita, en 6 idiomas, sin publicidad, ya en Google Play y App Store.", fr:"J'ai conçu et développé l'appli qui rassemble tous les événements de L'Aquila et de sa province : concerts, théâtre, fêtes, cinéma, Perdonanza, actualités locales, carte et transports. Gratuite, en 6 langues, sans publicité, désormais sur Google Play et l'App Store." },
+    url:"https://mirkorocci.it/laquilive" },
 
   { img:"assets/press/innotalk-laquilablog.jpg", tag:NTAG.social,
     date:{ it:"2 luglio 2026", en:"2 July 2026", es:"2 de julio de 2026", fr:"2 juillet 2026" },
