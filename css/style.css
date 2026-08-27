@@ -655,6 +655,7 @@ body.menu-open{overflow:hidden}
   .nav-links.open a:nth-child(5){transition-delay:.15s}.nav-links.open a:nth-child(6){transition-delay:.18s}
   .nav-links.open a:nth-child(7){transition-delay:.21s}.nav-links.open a:nth-child(8){transition-delay:.24s}
   .nav-links.open a:nth-child(9){transition-delay:.27s}.nav-links.open a:nth-child(10){transition-delay:.30s}
+  .nav-links.open a:nth-child(11){transition-delay:.33s}
   .nav-links .nav-cta{margin-top:18px;justify-content:center;text-align:center;color:#fff!important;
     box-shadow:0 10px 26px rgba(91,140,255,.35)}
   .menu-toggle{display:flex;width:44px;height:44px;align-items:center;justify-content:center;
