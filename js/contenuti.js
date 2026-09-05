@@ -62,6 +62,10 @@ const NEWS = [
   /* ▼▼▼ AGGIUNGI QUI LE NUOVE NOVITÀ (la più recente in alto) ▼▼▼
      (le notizie di Inno99 NON vanno qui: mettile nel blocco INNO99 più sotto) */
 
+  { date:{ it:"26 settembre 2026", en:"26 September 2026", es:"26 de septiembre de 2026", fr:"26 septembre 2026" }, tag:NTAG.conf, url:"",
+    t:{ it:"Invited talk a Ascoli Piceno con RigenerAzioni", en:"Invited talk in Ascoli Piceno with RigenerAzioni", es:"Charla invitada en Ascoli Piceno con RigenerAzioni", fr:"Conférence invitée à Ascoli Piceno avec RigenerAzioni" },
+    d:{ it:"Ho ricevuto l'invito da RigenerAzioni e da Giulio Brandimarti per un talk di fisica presso l'Ufficio Rigenerazione Ex Carbon di Ascoli Piceno: scienza, innovazione e futuro, sabato 26 settembre dalle 10:00 alle 13:00.", en:"Invited by RigenerAzioni and Giulio Brandimarti for a physics talk at the Ufficio Rigenerazione Ex Carbon in Ascoli Piceno: science, innovation and the future, Saturday 26 September from 10:00 to 13:00.", es:"Invitado por RigenerAzioni y Giulio Brandimarti a una charla de física en la Oficina de Regeneración Ex Carbon de Ascoli Piceno: ciencia, innovación y futuro, el sábado 26 de septiembre de 10:00 a 13:00.", fr:"Invité par RigenerAzioni et Giulio Brandimarti pour une conférence de physique à l'Ufficio Rigenerazione Ex Carbon d'Ascoli Piceno : science, innovation et avenir, samedi 26 septembre de 10h à 13h." } },
+
   { date:{ it:"Ago 2026", en:"Aug 2026", es:"Ago 2026", fr:"Août 2026" }, tag:NTAG.social,
     url:"laquilive-app.html",
     img:"assets/press/laquilive-icona.png",
