@@ -62,8 +62,10 @@ const NEWS = [
   /* ▼▼▼ AGGIUNGI QUI LE NUOVE NOVITÀ (la più recente in alto) ▼▼▼
      (le notizie di Inno99 NON vanno qui: mettile nel blocco INNO99 più sotto) */
 
-  { date:{ it:"26 settembre 2026", en:"26 September 2026", es:"26 de septiembre de 2026", fr:"26 septembre 2026" }, tag:NTAG.conf, url:"",
-    t:{ it:"Invited talk a Ascoli Piceno con RigenerAzioni", en:"Invited talk in Ascoli Piceno with RigenerAzioni", es:"Charla invitada en Ascoli Piceno con RigenerAzioni", fr:"Conférence invitée à Ascoli Piceno avec RigenerAzioni" },
+  { date:{ it:"26 settembre 2026", en:"26 September 2026", es:"26 de septiembre de 2026", fr:"26 septembre 2026" }, tag:NTAG.conf,
+    url:"assets/press/rigenerazioni-locandina.jpg",
+    img:"assets/press/rigenerazioni-talk-ascoli.jpg",
+    t:{ it:"Invited talk ad Ascoli Piceno con RigenerAzioni", en:"Invited talk in Ascoli Piceno with RigenerAzioni", es:"Charla invitada en Ascoli Piceno con RigenerAzioni", fr:"Conférence invitée à Ascoli Piceno avec RigenerAzioni" },
     d:{ it:"Ho ricevuto l'invito da RigenerAzioni e da Giulio Brandimarti per un talk di fisica presso l'Ufficio Rigenerazione Ex Carbon di Ascoli Piceno: scienza, innovazione e futuro, sabato 26 settembre dalle 10:00 alle 13:00.", en:"Invited by RigenerAzioni and Giulio Brandimarti for a physics talk at the Ufficio Rigenerazione Ex Carbon in Ascoli Piceno: science, innovation and the future, Saturday 26 September from 10:00 to 13:00.", es:"Invitado por RigenerAzioni y Giulio Brandimarti a una charla de física en la Oficina de Regeneración Ex Carbon de Ascoli Piceno: ciencia, innovación y futuro, el sábado 26 de septiembre de 10:00 a 13:00.", fr:"Invité par RigenerAzioni et Giulio Brandimarti pour une conférence de physique à l'Ufficio Rigenerazione Ex Carbon d'Ascoli Piceno : science, innovation et avenir, samedi 26 septembre de 10h à 13h." } },
 
   { date:{ it:"Ago 2026", en:"Aug 2026", es:"Ago 2026", fr:"Août 2026" }, tag:NTAG.social,
@@ -122,6 +124,12 @@ const NEWS = [
    spostale/lasciale in NEWS e aggiorna queste card.
    ============================================================================ */
 const FEATURED = [
+
+  { img:"assets/press/rigenerazioni-talk-ascoli.jpg", tag:NTAG.conf,
+    date:{ it:"26 settembre 2026", en:"26 September 2026", es:"26 de septiembre de 2026", fr:"26 septembre 2026" },
+    t:{ it:"Invited talk ad Ascoli Piceno: «Talk Fisico» con RigenerAzioni", en:"Invited talk in Ascoli Piceno: 'Talk Fisico' with RigenerAzioni", es:"Charla invitada en Ascoli Piceno: «Talk Fisico» con RigenerAzioni", fr:"Conférence invitée à Ascoli Piceno : « Talk Fisico » avec RigenerAzioni" },
+    d:{ it:"RigenerAzioni impresa sociale e Giulio Brandimarti mi hanno invitato all'Ufficio Rigenerazione Ex Carbon per un incontro aperto alla città su scienza, innovazione e futuro: sabato 26 settembre, dalle 10:00 alle 13:00.", en:"RigenerAzioni social enterprise and Giulio Brandimarti invited me to the Ufficio Rigenerazione Ex Carbon for an open meeting on science, innovation and the future: Saturday 26 September, 10:00–13:00.", es:"RigenerAzioni empresa social y Giulio Brandimarti me invitaron a la Oficina de Regeneración Ex Carbon a un encuentro abierto sobre ciencia, innovación y futuro: sábado 26 de septiembre, de 10:00 a 13:00.", fr:"RigenerAzioni entreprise sociale et Giulio Brandimarti m'ont invité à l'Ufficio Rigenerazione Ex Carbon pour une rencontre ouverte sur la science, l'innovation et l'avenir : samedi 26 septembre, de 10h à 13h." },
+    url:"assets/press/rigenerazioni-locandina.jpg" },
 
   { img:"assets/press/laquilive-icona.png", tag:NTAG.social,
     date:{ it:"19 agosto 2026", en:"19 August 2026", es:"19 de agosto de 2026", fr:"19 août 2026" },
@@ -213,7 +221,7 @@ const INNO99 = [
 
   /* ▼▼▼ AGGIUNGI QUI LE NUOVE NOTIZIE DI INNO99 (la più recente in alto) ▼▼▼ */
 
-  { outlet:"Il Centro", year:"2026", url:"", img:"",
+  { outlet:"Il Centro", year:"2026", url:"assets/press/ilcentro-innotalk-pagina.jpg", img:"assets/press/ilcentro-innotalk.jpg",
     q:{ it:"«Inno Talk sbarca in città e segna il tutto esaurito» — edizione cartacea del 4 luglio 2026.", en:"'Inno Talk lands in town and sells out' — print edition, 4 July 2026.", es:"«Inno Talk llega a la ciudad y agota las entradas» — edición impresa del 4 de julio de 2026.", fr:"« Inno Talk débarque en ville et affiche complet » — édition papier du 4 juillet 2026." } },
   { outlet:"StreamingWorld TV", year:"2026", url:"https://streamingworldtv.it/le-idee-migliori-nascono-davanti-a-un-aperitivo-il-primo-inno-talk-conquista-laquila-sala-gremita-per-il-debutto-di-inno99/", img:"assets/press/innotalk-streamingworld.jpg",
     q:{ it:"«Le idee migliori nascono davanti a un aperitivo»: il primo Inno Talk conquista L'Aquila.", en:"'The best ideas are born over an aperitif': the first Inno Talk wins over L'Aquila.", es:"«Las mejores ideas nacen ante un aperitivo»: el primer Inno Talk conquista L'Aquila.", fr:"« Les meilleures idées naissent autour d'un apéritif » : le premier Inno Talk conquiert L'Aquila." } },
