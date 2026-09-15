@@ -1,0 +1,46 @@
+# Mirko Rocci
+
+> Costruisco il ponte tra la fisica quantistica fondamentale e le tecnologie che arrivano nello spazio.
+
+Mirko Rocci è Ph.D. in Fisica della Materia Condensata, formato al Massachusetts Institute of Technology, alla Scuola Normale Superiore e a Madrid. Lavora come tecnologo in Thales Alenia Space Italia a L'Aquila, dove guida l'innovazione nelle tecnologie spaziali. I suoi ambiti di ricerca sono tecnologie quantistiche, superconduttività, nanotecnologie e hardware spaziale. È CTO e co-founder di Clair Clinique e fondatore e presidente dell'associazione culturale 3:33; co-ideatore e curatore di Inno99.
+
+## In English
+
+Mirko Rocci holds a Ph.D. in Condensed Matter Physics, trained at the Massachusetts Institute of Technology, the Scuola Normale Superiore and in Madrid. He works as a technologist at Thales Alenia Space Italia in L'Aquila, where he leads innovation in space technologies. His research areas are quantum technologies, superconductivity, nanotechnologies and space hardware. He is CTO and co-founder of Clair Clinique and founder and president of the cultural association 3:33; co-creator and curator of Inno99.
+
+## Ruoli e progetti
+
+- [Clair Clinique](https://www.clairclinique.com/): cosmesi personalizzata che unisce intelligenza artificiale, robotica e analisi biometrica. Sede Tecnopolo d'Abruzzo, L'Aquila.
+- [Associazione 3:33](https://www.3e33.it/): associazione culturale fondata e presieduta da Mirko Rocci a L'Aquila per portare scienza, tecnologia ed energia civica.
+- [Inno99](https://inno99.it/): ciclo di seminari-serata in formula aperitivo co-ideato e curato per Innovalley.
+- [L'AquiLive](https://mirkorocci.it/laquilive-app.html): app gratuita che raccoglie gli eventi dell'Aquila e provincia, ideata e costruita da Mirko Rocci.
+
+## Ricerca e pubblicazioni
+
+- [Extremely long-range, high-temperature Josephson coupling across a half-metallic ferromagnet](https://doi.org/10.1038/s41563-021-01162-5) — Nature Materials, 2021
+- [A Josephson phase battery](https://doi.org/10.1038/s41565-020-0712-7) — Nature Nanotechnology, 2020
+- [Gate-controlled suspended titanium nanobridge supercurrent transistor](https://doi.org/10.1021/acsnano.0c05355) — ACS Nano, 2020
+- [Large enhancement of critical current in superconducting devices by gate voltage](https://doi.org/10.1021/acs.nanolett.0c03547) — Nano Letters, 2020
+- [Enhanced ferromagnetism in monolayer Cr₂Te₃ via topological insulator coupling](https://doi.org/10.1088/1361-6633/add9c5) — Reports on Progress in Physics, 2025
+- [Spin-resolved magneto-tunneling and giant anisotropic g-factor in broken-gap InAs–GaSb core–shell nanowires](https://doi.org/10.1021/acs.nanolett.3c02559) — Nano Letters, 2024
+
+## Premi e riconoscimenti
+
+- 2025: Menzione Speciale ai Leonardo Innovation Awards — progetto G-DEPM «Graphene Direct Enabled Polymer Metallization».
+- 2025: Thales Alenia Space Innovation Award — categoria Idea, 1° classificato, progetto G-DEPM, Team Leader.
+- 2024: Membro ufficiale dell'Industrial Advisory Board del progetto Horizon Europe Pathfinder «ATYPIQUAL».
+- 2023: Thales Alenia Space Innovation Award — categoria Idea, 1° classificato, progetto su grafene e nitruro di boro, Team Leader.
+- 2021: Hello Space Award, 1° classificato, progetto «Lunar» — Thales Alenia Space.
+- 2018: Immagine di copertina della rivista internazionale Nano Letters.
+
+## Profili ufficiali
+
+- [ORCID](https://orcid.org/0000-0002-3907-5275)
+- [Google Scholar](https://scholar.google.com/citations?user=vZlXhbkAAAAJ)
+- [LinkedIn](https://www.linkedin.com/in/mirko-rocci/)
+- [ResearchGate](https://www.researchgate.net/profile/Mirko-Rocci)
+- [Wikidata](https://www.wikidata.org/wiki/Q60155165)
+
+## Opzionale
+
+- [Sitemap](https://mirkorocci.it/sitemap.xml)

@@ -1,0 +1,20 @@
+{
+  "html": "index.html",
+  "baseUrl": "https://mirkorocci.it/",
+  "scripts": ["js/contenuti.js", "js/data.js", "js/main.js"],
+  "containers": [
+    "featured-grid",
+    "news-grid",
+    "pub-grid",
+    "ventures-grid",
+    "ventures-contact",
+    "assoc-gallery",
+    "assoc-grid",
+    "assoc-press-grid",
+    "timeline",
+    "awards-list",
+    "press-grid",
+    "inno99-grid",
+    "marquee-track"
+  ]
+}

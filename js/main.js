@@ -291,7 +291,21 @@ function applyLang(l){
   $$("[data-en-html]").forEach(el=>{ if(el.dataset.itHtml===undefined) el.dataset.itHtml=el.innerHTML; el.innerHTML = l==="it"?el.dataset.itHtml:(el.dataset[l+"Html"]||el.dataset.enHtml||el.dataset.itHtml); });
   const lc=$("#lang-current"); if(lc) lc.innerHTML = l.toUpperCase()+' <span class="caret">▾</span>';
   updateMoreLabels();
+  syncLangUrl(l);
   try{localStorage.setItem("mr-lang",l);}catch(e){}
+}
+
+/* URL, canonical e og:url coerenti con la lingua mostrata (hreflang: /?lang=xx) */
+function syncLangUrl(l){
+  const base="https://mirkorocci.it/", href = l==="it" ? base : base+"?lang="+l;
+  const can=document.querySelector('link[rel="canonical"]'); if(can) can.href=href;
+  const og=document.querySelector('meta[property="og:url"]'); if(og) og.content=href;
+  try{
+    const q=new URLSearchParams(location.search);
+    if(l==="it") q.delete("lang"); else q.set("lang",l);
+    const qs=q.toString();
+    history.replaceState(null,"",location.pathname+(qs?"?"+qs:"")+location.hash);
+  }catch(e){}
 }
 
 /* show-more toggles for publications & press */
