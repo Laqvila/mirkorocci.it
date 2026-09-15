@@ -214,6 +214,18 @@ function renderNews(){
     </article>`).join("");
 }
 
+function renderFaq(){
+  const g=$("#faq-list"); if(!g||typeof FAQ==="undefined") return;
+  const ld={"@context":"https://schema.org","@type":"FAQPage",
+    "mainEntity":FAQ.map(f=>({"@type":"Question","name":f.q.it,"acceptedAnswer":{"@type":"Answer","text":f.a.it}}))};
+  g.innerHTML = FAQ.map((f,i)=>`
+    <details class="faq reveal"${i===0?" open":""}>
+      <summary><h3 ${L(f.q)}>${esc(f.q.it)}</h3></summary>
+      <p ${L(f.a)}>${esc(f.a.it)}</p>
+    </details>`).join("")
+    + `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g,"\\u003c")}</script>`;
+}
+
 function renderVenturesContact(){
   const el=$("#ventures-contact"); if(!el||typeof VENTURES_CONTACT==="undefined") return;
   const mails = VENTURES_CONTACT.emails.map(m=>`<a href="mailto:${m}">${m}</a>`).join("");
@@ -460,6 +472,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   renderFeatured();
   renderMarquee();
   renderNews();
+  renderFaq();
   renderVenturesContact();
   renderMap();
   initShowMore();

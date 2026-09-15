@@ -695,3 +695,13 @@ body.menu-open{overflow:hidden}
   *{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
 }
+
+/* ===== FAQ (domande frequenti) ===== */
+.faq-list{max-width:820px;margin:0 auto}
+.faq{border-bottom:1px solid var(--panel-brd);padding:4px 0}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary h3{font-size:1.05rem;font-weight:600;margin:0;line-height:1.4}
+.faq summary::after{content:"+";flex:none;font-size:1.5rem;line-height:1;opacity:.55;transition:transform .25s}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq p{margin:0 0 18px;line-height:1.75;opacity:.88;max-width:72ch}
