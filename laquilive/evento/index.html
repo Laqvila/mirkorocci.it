@@ -68,6 +68,15 @@
       var ios = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
       var apri = document.getElementById('apri');
 
+      // il tocco si conta nello Studio come «condivisione»: niente IP, niente identificativi
+      try {
+        fetch(SB + '/rest/v1/rpc/registra_click_link', {
+          method: 'POST', keepalive: true,
+          headers: { 'Content-Type': 'application/json', apikey: CHIAVE, Authorization: 'Bearer ' + CHIAVE },
+          body: JSON.stringify({ p_canale: 'condivisione', p_destinazione: 'evento', p_piattaforma: ios ? 'ios' : android ? 'android' : 'altro' })
+        }).catch(function () {});
+      } catch (e) { /* il conteggio non deve mai fermare l'apertura */ }
+
       // senza un id valido resta la pagina degli store, senza il tasto «Apri»
       if (!valido) { apri.className += ' nascosto'; return; }
 

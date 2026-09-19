@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "W64HZNPNTX.it.aqlive99.app",
+        "appIDs": ["W64HZNPNTX.it.aqlive99.app"],
+        "paths": ["/laquilive/evento", "/laquilive/evento/*"],
+        "components": [
+          { "/": "/laquilive/evento" },
+          { "/": "/laquilive/evento/*" }
+        ]
+      }
+    ]
+  }
+}

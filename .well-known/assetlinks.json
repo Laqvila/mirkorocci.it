@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "it.aqlive99.app",
+      "sha256_cert_fingerprints": [
+        "B8:B2:AA:58:36:04:33:6C:93:DD:18:FD:B4:98:30:4B:B9:79:BE:31:0E:C9:B5:44:EC:FA:86:6F:EC:0C:BE:34"
+      ]
+    }
+  }
+]
