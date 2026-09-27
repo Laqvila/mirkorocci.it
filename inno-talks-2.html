@@ -104,6 +104,15 @@
   blockquote cite{display:block; margin-top:.4rem; font-style:normal; font-size:.88rem; color:var(--faint)}
   .btn{display:inline-block; margin:.4rem .6rem .4rem 0; padding:.6rem 1.1rem; border:1px solid var(--acc); border-radius:999px; color:var(--txt); text-decoration:none; font-weight:600; font-size:.92rem}
   .btn:hover{background:var(--acc); color:#04060f}
+  /* ---------- rassegna stampa ---------- */
+  .press{display:grid; grid-template-columns:repeat(auto-fill,minmax(15rem,1fr)); gap:1rem; margin:1.2rem 0 0}
+  .pc{display:flex; flex-direction:column; border:1px solid var(--brd); border-radius:14px; overflow:hidden; background:var(--panel); color:var(--txt); text-decoration:none; transition:border-color .25s, transform .25s}
+  .pc:hover{border-color:var(--acc); transform:translateY(-2px)}
+  .pc img{display:block; width:100%; aspect-ratio:16/9; object-fit:cover; background:#070910}
+  .pc .pb{padding:.8rem 1rem 1rem}
+  .pc .src{display:block; font-size:.74rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--acc); margin-bottom:.3rem}
+  .pc .tt{display:block; font-size:.95rem; line-height:1.45; font-weight:600}
+  .pc .dt{display:block; margin-top:.4rem; font-size:.82rem; color:var(--faint)}
   ul{padding-left:1.15rem; color:var(--dim)}
   li{margin:.45rem 0}
   footer{margin-top:3.2rem; padding-top:1.4rem; border-top:1px solid var(--brd); font-size:.88rem; color:var(--faint)}
@@ -226,6 +235,35 @@
 <p>Romanelli ha poi introdotto due imprese del Tecnopolo. Con l'ing. <strong>Stefano Tennina</strong>, <strong>West Aquila</strong> ha presentato la SHM-BOARD per il monitoraggio strutturale degli edifici, nata dopo il terremoto del 2009 e oggi attiva in una trentina di siti, dalla Torre Civica dell'Aquila alle Etihad Towers di Abu Dhabi. Con il dott. <strong>Alejandro Chaparro Blanco</strong>, <strong>Accyourate Group</strong> ha mostrato dal vivo la maglietta YouCare per l'elettrocardiogramma continuo e ha raccontato otto anni di lavoro in tre lezioni. La tecnologia da sola non basta, per crescere servono i partner giusti e alla fine sono le persone a fare la differenza.</p>
 <p>In chiusura <strong>Mirko Rocci</strong> ha indicato il filo comune dei tre interventi, i dati raccolti dai sensori e l'intelligenza artificiale che li interpreta. <strong>Federico Fioriti</strong> ha poi ricordato come è nato Inno99, tre anni fa, da un foglietto su cui Rocci aveva scritto l'idea di incontri per raccontare le eccellenze dell'Aquila. Il format è già stato richiesto a Pescara e a Chieti.</p>
 <p>Rocci ha ringraziato il Tecnopolo d'Abruzzo e Roberto Romanelli, senza il cui supporto la serata non avrebbe avuto queste dimensioni, le imprese, il prof. Flammini e Federico Fioriti. Il prossimo Inno Talk è previsto per ottobre.</p>
+
+<h2>La rassegna stampa</h2>
+<p>Gli articoli usciti su Inno Talks #2, prima e dopo la serata.</p>
+<div class="press">
+  <a class="pc" href="https://www.laquilablog.it/inno99-sala-piena-per-il-secondo-inno-talk/" target="_blank" rel="noopener noreferrer">
+    <img src="assets/press/innotalk2-laquilablog-sala-piena.jpg" alt="" loading="lazy">
+    <span class="pb"><span class="src">L'Aquila Blog</span><span class="tt">Inno99, sala piena per il secondo Inno-Talk</span><span class="dt">26 settembre 2026</span></span>
+  </a>
+  <a class="pc" href="https://www.abruzzoweb.it/inno-talk-flammini-ia-rivoluzione-da-gestire-visioni-futuro-in-aperitivo-innovazione-allaquila/" target="_blank" rel="noopener noreferrer">
+    <img src="assets/press/innotalk2-abruzzoweb-flammini.jpg" alt="" loading="lazy">
+    <span class="pb"><span class="src">AbruzzoWeb</span><span class="tt">Inno Talk, Flammini: «IA rivoluzione da gestire». Visioni di futuro all'aperitivo dell'innovazione</span><span class="dt">25 settembre 2026</span></span>
+  </a>
+  <a class="pc" href="assets/press/ilcentro-innotalk2-pagina.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="assets/press/ilcentro-innotalk2.jpg" alt="" loading="lazy">
+    <span class="pb"><span class="src">Il Centro · cartaceo</span><span class="tt">«Il mondo della ricerca incontra le imprese»</span><span class="dt">24 settembre 2026</span></span>
+  </a>
+  <a class="pc" href="https://www.laquilablog.it/dalla-ricerca-al-prodotto-il-24-settembre-il-secondo-inno-talk-di-inno99/" target="_blank" rel="noopener noreferrer">
+    <img src="assets/press/innotalk2-laquilablog.jpg" alt="" loading="lazy">
+    <span class="pb"><span class="src">L'Aquila Blog</span><span class="tt">«Dalla ricerca al prodotto», il 24 settembre il secondo Inno-Talk di Inno99</span><span class="dt">22 settembre 2026</span></span>
+  </a>
+  <a class="pc" href="https://www.abruzzoweb.it/dalla-ricerca-al-prodotto-aperitivi-dellinnovazione-allaquila-il-secondo-inno-talk-di-inno99/" target="_blank" rel="noopener noreferrer">
+    <img src="assets/press/innotalk2-abruzzoweb.jpg" alt="" loading="lazy">
+    <span class="pb"><span class="src">AbruzzoWeb</span><span class="tt">«Dalla ricerca al prodotto»: Aperitivi dell'Innovazione, all'Aquila il secondo Inno-Talk di Inno99</span><span class="dt">22 settembre 2026</span></span>
+  </a>
+  <a class="pc" href="https://www.rete8.it/cronaca/laquila-dalla-ricerca-al-prodotto-secondo-inno-talk-di-inno99/" target="_blank" rel="noopener noreferrer">
+    <img src="assets/press/innotalk2-rete8.jpg" alt="" loading="lazy">
+    <span class="pb"><span class="src">Rete8</span><span class="tt">L'Aquila, «Dalla ricerca al prodotto», secondo Inno-Talk di Inno99</span><span class="dt">22 settembre 2026</span></span>
+  </a>
+</div>
 
 <h2>Il resoconto</h2>
 <p>Nel resoconto trovate i contenuti di ogni intervento, con le citazioni principali.</p>
