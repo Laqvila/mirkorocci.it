@@ -225,6 +225,10 @@ const INNO99 = [
 
   /* ▼▼▼ AGGIUNGI QUI LE NUOVE NOTIZIE DI INNO99 (la più recente in alto) ▼▼▼ */
 
+  { outlet:"AbruzzoWeb", year:"2026", url:"https://www.abruzzoweb.it/inno-talk-rocci-ecosistema-idee-per-laquila-romanelli-tecnopolo-fucina-innovazione/", img:"assets/press/innotalk2-abruzzoweb-intervista.jpg",
+    q:{ it:"Inno Talk, Rocci: «Un ecosistema di idee per L'Aquila». Romanelli: «Il Tecnopolo fucina di innovazione».", en:"Inno Talk, Rocci: 'An ecosystem of ideas for L'Aquila'. Romanelli: 'Tecnopolo, a forge of innovation'.", es:"Inno Talk, Rocci: «Un ecosistema de ideas para L'Aquila». Romanelli: «El Tecnopolo, fragua de innovación».", fr:"Inno Talk, Rocci : « Un écosystème d'idées pour L'Aquila ». Romanelli : « Le Tecnopolo, forge de l'innovation »." } },
+  { outlet:"Il Centro", year:"2026", url:"assets/press/ilcentro-innotalk2-28set-pagina.jpg", img:"assets/press/ilcentro-innotalk2-28set.jpg",
+    q:{ it:"«Ricerca, innovazione e sviluppo: dal laboratorio fino al mercato» — edizione cartacea del 28 settembre 2026.", en:"'Research, innovation and development: from the lab to the market' — print edition, 28 September 2026.", es:"«Investigación, innovación y desarrollo: del laboratorio al mercado» — edición impresa del 28 de septiembre de 2026.", fr:"« Recherche, innovation et développement : du laboratoire au marché » — édition papier du 28 septembre 2026." } },
   { outlet:"L'Aquila Blog", year:"2026", url:"https://www.laquilablog.it/inno99-sala-piena-per-il-secondo-inno-talk/", img:"assets/press/innotalk2-laquilablog-sala-piena.jpg",
     q:{ it:"Inno99, sala piena per il secondo Inno-Talk.", en:"Inno99, a full house for the second Inno-Talk.", es:"Inno99, sala llena en el segundo Inno-Talk.", fr:"Inno99, salle comble pour le deuxième Inno-Talk." } },
   { outlet:"AbruzzoWeb", year:"2026", url:"https://www.abruzzoweb.it/inno-talk-flammini-ia-rivoluzione-da-gestire-visioni-futuro-in-aperitivo-innovazione-allaquila/", img:"assets/press/innotalk2-abruzzoweb-flammini.jpg",
