@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<title>Rassegna stampa — Mirko Rocci, Ph.D.</title>
+<meta name="description" content="Articoli, servizi TV e interviste su Mirko Rocci: ricerca e innovazione spaziale, Inno99 e Associazione 3:33. Archivio completo con filtri per argomento." />
+<meta name="author" content="Mirko Rocci" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://mirkorocci.it/stampa.html" />
+<link rel="alternate" hreflang="it" href="https://mirkorocci.it/stampa.html" />
+<link rel="alternate" hreflang="en" href="https://mirkorocci.it/stampa.html?lang=en" />
+<link rel="alternate" hreflang="es" href="https://mirkorocci.it/stampa.html?lang=es" />
+<link rel="alternate" hreflang="fr" href="https://mirkorocci.it/stampa.html?lang=fr" />
+<link rel="alternate" hreflang="x-default" href="https://mirkorocci.it/stampa.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Mirko Rocci" />
+<meta property="og:title" content="Rassegna stampa — Mirko Rocci, Ph.D." />
+<meta property="og:description" content="Articoli, servizi TV e interviste su Mirko Rocci: ricerca e innovazione spaziale, Inno99 e Associazione 3:33. Archivio completo con filtri per argomento." />
+<meta property="og:url" content="https://mirkorocci.it/stampa.html" />
+<meta property="og:image" content="https://mirkorocci.it/assets/mirko.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#05060c" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="manifest" href="site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css?v=20260928c" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://mirkorocci.it/stampa.html#page",
+      "url": "https://mirkorocci.it/stampa.html",
+      "name": "Rassegna stampa — Mirko Rocci, Ph.D.",
+      "description": "Articoli, servizi TV e interviste su Mirko Rocci: ricerca e innovazione spaziale, Inno99 e Associazione 3:33. Archivio completo con filtri per argomento.",
+      "inLanguage": "it",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Mirko Rocci",
+        "url": "https://mirkorocci.it/"
+      },
+      "about": {
+        "@type": "Person",
+        "@id": "https://mirkorocci.it/#person",
+        "name": "Mirko Rocci",
+        "url": "https://mirkorocci.it/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mirkorocci.it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Rassegna stampa",
+          "item": "https://mirkorocci.it/stampa.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="stampa">
+
+<a class="skip-link" href="#main" data-en="Skip to content" data-es="Saltar al contenido" data-fr="Aller au contenu">Vai al contenuto</a>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- Navbar -->
+<header id="navbar">
+  <a href="#hero" class="brand">
+    <span class="brand-mark">MR</span>
+    <span class="brand-name">Mirko&nbsp;Rocci<span class="brand-dot">.</span></span>
+  </a>
+  <nav class="nav-links" id="nav-links" aria-label="Primary"><!--pre:nav-links--><a href="./#about" data-en="About" data-es="Perfil" data-fr="Profil" data-it="Profilo">Profilo</a><a href="./#news" data-en="News" data-es="Novedades" data-fr="Actus" data-it="Novità">Novità</a><a href="./#research" data-en="Research" data-es="Investigación" data-fr="Recherche" data-it="Ricerca">Ricerca</a><a href="pubblicazioni.html" data-en="Publications" data-es="Publicaciones" data-fr="Publications" data-it="Pubblicazioni">Pubblicazioni</a><a href="./#ventures" data-en="Ventures" data-es="Empresas" data-fr="Entreprises" data-it="Imprese">Imprese</a><a href="associazione-333.html" data-en="Association 3:33" data-es="Asociación 3:33" data-fr="Association 3:33" data-it="Associazione 3:33">Associazione 3:33</a><a href="inno99.html" data-en="Inno99" data-es="Inno99" data-fr="Inno99" data-it="Inno99">Inno99</a><a href="stampa.html" class="active-link" aria-current="page" data-en="Press" data-es="Prensa" data-fr="Presse" data-it="Stampa">Stampa</a><a href="percorso.html" data-en="Career" data-es="Trayectoria" data-fr="Parcours" data-it="Percorso">Percorso</a><a href="./#contact" class="nav-cta" data-en="Contact" data-es="Contacto" data-fr="Contact" data-it="Contatti">Contatti</a><!--/pre:nav-links--></nav>
+  <div class="nav-tools">
+    <div class="lang-switch" id="lang-switch">
+      <button class="lang-current" id="lang-current" aria-haspopup="true" aria-expanded="false">IT <span class="caret">▾</span></button>
+      <ul class="lang-menu" id="lang-menu" role="menu">
+        <li><button data-lang="it" role="menuitem">Italiano</button></li>
+        <li><button data-lang="en" role="menuitem">English</button></li>
+        <li><button data-lang="es" role="menuitem">Español</button></li>
+        <li><button data-lang="fr" role="menuitem">Français</button></li>
+      </ul>
+    </div>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<header class="page-hero">
+  <nav class="crumbs reveal" aria-label="Breadcrumb"><a href="./" data-en="Home" data-es="Inicio" data-fr="Accueil">Home</a><span aria-hidden="true">›</span><span data-en="Press coverage" data-es="Prensa" data-fr="Revue de presse">Rassegna stampa</span></nav>
+  <span class="eyebrow reveal" data-en="In the media" data-es="En los medios" data-fr="Dans les médias">Nei media</span>
+  <h1 class="reveal" data-en="Press coverage" data-es="Prensa" data-fr="Revue de presse">Rassegna stampa</h1>
+  <p class="page-lead reveal" data-en="Articles, TV reports and interviews on research, innovation and civic engagement. Use the filters to see only scientific work, Inno99 or the 3:33 Association." data-es="Artículos, reportajes de TV y entrevistas sobre investigación, innovación y compromiso cívico. Usa los filtros para ver solo el trabajo científico, Inno99 o la Asociación 3:33." data-fr="Articles, reportages TV et interviews sur la recherche, l&#x27;innovation et l&#x27;engagement civique. Utilisez les filtres pour ne voir que le travail scientifique, Inno99 ou l&#x27;Association 3:33.">Articoli, servizi TV e interviste su ricerca, innovazione e impegno civico. Usa i filtri per vedere solo il lavoro scientifico, Inno99 o l'Associazione 3:33.</p>
+  
+</header>
+<section id="press" class="section">
+  <div class="filters reveal" id="press-filters" role="group" aria-label="Filtra per argomento"><!--pre:press-filters--><button type="button" class="chip" data-f="all" aria-pressed="true"><span data-en="All" data-es="Todas" data-fr="Toutes" data-it="Tutte">Tutte</span><b>85</b></button><button type="button" class="chip" data-f="lavoro" aria-pressed="false"><span data-en="Science &amp; work" data-es="Ciencia y trabajo" data-fr="Science et travail" data-it="Scienza e lavoro">Scienza e lavoro</span><b>18</b></button><button type="button" class="chip" data-f="inno99" aria-pressed="false"><span data-en="Inno99" data-es="Inno99" data-fr="Inno99" data-it="Inno99">Inno99</span><b>14</b></button><button type="button" class="chip" data-f="333" aria-pressed="false"><span data-en="Association 3:33" data-es="Asociación 3:33" data-fr="Association 3:33" data-it="Associazione 3:33">Associazione 3:33</span><b>53</b></button><!--/pre:press-filters--></div>
+  <div class="press-grid press-list" id="press-archive"><!--pre:press-archive--><a class="press reveal has-photo" href="assets/press/laquilive-articolo.pdf" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    <div class="press-photo"><img src="assets/press/laquilive-abruzzosera.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">A4 Quotidiano</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="'The L'AquiLive app arrives with all the events of L'Aquila and its surroundings', devised and developed by Mirko Rocci — 26 August 2026 edition." data-es="«Llega la app L'AquiLive con todos los eventos de L'Aquila y alrededores», ideada y desarrollada por Mirko Rocci — edición del 26 de agosto de 2026." data-fr="« Voici l'appli L'AquiLive avec tous les événements de L'Aquila et ses environs », conçue et développée par Mirko Rocci — édition du 26 août 2026." data-it="«Arriva l'app L'AquiLive con tutti gli eventi di L'Aquila e dintorni», ideata e sviluppata da Mirko Rocci — edizione del 26 agosto 2026.">«Arriva l'app L'AquiLive con tutti gli eventi di L'Aquila e dintorni», ideata e sviluppata da Mirko Rocci — edizione del 26 agosto 2026.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://abruzzosera.it/attualita/laquilive-lapp-gratuita-per-laquila-ideata-dal-fisico-mirko-rocci/" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    <div class="press-photo"><img src="assets/press/laquilive-abruzzosera.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Abruzzosera</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="'L'AquiLive, the free app for L'Aquila devised by physicist Mirko Rocci'." data-es="«L'AquiLive, la app gratuita para L'Aquila ideada por el físico Mirko Rocci»." data-fr="« L'AquiLive, l'appli gratuite pour L'Aquila conçue par le physicien Mirko Rocci »." data-it="«L'AquiLive, l'app gratuita per L'Aquila ideata dal fisico Mirko Rocci».">«L'AquiLive, l'app gratuita per L'Aquila ideata dal fisico Mirko Rocci».</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/nasce-laquilive-lapp-gratuita-con-tutti-gli-eventi-della-citta/" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    <div class="press-photo"><img src="assets/press/laquilive-laquilablog.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="'L'AquiLive is born, the free app with all the city's events'." data-es="«Nace L'AquiLive, la app gratuita con todos los eventos de la ciudad»." data-fr="« Naissance de L'AquiLive, l'appli gratuite avec tous les événements de la ville »." data-it="«Nasce L'AquiLive, l'app gratuita con tutti gli eventi della città».">«Nasce L'AquiLive, l'app gratuita con tutti gli eventi della città».</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://news-town.it/2026/08/25/scenari/arriva-lapp-laquilive-con-tutti-gli-eventi-di-laquila-e-dintorni/" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    <div class="press-photo"><img src="assets/press/laquilive-newstown.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">News-Town</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="'The L'AquiLive app arrives with all the events of L'Aquila and its surroundings'." data-es="«Llega la app L'AquiLive con todos los eventos de L'Aquila y alrededores»." data-fr="« Voici l'appli L'AquiLive avec tous les événements de L'Aquila et ses environs »." data-it="«Arriva l'app L'AquiLive con tutti gli eventi di L'Aquila e dintorni».">«Arriva l'app L'AquiLive con tutti gli eventi di L'Aquila e dintorni».</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/alliis-daosta-presentata-la-masterclass-2026/" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    <div class="press-photo"><img src="assets/press/masterclass2026.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="Masterclass 2026 unveiled at IIS d'Aosta." data-es="Presentada la Masterclass 2026 en el IIS d'Aosta." data-fr="Présentation de la Masterclass 2026 à l'IIS d'Aosta." data-it="All'IIS d'Aosta presentata la Masterclass 2026.">All'IIS d'Aosta presentata la Masterclass 2026.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://news-town.it/2026/03/09/persone/allaquilano-mirko-rocci-una-menzione-speciale-nellinnovation-award-di-leonardo/" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    <div class="press-photo"><img src="assets/press/newstown-leonardo.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">News-Town</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="'L'Aquila's Mirko Rocci receives a special mention at Leonardo's Innovation Award.'" data-es="«Al aquilano Mirko Rocci una mención especial en el Innovation Award de Leonardo.»" data-fr="« Le natif de L'Aquila Mirko Rocci reçoit une mention spéciale à l'Innovation Award de Leonardo. »" data-it="«All'aquilano Mirko Rocci una menzione speciale nell'Innovation Award di Leonardo.»">«All'aquilano Mirko Rocci una menzione speciale nell'Innovation Award di Leonardo.»</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.abruzzoweb.it/inno-talk-rocci-ecosistema-idee-per-laquila-romanelli-tecnopolo-fucina-innovazione/" target="_blank" rel="noopener noreferrer" data-cat="inno99">
+    <div class="press-photo"><img src="assets/press/innotalk2-abruzzoweb-intervista.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">AbruzzoWeb</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="Inno Talk, Rocci: 'An ecosystem of ideas for L'Aquila'. Romanelli: 'Tecnopolo, a forge of innovation'." data-es="Inno Talk, Rocci: «Un ecosistema de ideas para L'Aquila». Romanelli: «El Tecnopolo, fragua de innovación»." data-fr="Inno Talk, Rocci : « Un écosystème d'idées pour L'Aquila ». Romanelli : « Le Tecnopolo, forge de l'innovation »." data-it="Inno Talk, Rocci: «Un ecosistema di idee per L'Aquila». Romanelli: «Il Tecnopolo fucina di innovazione».">Inno Talk, Rocci: «Un ecosistema di idee per L'Aquila». Romanelli: «Il Tecnopolo fucina di innovazione».</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="assets/press/ilcentro-innotalk2-28set-pagina.jpg" target="_blank" rel="noopener noreferrer" data-cat="inno99">
+    <div class="press-photo"><img src="assets/press/ilcentro-innotalk2-28set.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Il Centro</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="'Research, innovation and development: from the lab to the market' — print edition, 28 September 2026." data-es="«Investigación, innovación y desarrollo: del laboratorio al mercado» — edición impresa del 28 de septiembre de 2026." data-fr="« Recherche, innovation et développement : du laboratoire au marché » — édition papier du 28 septembre 2026." data-it="«Ricerca, innovazione e sviluppo: dal laboratorio fino al mercato» — edizione cartacea del 28 settembre 2026.">«Ricerca, innovazione e sviluppo: dal laboratorio fino al mercato» — edizione cartacea del 28 settembre 2026.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/inno99-sala-piena-per-il-secondo-inno-talk/" target="_blank" rel="noopener noreferrer" data-cat="inno99">
+    <div class="press-photo"><img src="assets/press/innotalk2-laquilablog-sala-piena.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="Inno99, a full house for the second Inno-Talk." data-es="Inno99, sala llena en el segundo Inno-Talk." data-fr="Inno99, salle comble pour le deuxième Inno-Talk." data-it="Inno99, sala piena per il secondo Inno-Talk.">Inno99, sala piena per il secondo Inno-Talk.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.abruzzoweb.it/inno-talk-flammini-ia-rivoluzione-da-gestire-visioni-futuro-in-aperitivo-innovazione-allaquila/" target="_blank" rel="noopener noreferrer" data-cat="inno99">
+    <div class="press-photo"><img src="assets/press/innotalk2-abruzzoweb-flammini.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">AbruzzoWeb</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="Inno Talk, Flammini: 'AI is a revolution to be managed'. Visions of the future at the innovation aperitif in L'Aquila." data-es="Inno Talk, Flammini: «La IA, una revolución que hay que gestionar». Visiones de futuro en el aperitivo de la innovación en L'Aquila." data-fr="Inno Talk, Flammini : « L'IA, une révolution à gérer ». Visions d'avenir à l'apéritif de l'innovation à L'Aquila." data-it="Inno Talk, Flammini: «IA rivoluzione da gestire». Visioni di futuro all'aperitivo dell'innovazione all'Aquila.">Inno Talk, Flammini: «IA rivoluzione da gestire». Visioni di futuro all'aperitivo dell'innovazione all'Aquila.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="inno-talks-2.html" data-cat="inno99">
+    <div class="press-photo"><img src="assets/inno-talks-2/sala.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Inno99 · La serata</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="Inno Talks #2, how it went: the full live stream, the photos and the report of the evening of 24 September at the Irish Pub Via Verdi." data-es="Inno Talks #2, así fue: la retransmisión completa, las fotos y el resumen de la velada del 24 de septiembre en el Irish Pub Via Verdi." data-fr="Inno Talks #2, comment ça s'est passé : le direct intégral, les photos et le compte rendu de la soirée du 24 septembre à l'Irish Pub Via Verdi." data-it="Inno Talks #2, com'è andata: la diretta integrale, le foto e il resoconto della serata del 24 settembre all'Irish Pub Via Verdi, condotta da Mirko Rocci.">Inno Talks #2, com'è andata: la diretta integrale, le foto e il resoconto della serata del 24 settembre all'Irish Pub Via Verdi, condotta da Mirko Rocci.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="assets/press/ilcentro-innotalk2-pagina.jpg" target="_blank" rel="noopener noreferrer" data-cat="inno99">
+    <div class="press-photo"><img src="assets/press/ilcentro-innotalk2.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Il Centro</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="'The world of research meets business' — print edition, 24 September 2026." data-es="«El mundo de la investigación se encuentra con las empresas» — edición impresa del 24 de septiembre de 2026." data-fr="« Le monde de la recherche rencontre les entreprises » — édition papier du 24 septembre 2026." data-it="«Il mondo della ricerca incontra le imprese» — edizione cartacea del 24 settembre 2026.">«Il mondo della ricerca incontra le imprese» — edizione cartacea del 24 settembre 2026.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/dalla-ricerca-al-prodotto-il-24-settembre-il-secondo-inno-talk-di-inno99/" target="_blank" rel="noopener noreferrer" data-cat="inno99">
+    <div class="press-photo"><img src="assets/press/innotalk2-laquilablog.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="'From research to product': the second Inno-Talk by Inno99 on 24 September." data-es="«De la investigación al producto»: el 24 de septiembre el segundo Inno-Talk de Inno99." data-fr="« De la recherche au produit » : le 24 septembre, le deuxième Inno-Talk d'Inno99." data-it="«Dalla ricerca al prodotto», il 24 settembre il secondo Inno-Talk di Inno99.">«Dalla ricerca al prodotto», il 24 settembre il secondo Inno-Talk di Inno99.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.abruzzoweb.it/dalla-ricerca-al-prodotto-aperitivi-dellinnovazione-allaquila-il-secondo-inno-talk-di-inno99/" target="_blank" rel="noopener noreferrer" data-cat="inno99">
+    <div class="press-photo"><img src="assets/press/innotalk2-abruzzoweb.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">AbruzzoWeb</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="'From research to product': the Innovation Aperitifs, the second Inno99 Inno-Talk in L'Aquila." data-es="«De la investigación al producto»: los Aperitivos de la Innovación, en L'Aquila el segundo Inno-Talk de Inno99." data-fr="« De la recherche au produit » : les Apéritifs de l'Innovation, à L'Aquila le deuxième Inno-Talk d'Inno99." data-it="«Dalla ricerca al prodotto»: gli Aperitivi dell'Innovazione, all'Aquila il secondo Inno-Talk di Inno99.">«Dalla ricerca al prodotto»: gli Aperitivi dell'Innovazione, all'Aquila il secondo Inno-Talk di Inno99.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.rete8.it/cronaca/laquila-dalla-ricerca-al-prodotto-secondo-inno-talk-di-inno99/" target="_blank" rel="noopener noreferrer" data-cat="inno99">
+    <div class="press-photo"><img src="assets/press/innotalk2-rete8.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Rete8</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="L'Aquila: 'From research to product', the second Inno-Talk by Inno99." data-es="L'Aquila: «De la investigación al producto», segundo Inno-Talk de Inno99." data-fr="L'Aquila : « De la recherche au produit », deuxième Inno-Talk d'Inno99." data-it="L'Aquila: «Dalla ricerca al prodotto», secondo Inno-Talk di Inno99.">L'Aquila: «Dalla ricerca al prodotto», secondo Inno-Talk di Inno99.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="assets/press/ilcentro-innotalk-pagina.jpg" target="_blank" rel="noopener noreferrer" data-cat="inno99">
+    <div class="press-photo"><img src="assets/press/ilcentro-innotalk.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Il Centro</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="'Inno Talk lands in town and sells out' — print edition, 4 July 2026." data-es="«Inno Talk llega a la ciudad y agota las entradas» — edición impresa del 4 de julio de 2026." data-fr="« Inno Talk débarque en ville et affiche complet » — édition papier du 4 juillet 2026." data-it="«Inno Talk sbarca in città e segna il tutto esaurito» — edizione cartacea del 4 luglio 2026.">«Inno Talk sbarca in città e segna il tutto esaurito» — edizione cartacea del 4 luglio 2026.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://streamingworldtv.it/le-idee-migliori-nascono-davanti-a-un-aperitivo-il-primo-inno-talk-conquista-laquila-sala-gremita-per-il-debutto-di-inno99/" target="_blank" rel="noopener noreferrer" data-cat="inno99">
+    <div class="press-photo"><img src="assets/press/innotalk-streamingworld.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">StreamingWorld TV</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="'The best ideas are born over an aperitif': the first Inno Talk wins over L'Aquila." data-es="«Las mejores ideas nacen ante un aperitivo»: el primer Inno Talk conquista L'Aquila." data-fr="« Les meilleures idées naissent autour d'un apéritif » : le premier Inno Talk conquiert L'Aquila." data-it="«Le idee migliori nascono davanti a un aperitivo»: il primo Inno Talk conquista L'Aquila.">«Le idee migliori nascono davanti a un aperitivo»: il primo Inno Talk conquista L'Aquila.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/inno99-debutta-allaquila-sala-gremita-per-il-primo-inno-talk/" target="_blank" rel="noopener noreferrer" data-cat="inno99">
+    <div class="press-photo"><img src="assets/press/innotalk-laquilablog.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="Inno99 debuts in L'Aquila: packed house for the first Inno Talk." data-es="Inno99 debuta en L'Aquila: sala llena en el primer Inno Talk." data-fr="Inno99 débute à L'Aquila : salle comble pour le premier Inno Talk." data-it="Inno99 debutta all'Aquila: sala gremita per il primo Inno Talk.">Inno99 debutta all'Aquila: sala gremita per il primo Inno Talk.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://abruzzosera.it/cultura-e-societa/laquila-debutta-inno99-gli-aperitivi-dellinnovazione-aprono-il-programma-di-innovalley/" target="_blank" rel="noopener noreferrer" data-cat="inno99">
+    <div class="press-photo"><img src="assets/press/innotalk-abruzzosera.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Abruzzosera</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="Inno99 debuts in L'Aquila: the 'innovation aperitifs' open Innovalley's programme." data-es="Debuta Inno99 en L'Aquila: los «aperitivos de la innovación» abren el programa de Innovalley." data-fr="Inno99 débute à L'Aquila : les « apéritifs de l'innovation » ouvrent le programme d'Innovalley." data-it="A L'Aquila debutta Inno99: gli «aperitivi dell'innovazione» aprono il programma di Innovalley.">A L'Aquila debutta Inno99: gli «aperitivi dell'innovazione» aprono il programma di Innovalley.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/inno99-porta-linnovazione-allaquila-primo-talk-il-2-luglio/" target="_blank" rel="noopener noreferrer" data-cat="inno99">
+    <div class="press-photo"><img src="assets/press/innotalk-annuncio.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="Inno99 brings innovation to L'Aquila: first talk on 2 July." data-es="Inno99 lleva la innovación a L'Aquila: primer talk el 2 de julio." data-fr="Inno99 apporte l'innovation à L'Aquila : premier talk le 2 juillet." data-it="Inno99 porta l'innovazione all'Aquila: primo talk il 2 luglio.">Inno99 porta l'innovazione all'Aquila: primo talk il 2 luglio.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/alliis-daosta-presentata-la-masterclass-2026/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press/masterclass2026.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2026</div>
+      <p class="press-quote" data-en="Masterclass 2026 unveiled at IIS d'Aosta." data-es="Presentada la Masterclass 2026 en el IIS d'Aosta." data-fr="Présentation de la Masterclass 2026 à l'IIS d'Aosta." data-it="All'IIS d'Aosta presentata la Masterclass 2026.">All'IIS d'Aosta presentata la Masterclass 2026.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.leonardo.com/en/news-and-stories-detail/-/detail/innovation-award-2025-edizione-record" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    <div class="press-photo"><img src="assets/press/leonardo-award.png" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Leonardo</div>
+      <div class="press-year">2025</div>
+      <p class="press-quote" data-en="Innovation Award 2025: a record edition, with the G-DEPM project among the protagonists." data-es="Innovation Award 2025: edición récord, con el proyecto G-DEPM entre los protagonistas." data-fr="Innovation Award 2025 : édition record, avec le projet G-DEPM parmi les protagonistes." data-it="Innovation Award 2025: edizione record, il progetto G-DEPM tra i protagonisti.">Innovation Award 2025: edizione record, il progetto G-DEPM tra i protagonisti.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.radiolaquila1.it/2025/01/16/amlaquila-masterclass-2025-al-via-la-terza-edizione/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-61.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Radio L&#39;Aquila 1</div>
+      <div class="press-year">2025</div>
+      <p class="press-quote" data-en="A L'Aquila, MasterClass 2025: Al Via la Terza Edizione." data-es="A L'Aquila, MasterClass 2025: Al Via la Terza Edizione." data-fr="A L'Aquila, MasterClass 2025: Al Via la Terza Edizione." data-it="A L'Aquila, MasterClass 2025: Al Via la Terza Edizione.">A L'Aquila, MasterClass 2025: Al Via la Terza Edizione.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://news-town.it/2025/01/16/persone/prende-il-via-la-terza-edizione-della-masterclass-organizzata-dallassociazione-333/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-60.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">News-Town</div>
+      <div class="press-year">2025</div>
+      <p class="press-quote" data-en="Prende il via la terza edizione della MasterClass 2025" data-es="Prende il via la terza edizione della MasterClass 2025" data-fr="Prende il via la terza edizione della MasterClass 2025" data-it="Prende il via la terza edizione della MasterClass 2025">Prende il via la terza edizione della MasterClass 2025</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/laquila-al-via-la-terza-edizione-di-masterclass-2025/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-58.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2025</div>
+      <p class="press-quote" data-en="L'Aquila, al via la terza edizione di MasterClass 2025" data-es="L'Aquila, al via la terza edizione di MasterClass 2025" data-fr="L'Aquila, al via la terza edizione di MasterClass 2025" data-it="L'Aquila, al via la terza edizione di MasterClass 2025">L'Aquila, al via la terza edizione di MasterClass 2025</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://abruzzolive.it/masterclass-2025-il-via-alla-terza-edizione-aquilana/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-57.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">AbruzzoLive</div>
+      <div class="press-year">2025</div>
+      <p class="press-quote" data-en="MasterClass 2025, il via alla terza edizione aquilana" data-es="MasterClass 2025, il via alla terza edizione aquilana" data-fr="MasterClass 2025, il via alla terza edizione aquilana" data-it="MasterClass 2025, il via alla terza edizione aquilana">MasterClass 2025, il via alla terza edizione aquilana</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://abruzzoweb.it/facciamo-adottare-laquila-da-elon-musk-per-laboratorio-rivoluzione-tecnologica-la-proposta-di-3-33/" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    <div class="press-photo"><img src="assets/press/abruzzoweb-musk.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Abruzzoweb</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="'Let's have Elon Musk adopt L'Aquila for a technological revolution.'" data-es="«Que Elon Musk adopte L'Aquila para la revolución tecnológica.»" data-fr="« Faisons adopter L'Aquila par Elon Musk pour la révolution technologique. »" data-it="«Facciamo adottare L'Aquila da Elon Musk per la rivoluzione tecnologica.»">«Facciamo adottare L'Aquila da Elon Musk per la rivoluzione tecnologica.»</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.radiolaquila1.it/2024/10/20/associazione-333-presidente-rocci-facciamo-adottare-laquila-da-elon-musk/" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    <div class="press-photo"><img src="assets/press/radiolaquila-duomo.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Radio L&#39;Aquila 1</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="President Rocci: 'Let's have Elon Musk adopt L'Aquila'." data-es="Presidente Rocci: «Que Elon Musk adopte L'Aquila»." data-fr="Président Rocci : « Faisons adopter L'Aquila par Elon Musk »." data-it="Presidente Rocci: «Facciamo adottare L'Aquila da Elon Musk».">Presidente Rocci: «Facciamo adottare L'Aquila da Elon Musk».</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/associazione-3-33-proponiamo-ladozione-tecnologica-della-citta-dellaquila-da-parte-di-elon-musk/" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    <div class="press-photo"><img src="assets/press/laquilablog-musk.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="'We propose the technological adoption of L'Aquila by Elon Musk.'" data-es="«Proponemos la adopción tecnológica de L'Aquila por parte de Elon Musk.»" data-fr="« Nous proposons l'adoption technologique de L'Aquila par Elon Musk. »" data-it="«Proponiamo l'adozione tecnologica della città dell'Aquila da parte di Elon Musk.»">«Proponiamo l'adozione tecnologica della città dell'Aquila da parte di Elon Musk.»</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="assets/press333/ilcentro-musk-pagina.jpg" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/ilcentro-musk.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Il Centro</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="'May Elon Musk adopt L'Aquila for an ever more digital future' — print edition, 22 October 2024." data-es="«Que Elon Musk adopte L'Aquila para un futuro cada vez más digital» — edición impresa del 22 de octubre de 2024." data-fr="« Qu'Elon Musk adopte L'Aquila pour un avenir toujours plus numérique » — édition papier du 22 octobre 2024." data-it="«Elon Musk adotti L'Aquila per un futuro sempre più digitale» — edizione cartacea del 22 ottobre 2024.">«Elon Musk adotti L'Aquila per un futuro sempre più digitale» — edizione cartacea del 22 ottobre 2024.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="assets/press333/ilmessaggero-musk-pagina.jpg" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/ilmessaggero-musk.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Il Messaggero</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="'Towards the smart future: a proposal aims to involve Elon Musk and his companies' — print edition, October 2024." data-es="«Hacia el futuro smart: una propuesta busca implicar a Elon Musk y sus empresas» — edición impresa, octubre de 2024." data-fr="« Vers le futur smart : une proposition vise à impliquer Elon Musk et ses entreprises » — édition papier, octobre 2024." data-it="«Verso il futuro smart: una proposta mira a coinvolgere Elon Musk e le sue aziende» — edizione cartacea, ottobre 2024.">«Verso il futuro smart: una proposta mira a coinvolgere Elon Musk e le sue aziende» — edizione cartacea, ottobre 2024.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.radiolaquila1.it/2024/10/20/associazione-333-presidente-rocci-facciamo-adottare-laquila-da-elon-musk/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-56.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Radio L&#39;Aquila 1</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Associazione 3:33: Presidente Rocci, 'Facciamo adottare L'Aquila da Elon Musk'" data-es="Associazione 3:33: Presidente Rocci, 'Facciamo adottare L'Aquila da Elon Musk'" data-fr="Associazione 3:33: Presidente Rocci, 'Facciamo adottare L'Aquila da Elon Musk'" data-it="Associazione 3:33: Presidente Rocci, 'Facciamo adottare L'Aquila da Elon Musk'">Associazione 3:33: Presidente Rocci, 'Facciamo adottare L'Aquila da Elon Musk'</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://infomedianews.com/associazione-333-facciamo-adottare-laquila-da-musk/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-55.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">InfoMedia News</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Associazione 3:33, Presidente Rocci: 'Facciamo adottare L'Aquila da Musk'" data-es="Associazione 3:33, Presidente Rocci: 'Facciamo adottare L'Aquila da Musk'" data-fr="Associazione 3:33, Presidente Rocci: 'Facciamo adottare L'Aquila da Musk'" data-it="Associazione 3:33, Presidente Rocci: 'Facciamo adottare L'Aquila da Musk'">Associazione 3:33, Presidente Rocci: 'Facciamo adottare L'Aquila da Musk'</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://abruzzoweb.it/facciamo-adottare-laquila-da-elon-musk-per-laboratorio-rivoluzione-tecnologica-la-proposta-di-3-33/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-54.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Abruzzoweb</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="'FACCIAMO ADOTTARE L'AQUILA DA ELON MUSK PER MODELLO RIVOLUZIONE TECNOLOGICA', LA PROPOSTA DI 3.33" data-es="'FACCIAMO ADOTTARE L'AQUILA DA ELON MUSK PER MODELLO RIVOLUZIONE TECNOLOGICA', LA PROPOSTA DI 3.33" data-fr="'FACCIAMO ADOTTARE L'AQUILA DA ELON MUSK PER MODELLO RIVOLUZIONE TECNOLOGICA', LA PROPOSTA DI 3.33" data-it="'FACCIAMO ADOTTARE L'AQUILA DA ELON MUSK PER MODELLO RIVOLUZIONE TECNOLOGICA', LA PROPOSTA DI 3.33">'FACCIAMO ADOTTARE L'AQUILA DA ELON MUSK PER MODELLO RIVOLUZIONE TECNOLOGICA', LA PROPOSTA DI 3.33</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/associazione-3-33-proponiamo-ladozione-tecnologica-della-citta-dellaquila-da-parte-di-elon-musk/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-53.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Associazione 3.33: “Proponiamo l’adozione tecnologica della Città dell’Aquila da parte di Elon Musk'" data-es="Associazione 3.33: “Proponiamo l’adozione tecnologica della Città dell’Aquila da parte di Elon Musk'" data-fr="Associazione 3.33: “Proponiamo l’adozione tecnologica della Città dell’Aquila da parte di Elon Musk'" data-it="Associazione 3.33: “Proponiamo l’adozione tecnologica della Città dell’Aquila da parte di Elon Musk'">Associazione 3.33: “Proponiamo l’adozione tecnologica della Città dell’Aquila da parte di Elon Musk'</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.youtube.com/watch?v=B1bp5BvuqBU" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-50.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">YouTube</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="L'Aquila. Cerimonia conclusiva per 'Masterclass 2024'" data-es="L'Aquila. Cerimonia conclusiva per 'Masterclass 2024'" data-fr="L'Aquila. Cerimonia conclusiva per 'Masterclass 2024'" data-it="L'Aquila. Cerimonia conclusiva per 'Masterclass 2024'">L'Aquila. Cerimonia conclusiva per 'Masterclass 2024'</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.youtube.com/watch?v=I2_WzKKtO6s" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-49.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">YouTube</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="La cerimonia di chiusura del progetto formativo MasterClass 2024 - 20/05/2024" data-es="La cerimonia di chiusura del progetto formativo MasterClass 2024 - 20/05/2024" data-fr="La cerimonia di chiusura del progetto formativo MasterClass 2024 - 20/05/2024" data-it="La cerimonia di chiusura del progetto formativo MasterClass 2024 - 20/05/2024">La cerimonia di chiusura del progetto formativo MasterClass 2024 - 20/05/2024</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://news-town.it/2024/05/17/eventi/si-conclude-la-seconda-edizione-di-masterclass-2024-domani-la-cerimonia-di-chiusura/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-48.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">News-Town</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Si conclude la II edizione di MasterClass 2024: oggi la cerimonia di chiusura" data-es="Si conclude la II edizione di MasterClass 2024: oggi la cerimonia di chiusura" data-fr="Si conclude la II edizione di MasterClass 2024: oggi la cerimonia di chiusura" data-it="Si conclude la II edizione di MasterClass 2024: oggi la cerimonia di chiusura">Si conclude la II edizione di MasterClass 2024: oggi la cerimonia di chiusura</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://abruzzosera.it/alla-sala-ipogea-la-cerimonia-di-chiusura-del-progetto-masterclass-2024-con-lectio-magistralis-di-massimo-claudio-comparini/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-47.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Abruzzosera</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Alla Sala Ipogea la cerimonia di chiusura del Progetto MasterClass 2024 con lectio magistralis di Massimo Claudio Comparini" data-es="Alla Sala Ipogea la cerimonia di chiusura del Progetto MasterClass 2024 con lectio magistralis di Massimo Claudio Comparini" data-fr="Alla Sala Ipogea la cerimonia di chiusura del Progetto MasterClass 2024 con lectio magistralis di Massimo Claudio Comparini" data-it="Alla Sala Ipogea la cerimonia di chiusura del Progetto MasterClass 2024 con lectio magistralis di Massimo Claudio Comparini">Alla Sala Ipogea la cerimonia di chiusura del Progetto MasterClass 2024 con lectio magistralis di Massimo Claudio Comparini</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/masterclass-2024-chiude-con-una-lectio-magistralis-sul-tema-dello-spazio/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-46.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="MasterClass 2024 chiude con una Lectio Magistralis sul tema dello Spazio" data-es="MasterClass 2024 chiude con una Lectio Magistralis sul tema dello Spazio" data-fr="MasterClass 2024 chiude con una Lectio Magistralis sul tema dello Spazio" data-it="MasterClass 2024 chiude con una Lectio Magistralis sul tema dello Spazio">MasterClass 2024 chiude con una Lectio Magistralis sul tema dello Spazio</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://azinforma.com/laquila-allemiciclo-cerimonia-di-chiusura-del-progetto-formativo-masterclass-2024/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-45.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">AZ Informa</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="L'Aquila, all'Emiciclo cerimonia di chiusura del progetto formativo MasterClass 2024" data-es="L'Aquila, all'Emiciclo cerimonia di chiusura del progetto formativo MasterClass 2024" data-fr="L'Aquila, all'Emiciclo cerimonia di chiusura del progetto formativo MasterClass 2024" data-it="L'Aquila, all'Emiciclo cerimonia di chiusura del progetto formativo MasterClass 2024">L'Aquila, all'Emiciclo cerimonia di chiusura del progetto formativo MasterClass 2024</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/sesto-seminario-del-masterclass-2024-al-centro-interazione-e-creativita/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-44.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Sesto Seminario del MasterClass 2024, al centro Interazione e Creatività" data-es="Sesto Seminario del MasterClass 2024, al centro Interazione e Creatività" data-fr="Sesto Seminario del MasterClass 2024, al centro Interazione e Creatività" data-it="Sesto Seminario del MasterClass 2024, al centro Interazione e Creatività">Sesto Seminario del MasterClass 2024, al centro Interazione e Creatività</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://news-town.it/2024/05/09/eventi/masterclass-2024-criticality-management-al-centro-del-sesto-seminario/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-43.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">News-Town</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="MasterClass 2024: 'Criticality management' al centro del sesto seminario" data-es="MasterClass 2024: 'Criticality management' al centro del sesto seminario" data-fr="MasterClass 2024: 'Criticality management' al centro del sesto seminario" data-it="MasterClass 2024: 'Criticality management' al centro del sesto seminario">MasterClass 2024: 'Criticality management' al centro del sesto seminario</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://news-town.it/2024/04/26/eventi/laquila-primo-evento-dedicato-alla-scuola-normale-superiore-di-pisa/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-42.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">News-Town</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="L'Aquila: primo evento dedicato alla Scuola Normale Superiore di Pisa" data-es="L'Aquila: primo evento dedicato alla Scuola Normale Superiore di Pisa" data-fr="L'Aquila: primo evento dedicato alla Scuola Normale Superiore di Pisa" data-it="L'Aquila: primo evento dedicato alla Scuola Normale Superiore di Pisa">L'Aquila: primo evento dedicato alla Scuola Normale Superiore di Pisa</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/masterclass-2024-primo-evento-in-abruzzo-interamente-dedicato-alla-scuola-normale-superiore-di-pisa/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-41.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="MasterClass 2024: primo evento in Abruzzo interamente dedicato alla Scuola Normale Superiore di Pisa" data-es="MasterClass 2024: primo evento in Abruzzo interamente dedicato alla Scuola Normale Superiore di Pisa" data-fr="MasterClass 2024: primo evento in Abruzzo interamente dedicato alla Scuola Normale Superiore di Pisa" data-it="MasterClass 2024: primo evento in Abruzzo interamente dedicato alla Scuola Normale Superiore di Pisa">MasterClass 2024: primo evento in Abruzzo interamente dedicato alla Scuola Normale Superiore di Pisa</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://abruzzosera.it/primo-incontro-a-laquila-dedicato-alla-scuola-normale-superiore-di-pisa-e-presentazione-masterclass/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-40.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Abruzzosera</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Primo incontro a L'Aquila dedicato alla Scuola Normale Superiore di Pisa e presentazione MasterClass" data-es="Primo incontro a L'Aquila dedicato alla Scuola Normale Superiore di Pisa e presentazione MasterClass" data-fr="Primo incontro a L'Aquila dedicato alla Scuola Normale Superiore di Pisa e presentazione MasterClass" data-it="Primo incontro a L'Aquila dedicato alla Scuola Normale Superiore di Pisa e presentazione MasterClass">Primo incontro a L'Aquila dedicato alla Scuola Normale Superiore di Pisa e presentazione MasterClass</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://abruzzolive.it/primo-evento-in-abruzzo-interamente-dedicato-alla-scuola-normale-superiore-di-pisa/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-39.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">AbruzzoLive</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Primo evento in Abruzzo interamente dedicato alla Scuola Normale Superiore di Pisa" data-es="Primo evento in Abruzzo interamente dedicato alla Scuola Normale Superiore di Pisa" data-fr="Primo evento in Abruzzo interamente dedicato alla Scuola Normale Superiore di Pisa" data-it="Primo evento in Abruzzo interamente dedicato alla Scuola Normale Superiore di Pisa">Primo evento in Abruzzo interamente dedicato alla Scuola Normale Superiore di Pisa</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://abruzzolive.it/progetto-masterclass-2024-in-questura-con-i-giovani-e-le-forze-dellordine/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-38.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">AbruzzoLive</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Progetto MasterClass 2024 in Questura con i giovani e le forze dell'ordine" data-es="Progetto MasterClass 2024 in Questura con i giovani e le forze dell'ordine" data-fr="Progetto MasterClass 2024 in Questura con i giovani e le forze dell'ordine" data-it="Progetto MasterClass 2024 in Questura con i giovani e le forze dell'ordine">Progetto MasterClass 2024 in Questura con i giovani e le forze dell'ordine</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://news-town.it/2024/04/18/eventi/masterclass-2024-un-percorso-formativo-sulle-droghe-alla-questura-dellaquila/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-37.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">News-Town</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="MasterClass 2024: un percorso formativo sulle droghe alla Questura dell'Aquila" data-es="MasterClass 2024: un percorso formativo sulle droghe alla Questura dell'Aquila" data-fr="MasterClass 2024: un percorso formativo sulle droghe alla Questura dell'Aquila" data-it="MasterClass 2024: un percorso formativo sulle droghe alla Questura dell'Aquila">MasterClass 2024: un percorso formativo sulle droghe alla Questura dell'Aquila</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://abruzzosera.it/progetto-masterclass-2024-in-questura/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-36.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Abruzzosera</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Progetto MasterClass 2024 in Questura" data-es="Progetto MasterClass 2024 in Questura" data-fr="Progetto MasterClass 2024 in Questura" data-it="Progetto MasterClass 2024 in Questura">Progetto MasterClass 2024 in Questura</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/progetto-masterclass-2024-in-questura-con-i-giovani-e-le-forze-dellordine/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-35.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Progetto MasterClass 2024 in Questura con i giovani e le forze dell’ordine" data-es="Progetto MasterClass 2024 in Questura con i giovani e le forze dell’ordine" data-fr="Progetto MasterClass 2024 in Questura con i giovani e le forze dell’ordine" data-it="Progetto MasterClass 2024 in Questura con i giovani e le forze dell’ordine">Progetto MasterClass 2024 in Questura con i giovani e le forze dell’ordine</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://infomedianews.com/laquila-progetto-masterclass-2024/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-34.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">InfoMedia News</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="L'Aquila: progetto Masterclass 2024" data-es="L'Aquila: progetto Masterclass 2024" data-fr="L'Aquila: progetto Masterclass 2024" data-it="L'Aquila: progetto Masterclass 2024">L'Aquila: progetto Masterclass 2024</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/laquila-a-palazzo-fibbioni-il-terzo-seminario-di-masterclass-2024/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-32.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="L'Aquila: a Palazzo Fibbioni il terzo seminario di MasterClass 2024" data-es="L'Aquila: a Palazzo Fibbioni il terzo seminario di MasterClass 2024" data-fr="L'Aquila: a Palazzo Fibbioni il terzo seminario di MasterClass 2024" data-it="L'Aquila: a Palazzo Fibbioni il terzo seminario di MasterClass 2024">L'Aquila: a Palazzo Fibbioni il terzo seminario di MasterClass 2024</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://abruzzolive.it/intelligenza-artificiale-e-robotica-collaborativa-terzo-seminario-del-percorso-formativo-masterclass-2024/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-31.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">AbruzzoLive</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Intelligenza Artificiale e robotica collaborativa, terzo seminario del percorso formativo MasterClass 2024" data-es="Intelligenza Artificiale e robotica collaborativa, terzo seminario del percorso formativo MasterClass 2024" data-fr="Intelligenza Artificiale e robotica collaborativa, terzo seminario del percorso formativo MasterClass 2024" data-it="Intelligenza Artificiale e robotica collaborativa, terzo seminario del percorso formativo MasterClass 2024">Intelligenza Artificiale e robotica collaborativa, terzo seminario del percorso formativo MasterClass 2024</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.youtube.com/watch?v=0hBglRqsU40" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-30.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">YouTube</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="L'Aquila, terzo seminario in Masterclass 2024" data-es="L'Aquila, terzo seminario in Masterclass 2024" data-fr="L'Aquila, terzo seminario in Masterclass 2024" data-it="L'Aquila, terzo seminario in Masterclass 2024">L'Aquila, terzo seminario in Masterclass 2024</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/laquila-parte-il-secondo-seminario-del-percorso-formativo-masterclass-2024/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-29.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="L’Aquila, parte il secondo seminario del percorso formativo MasterClass 2024" data-es="L’Aquila, parte il secondo seminario del percorso formativo MasterClass 2024" data-fr="L’Aquila, parte il secondo seminario del percorso formativo MasterClass 2024" data-it="L’Aquila, parte il secondo seminario del percorso formativo MasterClass 2024">L’Aquila, parte il secondo seminario del percorso formativo MasterClass 2024</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.youtube.com/watch?v=qPnLL3RSWyQ" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-28.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">YouTube</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Masterclass 2024, continuano gli incontri" data-es="Masterclass 2024, continuano gli incontri" data-fr="Masterclass 2024, continuano gli incontri" data-it="Masterclass 2024, continuano gli incontri">Masterclass 2024, continuano gli incontri</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.radiolaquila1.it/2024/03/23/secondo-seminario-del-percorso-formativo-masterclass-2024/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-27.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Radio L&#39;Aquila 1</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Secondo Seminario del percorso formativo MasterClass 2024" data-es="Secondo Seminario del percorso formativo MasterClass 2024" data-fr="Secondo Seminario del percorso formativo MasterClass 2024" data-it="Secondo Seminario del percorso formativo MasterClass 2024">Secondo Seminario del percorso formativo MasterClass 2024</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://news-town.it/2024/03/23/scenari/masterclass-2024-la-fisica-e-lingegneria-davanguardia-al-centro-del-secondo-seminario/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-26.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">News-Town</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="MasterClass 2024: la fisica e l'ingegneria d'avanguardia al centro del secondo seminario" data-es="MasterClass 2024: la fisica e l'ingegneria d'avanguardia al centro del secondo seminario" data-fr="MasterClass 2024: la fisica e l'ingegneria d'avanguardia al centro del secondo seminario" data-it="MasterClass 2024: la fisica e l'ingegneria d'avanguardia al centro del secondo seminario">MasterClass 2024: la fisica e l'ingegneria d'avanguardia al centro del secondo seminario</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.radiolaquila1.it/2024/03/17/primo-seminario-del-percorso-formativo-masterclass-2024/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-25.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Radio L&#39;Aquila 1</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Primo Seminario del percorso formativo MasterClass 2024" data-es="Primo Seminario del percorso formativo MasterClass 2024" data-fr="Primo Seminario del percorso formativo MasterClass 2024" data-it="Primo Seminario del percorso formativo MasterClass 2024">Primo Seminario del percorso formativo MasterClass 2024</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://news-town.it/2024/03/18/eventi/il-progetto-masterclass-2024-entra-nella-sua-fase-formativa-con-il-primo-dei-sette-seminari/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-24.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">News-Town</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Il progetto MasterClass 2024 entra nella sua fase formativa con il primo dei sette seminari" data-es="Il progetto MasterClass 2024 entra nella sua fase formativa con il primo dei sette seminari" data-fr="Il progetto MasterClass 2024 entra nella sua fase formativa con il primo dei sette seminari" data-it="Il progetto MasterClass 2024 entra nella sua fase formativa con il primo dei sette seminari">Il progetto MasterClass 2024 entra nella sua fase formativa con il primo dei sette seminari</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/laquila-primo-seminario-del-percorso-formativo-masterclass-2024/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-22.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="L’Aquila, Primo Seminario del percorso formativo MasterClass 2024" data-es="L’Aquila, Primo Seminario del percorso formativo MasterClass 2024" data-fr="L’Aquila, Primo Seminario del percorso formativo MasterClass 2024" data-it="L’Aquila, Primo Seminario del percorso formativo MasterClass 2024">L’Aquila, Primo Seminario del percorso formativo MasterClass 2024</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://abruzzolive.it/nella-sala-ipogea-dellemiciclo-il-primo-seminario-nellambito-del-progetto-masterclass-2024/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-21.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">AbruzzoLive</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Nella sala Ipogea dell'Emiciclo il primo seminario nell’ambito del progetto Masterclass 2024" data-es="Nella sala Ipogea dell'Emiciclo il primo seminario nell’ambito del progetto Masterclass 2024" data-fr="Nella sala Ipogea dell'Emiciclo il primo seminario nell’ambito del progetto Masterclass 2024" data-it="Nella sala Ipogea dell'Emiciclo il primo seminario nell’ambito del progetto Masterclass 2024">Nella sala Ipogea dell'Emiciclo il primo seminario nell’ambito del progetto Masterclass 2024</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://abruzzoweb.it/laquila-boom-di-adesioni-al-progetto-formativo-masterclass-2024/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-20.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Abruzzoweb</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="L'AQUILA: BOOM DI ADESIONI AL PROGETTO FORMATIVO MASTERCLASS 2024" data-es="L'AQUILA: BOOM DI ADESIONI AL PROGETTO FORMATIVO MASTERCLASS 2024" data-fr="L'AQUILA: BOOM DI ADESIONI AL PROGETTO FORMATIVO MASTERCLASS 2024" data-it="L'AQUILA: BOOM DI ADESIONI AL PROGETTO FORMATIVO MASTERCLASS 2024">L'AQUILA: BOOM DI ADESIONI AL PROGETTO FORMATIVO MASTERCLASS 2024</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://news-town.it/2024/03/13/scenari/boom-di-adesioni-al-progetto-masterclass-2024-sale-il-numero-di-partecipanti-da-30-a-50/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-19.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">News-Town</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="Boom di adesioni al progetto MasterClass 2024. Sale il numero di partecipanti" data-es="Boom di adesioni al progetto MasterClass 2024. Sale il numero di partecipanti" data-fr="Boom di adesioni al progetto MasterClass 2024. Sale il numero di partecipanti" data-it="Boom di adesioni al progetto MasterClass 2024. Sale il numero di partecipanti">Boom di adesioni al progetto MasterClass 2024. Sale il numero di partecipanti</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/a-laquila-boom-di-adesioni-al-progetto-formativo-masterclass-2024/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-18.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2024</div>
+      <p class="press-quote" data-en="A L'Aquila boom di adesioni al progetto formativo MasterClass 2024" data-es="A L'Aquila boom di adesioni al progetto formativo MasterClass 2024" data-fr="A L'Aquila boom di adesioni al progetto formativo MasterClass 2024" data-it="A L'Aquila boom di adesioni al progetto formativo MasterClass 2024">A L'Aquila boom di adesioni al progetto formativo MasterClass 2024</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.aqbox.tv/notizie.php?view=22618" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-16.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">AQ Box TV</div>
+      <div class="press-year">2023</div>
+      <p class="press-quote" data-en="Servizio televisivo sulle attività dell'associazione 3:33" data-es="Servizio televisivo sulle attività dell'associazione 3:33" data-fr="Servizio televisivo sulle attività dell'associazione 3:33" data-it="Servizio televisivo sulle attività dell'associazione 3:33">Servizio televisivo sulle attività dell'associazione 3:33</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://abruzzoweb.it/laquila-masterclass-2023-grande-successo-percorso-intenso-6-maggio-evento-conclusivo/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-13.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Abruzzoweb</div>
+      <div class="press-year">2023</div>
+      <p class="press-quote" data-en="L'AQUILA, MASTERCLASS 2023: 'GRANDE SUCCESSO, PERCORSO INTENSO', 6 MAGGIO EVENTO CONCLUSIVO" data-es="L'AQUILA, MASTERCLASS 2023: 'GRANDE SUCCESSO, PERCORSO INTENSO', 6 MAGGIO EVENTO CONCLUSIVO" data-fr="L'AQUILA, MASTERCLASS 2023: 'GRANDE SUCCESSO, PERCORSO INTENSO', 6 MAGGIO EVENTO CONCLUSIVO" data-it="L'AQUILA, MASTERCLASS 2023: 'GRANDE SUCCESSO, PERCORSO INTENSO', 6 MAGGIO EVENTO CONCLUSIVO">L'AQUILA, MASTERCLASS 2023: 'GRANDE SUCCESSO, PERCORSO INTENSO', 6 MAGGIO EVENTO CONCLUSIVO</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.youtube.com/watch?v=PxFAveFTMEM" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-17.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">YouTube</div>
+      <div class="press-year">2023</div>
+      <p class="press-quote" data-en="Masterclass, un'occasione unica per gli studenti aquilani" data-es="Masterclass, un'occasione unica per gli studenti aquilani" data-fr="Masterclass, un'occasione unica per gli studenti aquilani" data-it="Masterclass, un'occasione unica per gli studenti aquilani">Masterclass, un'occasione unica per gli studenti aquilani</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.ilcapoluogo.it/2023/04/16/droghe-di-ultima-generazione-incontro-informativo-in-questura/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-11.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Il Capoluogo</div>
+      <div class="press-year">2023</div>
+      <p class="press-quote" data-en="Droghe di ultima generazione, incontro informativo in Questura" data-es="Droghe di ultima generazione, incontro informativo in Questura" data-fr="Droghe di ultima generazione, incontro informativo in Questura" data-it="Droghe di ultima generazione, incontro informativo in Questura">Droghe di ultima generazione, incontro informativo in Questura</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/gli-algoritmi-domineranno-il-mondo-a-laquila-liniziativa-dellassociazione-333/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-10.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2023</div>
+      <p class="press-quote" data-en="'Gli algoritmi domineranno il mondo?', a L'Aquila l'iniziativa dell'associazione 3:33" data-es="'Gli algoritmi domineranno il mondo?', a L'Aquila l'iniziativa dell'associazione 3:33" data-fr="'Gli algoritmi domineranno il mondo?', a L'Aquila l'iniziativa dell'associazione 3:33" data-it="'Gli algoritmi domineranno il mondo?', a L'Aquila l'iniziativa dell'associazione 3:33">'Gli algoritmi domineranno il mondo?', a L'Aquila l'iniziativa dell'associazione 3:33</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/a-laquila-la-prima-masterclass-di-associazione-333-e-centro-studi-la-meta/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-9.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2023</div>
+      <p class="press-quote" data-en="A L'Aquila la prima masterclass di associazione 3:33 e Centro studi La Meta" data-es="A L'Aquila la prima masterclass di associazione 3:33 e Centro studi La Meta" data-fr="A L'Aquila la prima masterclass di associazione 3:33 e Centro studi La Meta" data-it="A L'Aquila la prima masterclass di associazione 3:33 e Centro studi La Meta">A L'Aquila la prima masterclass di associazione 3:33 e Centro studi La Meta</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/laquila-al-via-masterclass-per-ispirare-studenti-superiori-verso-eccellenza/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-8.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2023</div>
+      <p class="press-quote" data-en="L'Aquila, al via Masterclass per ispirare studenti superiori verso eccellenza" data-es="L'Aquila, al via Masterclass per ispirare studenti superiori verso eccellenza" data-fr="L'Aquila, al via Masterclass per ispirare studenti superiori verso eccellenza" data-it="L'Aquila, al via Masterclass per ispirare studenti superiori verso eccellenza">L'Aquila, al via Masterclass per ispirare studenti superiori verso eccellenza</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://infomedianews.com/laquila-presentato-progetto-masterclass-2023/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-2.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">InfoMedia News</div>
+      <div class="press-year">2023</div>
+      <p class="press-quote" data-en="L'Aquila: presentato progetto MasterClass 2023" data-es="L'Aquila: presentato progetto MasterClass 2023" data-fr="L'Aquila: presentato progetto MasterClass 2023" data-it="L'Aquila: presentato progetto MasterClass 2023">L'Aquila: presentato progetto MasterClass 2023</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.laquilablog.it/associazione-333-un-concorso-giornalistico-in-memoria-del-medico-libanese-mohamed-ali-zaraket/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-4.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">L&#39;Aquila Blog</div>
+      <div class="press-year">2023</div>
+      <p class="press-quote" data-en="Associazione 3:33, un concorso giornalistico in memoria del medico libanese Mohamed Alì Zaraket" data-es="Associazione 3:33, un concorso giornalistico in memoria del medico libanese Mohamed Alì Zaraket" data-fr="Associazione 3:33, un concorso giornalistico in memoria del medico libanese Mohamed Alì Zaraket" data-it="Associazione 3:33, un concorso giornalistico in memoria del medico libanese Mohamed Alì Zaraket">Associazione 3:33, un concorso giornalistico in memoria del medico libanese Mohamed Alì Zaraket</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://abruzzoweb.it/associazione-3-33-da-laquila-progetto-sociale-di-rinascita-concorso-in-memoria-dottor-zaraket/" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-3.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Abruzzoweb</div>
+      <div class="press-year">2023</div>
+      <p class="press-quote" data-en="ASSOCIAZIONE '3.33': DA L'AQUILA PROGETTO SOCIALE DI RINASCITA, CONCORSO IN MEMORIA DOTTOR ZARAKET" data-es="ASSOCIAZIONE '3.33': DA L'AQUILA PROGETTO SOCIALE DI RINASCITA, CONCORSO IN MEMORIA DOTTOR ZARAKET" data-fr="ASSOCIAZIONE '3.33': DA L'AQUILA PROGETTO SOCIALE DI RINASCITA, CONCORSO IN MEMORIA DOTTOR ZARAKET" data-it="ASSOCIAZIONE '3.33': DA L'AQUILA PROGETTO SOCIALE DI RINASCITA, CONCORSO IN MEMORIA DOTTOR ZARAKET">ASSOCIAZIONE '3.33': DA L'AQUILA PROGETTO SOCIALE DI RINASCITA, CONCORSO IN MEMORIA DOTTOR ZARAKET</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://www.aqbox.tv/notizie.php?view=21919" target="_blank" rel="noopener noreferrer" data-cat="333">
+    <div class="press-photo"><img src="assets/press333/a333-1.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">AQ Box TV</div>
+      <div class="press-year">2023</div>
+      <p class="press-quote" data-en="Servizio televisivo sulle attività dell'associazione 3:33" data-es="Servizio televisivo sulle attività dell'associazione 3:33" data-fr="Servizio televisivo sulle attività dell'associazione 3:33" data-it="Servizio televisivo sulle attività dell'associazione 3:33">Servizio televisivo sulle attività dell'associazione 3:33</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><div class="press reveal" data-cat="lavoro">
+    
+    <div class="press-body">
+      <div class="press-outlet">Il Messaggero</div>
+      <div class="press-year">2020</div>
+      <p class="press-quote" data-en="'Supercomputers: an L'Aquila native among the protagonists' — print edition, 13 December 2020." data-es="«Supercomputadoras: también un aquilano entre los protagonistas» — edición impresa del 13 de diciembre de 2020." data-fr="« Superordinateurs : un natif de L'Aquila parmi les protagonistes » — édition papier du 13 décembre 2020." data-it="«Supercomputer: anche un aquilano tra i protagonisti» — edizione cartacea del 13 dicembre 2020.">«Supercomputer: anche un aquilano tra i protagonisti» — edizione cartacea del 13 dicembre 2020.</p>
+      <div class="press-arrow press-print"><span data-en="Print edition" data-es="Edición impresa" data-fr="Édition papier" data-it="Edizione cartacea">Edizione cartacea</span></div>
+    </div>
+  </div><a class="press reveal has-photo" href="https://www.repubblica.it/tecnologia/2020/06/17/news/realizzata_una_batteria_a_fase_quantica_e_la_prima_volta-259439007/" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    <div class="press-photo"><img src="assets/press/repubblica-batteria.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">la Repubblica</div>
+      <div class="press-year">2020</div>
+      <p class="press-quote" data-en="'A quantum phase battery has been built. For the first time.'" data-es="«Creada una batería de fase cuántica. Es la primera vez.»" data-fr="« Une batterie à phase quantique a été créée. Pour la première fois. »" data-it="«Realizzata una batteria a fase quantica. È la prima volta.»">«Realizzata una batteria a fase quantica. È la prima volta.»</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://physicsworld.com/a/physicists-create-quantum-phase-battery/" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    <div class="press-photo"><img src="assets/press/physicsworld-battery.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Physics World</div>
+      <div class="press-year">2020</div>
+      <p class="press-quote" data-en="'Physicists create quantum phase battery.'" data-es="«Physicists create quantum phase battery.»" data-fr="« Physicists create quantum phase battery. »" data-it="«Physicists create quantum phase battery.»">«Physicists create quantum phase battery.»</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal" href="https://www.corrierenazionale.it/2020/09/13/superconduttori-cnr-realizza-un-nanofilo-innovativo/" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    
+    <div class="press-body">
+      <div class="press-outlet">Corriere Nazionale</div>
+      <div class="press-year">2020</div>
+      <p class="press-quote" data-en="A supercurrent transistor from a next-generation nanowire." data-es="Un transistor de supercorriente a partir de un nanohilo de nueva generación." data-fr="Un transistor à supercourant à partir d'un nanofil de nouvelle génération." data-it="Un transistor a supercorrente da un nanofilo di nuova generazione.">Un transistor a supercorrente da un nanofilo di nuova generazione.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://abruzzoweb.it/la-prima-batteria-a-fase-quantica-un-aquilano-nel-progetto-rivoluzionario/" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    <div class="press-photo"><img src="assets/press/abruzzoweb-batteria.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">Abruzzoweb</div>
+      <div class="press-year">2020</div>
+      <p class="press-quote" data-en="'The first quantum phase battery: an L'Aquila native in the groundbreaking project.'" data-es="«La primera batería de fase cuántica: un aquilano en el proyecto revolucionario.»" data-fr="« La première batterie à phase quantique : un natif de L'Aquila dans le projet révolutionnaire. »" data-it="«La prima batteria a fase quantica: un aquilano nel progetto rivoluzionario.»">«La prima batteria a fase quantica: un aquilano nel progetto rivoluzionario.»</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal" href="https://n3ws.today/categories/science/first-quantum-phase-supercurrent-battery-ever-developed" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    
+    <div class="press-body">
+      <div class="press-outlet">N3ws Today</div>
+      <div class="press-year">2020</div>
+      <p class="press-quote" data-en="'First quantum phase ‘supercurrent’ battery ever developed.'" data-es="«First quantum phase ‘supercurrent’ battery ever developed.»" data-fr="« First quantum phase ‘supercurrent’ battery ever developed. »" data-it="«First quantum phase 'supercurrent' battery ever developed.»">«First quantum phase 'supercurrent' battery ever developed.»</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="https://normalenews.sns.it/memex-i-luoghi-della-scienza-parla-di-pisa-e-del-laboratorio-nest" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    <div class="press-photo"><img src="assets/press/sns-memex.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">RAI 3 — Memex</div>
+      <div class="press-year">2017</div>
+      <p class="press-quote" data-en="'Memex — Places of Science': from the NEST lab of the Scuola Normale." data-es="«Memex — Los lugares de la Ciencia»: desde el laboratorio NEST de la Scuola Normale." data-fr="« Memex — Les lieux de la Science » : depuis le laboratoire NEST de la Scuola Normale." data-it="«Memex — I luoghi della Scienza»: dal laboratorio NEST della Scuola Normale.">«Memex — I luoghi della Scienza»: dal laboratorio NEST della Scuola Normale.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><a class="press reveal has-photo" href="http://www.laboratorionest.it/nestinternet-festival-2015/" target="_blank" rel="noopener noreferrer" data-cat="lavoro">
+    <div class="press-photo"><img src="assets/press/nest-festival.jpg" alt="" loading="lazy"></div>
+    <div class="press-body">
+      <div class="press-outlet">RAI Scuola</div>
+      <div class="press-year">2015</div>
+      <p class="press-quote" data-en="'Space in the Nanoworld' — Internet Festival." data-es="«El Espacio en el Nanomundo» — Internet Festival." data-fr="« L'Espace dans le Nanomonde » — Internet Festival." data-it="«Lo Spazio nel Nanomondo» — Internet Festival.">«Lo Spazio nel Nanomondo» — Internet Festival.</p>
+      <div class="press-arrow"><span data-en="Open" data-es="Abrir" data-fr="Ouvrir" data-it="Apri">Apri</span> →</div>
+    </div>
+  </a><!--/pre:press-archive--></div>
+</section>
+
+</main>
+
+<footer id="footer">
+  <div class="foot-inner">
+    <span class="foot-brand">Mirko Rocci<span class="brand-dot">.</span></span>
+    <span class="foot-copy">© <span id="year"></span> Mirko Rocci — L'Aquila, Italia ·
+      <a href="#" id="cookie-prefs" data-en="Cookie preferences" data-es="Preferencias de cookies" data-fr="Préférences cookies">Preferenze cookie</a>
+    </span>
+    <nav class="foot-nav" id="foot-nav" aria-label="Pagine del sito"><!--pre:foot-nav--><a href="./" data-en="Home" data-es="Inicio" data-fr="Accueil" data-it="Home">Home</a><a href="pubblicazioni.html" data-en="Publications" data-es="Publicaciones" data-fr="Publications" data-it="Pubblicazioni">Pubblicazioni</a><a href="stampa.html" data-en="Press coverage" data-es="Prensa" data-fr="Revue de presse" data-it="Rassegna stampa">Rassegna stampa</a><a href="inno99.html" data-en="Inno99" data-es="Inno99" data-fr="Inno99" data-it="Inno99">Inno99</a><a href="associazione-333.html" data-en="Association 3:33" data-es="Asociación 3:33" data-fr="Association 3:33" data-it="Associazione 3:33">Associazione 3:33</a><a href="percorso.html" data-en="Career, map and awards" data-es="Trayectoria, mapa y premios" data-fr="Parcours, carte et prix" data-it="Percorso, mappa e premi">Percorso, mappa e premi</a><a href="laquilive-app.html" data-en="L'AquiLive app" data-es="App L'AquiLive" data-fr="Appli L'AquiLive" data-it="App L'AquiLive">App L'AquiLive</a><!--/pre:foot-nav--></nav>
+    <button class="to-top" id="to-top" aria-label="Back to top">↑</button>
+  </div>
+</footer>
+
+<!-- COOKIE CONSENT -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+  <p class="cookie-text" data-en="This site uses only technical cookies. With your consent we also use Google Analytics to understand traffic. You can change your choice anytime." data-es="Este sitio usa solo cookies técnicas. Con tu consentimiento usamos también Google Analytics para entender el tráfico. Puedes cambiar tu elección cuando quieras." data-fr="Ce site n'utilise que des cookies techniques. Avec votre consentement, nous utilisons aussi Google Analytics pour comprendre le trafic. Vous pouvez modifier votre choix à tout moment.">
+    Questo sito usa solo cookie tecnici. Con il tuo consenso usiamo anche Google Analytics per capire il traffico. Puoi cambiare la tua scelta quando vuoi.
+  </p>
+  <div class="cookie-actions">
+    <button class="btn btn-ghost cookie-btn" id="cookie-reject" data-en="Reject" data-es="Rechazar" data-fr="Refuser">Rifiuta</button>
+    <button class="btn btn-primary cookie-btn" id="cookie-accept" data-en="Accept" data-es="Aceptar" data-fr="Accepter">Accetta</button>
+  </div>
+</div>
+
+<!-- contenuti.js = il file da modificare per news, stampa e pubblicazioni -->
+<script src="js/contenuti.js?v=20260928c"></script>
+<script src="js/data.js?v=20260928c"></script>
+<script src="js/main.js?v=20260928c"></script>
+</body>
+</html>

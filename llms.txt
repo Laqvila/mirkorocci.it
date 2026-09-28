@@ -8,6 +8,15 @@ Mirko Rocci è Ph.D. in Fisica della Materia Condensata, formato al Massachusett
 
 Mirko Rocci holds a Ph.D. in Condensed Matter Physics, trained at the Massachusetts Institute of Technology, the Scuola Normale Superiore and in Madrid. He works as a technologist at Thales Alenia Space Italia in L'Aquila, where he leads innovation in space technologies. His research areas are quantum technologies, superconductivity, nanotechnologies and space hardware. He is CTO and co-founder of Clair Clinique and founder and president of the cultural association 3:33; co-creator and curator of Inno99.
 
+## Pagine del sito
+
+- [Home](https://mirkorocci.it/): profilo, novità, ricerca, imprese e contatti.
+- [Pubblicazioni](https://mirkorocci.it/pubblicazioni.html): selezione delle pubblicazioni peer-reviewed con link alle riviste.
+- [Rassegna stampa](https://mirkorocci.it/stampa.html): archivio completo di articoli e servizi, filtrabile per lavoro scientifico, Inno99 e Associazione 3:33.
+- [Inno99](https://mirkorocci.it/inno99.html): il ciclo di aperitivi dell'innovazione e la sua rassegna stampa.
+- [Associazione 3:33](https://mirkorocci.it/associazione-333.html): attività dell'associazione e rassegna stampa.
+- [Percorso](https://mirkorocci.it/percorso.html): carriera, mappa dei luoghi, attività e premi.
+
 ## Ruoli e progetti
 
 - [Clair Clinique](https://www.clairclinique.com/): cosmesi personalizzata che unisce intelligenza artificiale, robotica e analisi biometrica. Sede Tecnopolo d'Abruzzo, L'Aquila.

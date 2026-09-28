@@ -75,9 +75,31 @@ const NEWS_ICON = {
 };
 function newsKey(tag){ if(typeof NTAG==="undefined") return "conf"; return Object.keys(NTAG).find(k=>NTAG[k]===tag)||"conf"; }
 
+/* pagina corrente (da <body data-page="...">) e link verso le sezioni della home */
+const PAGE = () => (document.body && document.body.getAttribute("data-page")) || "home";
+const onHome = () => PAGE()==="home";
+const siteHref = h => (h.charAt(0)==="#" && !onHome()) ? "./"+h : h;
+/* data-limit="3" su un contenitore: in home si mostrano solo i primi elementi */
+const lim = (arr,g) => { const n=parseInt(g.getAttribute("data-limit"),10); return n>0 ? arr.slice(0,n) : arr; };
+
+function renderNav(){
+  const nav=$("#nav-links"); if(!nav||typeof NAV==="undefined") return;
+  const p=PAGE();
+  nav.innerHTML = NAV.map(n=>{
+    const here = n.page && n.page===p;
+    const cls = [n.cta?"nav-cta":"", here?"active-link":""].filter(Boolean).join(" ");
+    return `<a href="${siteHref(n.href)}"${cls?` class="${cls}"`:""}${here?' aria-current="page"':""} ${L(n.t)}>${esc(n.t.it)}</a>`;
+  }).join("");
+  const brand=$(".brand"); if(brand) brand.setAttribute("href", onHome() ? "#hero" : "./");
+}
+function renderFooterNav(){
+  const f=$("#foot-nav"); if(!f||typeof SITE_PAGES==="undefined") return;
+  f.innerHTML = SITE_PAGES.map(s=>`<a href="${s.href}" ${L(s.t)}>${esc(s.t.it)}</a>`).join("");
+}
+
 function renderPublications(){
   const g=$("#pub-grid"); if(!g) return;
-  g.innerHTML = PUBLICATIONS.map(p=>`
+  g.innerHTML = lim(PUBLICATIONS,g).map(p=>`
     <article class="pub reveal tilt">
       <div class="pub-cover">${cover(p.theme)}
         <span class="pub-badge" ${L(p.role)}>${esc(p.role.it)}</span>
@@ -129,7 +151,7 @@ function renderAssoc333(){
       <p ${L(h.d)}>${esc(h.d.it)}</p>
     </article>`).join("");
   const pg=$("#assoc-press-grid");
-  if(pg && typeof ASSOC_PRESS!=="undefined") pg.innerHTML = ASSOC_PRESS.map(pressCard).join("");
+  if(pg && typeof ASSOC_PRESS!=="undefined") pg.innerHTML = lim(ASSOC_PRESS,pg).map(p=>pressCard(p)).join("");
 }
 
 function renderFeatured(){
@@ -150,7 +172,7 @@ function renderFeatured(){
 
 function renderTimeline(){
   const tl=$("#timeline"); if(!tl) return;
-  tl.innerHTML = TIMELINE.map(t=>`
+  tl.innerHTML = lim(TIMELINE,tl).map(t=>`
     <div class="tl reveal">
       <div class="tl-top">
         <span class="tl-range" ${L(t.range)}>${esc(t.range.it)}</span>
@@ -165,7 +187,7 @@ function renderTimeline(){
 
 function renderAwards(){
   const ul=$("#awards-list"); if(!ul) return;
-  ul.innerHTML = AWARDS.map(a=>{
+  ul.innerHTML = lim(AWARDS,ul).map(a=>{
     const txt = a.url
       ? `<a class="aw-text aw-link" href="${a.url}" target="_blank" rel="noopener noreferrer" ${L(a.t)}>${esc(a.t.it)}</a>`
       : `<span class="aw-text" ${L(a.t)}>${esc(a.t.it)}</span>`;
@@ -179,7 +201,7 @@ function renderAwards(){
   }).join("");
 }
 
-function pressCard(p){
+function pressCard(p, extra){
   const clickable = p.url && p.url !== "";
   const tag = clickable ? "a" : "div";
   const attrs = clickable ? linkAttrs(p.url) : "";
@@ -187,7 +209,7 @@ function pressCard(p){
   const arrow = clickable
     ? `<div class="press-arrow"><span ${L({en:"Open",es:"Abrir",fr:"Ouvrir"})}>Apri</span> →</div>`
     : `<div class="press-arrow press-print"><span ${L({en:"Print edition",es:"Edición impresa",fr:"Édition papier"})}>Edizione cartacea</span></div>`;
-  return `<${tag} class="press reveal${p.img?" has-photo":""}"${attrs}>
+  return `<${tag} class="press reveal${p.img?" has-photo":""}"${attrs}${extra||""}>
     ${photo}
     <div class="press-body">
       <div class="press-outlet">${esc(p.outlet)}</div>
@@ -199,11 +221,43 @@ function pressCard(p){
 }
 function renderPress(){
   const g=$("#press-grid"); if(!g) return;
-  g.innerHTML = PRESS.map(pressCard).join("");
+  g.innerHTML = lim(PRESS,g).map(p=>pressCard(p)).join("");
 }
 function renderInno99(){
   const g=$("#inno99-grid"); if(!g||typeof INNO99==="undefined") return;
-  g.innerHTML = INNO99.map(pressCard).join("");
+  g.innerHTML = lim(INNO99,g).map(p=>pressCard(p)).join("");
+}
+
+/* archivio completo della stampa (pagina stampa.html) con filtri per categoria */
+const PRESS_CATS = [
+  ["all",    {it:"Tutte", en:"All", es:"Todas", fr:"Toutes"}],
+  ["lavoro", {it:"Scienza e lavoro", en:"Science & work", es:"Ciencia y trabajo", fr:"Science et travail"}],
+  ["inno99", {it:"Inno99", en:"Inno99", es:"Inno99", fr:"Inno99"}],
+  ["333",    {it:"Associazione 3:33", en:"Association 3:33", es:"Asociación 3:33", fr:"Association 3:33"}]
+];
+function renderPressArchive(){
+  const g=$("#press-archive"); if(!g) return;
+  const src=[["lavoro",typeof PRESS!=="undefined"?PRESS:[]],["inno99",typeof INNO99!=="undefined"?INNO99:[]],["333",typeof ASSOC_PRESS!=="undefined"?ASSOC_PRESS:[]]];
+  const all=[]; src.forEach(([cat,arr])=>arr.forEach(p=>all.push({p,cat})));
+  all.sort((a,b)=>(parseInt(b.p.year,10)||0)-(parseInt(a.p.year,10)||0)); // stabile: dentro l'anno resta l'ordine dei file
+  g.innerHTML = all.map(o=>pressCard(o.p,` data-cat="${o.cat}"`)).join("");
+  const bar=$("#press-filters"); if(!bar) return;
+  const count={all:all.length}; all.forEach(o=>count[o.cat]=(count[o.cat]||0)+1);
+  bar.innerHTML = PRESS_CATS.map(([k,t])=>`<button type="button" class="chip" data-f="${k}" aria-pressed="${k==="all"}"><span ${L(t)}>${esc(t.it)}</span><b>${count[k]||0}</b></button>`).join("");
+}
+function initPressFilters(){
+  const bar=$("#press-filters"), g=$("#press-archive"); if(!bar||!g) return;
+  const apply=k=>{
+    $$(".chip",bar).forEach(c=>c.setAttribute("aria-pressed",String(c.dataset.f===k)));
+    $$(".press",g).forEach(c=>{ c.hidden = k!=="all" && c.dataset.cat!==k; if(!c.hidden) c.classList.add("in"); });
+  };
+  bar.addEventListener("click",e=>{
+    const b=e.target.closest(".chip"); if(!b) return;
+    apply(b.dataset.f);
+    try{ history.replaceState(null,"",location.pathname+location.search+(b.dataset.f==="all"?"":"#"+b.dataset.f)); }catch(err){}
+  });
+  const h=decodeURIComponent(location.hash.slice(1));
+  if(PRESS_CATS.some(c=>c[0]===h && h!=="all")) apply(h);
 }
 
 function renderMarquee(){
@@ -328,7 +382,8 @@ function applyLang(l){
 
 /* URL, canonical e og:url coerenti con la lingua mostrata (hreflang: /?lang=xx) */
 function syncLangUrl(l){
-  const base="https://mirkorocci.it/", href = l==="it" ? base : base+"?lang="+l;
+  const file=(location.pathname.split("/").pop()||"").replace(/^index\.html$/,"");
+  const base="https://mirkorocci.it/"+file, href = l==="it" ? base : base+"?lang="+l;
   const can=document.querySelector('link[rel="canonical"]'); if(can) can.href=href;
   const og=document.querySelector('meta[property="og:url"]'); if(og) og.content=href;
   try{
@@ -482,6 +537,9 @@ function initCookies(){
    INIT
    ========================================================= */
 document.addEventListener("DOMContentLoaded",()=>{
+  renderNav();
+  renderFooterNav();
+  renderPressArchive();
   renderPublications();
   renderVentures();
   renderAssoc333();
@@ -496,6 +554,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   renderVenturesContact();
   renderMap();
   initShowMore();
+  initPressFilters();
   initReveal();
   initLang();
   initCounters();

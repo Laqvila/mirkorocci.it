@@ -1,25 +1,33 @@
 {
-  "html": "index.html",
   "baseUrl": "https://mirkorocci.it/",
   "scripts": [
     "js/contenuti.js",
     "js/data.js",
     "js/main.js"
   ],
-  "containers": [
-    "featured-grid",
-    "news-grid",
-    "pub-grid",
-    "ventures-grid",
-    "ventures-contact",
-    "assoc-gallery",
-    "assoc-grid",
-    "assoc-press-grid",
-    "timeline",
-    "awards-list",
-    "press-grid",
-    "inno99-grid",
-    "marquee-track",
-    "faq-list"
+  "pages": [
+    {
+      "html": "index.html",
+      "containers": [
+        "nav-links",
+        "foot-nav",
+        "featured-grid",
+        "news-grid",
+        "pub-grid",
+        "ventures-grid",
+        "ventures-contact",
+        "assoc-gallery",
+        "timeline",
+        "press-grid",
+        "inno99-grid",
+        "marquee-track",
+        "faq-list"
+      ]
+    },
+    { "html": "pubblicazioni.html",    "containers": ["nav-links", "foot-nav", "pub-grid"] },
+    { "html": "stampa.html",           "containers": ["nav-links", "foot-nav", "press-filters", "press-archive"] },
+    { "html": "inno99.html",           "containers": ["nav-links", "foot-nav", "inno99-grid"] },
+    { "html": "associazione-333.html", "containers": ["nav-links", "foot-nav", "assoc-gallery", "assoc-grid", "assoc-press-grid"] },
+    { "html": "percorso.html",         "containers": ["nav-links", "foot-nav", "timeline", "awards-list"] }
   ]
 }

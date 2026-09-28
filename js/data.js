@@ -167,3 +167,35 @@ const AWARDS = [
   { year:"2018", t:{ it:"Immagine di copertina della rivista internazionale Nano Letters (American Chemical Society).", en:"Cover image of the international journal Nano Letters (American Chemical Society).", es:"Imagen de portada de la revista internacional Nano Letters (American Chemical Society).", fr:"Image de couverture de la revue internationale Nano Letters (American Chemical Society)." } }
 ];
 
+
+
+/* ============================================================================
+   MENU E PAGINE DEL SITO
+   ----------------------------------------------------------------------------
+   Un'unica definizione per il menu in alto e per il piè di pagina di TUTTE le
+   pagine. "#qualcosa" = sezione della home; "pagina.html" = pagina a sé.
+   page = identificativo usato in <body data-page="..."> per evidenziare la voce.
+   ============================================================================ */
+const NAV = [
+  { href:"#about",                t:{ it:"Profilo",           en:"About",            es:"Perfil",           fr:"Profil" } },
+  { href:"#news",                 t:{ it:"Novità",            en:"News",             es:"Novedades",        fr:"Actus" } },
+  { href:"#research",             t:{ it:"Ricerca",           en:"Research",         es:"Investigación",    fr:"Recherche" } },
+  { href:"pubblicazioni.html",    page:"pubblicazioni",    t:{ it:"Pubblicazioni", en:"Publications", es:"Publicaciones", fr:"Publications" } },
+  { href:"#ventures",             t:{ it:"Imprese",           en:"Ventures",         es:"Empresas",         fr:"Entreprises" } },
+  { href:"associazione-333.html", page:"associazione-333", t:{ it:"Associazione 3:33", en:"Association 3:33", es:"Asociación 3:33", fr:"Association 3:33" } },
+  { href:"inno99.html",           page:"inno99",           t:{ it:"Inno99", en:"Inno99", es:"Inno99", fr:"Inno99" } },
+  { href:"stampa.html",           page:"stampa",           t:{ it:"Stampa", en:"Press", es:"Prensa", fr:"Presse" } },
+  { href:"percorso.html",         page:"percorso",         t:{ it:"Percorso", en:"Career", es:"Trayectoria", fr:"Parcours" } },
+  { href:"#contact", cta:true,    t:{ it:"Contatti",          en:"Contact",          es:"Contacto",         fr:"Contact" } }
+];
+
+/* piè di pagina: le pagine del sito, in ordine */
+const SITE_PAGES = [
+  { href:"./",                    t:{ it:"Home", en:"Home", es:"Inicio", fr:"Accueil" } },
+  { href:"pubblicazioni.html",    t:{ it:"Pubblicazioni", en:"Publications", es:"Publicaciones", fr:"Publications" } },
+  { href:"stampa.html",           t:{ it:"Rassegna stampa", en:"Press coverage", es:"Prensa", fr:"Revue de presse" } },
+  { href:"inno99.html",           t:{ it:"Inno99", en:"Inno99", es:"Inno99", fr:"Inno99" } },
+  { href:"associazione-333.html", t:{ it:"Associazione 3:33", en:"Association 3:33", es:"Asociación 3:33", fr:"Association 3:33" } },
+  { href:"percorso.html",         t:{ it:"Percorso, mappa e premi", en:"Career, map and awards", es:"Trayectoria, mapa y premios", fr:"Parcours, carte et prix" } },
+  { href:"laquilive-app.html",    t:{ it:"App L'AquiLive", en:"L'AquiLive app", es:"App L'AquiLive", fr:"Appli L'AquiLive" } }
+];

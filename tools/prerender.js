@@ -283,8 +283,8 @@ function parseInto(parent, html) {
 }
 
 /* ---------- esecuzione ---------- */
-function run() {
-  const htmlPath = path.join(ROOT, CONFIG.html);
+function run(PAGE) {
+  const htmlPath = path.join(ROOT, PAGE.html);
   const source = fs.readFileSync(htmlPath, "utf8");
 
   // albero del documento, con i contenitori già svuotati dai prerender precedenti
@@ -295,6 +295,10 @@ function run() {
   const body = createEl("body");
   const head = createEl("head");
   const bodyOpen = clean.slice(bodyStart).match(/^<body([^>]*)>/i);
+  // gli attributi di <body> servono agli script (es. data-page per menu e limiti)
+  (bodyOpen[1].match(/\s([\w-]+)="([^"]*)"/g) || []).forEach((a) => {
+    const m = a.match(/\s([\w-]+)="([^"]*)"/); body.setAttribute(m[1], m[2]);
+  });
   body.innerHTML = clean.slice(bodyStart + bodyOpen[0].length, bodyEnd < 0 ? clean.length : bodyEnd)
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "");
   head.innerHTML = (clean.match(/<head[^>]*>([\s\S]*?)<\/head>/i) || [, ""])[1];
@@ -328,7 +332,7 @@ function run() {
   const obs = function () { return { observe: noop, unobserve: noop, disconnect: noop, takeRecords: () => [] }; };
   const window = {
     document,
-    location: { search: "", hash: "", pathname: "/", href: CONFIG.baseUrl, host: "", origin: CONFIG.baseUrl.replace(/\/$/, ""), protocol: "https:" },
+    location: { search: "", hash: "", pathname: PAGE.html === "index.html" ? "/" : "/" + PAGE.html, href: CONFIG.baseUrl + (PAGE.html === "index.html" ? "" : PAGE.html), host: "", origin: CONFIG.baseUrl.replace(/\/$/, ""), protocol: "https:" },
     navigator: { language: "it-IT", languages: ["it-IT"], userAgent: "prerender", onLine: true },
     localStorage: { getItem: (k) => (storage.has(k) ? storage.get(k) : null), setItem: (k, v) => storage.set(k, String(v)), removeItem: (k) => storage.delete(k), clear: () => storage.clear() },
     sessionStorage: { getItem: () => null, setItem: noop, removeItem: noop },
@@ -367,7 +371,7 @@ function run() {
   let html = source;
   let done = 0;
   const missing = [];
-  for (const id of CONFIG.containers) {
+  for (const id of PAGE.containers) {
     const el = docEl.querySelector("#" + id);
     const rendered = el ? el.innerHTML.trim() : "";
     if (!rendered) { missing.push(id); continue; }
@@ -383,8 +387,10 @@ function run() {
     done++;
   }
   fs.writeFileSync(htmlPath, html, "utf8");
-  console.log(`prerender: ${done}/${CONFIG.containers.length} sezioni scritte in ${CONFIG.html}`);
+  console.log(`prerender: ${done}/${PAGE.containers.length} sezioni scritte in ${PAGE.html}`);
   if (missing.length) { console.log("  vuote o non trovate: " + missing.join(", ")); process.exitCode = 1; }
 }
 
-run();
+// più pagine: "pages" nel file di configurazione; resta compatibile col vecchio formato
+const PAGES = CONFIG.pages || [{ html: CONFIG.html, containers: CONFIG.containers }];
+for (const pg of PAGES) run(pg);

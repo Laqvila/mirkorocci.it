@@ -13,6 +13,22 @@ Dentro trovi tre sezioni già pronte e commentate in italiano:
 2. **RASSEGNA STAMPA** — gli articoli di giornale
 3. **PUBBLICAZIONI SCIENTIFICHE**
 
+### Le pagine del sito
+
+Dal settembre 2026 il sito ha una home più corta e alcune pagine dedicate. Non cambia
+niente nel modo di aggiungere contenuti: scrivi sempre nello stesso file e ogni voce compare
+da sola nei posti giusti.
+
+| Cosa aggiungi | Dove si vede |
+|---|---|
+| Novità (`NEWS`) | home, le prime 6 subito e le altre con "Mostra tutte" |
+| Articolo di stampa (`PRESS`) | home (primi 4) e pagina **Rassegna stampa** |
+| Articolo su Inno99 (`INNO99`) | home (primi 3), pagina **Inno99** e **Rassegna stampa** |
+| Articolo sull'associazione (`ASSOC_PRESS`) | pagina **Associazione 3:33** e **Rassegna stampa** |
+| Pubblicazione (`PUBLICATIONS`) | home (prime 3) e pagina **Pubblicazioni** |
+
+La pagina Rassegna stampa raccoglie tutto e ha dei filtri in alto.
+
 ---
 
 ## 1. Aggiungere una NOVITÀ (news)

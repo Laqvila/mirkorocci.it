@@ -827,3 +827,69 @@ body.menu-open{overflow:hidden}
   .cookie-actions{gap:8px}
   .cookie-btn{padding:9px 18px;min-height:42px;flex:1}
 }
+
+/* =========================================================
+   v4 — PAGINE DEDICATE, FILTRI, PIÈ DI PAGINA
+   ========================================================= */
+[hidden]{display:none!important}
+.news-grid.collapsed .news:nth-child(n+7){display:none}
+
+/* intestazione delle pagine interne */
+.page-hero{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:128px var(--pad-x) 10px}
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:8px;color:var(--txt-faint);font-size:13.5px;margin-bottom:20px}
+.crumbs a{color:var(--txt-dim);display:inline-flex;align-items:center;min-height:32px}
+.crumbs a:hover{color:var(--accent)}
+.crumbs span[aria-hidden]{opacity:.5}
+.page-hero h1{font-size:clamp(2.3rem,6vw,4rem);font-weight:800;line-height:1.05;
+  background:linear-gradient(120deg,#fff 35%,var(--accent) 75%,var(--accent-2));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.page-lead{color:var(--txt-dim);font-size:clamp(1.02rem,1.7vw,1.2rem);max-width:780px;margin-top:18px}
+.page-facts{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.page-facts span{font-size:13px;color:var(--txt-dim);padding:7px 14px;border-radius:30px;background:var(--panel);border:1px solid var(--panel-brd)}
+.page-facts b{color:var(--txt);font-weight:700}
+.page-hero + .section{padding-top:clamp(36px,6vw,64px)}
+
+/* pulsanti in fondo a una sezione della home */
+.sec-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px}
+
+/* filtri della rassegna stampa */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.chip{display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:0 17px;border-radius:40px;cursor:pointer;
+  border:1px solid var(--panel-brd);background:var(--panel);color:var(--txt-dim);font:600 14px 'Inter',sans-serif;
+  transition:background .25s,color .25s,border-color .25s;white-space:nowrap}
+.chip:hover{border-color:var(--accent);color:var(--txt)}
+.chip b{font-size:12px;font-weight:700;color:var(--txt-faint);background:rgba(255,255,255,.07);border-radius:20px;padding:2px 8px}
+.chip[aria-pressed="true"]{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;border-color:transparent}
+.chip[aria-pressed="true"] b{color:#fff;background:rgba(255,255,255,.2)}
+.chip:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* intestazioni di gruppo dentro una pagina */
+.sub-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:0 0 20px}
+.sub-head h2{font-size:clamp(1.35rem,2.6vw,1.8rem)}
+.sub-head p{color:var(--txt-faint);font-size:14px}
+
+/* piè di pagina con le pagine del sito */
+.foot-nav{order:3;flex:1 0 100%;display:flex;flex-wrap:wrap;justify-content:center;gap:2px 20px;
+  padding-top:16px;margin-top:4px;border-top:1px solid var(--panel-brd)}
+.foot-nav a{color:var(--txt-dim);font-size:14px;display:inline-flex;align-items:center;min-height:40px}
+.foot-nav a:hover{color:var(--accent)}
+
+/* elenco compatto (archivi): su telefono ogni articolo è una riga con miniatura */
+@media(max-width:680px){
+  .press-list{display:flex;flex-direction:column;gap:10px}
+  .press-list .press{flex-direction:row;min-height:0;border-radius:16px}
+  .press-list .press-photo{flex:0 0 104px;aspect-ratio:auto;min-height:104px;border-bottom:0;border-right:1px solid var(--panel-brd)}
+  .press-list .press-photo::after{display:none}
+  .press-list .press-body{padding:12px 14px;min-width:0}
+  .press-list .press-outlet{font-size:.95rem}
+  .press-list .press-year{margin-bottom:5px}
+  .press-list .press-quote{-webkit-line-clamp:3;font-size:.88rem}
+  .press-list .press-arrow{margin-top:6px;min-height:0;font-size:12.5px}
+  .filters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:calc(-1 * var(--pad-x));
+    padding:2px var(--pad-x) 6px}
+  .filters::-webkit-scrollbar{display:none}
+  .page-hero{padding-top:104px}
+  .sec-cta .btn{flex:1 1 100%;justify-content:center}
+}
+/* pubblicazioni nella pagina dedicata: copertina più bassa su telefono */
+@media(max-width:680px){.pub-list{gap:14px}.pub-list .pub-cover{aspect-ratio:16/7}}
