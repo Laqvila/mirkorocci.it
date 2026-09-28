@@ -59,6 +59,22 @@ function cover(theme){
 const cur = () => LANGS.includes(document.documentElement.lang) ? document.documentElement.lang : "it";
 const ext = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>`;
 
+/* link esterni e file (foto, PDF) in una nuova scheda; pagine e ancore del sito nella stessa */
+function linkAttrs(url){
+  const nuova = /^https?:\/\//i.test(url) || /^assets\//i.test(url) || /\.(pdf|jpe?g|png|webp)$/i.test(url);
+  return nuova ? ` href="${url}" target="_blank" rel="noopener noreferrer"` : ` href="${url}"`;
+}
+
+/* segnaposto grafico per le news senza foto: la griglia resta regolare */
+const NEWS_ICON = {
+  award:`<svg viewBox="0 0 24 24" fill="none" stroke="#ffce6b" stroke-width="1.5"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8.5 20h7"/></svg>`,
+  conf:`<svg viewBox="0 0 24 24" fill="none" stroke="#8fb0ff" stroke-width="1.5"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>`,
+  pub:`<svg viewBox="0 0 24 24" fill="none" stroke="#c4a3ff" stroke-width="1.5"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg>`,
+  patent:`<svg viewBox="0 0 24 24" fill="none" stroke="#6fe0cf" stroke-width="1.5"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>`,
+  social:`<svg viewBox="0 0 24 24" fill="none" stroke="#ff9cc2" stroke-width="1.5"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.3"/><path d="M3 20c.5-3.5 3-5.5 6-5.5s5.5 2 6 5.5M15 15c2.8-.3 5.2 1.3 6 4.5"/></svg>`
+};
+function newsKey(tag){ if(typeof NTAG==="undefined") return "conf"; return Object.keys(NTAG).find(k=>NTAG[k]===tag)||"conf"; }
+
 function renderPublications(){
   const g=$("#pub-grid"); if(!g) return;
   g.innerHTML = PUBLICATIONS.map(p=>`
@@ -119,9 +135,7 @@ function renderAssoc333(){
 function renderFeatured(){
   const g=$("#featured-grid"); if(!g||typeof FEATURED==="undefined") return;
   g.innerHTML = FEATURED.map(f=>{
-    const internal = f.url && f.url.charAt(0)==="#";
-    const attrs = internal ? ` href="${f.url}"` : ` href="${f.url}" target="_blank" rel="noopener noreferrer"`;
-    return `<a class="feat reveal"${attrs}>
+    return `<a class="feat reveal"${linkAttrs(f.url)}>
       <div class="feat-photo"><img src="${f.img}" alt="" loading="lazy"></div>
       <div class="feat-body">
         <div class="feat-top"><span class="news-tag" ${L(f.tag)}>${esc(f.tag.it)}</span>
@@ -168,7 +182,7 @@ function renderAwards(){
 function pressCard(p){
   const clickable = p.url && p.url !== "";
   const tag = clickable ? "a" : "div";
-  const attrs = clickable ? ` href="${p.url}" target="_blank" rel="noopener noreferrer"` : "";
+  const attrs = clickable ? linkAttrs(p.url) : "";
   const photo = p.img ? `<div class="press-photo"><img src="${p.img}" alt="" loading="lazy"></div>` : "";
   const arrow = clickable
     ? `<div class="press-arrow"><span ${L({en:"Open",es:"Abrir",fr:"Ouvrir"})}>Apri</span> →</div>`
@@ -201,17 +215,22 @@ function renderMarquee(){
 
 function renderNews(){
   const g=$("#news-grid"); if(!g||typeof NEWS==="undefined") return;
-  g.innerHTML = NEWS.map(n=>`
-    <article class="news reveal tilt${n.img?" has-photo":""}">
-      ${n.img?`<div class="news-photo"><img src="${n.img}" alt="" loading="lazy"></div>`:""}
+  g.innerHTML = NEWS.map(n=>{
+    const k=newsKey(n.tag);
+    const media = n.img
+      ? `<div class="news-photo"><img src="${n.img}" alt="" loading="lazy"></div>`
+      : `<div class="news-photo news-ph" data-k="${k}" aria-hidden="true">${NEWS_ICON[k]||NEWS_ICON.conf}</div>`;
+    return `
+    <article class="news reveal tilt has-photo">
+      ${media}
       <div class="news-top">
         <span class="news-date" ${L(n.date)}>${esc(n.date.it)}</span>
         <span class="news-tag" ${L(n.tag)}>${esc(n.tag.it)}</span>
       </div>
       <h3 class="news-title" ${L(n.t)}>${esc(n.t.it)}</h3>
       <p class="news-desc" ${L(n.d)}>${esc(n.d.it)}</p>
-      ${n.url?`<a class="news-link" href="${n.url}" target="_blank" rel="noopener noreferrer"><span ${L({en:"Read",es:"Leer",fr:"Lire"})}>Leggi</span>${ext}</a>`:""}
-    </article>`).join("");
+      ${n.url?`<a class="news-link"${linkAttrs(n.url)}><span ${L({en:"Read",es:"Leer",fr:"Lire"})}>Leggi</span>${ext}</a>`:""}
+    </article>`;}).join("");
 }
 
 function renderFaq(){
@@ -423,6 +442,7 @@ function initCanvas(){
    ========================================================= */
 function initInteractions(){
   if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if(!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
   $$(".tilt").forEach(el=>{el.addEventListener("mousemove",e=>{const r=el.getBoundingClientRect();const px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;el.style.transform=`perspective(800px) rotateY(${px*6}deg) rotateX(${-py*6}deg) translateY(-6px)`;});el.addEventListener("mouseleave",()=>{el.style.transform="";});});
   const photo=$(".hero-photo");
   if(photo){const frame=$(".photo-frame",photo);photo.style.perspective="900px";photo.addEventListener("mousemove",e=>{const r=photo.getBoundingClientRect();const px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;frame.style.transform=`rotateY(${px*9}deg) rotateX(${-py*9}deg)`;});photo.addEventListener("mouseleave",()=>{frame.style.transform="";});}

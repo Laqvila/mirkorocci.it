@@ -705,3 +705,125 @@ body.menu-open{overflow:hidden}
 .faq summary::after{content:"+";flex:none;font-size:1.5rem;line-height:1;opacity:.55;transition:transform .25s}
 .faq[open] summary::after{transform:rotate(45deg)}
 .faq p{margin:0 0 18px;line-height:1.75;opacity:.88;max-width:72ch}
+
+/* =========================================================
+   v4 — SISTEMA CARD UNIFICATO E MOBILE (settembre 2026)
+   Le regole qui sotto hanno la precedenza su quelle sopra.
+   ========================================================= */
+:root{--r-card:20px;--pad-x:clamp(18px,4vw,46px)}
+
+/* --- base comune a tutte le card --- */
+.feat,.news,.press,.pub,.venture,.rcard,.act,.assoc-card,.stat{border-radius:var(--r-card)}
+.feat,.news,.press,.pub,.venture{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02))}
+.feat:focus-visible,.press:focus-visible,.news-link:focus-visible,.pub-link:focus-visible,.venture-link:focus-visible,
+.btn:focus-visible,.nav-links a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* --- media: stesso formato 16:9 ovunque, con sfumatura verso il testo --- */
+.feat-photo,.news-photo,.press-photo,.pub-cover{aspect-ratio:16/9;position:relative}
+.feat-photo::after,.news-photo::after,.press-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:38%;
+  background:linear-gradient(180deg,transparent,rgba(5,6,12,.55));pointer-events:none}
+.press-photo{border-radius:0}
+
+/* --- news: niente buchi quando manca la foto --- */
+.news{padding:24px 22px}
+.news-photo{margin:-24px -22px 16px}
+.news-ph{display:grid;place-items:center;overflow:hidden;
+  background:radial-gradient(90% 120% at 20% 0%,var(--ph1,rgba(91,140,255,.35)),transparent 60%),
+             radial-gradient(90% 120% at 100% 100%,var(--ph2,rgba(160,107,255,.3)),transparent 60%),#0b0f20}
+.news-ph svg{width:54px;height:54px;opacity:.9;filter:drop-shadow(0 6px 20px rgba(0,0,0,.5))}
+.news-ph[data-k="award"]{--ph1:rgba(255,206,107,.38);--ph2:rgba(255,140,60,.22)}
+.news-ph[data-k="pub"]{--ph1:rgba(160,107,255,.4);--ph2:rgba(91,140,255,.25)}
+.news-ph[data-k="patent"]{--ph1:rgba(70,210,190,.32);--ph2:rgba(91,140,255,.25)}
+.news-ph[data-k="social"]{--ph1:rgba(255,120,170,.3);--ph2:rgba(160,107,255,.28)}
+.news-title{font-size:1.06rem}
+/* tutta la card è cliccabile quando c'è un link */
+.news-link{position:static;padding:8px 0;margin-top:auto}
+.news-link::after{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit}
+.news:has(.news-link){cursor:pointer}
+
+/* --- stampa: citazione su 4 righe al massimo, meta in una riga --- */
+.press-body{padding:18px 20px 20px}
+.press-quote{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.press-arrow{min-height:32px}
+
+/* --- in primo piano: due colonne fino ai tablet --- */
+@media(max-width:980px){.featured-grid{grid-template-columns:repeat(2,1fr)}}
+.feat-body{padding:22px 22px 24px}
+
+/* --- menu: nessuna voce su due righe --- */
+.nav-links a{white-space:nowrap}
+@media(min-width:1101px) and (max-width:1360px){.nav-links{gap:2px}.nav-links a{padding:8px 9px;font-size:13.8px}}
+
+/* --- hover solo dove esiste davvero un puntatore --- */
+@media(hover:none){
+  .feat:hover,.news:hover,.pub:hover,.press:hover,.rcard:hover,.act:hover,.stat:hover,.assoc-card:hover,.venture:hover{transform:none;box-shadow:none}
+  .feat:hover .feat-photo img,.news:hover .news-photo img,.press:hover .press-photo img,.pub:hover .pub-cover svg{transform:none}
+}
+
+/* --- aree toccabili di almeno 44px --- */
+.btn{min-height:46px}
+.lang-current{min-height:40px}
+.to-top{width:46px;height:46px}
+.contact-links a,.contact-emails a{display:inline-flex;align-items:center;min-height:44px;padding:0 4px}
+.pub-link,.venture-link,.feat-link{min-height:40px}
+#cookie-prefs{display:inline-block;padding:10px 2px}
+
+/* =========================================================
+   CAROSELLI SU TELEFONO (.rail)
+   Una griglia che sotto i 680px diventa una fila da scorrere
+   col dito, con la card successiva che si intravede a destra.
+   ========================================================= */
+@media(max-width:680px){
+  .rail{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(84%,340px);
+    gap:14px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;
+    margin-inline:calc(-1 * var(--pad-x));padding:4px var(--pad-x) 16px;scroll-padding-inline:var(--pad-x);
+    scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .rail::-webkit-scrollbar{display:none}
+  .rail>*{scroll-snap-align:start;min-width:0}
+  .rail>.reveal{opacity:1;transform:none}
+  .rail-note{display:flex;align-items:center;gap:8px;color:var(--txt-faint);font-size:12.5px;margin:-4px 0 4px;letter-spacing:.02em}
+  .rail-note::after{content:"→";color:var(--accent)}
+}
+@media(min-width:681px){.rail-note{display:none}}
+
+/* =========================================================
+   TELEFONO: prima schermata, spazi, statistiche
+   ========================================================= */
+@media(max-width:680px){
+  #hero{min-height:auto;padding-top:92px;padding-bottom:40px}
+  .hero-photo{width:min(190px,50vw);margin-bottom:0}
+  .photo-ring{inset:-9px;border-radius:26px}
+  .photo-frame{border-radius:20px}
+  .hero-title{font-size:clamp(2.6rem,12vw,3.4rem);margin-bottom:14px}
+  .hero-kicker{font-size:12px;margin-bottom:10px}
+  .hero-sub{font-size:1.02rem;margin-bottom:18px}
+  .hero-tags{gap:7px;margin-bottom:22px}
+  .hero-tags span{font-size:12px;padding:6px 11px}
+  .hero-cta{margin-bottom:24px}
+  .hero-cta .btn{flex:1 1 auto;justify-content:center}
+  .hero-affil{font-size:12.5px;gap:10px}
+  .scroll-hint{display:none}
+
+  .section{padding:56px var(--pad-x)}
+  .section-narrow{padding:36px var(--pad-x)}
+  .section-head{margin-bottom:28px}
+  .section-intro{margin-top:12px}
+
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .stat{padding:20px 12px}
+  .stat-label{font-size:12.5px}
+
+  .rcard,.act,.venture{padding:22px 20px}
+  .rcard-icon{width:46px;height:46px;margin-bottom:14px}
+  .assoc-lead{margin-bottom:28px}
+  .assoc-gallery,.assoc-grid{margin-bottom:28px}
+  .timeline .tl{padding-bottom:30px}
+  .awards-list li{padding:16px 0}
+  .awards-list li.aw-featured{flex-direction:column;gap:6px}
+  .awards-list li.aw-featured .aw-figure{max-width:100%;margin-top:10px}
+
+  .cookie-banner{padding:14px 16px;gap:10px;bottom:12px;border-radius:16px}
+  .cookie-text{font-size:12.5px;min-width:0}
+  .cookie-actions{gap:8px}
+  .cookie-btn{padding:9px 18px;min-height:42px;flex:1}
+}
