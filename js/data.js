@@ -199,3 +199,19 @@ const SITE_PAGES = [
   { href:"percorso.html",         t:{ it:"Percorso, mappa e premi", en:"Career, map and awards", es:"Trayectoria, mapa y premios", fr:"Parcours, carte et prix" } },
   { href:"laquilive-app.html",    t:{ it:"App L'AquiLive", en:"L'AquiLive app", es:"App L'AquiLive", fr:"Appli L'AquiLive" } }
 ];
+
+
+/* ============================================================================
+   PROFILI SOCIAL  ►  icone in alto (barra) e in fondo (piè di pagina)
+   ----------------------------------------------------------------------------
+   Per aggiungere o togliere un profilo basta aggiungere o togliere una riga.
+   Icone disponibili: "linkedin", "facebook", "instagram", "x", "youtube".
+   Metti l'indirizzo COMPLETO del profilo, copiato dal browser.
+   Le voci con url:"" vengono ignorate (non compare l'icona).
+   ============================================================================ */
+const SOCIAL = [
+  { icon:"linkedin",  name:"LinkedIn",  url:"https://www.linkedin.com/in/mirko-rocci/" },
+  { icon:"facebook",  name:"Facebook",  url:"https://www.facebook.com/mirko.rocci" },
+  { icon:"instagram", name:"Instagram", url:"" },
+  { icon:"x",         name:"X",         url:"" }
+];

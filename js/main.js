@@ -89,9 +89,31 @@ function renderNav(){
     const here = n.page && n.page===p;
     const cls = [n.cta?"nav-cta":"", here?"active-link":""].filter(Boolean).join(" ");
     return `<a href="${siteHref(n.href)}"${cls?` class="${cls}"`:""}${here?' aria-current="page"':""} ${L(n.t)}>${esc(n.t.it)}</a>`;
-  }).join("");
+  }).join("") + `<div class="social-row social-menu">${socialHTML()}</div>`;
   const brand=$(".brand"); if(brand) brand.setAttribute("href", onHome() ? "#hero" : "./");
 }
+/* icone dei profili social (glifi ufficiali, 24x24, colore ereditato) */
+const SOCIAL_ICON = {
+  linkedin:`<path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.6h.05c.53-.95 1.83-1.95 3.76-1.95C21.4 8.65 22 10.9 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2.02-3.3-2.02 0-2.33 1.57-2.33 3.2V21h-4V9z"/>`,
+  facebook:`<path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/>`,
+  instagram:`<path d="M12 2.2c3.2 0 3.6.01 4.85.07 1.17.05 1.8.25 2.23.42.56.22.96.48 1.38.9.42.42.68.82.9 1.38.17.42.37 1.06.42 2.23.06 1.25.07 1.65.07 4.85s-.01 3.6-.07 4.85c-.05 1.17-.25 1.8-.42 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.17-1.06.37-2.23.42-1.25.06-1.65.07-4.85.07s-3.6-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.42-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.17-.42-.37-1.06-.42-2.23-.06-1.25-.07-1.65-.07-4.85s.01-3.6.07-4.85c.05-1.17.25-1.8.42-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.17 1.06-.37 2.23-.42C8.4 2.21 8.8 2.2 12 2.2zm0 5.13a4.67 4.67 0 1 0 0 9.34 4.67 4.67 0 0 0 0-9.34zm0 7.7a3.03 3.03 0 1 1 0-6.06 3.03 3.03 0 0 1 0 6.06zm5.95-7.89a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0z"/>`,
+  x:`<path d="M18.9 2H22l-7.1 8.1L23 22h-6.5l-5.1-6.7L5.5 22H2.4l7.6-8.7L1.7 2h6.7l4.6 6.1L18.9 2zm-1.1 18h1.8L7.3 3.9H5.4L17.8 20z"/>`,
+  youtube:`<path d="M21.6 7.2a2.5 2.5 0 0 0-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.83.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.83-.43a2.5 2.5 0 0 0 1.77-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1-5.2 3.1z"/>`
+};
+function socialHTML(cls){
+  if(typeof SOCIAL==="undefined") return "";
+  const items = SOCIAL.filter(s=>s.url && SOCIAL_ICON[s.icon]);
+  if(!items.length) return "";
+  return items.map(s=>
+    `<a class="social-link" href="${s.url}" target="_blank" rel="noopener noreferrer me" title="${esc(s.name)}" aria-label="${esc(s.name)}">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${SOCIAL_ICON[s.icon]}</svg>
+    </a>`).join("");
+}
+function renderSocial(){
+  const html = socialHTML();
+  ["#social-top","#social-foot"].forEach(sel=>{ const el=$(sel); if(el) el.innerHTML = html; });
+}
+
 function renderFooterNav(){
   const f=$("#foot-nav"); if(!f||typeof SITE_PAGES==="undefined") return;
   f.innerHTML = SITE_PAGES.map(s=>`<a href="${s.href}" ${L(s.t)}>${esc(s.t.it)}</a>`).join("");
@@ -538,6 +560,7 @@ function initCookies(){
    ========================================================= */
 document.addEventListener("DOMContentLoaded",()=>{
   renderNav();
+  renderSocial();
   renderFooterNav();
   renderPressArchive();
   renderPublications();

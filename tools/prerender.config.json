@@ -11,6 +11,8 @@
       "containers": [
         "nav-links",
         "foot-nav",
+        "social-foot",
+        "social-top",
         "featured-grid",
         "news-grid",
         "pub-grid",
@@ -24,10 +26,59 @@
         "faq-list"
       ]
     },
-    { "html": "pubblicazioni.html",    "containers": ["nav-links", "foot-nav", "pub-grid"] },
-    { "html": "stampa.html",           "containers": ["nav-links", "foot-nav", "press-filters", "press-archive"] },
-    { "html": "inno99.html",           "containers": ["nav-links", "foot-nav", "inno99-grid"] },
-    { "html": "associazione-333.html", "containers": ["nav-links", "foot-nav", "assoc-gallery", "assoc-grid", "assoc-press-grid"] },
-    { "html": "percorso.html",         "containers": ["nav-links", "foot-nav", "timeline", "awards-list"] }
+    {
+      "html": "pubblicazioni.html",
+      "containers": [
+        "nav-links",
+        "foot-nav",
+        "social-foot",
+        "social-top",
+        "pub-grid"
+      ]
+    },
+    {
+      "html": "stampa.html",
+      "containers": [
+        "nav-links",
+        "foot-nav",
+        "social-foot",
+        "social-top",
+        "press-filters",
+        "press-archive"
+      ]
+    },
+    {
+      "html": "inno99.html",
+      "containers": [
+        "nav-links",
+        "foot-nav",
+        "social-foot",
+        "social-top",
+        "inno99-grid"
+      ]
+    },
+    {
+      "html": "associazione-333.html",
+      "containers": [
+        "nav-links",
+        "foot-nav",
+        "social-foot",
+        "social-top",
+        "assoc-gallery",
+        "assoc-grid",
+        "assoc-press-grid"
+      ]
+    },
+    {
+      "html": "percorso.html",
+      "containers": [
+        "nav-links",
+        "foot-nav",
+        "social-foot",
+        "social-top",
+        "timeline",
+        "awards-list"
+      ]
+    }
   ]
 }
