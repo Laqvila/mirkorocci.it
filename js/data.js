@@ -212,6 +212,6 @@ const SITE_PAGES = [
 const SOCIAL = [
   { icon:"linkedin",  name:"LinkedIn",  url:"https://www.linkedin.com/in/mirko-rocci/" },
   { icon:"facebook",  name:"Facebook",  url:"https://www.facebook.com/mirko.rocci" },
-  { icon:"instagram", name:"Instagram", url:"" },
-  { icon:"x",         name:"X",         url:"" }
+  { icon:"instagram", name:"Instagram", url:"https://www.instagram.com/mirko.rocci/" },
+  { icon:"x",         name:"X",         url:"https://x.com/mirko_rocci" }
 ];
