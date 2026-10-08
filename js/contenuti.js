@@ -62,6 +62,12 @@ const NEWS = [
   /* ▼▼▼ AGGIUNGI QUI LE NUOVE NOVITÀ (la più recente in alto) ▼▼▼
      (le notizie di Inno99 NON vanno qui: mettile nel blocco INNO99 più sotto) */
 
+  { date:{ it:"22-23 ottobre 2026", en:"22-23 October 2026", es:"22-23 de octubre de 2026", fr:"22-23 octobre 2026" }, tag:NTAG.conf,
+    url:"https://www.innovazioni.camp/innovation-speakers/mirko-rocci/",
+    img:"assets/press/innovazioni2026.jpg",
+    t:{ it:"Innovation Speaker a InnovAzioni 2026, il Festival nazionale dell'Innovazione", en:"Innovation Speaker at InnovAzioni 2026, Italy's national innovation festival", es:"Innovation Speaker en InnovAzioni 2026, el festival nacional de la innovación", fr:"Innovation Speaker à InnovAzioni 2026, le festival national de l'innovation" },
+    d:{ it:"Il 22 e 23 ottobre sarò tra gli Innovation Speaker della tredicesima edizione di InnovAzioni, il festival promosso da Confindustria Abruzzo Medio Adriatico all'Aurum di Pescara. Il tema di quest'anno è «Impresa intelligente: AI Agents e nuovi modelli decisionali».", en:"On 22 and 23 October I will be among the Innovation Speakers at the thirteenth edition of InnovAzioni, the festival promoted by Confindustria Abruzzo Medio Adriatico at the Aurum in Pescara. This year's theme is 'Intelligent enterprise: AI Agents and new decision-making models'.", es:"El 22 y 23 de octubre estaré entre los Innovation Speakers de la decimotercera edición de InnovAzioni, el festival promovido por Confindustria Abruzzo Medio Adriatico en el Aurum de Pescara. El tema de este año es «Empresa inteligente: AI Agents y nuevos modelos de decisión».", fr:"Les 22 et 23 octobre, je serai parmi les Innovation Speakers de la treizième édition d'InnovAzioni, le festival promu par Confindustria Abruzzo Medio Adriatico à l'Aurum de Pescara. Le thème de cette année est « Entreprise intelligente : AI Agents et nouveaux modèles de décision »." } },
+
   { date:{ it:"26 settembre 2026", en:"26 September 2026", es:"26 de septiembre de 2026", fr:"26 septembre 2026" }, tag:NTAG.conf,
     url:"assets/press/rigenerazioni-locandina.jpg",
     img:"assets/press/rigenerazioni-talk-ascoli.jpg",
@@ -131,6 +137,12 @@ const NEWS = [
    ============================================================================ */
 const FEATURED = [
 
+  { img:"assets/press/innovazioni2026.jpg", tag:NTAG.conf,
+    date:{ it:"22-23 ottobre 2026", en:"22-23 October 2026", es:"22-23 de octubre de 2026", fr:"22-23 octobre 2026" },
+    t:{ it:"Sarò Innovation Speaker a InnovAzioni 2026", en:"I will be an Innovation Speaker at InnovAzioni 2026", es:"Seré Innovation Speaker en InnovAzioni 2026", fr:"Je serai Innovation Speaker à InnovAzioni 2026" },
+    d:{ it:"Il 22 e 23 ottobre partecipo alla tredicesima edizione del Festival nazionale dell'Innovazione, promosso da Confindustria Abruzzo Medio Adriatico all'Aurum di Pescara. Due giornate di confronto tra imprese, esperti e istituzioni sul tema «Impresa intelligente: AI Agents e nuovi modelli decisionali».", en:"On 22 and 23 October I am taking part in the thirteenth edition of Italy's national innovation festival, promoted by Confindustria Abruzzo Medio Adriatico at the Aurum in Pescara. Two days of discussion among businesses, experts and institutions on the theme 'Intelligent enterprise: AI Agents and new decision-making models'.", es:"El 22 y 23 de octubre participo en la decimotercera edición del Festival nacional de la Innovación, promovido por Confindustria Abruzzo Medio Adriatico en el Aurum de Pescara. Dos jornadas de debate entre empresas, expertos e instituciones sobre el tema «Empresa inteligente: AI Agents y nuevos modelos de decisión».", fr:"Les 22 et 23 octobre, je participe à la treizième édition du Festival national de l'Innovation, promu par Confindustria Abruzzo Medio Adriatico à l'Aurum de Pescara. Deux journées d'échanges entre entreprises, experts et institutions sur le thème « Entreprise intelligente : AI Agents et nouveaux modèles de décision »." },
+    url:"https://www.innovazioni.camp/innovation-speakers/mirko-rocci/" },
+
   { img:"assets/press/rigenerazioni-talk-ascoli.jpg", tag:NTAG.conf,
     date:{ it:"26 settembre 2026", en:"26 September 2026", es:"26 de septiembre de 2026", fr:"26 septembre 2026" },
     t:{ it:"Invited talk ad Ascoli Piceno: «Talk Fisico» con RigenerAzioni", en:"Invited talk in Ascoli Piceno: 'Talk Fisico' with RigenerAzioni", es:"Charla invitada en Ascoli Piceno: «Talk Fisico» con RigenerAzioni", fr:"Conférence invitée à Ascoli Piceno : « Talk Fisico » avec RigenerAzioni" },
@@ -147,12 +159,7 @@ const FEATURED = [
     date:{ it:"19 agosto 2026", en:"19 August 2026", es:"19 de agosto de 2026", fr:"19 août 2026" },
     t:{ it:"È nata L'AquiLive: l'app gratuita degli eventi dell'Aquila", en:"Introducing L'AquiLive: the free events app for L'Aquila", es:"Nace L'AquiLive: la app gratuita de eventos de L'Aquila", fr:"Voici L'AquiLive : l'appli gratuite des événements de L'Aquila" },
     d:{ it:"Ho ideato e costruito l'app che raccoglie tutti gli eventi dell'Aquila e provincia: concerti, teatro, sagre, cinema, Perdonanza, news locali, mappa e trasporti. Gratuita, in 6 lingue, senza pubblicità, ora su Google Play e App Store: il mio modo di restituire qualcosa alla città.", en:"I designed and built the app that gathers every event in L'Aquila and its province: concerts, theatre, festivals, cinema, Perdonanza, local news, map and transport. Free, in 6 languages, ad-free, now on Google Play and the App Store — my way of giving something back to the city.", es:"Ideé y construí la app que reúne todos los eventos de L'Aquila y su provincia: conciertos, teatro, fiestas, cine, Perdonanza, noticias locales, mapa y transporte. Gratuita, en 6 idiomas, sin publicidad, ya en Google Play y App Store.", fr:"J'ai conçu et développé l'appli qui rassemble tous les événements de L'Aquila et de sa province : concerts, théâtre, fêtes, cinéma, Perdonanza, actualités locales, carte et transports. Gratuite, en 6 langues, sans publicité, désormais sur Google Play et l'App Store." },
-    url:"laquilive-app.html" },  { img:"assets/awards/leonardo-cingolani.jpg", tag:NTAG.award,
-    date:{ it:"Gennaio 2026", en:"January 2026", es:"Enero de 2026", fr:"Janvier 2026" },
-    t:{ it:"Menzione Speciale ai Leonardo Innovation Awards", en:"Special Mention at the Leonardo Innovation Awards", es:"Mención Especial en los Leonardo Innovation Awards", fr:"Mention Spéciale aux Leonardo Innovation Awards" },
-    d:{ it:"Con il progetto G-DEPM «Graphene Direct Enabled Polymer Metallization»: unica menzione speciale assegnata a Thales Alenia Space, consegnata dall'AD di Leonardo Roberto Cingolani.", en:"With the G-DEPM project 'Graphene Direct Enabled Polymer Metallization': the only special mention awarded to Thales Alenia Space, presented by Leonardo CEO Roberto Cingolani.", es:"Con el proyecto G-DEPM: única mención especial otorgada a Thales Alenia Space, entregada por el CEO de Leonardo, Roberto Cingolani.", fr:"Avec le projet G-DEPM : seule mention spéciale décernée à Thales Alenia Space, remise par le PDG de Leonardo, Roberto Cingolani." },
-    url:"https://news-town.it/2026/03/09/persone/allaquilano-mirko-rocci-una-menzione-speciale-nellinnovation-award-di-leonardo/" }
-
+    url:"laquilive-app.html" }
 ];
 
 
