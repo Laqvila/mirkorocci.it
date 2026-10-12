@@ -176,11 +176,45 @@ function renderAssoc333(){
   if(pg && typeof ASSOC_PRESS!=="undefined") pg.innerHTML = lim(ASSOC_PRESS,pg).map(p=>pressCard(p)).join("");
 }
 
+/* foto di una card: con  imgs:[...]  le immagini si alternano da sole (vedi initRotators) */
+function photoHTML(o, cls){
+  const list = (o.imgs && o.imgs.length) ? o.imgs : (o.img ? [o.img] : []);
+  if(list.length < 2) return `<div class="${cls}"><img src="${list[0]}" alt="" loading="lazy"></div>`;
+  return `<div class="${cls} rot">`
+    + list.map((src,i)=>`<img src="${src}" alt="" loading="lazy"${i===0?' class="on"':""}>`).join("")
+    + `<span class="rot-dots" aria-hidden="true">${list.map((_,i)=>`<i${i===0?' class="on"':""}></i>`).join("")}</span></div>`;
+}
+/* alterna le foto delle card con più immagini: un solo timer per tutte, così cambiano insieme */
+const ROT_MS = 2200;
+function initRotators(){
+  const rots = $$(".rot"); if(!rots.length) return;
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  /* con il mouse sopra la card la rotazione si ferma, per leggere con calma; sui touch non si ferma mai */
+  if(window.matchMedia("(hover: hover) and (pointer: fine)").matches){
+    rots.forEach(r=>{
+      const card = r.closest(".feat,.news") || r;
+      card.addEventListener("mouseenter",()=>{ r.dataset.pause="1"; });
+      card.addEventListener("mouseleave",()=>{ delete r.dataset.pause; });
+    });
+  }
+  setInterval(()=>{
+    if(document.hidden) return;
+    rots.forEach(r=>{
+      if(r.dataset.pause) return;
+      const imgs = $$("img",r), dots = $$(".rot-dots i",r);
+      const cur = imgs.findIndex(i=>i.classList.contains("on")), next = (cur+1) % imgs.length;
+      if(!imgs[next].complete || !imgs[next].naturalWidth) return;   // aspetta che la prossima sia caricata
+      imgs.forEach((im,i)=>im.classList.toggle("on", i===next));
+      dots.forEach((d,i)=>d.classList.toggle("on", i===next));
+    });
+  }, ROT_MS);
+}
+
 function renderFeatured(){
   const g=$("#featured-grid"); if(!g||typeof FEATURED==="undefined") return;
   g.innerHTML = FEATURED.map(f=>{
     return `<a class="feat reveal"${linkAttrs(f.url)}>
-      <div class="feat-photo"><img src="${f.img}" alt="" loading="lazy"></div>
+      ${photoHTML(f,"feat-photo")}
       <div class="feat-body">
         <div class="feat-top"><span class="news-tag" ${L(f.tag)}>${esc(f.tag.it)}</span>
           <span class="feat-date" ${L(f.date)}>${esc(f.date.it)}</span></div>
@@ -293,8 +327,8 @@ function renderNews(){
   const g=$("#news-grid"); if(!g||typeof NEWS==="undefined") return;
   g.innerHTML = NEWS.map(n=>{
     const k=newsKey(n.tag);
-    const media = n.img
-      ? `<div class="news-photo"><img src="${n.img}" alt="" loading="lazy"></div>`
+    const media = (n.img || (n.imgs && n.imgs.length))
+      ? photoHTML(n,"news-photo")
       : `<div class="news-photo news-ph" data-k="${k}" aria-hidden="true">${NEWS_ICON[k]||NEWS_ICON.conf}</div>`;
     return `
     <article class="news reveal tilt has-photo">
@@ -577,6 +611,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   renderVenturesContact();
   renderMap();
   initShowMore();
+  initRotators();
   initPressFilters();
   initReveal();
   initLang();

@@ -39,6 +39,10 @@
      t    : titolo della novità
      d    : descrizione breve
 
+   imgs : (facoltativo) più foto che si alternano da sole nella card, es.
+          imgs:["assets/press/uno.jpg","assets/press/due.jpg"],
+          La prima deve essere la stessa di img. Vale per NEWS e per FEATURED.
+
    img  : foto della card (SEMPRE consigliata quando c'è un link: usa la foto
           principale dell'articolo, salvata in assets/press/). Senza img la
           card è solo testo.
@@ -65,6 +69,7 @@ const NEWS = [
   { date:{ it:"18 ottobre 2026", en:"18 October 2026", es:"18 de octubre de 2026", fr:"18 octobre 2026" }, tag:NTAG.social,
     url:"assets/press/te-lo-ricordi-mario-locandina.jpg",
     img:"assets/press/te-lo-ricordi-mario.jpg",
+    imgs:["assets/press/te-lo-ricordi-mario.jpg","assets/press/te-lo-ricordi-mario-rocci.jpg"],
     t:{ it:"«Te lo ricordi Mario?», vi aspetto il 18 ottobre all'Aquila", en:"'Te lo ricordi Mario?', join me on 18 October in L'Aquila", es:"«Te lo ricordi Mario?», os espero el 18 de octubre en L'Aquila", fr:"« Te lo ricordi Mario? », rendez-vous le 18 octobre à L'Aquila" },
     d:{ it:"Domenica 18 ottobre alle 18:00 sarò allo Spazio Rimediato, in via Fontesecco 24 all'Aquila, per un pomeriggio di incontri, ricordi e risate dedicato a Mario Magnotta. Con me Romina Magnotta, Paolo Totti, Maurizio Videtta, Antonio Recupero e Roberto Di Leo, con il live action painting di Roberto Pavoni. Modera Ngulo che Strina. L'ingresso è gratuito.", en:"On Sunday 18 October at 6 pm I will be at Spazio Rimediato, via Fontesecco 24 in L'Aquila, for an afternoon of encounters, memories and laughter dedicated to Mario Magnotta. With me Romina Magnotta, Paolo Totti, Maurizio Videtta, Antonio Recupero and Roberto Di Leo, with live action painting by Roberto Pavoni. Hosted by Ngulo che Strina. Admission is free.", es:"El domingo 18 de octubre a las 18:00 estaré en Spazio Rimediato, via Fontesecco 24 en L'Aquila, en una tarde de encuentros, recuerdos y risas dedicada a Mario Magnotta. Conmigo Romina Magnotta, Paolo Totti, Maurizio Videtta, Antonio Recupero y Roberto Di Leo, con el live action painting de Roberto Pavoni. Modera Ngulo che Strina. La entrada es gratuita.", fr:"Dimanche 18 octobre à 18h, je serai au Spazio Rimediato, via Fontesecco 24 à L'Aquila, pour un après-midi de rencontres, de souvenirs et de rires consacré à Mario Magnotta. Avec moi Romina Magnotta, Paolo Totti, Maurizio Videtta, Antonio Recupero et Roberto Di Leo, avec le live action painting de Roberto Pavoni. Animé par Ngulo che Strina. L'entrée est gratuite." } },
 
@@ -144,6 +149,7 @@ const NEWS = [
 const FEATURED = [
 
   { img:"assets/press/te-lo-ricordi-mario.jpg", tag:NTAG.social,
+    imgs:["assets/press/te-lo-ricordi-mario.jpg","assets/press/te-lo-ricordi-mario-rocci.jpg"],
     date:{ it:"18 ottobre 2026", en:"18 October 2026", es:"18 de octubre de 2026", fr:"18 octobre 2026" },
     t:{ it:"«Te lo ricordi Mario?», domenica 18 ottobre all'Aquila", en:"'Te lo ricordi Mario?', Sunday 18 October in L'Aquila", es:"«Te lo ricordi Mario?», domingo 18 de octubre en L'Aquila", fr:"« Te lo ricordi Mario? », dimanche 18 octobre à L'Aquila" },
     d:{ it:"Vi invito allo Spazio Rimediato, in via Fontesecco 24, per un pomeriggio di incontri, ricordi e risate dedicato a Mario Magnotta. Sarò tra gli ospiti insieme a Romina Magnotta, Paolo Totti, Maurizio Videtta, Antonio Recupero e Roberto Di Leo, con il live action painting di Roberto Pavoni e la conduzione di Ngulo che Strina. Si comincia alle 18:00 e l'ingresso è gratuito.", en:"You are invited to Spazio Rimediato, via Fontesecco 24, for an afternoon of encounters, memories and laughter dedicated to Mario Magnotta. I will be among the guests together with Romina Magnotta, Paolo Totti, Maurizio Videtta, Antonio Recupero and Roberto Di Leo, with live action painting by Roberto Pavoni, hosted by Ngulo che Strina. It starts at 6 pm and admission is free.", es:"Os invito a Spazio Rimediato, via Fontesecco 24, a una tarde de encuentros, recuerdos y risas dedicada a Mario Magnotta. Estaré entre los invitados junto a Romina Magnotta, Paolo Totti, Maurizio Videtta, Antonio Recupero y Roberto Di Leo, con el live action painting de Roberto Pavoni y la conducción de Ngulo che Strina. Empieza a las 18:00 y la entrada es gratuita.", fr:"Je vous invite au Spazio Rimediato, via Fontesecco 24, pour un après-midi de rencontres, de souvenirs et de rires consacré à Mario Magnotta. Je serai parmi les invités avec Romina Magnotta, Paolo Totti, Maurizio Videtta, Antonio Recupero et Roberto Di Leo, avec le live action painting de Roberto Pavoni et l'animation de Ngulo che Strina. Début à 18h, entrée gratuite." },
