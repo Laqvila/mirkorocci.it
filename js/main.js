@@ -342,6 +342,7 @@ function renderNews(){
       </div>
       <h3 class="news-title" ${L(n.t)}>${esc(n.t.it)}</h3>
       <p class="news-desc" ${L(n.d)}>${esc(n.d.it)}</p>
+      ${n.press&&n.press.length?`<div class="news-press"><span ${L({en:"Press coverage",es:"Prensa",fr:"Revue de presse"})}>Rassegna stampa</span> ${n.press.map(r=>`<a${linkAttrs(r.url)}>${esc(r.outlet)}</a>`).join(" · ")}</div>`:""}
       ${n.url?`<a class="news-link"${linkAttrs(n.url)}><span ${L({en:"Read",es:"Leer",fr:"Lire"})}>Leggi</span>${ext}</a>`:""}
     </article>`;}).join("");
 }

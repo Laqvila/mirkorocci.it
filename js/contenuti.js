@@ -70,6 +70,13 @@ const NEWS = [
     url:"assets/press/te-lo-ricordi-mario-locandina.jpg",
     img:"assets/press/te-lo-ricordi-mario.jpg",
     imgs:["assets/press/te-lo-ricordi-mario.jpg","assets/press/te-lo-ricordi-mario-rocci.jpg"],
+    press:[
+      { outlet:"Il Centro", url:"assets/press/te-lo-ricordi-ilcentro.jpg" },
+      { outlet:"News-Town", url:"https://news-town.it/2026/10/18/eventi/te-lo-ricordi-mario-a-spazio-rimediato-un-pomeriggio-per-magnotta/" },
+      { outlet:"Vento Nuovo", url:"https://www.ventonuovo.eu/2026/10/18/un-evento-dedicato-a-mario-magnotta-oggi-a-laquila/" },
+      { outlet:"AbruzzoLive", url:"https://abruzzolive.it/laquila-ricorda-mario-magnotta-aneddoti-risate-e-omaggio-allo-storico-scherzo-della-lavatrice/" },
+      { outlet:"L'Aquila Blog", url:"https://www.laquilablog.it/te-lo-ricordi-mario/" }
+    ],
     t:{ it:"«Te lo ricordi Mario?», vi aspetto il 18 ottobre all'Aquila", en:"'Te lo ricordi Mario?', join me on 18 October in L'Aquila", es:"«Te lo ricordi Mario?», os espero el 18 de octubre en L'Aquila", fr:"« Te lo ricordi Mario? », rendez-vous le 18 octobre à L'Aquila" },
     d:{ it:"Domenica 18 ottobre alle 18:00 sarò allo Spazio Rimediato, in via Fontesecco 24 all'Aquila, per un pomeriggio di incontri, ricordi e risate dedicato a Mario Magnotta. Con me Romina Magnotta, Paolo Totti, Maurizio Videtta, Antonio Recupero e Roberto Di Leo, con il live action painting di Roberto Pavoni. Modera Ngulo che Strina. L'ingresso è gratuito.", en:"On Sunday 18 October at 6 pm I will be at Spazio Rimediato, via Fontesecco 24 in L'Aquila, for an afternoon of encounters, memories and laughter dedicated to Mario Magnotta. With me Romina Magnotta, Paolo Totti, Maurizio Videtta, Antonio Recupero and Roberto Di Leo, with live action painting by Roberto Pavoni. Hosted by Ngulo che Strina. Admission is free.", es:"El domingo 18 de octubre a las 18:00 estaré en Spazio Rimediato, via Fontesecco 24 en L'Aquila, en una tarde de encuentros, recuerdos y risas dedicada a Mario Magnotta. Conmigo Romina Magnotta, Paolo Totti, Maurizio Videtta, Antonio Recupero y Roberto Di Leo, con el live action painting de Roberto Pavoni. Modera Ngulo che Strina. La entrada es gratuita.", fr:"Dimanche 18 octobre à 18h, je serai au Spazio Rimediato, via Fontesecco 24 à L'Aquila, pour un après-midi de rencontres, de souvenirs et de rires consacré à Mario Magnotta. Avec moi Romina Magnotta, Paolo Totti, Maurizio Videtta, Antonio Recupero et Roberto Di Leo, avec le live action painting de Roberto Pavoni. Animé par Ngulo che Strina. L'entrée est gratuite." } },
 
@@ -198,6 +205,17 @@ const PRESS = [
 
   /* ▼▼▼ AGGIUNGI QUI I NUOVI ARTICOLI (il più recente in alto) ▼▼▼
      (gli articoli su Inno99 NON vanno qui: mettili nel blocco INNO99 più sotto) */
+
+  { outlet:"Il Centro", year:"2026", url:"", img:"assets/press/te-lo-ricordi-ilcentro.jpg",
+    q:{ it:"«Rivive il mito di Magnotta: pomeriggio tra ricordi e risate», sull'incontro «Te lo ricordi Mario?» a Spazio Rimediato. Edizione del 18 ottobre 2026.", en:"'The Magnotta legend lives again: an afternoon of memories and laughter', on the event 'Te lo ricordi Mario?' at Spazio Rimediato. Edition of 18 October 2026." } },
+  { outlet:"News-Town", year:"2026", url:"https://news-town.it/2026/10/18/eventi/te-lo-ricordi-mario-a-spazio-rimediato-un-pomeriggio-per-magnotta/", img:"assets/press/te-lo-ricordi-newstown.jpg",
+    q:{ it:"«Te lo ricordi Mario?»: a L'Aquila un pomeriggio per Mario Magnotta.", en:"'Te lo ricordi Mario?': an afternoon for Mario Magnotta in L'Aquila." } },
+  { outlet:"Vento Nuovo", year:"2026", url:"https://www.ventonuovo.eu/2026/10/18/un-evento-dedicato-a-mario-magnotta-oggi-a-laquila/", img:"assets/press/te-lo-ricordi-ventonuovo.jpg",
+    q:{ it:"«Un evento dedicato a Mario Magnotta oggi a L'Aquila».", en:"'An event dedicated to Mario Magnotta today in L'Aquila'." } },
+  { outlet:"AbruzzoLive", year:"2026", url:"https://abruzzolive.it/laquila-ricorda-mario-magnotta-aneddoti-risate-e-omaggio-allo-storico-scherzo-della-lavatrice/", img:"assets/press/te-lo-ricordi-abruzzolive.jpg",
+    q:{ it:"«L'Aquila ricorda Mario Magnotta: aneddoti, risate e omaggio allo storico scherzo della lavatrice».", en:"'L'Aquila remembers Mario Magnotta: anecdotes, laughter and a tribute to the historic washing-machine prank'." } },
+  { outlet:"L'Aquila Blog", year:"2026", url:"https://www.laquilablog.it/te-lo-ricordi-mario/", img:"assets/press/te-lo-ricordi-laquilablog.jpg",
+    q:{ it:"«Te lo ricordi Mario?», l'incontro dedicato a Mario Magnotta a Spazio Rimediato.", en:"'Te lo ricordi Mario?', the event dedicated to Mario Magnotta at Spazio Rimediato." } },
 
   { outlet:"A4 Quotidiano", year:"2026", url:"assets/press/laquilive-articolo.pdf", img:"assets/press/laquilive-abruzzosera.jpg",
     q:{ it:"«Arriva l'app L'AquiLive con tutti gli eventi di L'Aquila e dintorni», ideata e sviluppata da Mirko Rocci — edizione del 26 agosto 2026.", en:"'The L'AquiLive app arrives with all the events of L'Aquila and its surroundings', devised and developed by Mirko Rocci — 26 August 2026 edition.", es:"«Llega la app L'AquiLive con todos los eventos de L'Aquila y alrededores», ideada y desarrollada por Mirko Rocci — edición del 26 de agosto de 2026.", fr:"« Voici l'appli L'AquiLive avec tous les événements de L'Aquila et ses environs », conçue et développée par Mirko Rocci — édition du 26 août 2026." } },
