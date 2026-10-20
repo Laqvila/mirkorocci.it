@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>L'AquiLive — Scarica l'app</title>
+  <!-- Passaggio diretto allo store: mirkorocci.it/laquilive/scarica (dal 20/10/2026 mirkorocci.it/laquilive è la pagina dell'app, questo è il vecchio link elegante, per QR e locandine)
+       · riconosce il telefono: iPhone va sull'App Store, tutti gli altri su Google Play
+       · «?da=parola» dice da quale canale arriva il tocco (instagram, locandina-bar, ilcentro…):
+         il tocco si conta nello Studio, senza indirizzo IP e senza identificativi
+       · su Google Play la stessa parola viaggia come utm_source, così compare anche nei
+         rapporti di acquisizione della Play Console
+       noindex: la pagina è solo un passaggio, non un contenuto da indicizzare. -->
+  <meta name="robots" content="noindex">
+  <!-- ripiego per chi ha JavaScript spento: dopo due secondi si va comunque su Google Play -->
+  <meta http-equiv="refresh" content="2; url=https://play.google.com/store/apps/details?id=it.aqlive99.app">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script>
+    (function () {
+      var PLAY = 'https://play.google.com/store/apps/details?id=it.aqlive99.app';
+      var APPLE = 'https://apps.apple.com/it/app/laquilive/id6796280318';
+      var SB = 'https://kdgytiribodwqccvwzvc.supabase.co';
+      // chiave PUBBLICA, la stessa dentro l'app
+      var CHIAVE = 'sb_publishable_-tudt_coGbSiMfFxTWZ9yQ_YYxUtBid';
+      var ua = navigator.userAgent || '';
+      var ios = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      var android = /Android/i.test(ua);
+      var canale = ((new URLSearchParams(location.search).get('da') || '') + '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40);
+      var meta = ios ? APPLE : PLAY + (canale ? '&referrer=' + encodeURIComponent('utm_source=' + canale + '&utm_medium=link') : '');
+      window.__meta = meta;
+      try {
+        fetch(SB + '/rest/v1/rpc/registra_click_link', {
+          method: 'POST', keepalive: true,
+          headers: { 'Content-Type': 'application/json', apikey: CHIAVE, Authorization: 'Bearer ' + CHIAVE },
+          body: JSON.stringify({ p_canale: canale, p_destinazione: ios ? 'appstore' : 'play', p_piattaforma: ios ? 'ios' : android ? 'android' : 'altro' })
+        }).catch(function () {});
+      } catch (e) { /* il conteggio non deve mai fermare il passaggio allo store */ }
+      // un attimo perché la richiesta parta, poi via
+      setTimeout(function () { window.location.replace(meta); }, 160);
+    })();
+  </script>
+  <style>
+    body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+           background: #0B0908; color: #EDE8DE; font-family: system-ui, -apple-system, sans-serif; text-align: center; }
+    a { color: #F5820C; font-weight: 700; }
+    p { font-size: 1.05rem; line-height: 1.6; padding: 0 24px; }
+  </style>
+</head>
+<body>
+  <p>Ti stiamo portando allo store per scaricare <strong>L'AquiLive</strong>…<br>
+    <a href="https://play.google.com/store/apps/details?id=it.aqlive99.app">Android (Google Play)</a> ·
+    <a href="https://apps.apple.com/it/app/laquilive/id6796280318">iPhone (App Store)</a></p>
+</body>
+</html>

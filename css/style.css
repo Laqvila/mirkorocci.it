@@ -104,6 +104,19 @@ body::before{
   color:#fff!important;font-weight:600;box-shadow:0 6px 18px rgba(91,140,255,.35);
 }
 .nav-cta:hover{transform:translateY(-2px)}
+/* da 1301 a 1660px: con 11 voci la barra si stringe e le icone social stanno solo nel piè di pagina */
+@media(min-width:1301px) and (max-width:1660px){
+  #social-top{display:none}
+  .nav-links{gap:3px}
+  .nav-links a{padding:8px 9px;font-size:14px}
+  .nav-links a:not(.nav-cta)::after{left:9px;right:9px}
+}
+/* la voce di L'AquiLive: icona dell'app, testo pieno e pastiglia arancio */
+.nav-links a.nav-app{display:inline-flex;align-items:center;gap:7px;color:var(--txt);font-weight:600}
+.nav-links a.nav-app img{width:18px;height:18px;border-radius:5px;flex:none}
+.nav-links a.nav-app::after{background:linear-gradient(90deg,#F5820C,#E11D5F)}
+.nav-pill{font-size:10.5px;font-weight:700;letter-spacing:.02em;line-height:1;padding:3px 7px;border-radius:99px;
+  background:linear-gradient(135deg,rgba(245,130,12,.26),rgba(225,29,95,.22));color:#FFB46B;border:1px solid rgba(245,130,12,.5)}
 .nav-tools{display:flex;align-items:center;gap:12px}
 .lang-toggle{
   background:var(--panel);border:1px solid var(--panel-brd);color:var(--txt-dim);
@@ -624,11 +637,11 @@ body.menu-open{overflow:hidden}
   .assoc-gallery{grid-template-columns:1fr 1fr}
   .assoc-press{grid-template-columns:1fr}
 }
-/* ====== MENU A PANNELLO (hamburger) — fino a 1100px ======
+/* ====== MENU A PANNELLO (hamburger) — fino a 1300px (20/10/2026: 11 voci con L'AquiLive) ======
    Con 9 voci la barra inline sta comoda solo su schermi larghi:
    sotto i 1100px (telefoni anche in orizzontale, tablet, "sito
    desktop" degli smartphone) si usa il drawer. */
-@media(max-width:1100px){
+@media(max-width:1300px){
   /* FIX CRITICO: il backdrop-filter sulla navbar la rende "containing block"
      del drawer fixed (che collassava a una striscia alta ~80px dopo lo
      scroll). Su schermi piccoli: sfondo pieno, niente blur. */
@@ -922,7 +935,7 @@ body.menu-open{overflow:hidden}
 #social-foot .social-link:hover{color:var(--accent)}
 #social-foot:empty{display:none}
 
-@media(max-width:1100px){
+@media(max-width:1300px){
   #social-top{display:none}
   .nav-links .social-row{display:flex;gap:6px;margin-top:22px;padding-top:18px;
     border-top:1px solid var(--panel-brd);justify-content:center}

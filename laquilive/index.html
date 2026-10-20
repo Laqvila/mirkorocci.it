@@ -1,54 +1,481 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>L'AquiLive — Scarica l'app</title>
-  <!-- Link elegante per scaricare L'AquiLive: mirkorocci.it/laquilive
-       · riconosce il telefono: iPhone va sull'App Store, tutti gli altri su Google Play
-       · «?da=parola» dice da quale canale arriva il tocco (instagram, locandina-bar, ilcentro…):
-         il tocco si conta nello Studio, senza indirizzo IP e senza identificativi
-       · su Google Play la stessa parola viaggia come utm_source, così compare anche nei
-         rapporti di acquisizione della Play Console
-       noindex: la pagina è solo un passaggio, non un contenuto da indicizzare. -->
-  <meta name="robots" content="noindex">
-  <!-- ripiego per chi ha JavaScript spento: dopo due secondi si va comunque su Google Play -->
-  <meta http-equiv="refresh" content="2; url=https://play.google.com/store/apps/details?id=it.aqlive99.app">
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-  <script>
-    (function () {
-      var PLAY = 'https://play.google.com/store/apps/details?id=it.aqlive99.app';
-      var APPLE = 'https://apps.apple.com/it/app/laquilive/id6796280318';
-      var SB = 'https://kdgytiribodwqccvwzvc.supabase.co';
-      // chiave PUBBLICA, la stessa dentro l'app
-      var CHIAVE = 'sb_publishable_-tudt_coGbSiMfFxTWZ9yQ_YYxUtBid';
-      var ua = navigator.userAgent || '';
-      var ios = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-      var android = /Android/i.test(ua);
-      var canale = ((new URLSearchParams(location.search).get('da') || '') + '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40);
-      var meta = ios ? APPLE : PLAY + (canale ? '&referrer=' + encodeURIComponent('utm_source=' + canale + '&utm_medium=link') : '');
-      window.__meta = meta;
-      try {
-        fetch(SB + '/rest/v1/rpc/registra_click_link', {
-          method: 'POST', keepalive: true,
-          headers: { 'Content-Type': 'application/json', apikey: CHIAVE, Authorization: 'Bearer ' + CHIAVE },
-          body: JSON.stringify({ p_canale: canale, p_destinazione: ios ? 'appstore' : 'play', p_piattaforma: ios ? 'ios' : android ? 'android' : 'altro' })
-        }).catch(function () {});
-      } catch (e) { /* il conteggio non deve mai fermare il passaggio allo store */ }
-      // un attimo perché la richiesta parta, poi via
-      setTimeout(function () { window.location.replace(meta); }, 160);
-    })();
-  </script>
-  <style>
-    body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
-           background: #0B0908; color: #EDE8DE; font-family: system-ui, -apple-system, sans-serif; text-align: center; }
-    a { color: #F5820C; font-weight: 700; }
-    p { font-size: 1.05rem; line-height: 1.6; padding: 0 24px; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Sicurezza: niente script in linea, i conteggi vanno solo verso Supabase -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src https://kdgytiribodwqccvwzvc.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>L'AquiLive · L'app gratuita degli eventi di L'Aquila</title>
+<meta name="description" content="L'AquiLive è l'app gratuita e senza pubblicità con gli eventi, le notizie, gli sconti e i servizi di L'Aquila e dintorni: mappa, farmacie di turno, autobus, raccolta differenziata. Per iPhone e Android, in 9 lingue.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://mirkorocci.it/laquilive/">
+<meta name="theme-color" content="#0B0908">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/laquilive/icona-192.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="L'AquiLive">
+<meta property="og:title" content="L'AquiLive · Tutta L'Aquila in un'app gratuita">
+<meta property="og:description" content="Eventi, notizie, sconti e servizi di L'Aquila e dintorni in un'unica app, gratuita e senza pubblicità. Oltre 1.600 download in due mesi.">
+<meta property="og:url" content="https://mirkorocci.it/laquilive/">
+<meta property="og:image" content="https://mirkorocci.it/assets/laquilive/og-laquilive.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="L'AquiLive, eventi, cultura e vita quotidiana a L'Aquila e provincia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="L'AquiLive · Tutta L'Aquila in un'app gratuita">
+<meta name="twitter:description" content="Eventi, notizie, sconti e servizi di L'Aquila e dintorni in un'unica app, gratuita e senza pubblicità.">
+<meta name="twitter:image" content="https://mirkorocci.it/assets/laquilive/og-laquilive.jpg">
+<meta name="apple-itunes-app" content="app-id=6796280318">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      "@id": "https://mirkorocci.it/laquilive/#app",
+      "name": "L'AquiLive",
+      "url": "https://mirkorocci.it/laquilive/",
+      "description": "App gratuita e senza pubblicità con gli eventi, le notizie, gli sconti e i servizi di L'Aquila e dintorni: concerti, teatro, mostre, sagre, conferenze e Perdonanza Celestiniana, con mappa interattiva, promemoria, news locali, trasporti, farmacie di turno, raccolta differenziata, cinema e luoghi da scoprire.",
+      "image": "https://mirkorocci.it/assets/press/laquilive-icona.png",
+      "screenshot": [
+        "https://mirkorocci.it/assets/laquilive/mappa.jpg",
+        "https://mirkorocci.it/assets/laquilive/evento.jpg",
+        "https://mirkorocci.it/assets/laquilive/news.jpg"
+      ],
+      "applicationCategory": "EntertainmentApplication",
+      "operatingSystem": "Android, iOS",
+      "inLanguage": ["it", "en", "fr", "es", "de", "zh", "ar", "ja", "ko"],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "installUrl": [
+        "https://play.google.com/store/apps/details?id=it.aqlive99.app",
+        "https://apps.apple.com/it/app/laquilive/id6796280318"
+      ],
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=it.aqlive99.app",
+        "https://apps.apple.com/it/app/laquilive/id6796280318"
+      ],
+      "spatialCoverage": { "@type": "Place", "name": "L'Aquila e provincia", "address": { "@type": "PostalAddress", "addressLocality": "L'Aquila", "addressRegion": "AQ", "addressCountry": "IT" } },
+      "author": { "@type": "Person", "@id": "https://mirkorocci.it/#person", "name": "Mirko Rocci", "url": "https://mirkorocci.it/" },
+      "publisher": { "@id": "https://mirkorocci.it/#person" },
+      "subjectOf": [
+        { "@type": "NewsArticle", "headline": "L'AquiLive, l'app gratuita per L'Aquila ideata dal fisico Mirko Rocci", "url": "https://abruzzosera.it/attualita/laquilive-lapp-gratuita-per-laquila-ideata-dal-fisico-mirko-rocci/", "publisher": { "@type": "Organization", "name": "Abruzzosera" } },
+        { "@type": "NewsArticle", "headline": "Nasce L'AquiLive, l'app gratuita con tutti gli eventi della città", "url": "https://www.laquilablog.it/nasce-laquilive-lapp-gratuita-con-tutti-gli-eventi-della-citta/", "publisher": { "@type": "Organization", "name": "L'Aquila Blog" } },
+        { "@type": "NewsArticle", "headline": "Arriva l'app L'AquiLive con tutti gli eventi di L'Aquila e dintorni", "url": "https://news-town.it/2026/08/25/scenari/arriva-lapp-laquilive-con-tutti-gli-eventi-di-laquila-e-dintorni/", "publisher": { "@type": "Organization", "name": "News-Town" } }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Che cos'è L'AquiLive?", "acceptedAnswer": { "@type": "Answer", "text": "L'AquiLive è un'app gratuita e senza pubblicità che raccoglie in un solo posto gli eventi, le notizie, gli sconti e i servizi di L'Aquila e dintorni, con mappa interattiva, promemoria, trasporti, farmacie di turno, raccolta differenziata e cinema." } },
+        { "@type": "Question", "name": "L'AquiLive è gratuita?", "acceptedAnswer": { "@type": "Answer", "text": "Sì. L'app è gratuita e senza pubblicità, per Android su Google Play e per iPhone su App Store." } },
+        { "@type": "Question", "name": "In quali lingue è disponibile L'AquiLive?", "acceptedAnswer": { "@type": "Answer", "text": "In nove lingue: italiano, inglese, francese, spagnolo, tedesco, cinese, arabo, giapponese e coreano." } },
+        { "@type": "Question", "name": "Come si segnala un evento su L'AquiLive?", "acceptedAnswer": { "@type": "Answer", "text": "Chiunque può proporre un evento direttamente dall'app. Dopo una verifica redazionale viene pubblicato e diventa visibile a tutti." } },
+        { "@type": "Question", "name": "Chi ha creato L'AquiLive?", "acceptedAnswer": { "@type": "Answer", "text": "L'app è stata ideata e costruita da Mirko Rocci, fisico e tecnologo aquilano." } },
+        { "@type": "Question", "name": "Come può un'attività entrare nella sezione Sconti?", "acceptedAnswer": { "@type": "Answer", "text": "Bar, ristoranti, negozi, strutture ricettive ed esperienze del territorio possono proporre un'offerta riservata a chi usa l'app scrivendo a mirko.rocci@gmail.com. L'inserimento è gratuito, senza quote né commissioni, e la regola principale è che lo sconto sia reale e venga praticato davvero." } }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --ink: #0B0908; --ink-2: #110D0B; --panel: #17120F; --panel-2: #1E1814;
+    --line: rgba(255,255,255,.08); --line-2: rgba(255,255,255,.15);
+    --orange: #F5820C; --orange-lt: #FFB46B; --pink: #E11D5F; --yellow: #F2C230;
+    --grad: linear-gradient(135deg, #F5820C 0%, #E11D5F 100%);
+    --text: #F6F0EA; --muted: #B5A99E; --muted-2: #85796F;
+    --maxw: 1180px; --r: 18px; --ease: cubic-bezier(.2,.7,.2,1);
+    --font-d: "Space Grotesk", system-ui, sans-serif; --font-b: "Inter", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body { font-family: var(--font-b); background: var(--ink); color: var(--text); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; }
+  h1, h2, h3 { font-family: var(--font-d); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
+  :focus-visible { outline: 2px solid var(--orange-lt); outline-offset: 3px; border-radius: 6px; }
+  .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+  .grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .aql { white-space: nowrap; }
+  .aql i { font-style: normal; color: var(--orange); }
+  .kicker { display: inline-block; font-family: var(--font-d); font-size: .8rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
+  .link-inline { color: var(--orange-lt); font-weight: 600; }
+  .link-inline:hover { text-decoration: underline; }
+
+  /* sfondo: il rosone del marchio che gira piano, e due aloni caldi */
+  .bg-glow { position: fixed; z-index: 0; border-radius: 50%; filter: blur(90px); opacity: .35; pointer-events: none; }
+  .glow-a { width: 520px; height: 520px; left: -160px; top: -120px; background: var(--orange); }
+  .glow-b { width: 480px; height: 480px; right: -180px; top: 40%; background: var(--pink); opacity: .22; }
+
+  /* testata */
+  .testata { position: sticky; top: 0; z-index: 20; background: rgba(11,9,8,.82); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+  .testata .container { display: flex; align-items: center; justify-content: space-between; height: 66px; gap: 16px; }
+  .marchio { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; }
+  .marchio img { width: 34px; height: 34px; border-radius: 9px; }
+  .testata-dx { display: flex; align-items: center; gap: 18px; font-size: .9rem; color: var(--muted); }
+  .testata-dx a:hover { color: var(--text); }
+  .btn { display: inline-flex; align-items: center; gap: .5em; font-family: var(--font-d); font-weight: 600; font-size: .95rem; padding: .7em 1.3em; border-radius: 100px; background: var(--grad); color: #1C0B03; box-shadow: 0 10px 26px -12px rgba(245,130,12,.8); transition: transform .25s var(--ease); }
+  .btn:hover { transform: translateY(-2px); }
+
+  main, footer { position: relative; z-index: 1; }
+  .section { padding: 96px 0; position: relative; }
+  .section.tight { padding: 64px 0; }
+  .section-alt { background: linear-gradient(180deg, transparent, rgba(30,24,20,.6), transparent); }
+  .sec-head { max-width: 760px; margin: 0 auto 50px; text-align: center; }
+  .sec-head h2 { font-size: clamp(2rem, 4.4vw, 3.1rem); }
+  .lead { margin-top: 18px; color: var(--muted); font-size: 1.08rem; }
+  .split { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,.95fr); gap: 56px; align-items: center; }
+  .split.top { align-items: start; }
+  .sec-title { font-size: clamp(1.8rem, 3.6vw, 2.6rem); margin: 0 0 18px; }
+  .prose p { color: var(--muted); font-size: 1.05rem; line-height: 1.78; margin-top: 16px; }
+  .prose p:first-child { margin-top: 0; }
+  .prose strong { color: var(--text); }
+
+  /* apertura */
+  .apertura { padding: 64px 0 40px; }
+  .crumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; font-size: .84rem; color: var(--muted-2); }
+  .crumbs a { color: var(--muted); }
+  .crumbs a:hover { color: var(--orange-lt); }
+  .apertura h1 { font-size: clamp(2.5rem, 6vw, 4.4rem); font-weight: 700; letter-spacing: -.035em; max-width: 14ch; }
+  .ph-lead { max-width: 58ch; margin-top: 20px; color: var(--muted); font-size: clamp(1.02rem, 1.5vw, 1.14rem); }
+  .ph-lead strong { color: var(--text); }
+  .ph-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+  .chip-info { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 99px; border: 1px solid var(--line-2); background: rgba(11,9,8,.55); font-size: .87rem; }
+  .chip-info .ico { width: 17px; height: 17px; flex: none; fill: none; stroke: var(--orange); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .chip-info.hot { border-color: rgba(245,130,12,.5); background: rgba(245,130,12,.12); }
+  .prova { margin-top: 18px; font-size: .92rem; color: var(--muted); }
+  .prova b { color: var(--yellow); }
+
+  /* bottoni degli store */
+  .stores { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+  .stores.centro { justify-content: center; }
+  .store-btn { display: inline-flex; align-items: center; gap: 11px; min-width: 198px; padding: 12px 22px 12px 16px; border-radius: 14px; background: #000; border: 1px solid rgba(255,255,255,.3); color: #fff; transition: transform .25s var(--ease), border-color .25s, box-shadow .3s; }
+  .store-btn:hover { transform: translateY(-2px); border-color: #fff; box-shadow: 0 14px 30px -12px rgba(245,130,12,.6); }
+  .store-btn svg { width: 30px; height: 30px; flex: none; fill: currentColor; }
+  .store-btn span { display: flex; flex-direction: column; line-height: 1.12; }
+  .store-btn small { font-size: .68rem; opacity: .85; }
+  .store-btn b { font-family: var(--font-d); font-size: 1.3rem; font-weight: 600; white-space: nowrap; }
+
+  /* telefoni */
+  @keyframes bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -12px; } }
+  .phone { position: relative; margin: 0; padding: 9px; border-radius: 38px; background: linear-gradient(160deg, #2b2723, #0d0b0a 60%); border: 1px solid rgba(255,255,255,.15); box-shadow: 0 40px 80px -30px rgba(0,0,0,.9), inset 0 0 0 1px rgba(0,0,0,.6); }
+  .phone img { display: block; width: 100%; height: auto; border-radius: 30px; }
+  .visual { position: relative; display: flex; justify-content: center; align-items: center; padding: 24px 0; }
+  .visual-glow { position: absolute; inset: 6% 8%; border-radius: 50%; background: radial-gradient(closest-side, rgba(245,130,12,.38), rgba(225,29,95,.16) 60%, transparent); pointer-events: none; }
+  .phone-hero { width: min(300px, 76%); transform: rotate(3deg); animation: bob 8s ease-in-out infinite; }
+  .float-chip { position: absolute; z-index: 3; display: inline-flex; align-items: center; gap: 8px; padding: 9px 15px; border-radius: 99px; background: rgba(20,15,12,.88); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border: 1px solid rgba(245,130,12,.4); font-family: var(--font-d); font-size: .86rem; font-weight: 600; white-space: nowrap; box-shadow: 0 14px 30px -12px rgba(0,0,0,.85); animation: bob 6s ease-in-out infinite; }
+  .float-chip .ico { width: 16px; height: 16px; fill: none; stroke: var(--orange); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .fc-1 { top: 14%; left: 0; }
+  .fc-2 { top: 47%; right: 0; animation-delay: -2s; }
+  .fc-3 { bottom: 12%; left: 6%; animation-delay: -4s; }
+  .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); position: relative; display: inline-block; }
+  .pulse-dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: inherit; animation: pulse 2s ease-out infinite; }
+  @keyframes pulse { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(3.4); opacity: 0; } }
+
+  /* numeri */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; border: 1px solid var(--line); border-radius: var(--r); padding: 34px 20px; background: linear-gradient(180deg, rgba(30,24,20,.6), transparent); }
+  .stat { text-align: center; position: relative; }
+  .stat + .stat::before { content: ""; position: absolute; left: -10px; top: 50%; transform: translateY(-50%); width: 1px; height: 46px; background: var(--line); }
+  .stat .num { font-family: var(--font-d); font-weight: 700; font-size: clamp(2.2rem, 4vw, 3rem); line-height: 1.1; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; display: inline-block; }
+  .stat .lbl { display: block; color: var(--muted); font-size: .88rem; margin-top: 6px; }
+
+  /* tre passi */
+  .app-steps { list-style: none; display: grid; gap: 16px; margin-top: 28px; }
+  .app-steps li { display: flex; gap: 18px; align-items: flex-start; padding: 20px 22px; border-radius: 18px; background: var(--panel); border: 1px solid var(--line); }
+  .app-steps li > b { flex: none; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; font-family: var(--font-d); font-size: 1.1rem; color: #fff; background: var(--grad); box-shadow: 0 10px 24px -10px rgba(245,130,12,.8); }
+  .app-steps h3 { font-size: 1.2rem; margin-bottom: 4px; }
+  .app-steps p { color: var(--muted); font-size: .95rem; }
+  .steps-visual { display: flex; justify-content: center; }
+  .steps-visual .phone { width: min(290px, 78%); transform: rotate(-3deg); }
+
+  /* cosa trovi */
+  .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .card { position: relative; overflow: hidden; background: linear-gradient(180deg, var(--panel), var(--ink-2)); border: 1px solid var(--line); border-radius: var(--r); padding: 28px 26px; transition: transform .4s var(--ease), border-color .4s; }
+  .card:hover { transform: translateY(-6px); border-color: var(--line-2); }
+  .card-ico { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: rgba(245,130,12,.12); border: 1px solid rgba(245,130,12,.25); margin-bottom: 18px; }
+  .card-ico .ico { width: 26px; height: 26px; fill: none; stroke: var(--orange); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .card h3 { font-size: 1.24rem; margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: .96rem; }
+
+  /* schermate */
+  .phone-row { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 34px; max-width: 920px; margin: 0 auto; }
+  .pr-item { text-align: center; }
+  .pr-item .phone { max-width: 250px; margin: 0 auto 18px; transition: transform .5s var(--ease); }
+  .pr-item:hover .phone { transform: translateY(-8px); }
+  .pr-item b { display: block; font-family: var(--font-d); font-size: 1.12rem; margin-bottom: 4px; }
+  .pr-item p { color: var(--muted); font-size: .92rem; }
+
+  /* attività */
+  .box-attivita { display: grid; grid-template-columns: auto 1fr; gap: 26px; align-items: center; padding: 34px 36px; border-radius: 26px; background: radial-gradient(90% 140% at 100% 0%, rgba(242,194,48,.16), transparent 60%), var(--panel); border: 1px solid rgba(242,194,48,.35); }
+  .box-attivita .card-ico { width: 64px; height: 64px; margin: 0; background: rgba(242,194,48,.12); border-color: rgba(242,194,48,.35); }
+  .box-attivita .card-ico .ico { stroke: var(--yellow); width: 30px; height: 30px; }
+  .box-attivita h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 10px; }
+  .box-attivita p { color: var(--muted); }
+  .box-attivita p + p { margin-top: 10px; }
+
+  /* stampa */
+  .app-press { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; margin-top: 40px; }
+  .app-press a { display: flex; flex-direction: column; gap: 8px; height: 100%; padding: 22px; border-radius: 18px; background: var(--panel); border: 1px solid var(--line); transition: border-color .3s, transform .3s var(--ease); }
+  .app-press a:hover { border-color: rgba(245,130,12,.5); transform: translateY(-3px); }
+  .app-press small { font-family: var(--font-d); font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); }
+  .app-press b { font-family: var(--font-d); font-size: 1.02rem; line-height: 1.3; }
+  .app-press span { margin-top: auto; padding-top: 6px; color: var(--orange-lt); font-size: .88rem; font-weight: 600; }
+
+  /* domande */
+  .faq { max-width: 820px; margin: 0 auto; display: grid; gap: 12px; }
+  .faq details { border: 1px solid var(--line); border-radius: 16px; background: var(--panel); padding: 18px 22px; }
+  .faq summary { cursor: pointer; font-family: var(--font-d); font-weight: 600; font-size: 1.08rem; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; color: var(--orange); font-size: 1.4rem; line-height: 1; }
+  .faq details[open] summary::after { content: "−"; }
+  .faq p { margin-top: 10px; color: var(--muted); }
+
+  /* chiamata finale */
+  .app-cta { position: relative; text-align: center; padding: 60px 30px; border-radius: 28px; overflow: hidden; background: radial-gradient(80% 120% at 50% 0%, rgba(245,130,12,.25), transparent 60%), linear-gradient(160deg, #17120f, #0b0908); border: 1px solid rgba(245,130,12,.3); }
+  .ac-ico { width: 96px; height: 96px; border-radius: 24px; box-shadow: 0 18px 40px -14px rgba(245,130,12,.7); margin-bottom: 22px; }
+  .app-cta h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 10px; }
+  .app-cta > p { color: var(--muted); }
+  .ac-qr { display: inline-flex; align-items: center; gap: 16px; margin-top: 30px; padding: 12px 18px 12px 12px; border-radius: 18px; background: rgba(255,255,255,.04); border: 1px solid var(--line); text-align: left; max-width: 420px; }
+  .ac-qr img { width: 104px; height: 104px; border-radius: 10px; background: #fff; flex: none; }
+  .ac-qr span { color: var(--muted); font-size: .92rem; }
+
+  footer { border-top: 1px solid var(--line); padding: 34px 0 44px; color: var(--muted-2); font-size: .9rem; }
+  footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; }
+  footer nav { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+  footer a:hover { color: var(--text); }
+
+  /* comparsa (solo con JavaScript: senza, tutto resta visibile) */
+  .js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+  .js .reveal.in { opacity: 1; transform: none; }
+
+  @media (max-width: 960px) {
+    .split { grid-template-columns: 1fr; gap: 40px; }
+    .feature-grid { grid-template-columns: repeat(2, 1fr); }
+    .app-press { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .stats { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
+    .stat:nth-child(3)::before { display: none; }
+    .steps-visual { order: 2; }
+  }
+  @media (max-width: 640px) {
+    .section { padding: 72px 0; }
+    .container { padding: 0 18px; }
+    .testata-dx .solo-largo { display: none; }
+    .feature-grid, .app-press { grid-template-columns: 1fr; }
+    .phone-row { grid-template-columns: 1fr; gap: 44px; }
+    .store-btn { flex: 1 1 100%; justify-content: center; }
+    .box-attivita { grid-template-columns: 1fr; padding: 28px 24px; }
+    .fc-1 { left: -4px; } .fc-2 { right: -4px; }
+    .ac-qr { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+    .js .reveal { opacity: 1; transform: none; }
+  }
+</style>
 </head>
 <body>
-  <p>Ti stiamo portando allo store per scaricare <strong>L'AquiLive</strong>…<br>
-    <a href="https://play.google.com/store/apps/details?id=it.aqlive99.app">Android (Google Play)</a> ·
-    <a href="https://apps.apple.com/it/app/laquilive/id6796280318">iPhone (App Store)</a></p>
+<div class="bg-glow glow-a" aria-hidden="true"></div>
+<div class="bg-glow glow-b" aria-hidden="true"></div>
+
+<header class="testata">
+  <div class="container">
+    <a class="marchio" href="/laquilive/" aria-label="L'AquiLive, inizio pagina"><img src="/assets/laquilive/icona-192.png" alt="" width="34" height="34"><span class="aql">L'Aqui<i>Live</i></span></a>
+    <div class="testata-dx">
+      <a class="solo-largo" href="#cosa">Cosa trovi</a>
+      <a class="solo-largo" href="#attivita">Per le attività</a>
+      <a class="btn" href="#scarica">Scarica gratis</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- APERTURA -->
+<section class="apertura">
+  <div class="container">
+    <div class="split">
+      <div>
+        <nav class="crumbs" aria-label="Percorso"><a href="https://mirkorocci.it/">Mirko Rocci</a><span aria-hidden="true">›</span><span aria-current="page">L'AquiLive</span></nav>
+        <span class="kicker">L'app della tua città</span>
+        <h1>Che si fa stasera <span class="grad">a L'Aquila?</span></h1>
+        <p class="ph-lead"><strong>L'AquiLive</strong> raccoglie in un'unica app gratuita gli eventi, le notizie, gli sconti e i servizi di L'Aquila e dintorni. Concerti, teatro, mostre e sagre, insieme alle farmacie di turno, agli autobus e alla raccolta differenziata, aggiornati ogni giorno.</p>
+        <div class="ph-meta">
+          <span class="chip-info hot"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg> Gratuita e senza pubblicità</span>
+          <span class="chip-info"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18.5h2"/></svg> iPhone e Android</span>
+          <span class="chip-info"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> In 9 lingue</span>
+        </div>
+        <div class="stores">
+          <a class="store-btn" data-store="appstore" href="https://apps.apple.com/it/app/laquilive/id6796280318" aria-label="Scarica L'AquiLive da App Store per iPhone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small>Scarica su</small><b>App Store</b></span></a>
+          <a class="store-btn" data-store="play" href="https://play.google.com/store/apps/details?id=it.aqlive99.app" aria-label="Scarica L'AquiLive da Google Play per Android"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><small>Disponibile su</small><b>Google Play</b></span></a>
+        </div>
+        <p class="prova"><b>Oltre 1.600 download</b> nei primi due mesi.</p>
+      </div>
+      <div class="visual">
+        <div class="visual-glow" aria-hidden="true"></div>
+        <figure class="phone phone-hero"><img src="/assets/laquilive/mappa.jpg" alt="La mappa di L'AquiLive con gli eventi del giorno nel centro di L'Aquila" width="600" height="1298"></figure>
+        <span class="float-chip fc-1" aria-hidden="true"><span class="pulse-dot"></span> Eventi live ora</span>
+        <span class="float-chip fc-2" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M20.5 12.5 12.5 20.5 3.5 11.5V3.5h8z"/><circle cx="8" cy="8" r="1.6"/></svg> Sconti esclusivi</span>
+        <span class="float-chip fc-3" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg> Promemoria</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMERI -->
+<section class="section tight">
+  <div class="container">
+    <div class="stats reveal">
+      <div class="stat"><span class="num">1.600+</span><span class="lbl">download in due mesi</span></div>
+      <div class="stat"><span class="num">880+</span><span class="lbl">eventi pubblicati</span></div>
+      <div class="stat"><span class="num">9</span><span class="lbl">lingue</span></div>
+      <div class="stat"><span class="num">0 €</span><span class="lbl">gratis e senza pubblicità</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRE PASSI -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="split">
+      <div class="steps-visual reveal"><figure class="phone"><img src="/assets/laquilive/evento.jpg" alt="La scheda di un evento su L'AquiLive con foto, data, ora e luogo" width="600" height="1136" loading="lazy"></figure></div>
+      <div>
+        <span class="kicker reveal">Come funziona</span>
+        <h2 class="sec-title reveal">Tre passi per non perdere più <span class="grad">nulla</span></h2>
+        <ol class="app-steps">
+          <li class="reveal"><b>1</b><div><h3>Scarica l'app</h3><p>È gratuita, su App Store per iPhone e su Google Play per Android. Ti iscrivi in pochi secondi con Google, con Apple o con un indirizzo email.</p></div></li>
+          <li class="reveal"><b>2</b><div><h3>Scegli cosa fare</h3><p>Oggi, domani o nel fine settimana, per tema o sulla mappa. Ogni evento ha la sua scheda con foto, orari, luogo e come arrivare.</p></div></li>
+          <li class="reveal"><b>3</b><div><h3>Salva e ricevi il promemoria</h3><p>Salvi un evento e l'app ti avvisa quando vuoi tu. Con l'account gratuito sblocchi anche gli sconti riservati.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COSA TROVI -->
+<section class="section" id="cosa">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker">Tutta la città in un'app</span>
+      <h2>Cosa trovi su <span class="aql">L'Aqui<i>Live</i></span></h2>
+      <p class="lead">Quello che succede a L'Aquila e nei dintorni, insieme ai servizi che servono ogni giorno a chi ci vive e a chi la visita.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="card reveal"><div class="card-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><h3>Tutti gli eventi</h3><p>Concerti, teatro, mostre, sagre e conferenze, aggiornati ogni giorno e filtrabili per data e per tema.</p></article>
+      <article class="card reveal"><div class="card-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3>Mappa interattiva</h3><p>Gli eventi sulla mappa, con i percorsi delle manifestazioni, i luoghi di interesse, i parcheggi e le fontanelle.</p></article>
+      <article class="card reveal"><div class="card-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 12.5 12.5 20.5 3.5 11.5V3.5h8z"/><circle cx="8" cy="8" r="1.6"/></svg></div><h3>Sconti esclusivi</h3><p>Offerte di strutture ricettive e negozi del territorio riservate a chi usa l'app. Mostri il tuo codice e paghi meno.</p></article>
+      <article class="card reveal"><div class="card-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h8"/></svg></div><h3>News locali</h3><p>Le notizie delle testate aquilane in un solo posto, divise per giorno, con il rimando all'articolo originale.</p></article>
+      <article class="card reveal"><div class="card-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7z"/></svg></div><h3>Farmacie di turno</h3><p>Quella aperta adesso, con indirizzo e telefono, a L'Aquila e nei comuni della conca.</p></article>
+      <article class="card reveal"><div class="card-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16M8 18v3M16 18v3M8 14.5h.01M16 14.5h.01"/></svg></div><h3>Trasporti</h3><p>Le linee urbane con percorsi e fermate, i collegamenti per Roma e gli aeroporti, navette e taxi.</p></article>
+      <article class="card reveal"><div class="card-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M5 7l1 13h12l1-13M9 7V4h6v3"/></svg></div><h3>Raccolta differenziata</h3><p>Il calendario ASM del porta a porta e un promemoria la sera, per sapere sempre cosa mettere fuori.</p></article>
+      <article class="card reveal"><div class="card-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg></div><h3>Promemoria</h3><p>Salvi un evento e l'app ti avvisa quando vuoi tu, così non arrivi più il giorno dopo.</p></article>
+      <article class="card reveal"><div class="card-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg></div><h3>Cinema</h3><p>La programmazione delle sale con le locandine dei film in uscita.</p></article>
+      <article class="card reveal"><div class="card-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V9l6-4 6 4v12"/><path d="M15 21V11l6 3v7M7 12h4M7 16h4"/></svg></div><h3>Luoghi da scoprire</h3><p>Palazzi storici, musei, chiese, ristoranti e B&B consigliati, ognuno con la sua scheda e le foto.</p></article>
+      <article class="card reveal"><div class="card-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 8v8M8 12h8"/></svg></div><h3>Segnala il tuo evento</h3><p>Chiunque può proporre un evento dall'app. Dopo una verifica redazionale lo vede tutta la città.</p></article>
+      <article class="card reveal"><div class="card-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>In nove lingue</h3><p>Italiano, inglese, francese, spagnolo, tedesco, cinese, arabo, giapponese e coreano, per chi visita la città.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- SCHERMATE -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker">Uno sguardo all'app</span>
+      <h2>La città a portata di <span class="grad">pollice</span></h2>
+    </div>
+    <div class="phone-row">
+      <div class="pr-item reveal"><figure class="phone"><img src="/assets/laquilive/news.jpg" alt="Le notizie locali delle testate aquilane raccolte in L'AquiLive" width="600" height="1136" loading="lazy"></figure><b>News locali</b><p>Tutte le testate in un posto solo.</p></div>
+      <div class="pr-item reveal"><figure class="phone"><img src="/assets/laquilive/trasporti.jpg" alt="La sezione Trasporti di L'AquiLive con autobus urbani, interurbani, aeroporti, navette e taxi" width="600" height="1136" loading="lazy"></figure><b>Trasporti</b><p>Bus urbani, navette, aeroporti e taxi.</p></div>
+      <div class="pr-item reveal"><figure class="phone"><img src="/assets/laquilive/rifiuti.jpg" alt="Il calendario della raccolta differenziata con il promemoria serale" width="600" height="1136" loading="lazy"></figure><b>Rifiuti e raccolta</b><p>Cosa mettere fuori stasera.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ATTIVITÀ -->
+<section class="section tight" id="attivita">
+  <div class="container">
+    <div class="box-attivita reveal">
+      <div class="card-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9M3 9v11h18V9M3 9h18M9 20v-6h6v6"/></svg></div>
+      <div>
+        <h2>Hai un'attività? Entra negli Sconti</h2>
+        <p>Dentro l'app c'è una sezione dedicata alle offerte di bar, ristoranti, negozi, strutture ricettive ed esperienze del territorio, riservate a chi usa l'app. Entrare è gratuito, senza quote e senza commissioni sugli incassi. In cambio ottieni visibilità presso residenti e visitatori.</p>
+        <p>Scrivi a <a class="link-inline" href="mailto:mirko.rocci@gmail.com">mirko.rocci@gmail.com</a>. Le poche regole, a partire dalla più importante, cioè che lo sconto sia reale e venga praticato davvero, sono nel <a class="link-inline" href="/laquilive-regolamento-sconti.html">regolamento degli Sconti</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHI L'HA FATTA -->
+<section class="section">
+  <div class="container">
+    <div class="split top">
+      <div class="reveal">
+        <span class="kicker">Nata a L'Aquila</span>
+        <h2 class="sec-title">Fatta da un aquilano per <span class="grad">la sua città</span></h2>
+      </div>
+      <div class="prose reveal">
+        <p>L'AquiLive è stata ideata e costruita da <a class="link-inline" href="https://mirkorocci.it/">Mirko Rocci</a>, fisico e tecnologo aquilano. È nata per raccogliere in un solo posto la vita della città, che prima viaggiava tra volantini, pagine social e passaparola, e troppe volte si scopriva il giorno dopo.</p>
+        <p>L'app cresce con chi la usa. Ogni segnalazione, idea o critica è benvenuta, dalla <strong>chat dentro l'app</strong> o via email.</p>
+      </div>
+    </div>
+    <ul class="app-press">
+      <li class="reveal"><a href="https://abruzzosera.it/attualita/laquilive-lapp-gratuita-per-laquila-ideata-dal-fisico-mirko-rocci/" target="_blank" rel="noopener"><small>Abruzzosera</small><b>«L'AquiLive, l'app gratuita per L'Aquila ideata dal fisico Mirko Rocci»</b><span>Leggi l'articolo →</span></a></li>
+      <li class="reveal"><a href="https://www.laquilablog.it/nasce-laquilive-lapp-gratuita-con-tutti-gli-eventi-della-citta/" target="_blank" rel="noopener"><small>L'Aquila Blog</small><b>«Nasce L'AquiLive, l'app gratuita con tutti gli eventi della città»</b><span>Leggi l'articolo →</span></a></li>
+      <li class="reveal"><a href="https://news-town.it/2026/08/25/scenari/arriva-lapp-laquilive-con-tutti-gli-eventi-di-laquila-e-dintorni/" target="_blank" rel="noopener"><small>News-Town</small><b>«Arriva l'app L'AquiLive con tutti gli eventi di L'Aquila e dintorni»</b><span>Leggi l'articolo →</span></a></li>
+      <li class="reveal"><a href="/assets/press/laquilive-articolo.pdf" target="_blank" rel="noopener"><small>A4 Quotidiano</small><b>L'edizione del 26 agosto 2026</b><span>Apri il PDF →</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- DOMANDE -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="sec-head reveal"><span class="kicker">Domande frequenti</span><h2>Tutto quello che c'è da sapere</h2></div>
+    <div class="faq">
+      <details class="reveal"><summary>L'AquiLive è gratuita?</summary><p>Sì. L'app è gratuita e senza pubblicità, per Android su Google Play e per iPhone su App Store.</p></details>
+      <details class="reveal"><summary>Devo registrarmi?</summary><p>Su Android sì, con un'iscrizione gratuita che richiede pochi secondi. Su iPhone puoi guardare eventi, notizie e servizi anche senza account. L'account serve per salvare i preferiti, ricevere i promemoria e usare gli sconti riservati, e si crea con Google, con Apple o con un indirizzo email.</p></details>
+      <details class="reveal"><summary>In quali lingue è disponibile?</summary><p>In nove lingue: italiano, inglese, francese, spagnolo, tedesco, cinese, arabo, giapponese e coreano.</p></details>
+      <details class="reveal"><summary>Come si segnala un evento?</summary><p>Chiunque può proporre un evento direttamente dall'app. Dopo una verifica redazionale viene pubblicato e diventa visibile a tutti.</p></details>
+      <details class="reveal"><summary>Chi ha creato L'AquiLive?</summary><p>L'app è stata ideata e costruita da <a class="link-inline" href="https://mirkorocci.it/">Mirko Rocci</a>, fisico e tecnologo aquilano.</p></details>
+      <details class="reveal"><summary>Come può un'attività entrare negli Sconti?</summary><p>Scrivendo a <a class="link-inline" href="mailto:mirko.rocci@gmail.com">mirko.rocci@gmail.com</a>. L'inserimento è gratuito, senza quote né commissioni, e la regola principale è che lo sconto sia reale e venga praticato davvero.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- SCARICA -->
+<section class="section tight" id="scarica">
+  <div class="container">
+    <div class="app-cta reveal">
+      <img class="ac-ico" src="/assets/laquilive/icona-192.png" alt="L'icona di L'AquiLive" width="96" height="96" loading="lazy">
+      <h2>Scarica <span class="aql">L'Aqui<i>Live</i></span></h2>
+      <p>Gratuita e senza pubblicità, per iPhone e Android, in nove lingue.</p>
+      <div class="stores centro">
+        <a class="store-btn" data-store="appstore" href="https://apps.apple.com/it/app/laquilive/id6796280318" aria-label="Scarica L'AquiLive da App Store per iPhone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small>Scarica su</small><b>App Store</b></span></a>
+        <a class="store-btn" data-store="play" href="https://play.google.com/store/apps/details?id=it.aqlive99.app" aria-label="Scarica L'AquiLive da Google Play per Android"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><small>Disponibile su</small><b>Google Play</b></span></a>
+      </div>
+      <div class="ac-qr"><img src="/assets/laquilive/qr-laquilive.svg" alt="Codice QR per scaricare L'AquiLive" width="104" height="104" loading="lazy"><span>Sei al computer? Inquadra il codice con il telefono e arrivi subito allo store giusto.</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <span>Ideata e curata da <a href="https://mirkorocci.it/">Mirko Rocci</a></span>
+    <nav aria-label="Documenti">
+      <a href="/laquilive-privacy.html">Privacy</a>
+      <a href="/laquilive-termini.html">Termini d'uso</a>
+      <a href="/laquilive-regolamento-sconti.html">Regolamento sconti</a>
+      <a href="/laquilive-fonti.html">Fonti</a>
+      <a href="/laquilive-eliminazione-account.html">Eliminare l'account</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/js/laquilive-app.js?v=20261020b"></script>
 </body>
 </html>

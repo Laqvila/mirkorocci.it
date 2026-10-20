@@ -87,7 +87,10 @@ function renderNav(){
   const p=PAGE();
   nav.innerHTML = NAV.map(n=>{
     const here = n.page && n.page===p;
-    const cls = [n.cta?"nav-cta":"", here?"active-link":""].filter(Boolean).join(" ");
+    const cls = [n.cta?"nav-cta":"", n.app?"nav-app":"", here?"active-link":""].filter(Boolean).join(" ");
+    // la voce dell'app porta icona e pastiglia: niente data-en, altrimenti il
+    // cambio di lingua ne riscriverebbe il testo e le toglierebbe
+    if(n.app) return `<a href="${siteHref(n.href)}" class="${cls}"><img src="assets/laquilive/icona-192.png" alt="" width="18" height="18">${esc(n.t.it)}<span class="nav-pill">App</span></a>`;
     return `<a href="${siteHref(n.href)}"${cls?` class="${cls}"`:""}${here?' aria-current="page"':""} ${L(n.t)}>${esc(n.t.it)}</a>`;
   }).join("") + `<div class="social-row social-menu">${socialHTML()}</div>`;
   const brand=$(".brand"); if(brand) brand.setAttribute("href", onHome() ? "#hero" : "./");

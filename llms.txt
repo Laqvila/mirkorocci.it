@@ -22,7 +22,7 @@ Mirko Rocci holds a Ph.D. in Condensed Matter Physics, trained at the Massachuse
 - [Clair Clinique](https://www.clairclinique.com/): cosmesi personalizzata che unisce intelligenza artificiale, robotica e analisi biometrica. Sede Tecnopolo d'Abruzzo, L'Aquila.
 - [Associazione 3:33](https://www.3e33.it/): associazione culturale fondata e presieduta da Mirko Rocci a L'Aquila per portare scienza, tecnologia ed energia civica.
 - [Inno99](https://inno99.it/): ciclo di seminari-serata in formula aperitivo co-ideato e curato per Innovalley.
-- [L'AquiLive](https://mirkorocci.it/laquilive-app.html): app gratuita che raccoglie gli eventi dell'Aquila e provincia, ideata e costruita da Mirko Rocci.
+- [L'AquiLive](https://mirkorocci.it/laquilive/): app gratuita con gli eventi, le notizie, gli sconti e i servizi di L'Aquila e dintorni, ideata e costruita da Mirko Rocci. Oltre 1.600 download nei primi due mesi.
 
 ## Ricerca e pubblicazioni
 
