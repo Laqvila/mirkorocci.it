@@ -157,6 +157,7 @@ const NEWS = [
 const FEATURED = [
 
   { img:"assets/press/te-lo-ricordi-mario.jpg", tag:NTAG.social,
+    video:"assets/press/te-lo-ricordi-reel.mp4", poster:"assets/press/te-lo-ricordi-reel.jpg",
     imgs:["assets/press/te-lo-ricordi-mario.jpg","assets/press/te-lo-ricordi-mario-rocci.jpg"],
     date:{ it:"18 ottobre 2026", en:"18 October 2026", es:"18 de octubre de 2026", fr:"18 octobre 2026" },
     t:{ it:"«Te lo ricordi Mario?», domenica 18 ottobre all'Aquila", en:"'Te lo ricordi Mario?', Sunday 18 October in L'Aquila", es:"«Te lo ricordi Mario?», domingo 18 de octubre en L'Aquila", fr:"« Te lo ricordi Mario? », dimanche 18 octobre à L'Aquila" },

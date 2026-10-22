@@ -511,6 +511,7 @@ body.menu-open{overflow:hidden}
 .feat:hover::after{opacity:1}
 .feat-photo{aspect-ratio:16/8;overflow:hidden;border-bottom:1px solid var(--panel-brd)}
 .feat-photo img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.feat-photo video,.news-photo video{width:100%;height:100%;object-fit:cover;display:block;background:#1a0405}
 .feat:hover .feat-photo img{transform:scale(1.06)}
 .feat-body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
 .feat-top{display:flex;align-items:center;gap:12px;margin-bottom:13px}

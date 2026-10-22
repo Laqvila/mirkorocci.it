@@ -181,6 +181,7 @@ function renderAssoc333(){
 
 /* foto di una card: con  imgs:[...]  le immagini si alternano da sole (vedi initRotators) */
 function photoHTML(o, cls){
+  if(o.video) return `<div class="${cls} has-video"><video src="${o.video}"${o.poster?` poster="${o.poster}"`:""} muted loop playsinline preload="none" aria-hidden="true"></video></div>`;
   const list = (o.imgs && o.imgs.length) ? o.imgs : (o.img ? [o.img] : []);
   if(list.length < 2) return `<div class="${cls}"><img src="${list[0]}" alt="" loading="lazy"></div>`;
   return `<div class="${cls} rot">`
@@ -189,6 +190,18 @@ function photoHTML(o, cls){
 }
 /* alterna le foto delle card con più immagini: un solo timer per tutte, così cambiano insieme */
 const ROT_MS = 2200;
+/* video delle card: partono senza audio quando entrano nello schermo e si fermano quando escono;
+   con «riduci animazioni» resta il fotogramma fisso (poster) */
+function initCardVideos(){
+  const vids = $$(".has-video video"); if(!vids.length) return;
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const io = new IntersectionObserver(es=>es.forEach(e=>{
+    const v=e.target;
+    if(e.isIntersecting){ if(v.preload!=="auto") v.preload="auto"; const p=v.play(); if(p&&p.catch) p.catch(()=>{}); }
+    else v.pause();
+  }),{threshold:.35});
+  vids.forEach(v=>io.observe(v));
+}
 function initRotators(){
   const rots = $$(".rot"); if(!rots.length) return;
   if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -616,6 +629,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   renderMap();
   initShowMore();
   initRotators();
+  initCardVideos();
   initPressFilters();
   initReveal();
   initLang();
