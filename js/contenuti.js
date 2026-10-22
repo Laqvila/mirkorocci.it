@@ -71,6 +71,7 @@ const NEWS = [
     img:"assets/press/te-lo-ricordi-mario.jpg",
     imgs:["assets/press/te-lo-ricordi-mario.jpg","assets/press/te-lo-ricordi-mario-rocci.jpg"],
     press:[
+      { outlet:"Abruzzo Sera", url:"https://abruzzosera.it/cultura-e-societa/te-lo-ricordi-mario-risate-e-commozione-nel-pomeriggio-dedicato-a-magnotta/" },
       { outlet:"Il Centro", url:"assets/press/te-lo-ricordi-ilcentro-testata.jpg" },
       { outlet:"News-Town", url:"https://news-town.it/2026/10/18/eventi/te-lo-ricordi-mario-a-spazio-rimediato-un-pomeriggio-per-magnotta/" },
       { outlet:"Vento Nuovo", url:"https://www.ventonuovo.eu/2026/10/18/un-evento-dedicato-a-mario-magnotta-oggi-a-laquila/" },
@@ -206,6 +207,8 @@ const PRESS = [
   /* ▼▼▼ AGGIUNGI QUI I NUOVI ARTICOLI (il più recente in alto) ▼▼▼
      (gli articoli su Inno99 NON vanno qui: mettili nel blocco INNO99 più sotto) */
 
+  { outlet:"Abruzzo Sera", year:"2026", url:"https://abruzzosera.it/cultura-e-societa/te-lo-ricordi-mario-risate-e-commozione-nel-pomeriggio-dedicato-a-magnotta/", img:"assets/press/te-lo-ricordi-abruzzosera.jpg",
+    q:{ it:"«Te lo ricordi Mario?». Risate e commozione nel pomeriggio dedicato a Magnotta.", en:"'Te lo ricordi Mario?'. Laughter and emotion at the afternoon dedicated to Magnotta." } },
   { outlet:"Il Centro", year:"2026", url:"", img:"assets/press/te-lo-ricordi-ilcentro-testata.jpg",
     q:{ it:"«Rivive il mito di Magnotta: pomeriggio tra ricordi e risate», sull'incontro «Te lo ricordi Mario?» a Spazio Rimediato. Edizione del 18 ottobre 2026.", en:"'The Magnotta legend lives again: an afternoon of memories and laughter', on the event 'Te lo ricordi Mario?' at Spazio Rimediato. Edition of 18 October 2026." } },
   { outlet:"News-Town", year:"2026", url:"https://news-town.it/2026/10/18/eventi/te-lo-ricordi-mario-a-spazio-rimediato-un-pomeriggio-per-magnotta/", img:"assets/press/te-lo-ricordi-newstown.jpg",
