@@ -273,6 +273,10 @@ function renderAwards(){
   }).join("");
 }
 
+/* articoli dello stesso evento: campo ev in PRESS, nomi in PRESS_EVENTS (contenuti.js) */
+function pressEvent(p){
+  return (p.ev && typeof PRESS_EVENTS!=="undefined" && PRESS_EVENTS[p.ev]) || null;
+}
 function pressCard(p, extra){
   const clickable = p.url && p.url !== "";
   const tag = clickable ? "a" : "div";
@@ -281,9 +285,12 @@ function pressCard(p, extra){
   const arrow = clickable
     ? `<div class="press-arrow"><span ${L({en:"Open",es:"Abrir",fr:"Ouvrir"})}>Apri</span> →</div>`
     : `<div class="press-arrow press-print"><span ${L({en:"Print edition",es:"Edición impresa",fr:"Édition papier"})}>Edizione cartacea</span></div>`;
-  return `<${tag} class="press reveal${p.img?" has-photo":""}"${attrs}${extra||""}>
+  const ev = pressEvent(p);
+  const evTag = ev ? `<div class="press-ev"><span ${L({en:"Event",es:"Evento",fr:"Événement"})}>Evento</span> · ${esc(ev.t.it)}</div>` : "";
+  return `<${tag} class="press reveal${p.img?" has-photo":""}"${attrs}${p.ev?` data-ev="${p.ev}"`:""}${extra||""}>
     ${photo}
     <div class="press-body">
+      ${evTag}
       <div class="press-outlet">${esc(p.outlet)}</div>
       <div class="press-year">${p.year}</div>
       <p class="press-quote" ${L(p.q)}>${esc(p.q.it)}</p>
@@ -315,13 +322,21 @@ function renderPressArchive(){
   g.innerHTML = all.map(o=>pressCard(o.p,` data-cat="${o.cat}"`)).join("");
   const bar=$("#press-filters"); if(!bar) return;
   const count={all:all.length}; all.forEach(o=>count[o.cat]=(count[o.cat]||0)+1);
-  bar.innerHTML = PRESS_CATS.map(([k,t])=>`<button type="button" class="chip" data-f="${k}" aria-pressed="${k==="all"}"><span ${L(t)}>${esc(t.it)}</span><b>${count[k]||0}</b></button>`).join("");
+  bar.innerHTML = PRESS_CATS.map(([k,t])=>`<button type="button" class="chip" data-f="${k}" aria-pressed="${k==="all"}"><span ${L(t)}>${esc(t.it)}</span><b>${count[k]||0}</b></button>`).join("")
+    + pressEventChips(all.map(o=>o.p));
+}
+/* un filtro per ogni evento con almeno due articoli */
+function pressEventChips(list){
+  if(typeof PRESS_EVENTS==="undefined") return "";
+  const n={}; list.forEach(p=>{ if(pressEvent(p)) n[p.ev]=(n[p.ev]||0)+1; });
+  return Object.keys(PRESS_EVENTS).filter(k=>n[k]>1)
+    .map(k=>`<button type="button" class="chip chip-ev" data-f="${k}" aria-pressed="false"><span>${esc(PRESS_EVENTS[k].t.it)}</span><b>${n[k]}</b></button>`).join("");
 }
 function initPressFilters(){
   const bar=$("#press-filters"), g=$("#press-archive"); if(!bar||!g) return;
   const apply=k=>{
     $$(".chip",bar).forEach(c=>c.setAttribute("aria-pressed",String(c.dataset.f===k)));
-    $$(".press",g).forEach(c=>{ c.hidden = k!=="all" && c.dataset.cat!==k; if(!c.hidden) c.classList.add("in"); });
+    $$(".press",g).forEach(c=>{ c.hidden = k!=="all" && c.dataset.cat!==k && c.dataset.ev!==k; if(!c.hidden) c.classList.add("in"); });
   };
   bar.addEventListener("click",e=>{
     const b=e.target.closest(".chip"); if(!b) return;
@@ -329,7 +344,7 @@ function initPressFilters(){
     try{ history.replaceState(null,"",location.pathname+location.search+(b.dataset.f==="all"?"":"#"+b.dataset.f)); }catch(err){}
   });
   const h=decodeURIComponent(location.hash.slice(1));
-  if(PRESS_CATS.some(c=>c[0]===h && h!=="all")) apply(h);
+  if(/^[\w-]+$/.test(h) && h!=="all" && $(`.chip[data-f="${h}"]`,bar)) apply(h);
 }
 
 function renderMarquee(){
