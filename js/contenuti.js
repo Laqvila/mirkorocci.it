@@ -71,6 +71,7 @@ const NEWS = [
     img:"assets/press/te-lo-ricordi-mario.jpg",
     imgs:["assets/press/te-lo-ricordi-mario.jpg","assets/press/te-lo-ricordi-mario-rocci.jpg"],
     press:[
+      { outlet:"Danger Of Music", url:"https://realdangerofmusic.com/2026/10/22/te-lo-ricordi-mario-un-successo-levento-dedicato-a-mario-magnotta-tra-emozioni-e-risate/" },
       { outlet:"Abruzzo Sera", url:"https://abruzzosera.it/cultura-e-societa/te-lo-ricordi-mario-risate-e-commozione-nel-pomeriggio-dedicato-a-magnotta/" },
       { outlet:"Il Centro", url:"assets/press/te-lo-ricordi-ilcentro-testata.jpg" },
       { outlet:"News-Town", url:"https://news-town.it/2026/10/18/eventi/te-lo-ricordi-mario-a-spazio-rimediato-un-pomeriggio-per-magnotta/" },
@@ -157,7 +158,7 @@ const NEWS = [
 const FEATURED = [
 
   { img:"assets/press/te-lo-ricordi-mario.jpg", tag:NTAG.social,
-    video:"assets/press/te-lo-ricordi-reel.mp4", poster:"assets/press/te-lo-ricordi-reel.jpg",
+    video:"assets/press/te-lo-ricordi-reel.mp4?v=20261024", poster:"assets/press/te-lo-ricordi-reel.jpg?v=20261024",
     imgs:["assets/press/te-lo-ricordi-mario.jpg","assets/press/te-lo-ricordi-mario-rocci.jpg"],
     date:{ it:"18 ottobre 2026", en:"18 October 2026", es:"18 de octubre de 2026", fr:"18 octobre 2026" },
     t:{ it:"«Te lo ricordi Mario?», domenica 18 ottobre all'Aquila", en:"'Te lo ricordi Mario?', Sunday 18 October in L'Aquila", es:"«Te lo ricordi Mario?», domingo 18 de octubre en L'Aquila", fr:"« Te lo ricordi Mario? », dimanche 18 octobre à L'Aquila" },
@@ -208,6 +209,8 @@ const PRESS = [
   /* ▼▼▼ AGGIUNGI QUI I NUOVI ARTICOLI (il più recente in alto) ▼▼▼
      (gli articoli su Inno99 NON vanno qui: mettili nel blocco INNO99 più sotto) */
 
+  { outlet:"Danger Of Music", year:"2026", url:"https://realdangerofmusic.com/2026/10/22/te-lo-ricordi-mario-un-successo-levento-dedicato-a-mario-magnotta-tra-emozioni-e-risate/", img:"assets/press/te-lo-ricordi-dangerofmusic.jpg",
+    q:{ it:"«Te lo ricordi Mario? Un successo l'evento dedicato a Mario Magnotta, tra emozioni e risate».", en:"'Te lo ricordi Mario? The event dedicated to Mario Magnotta was a success, between emotion and laughter'.", es:"«Te lo ricordi Mario? Un éxito el evento dedicado a Mario Magnotta, entre emociones y risas».", fr:"« Te lo ricordi Mario? Un succès pour l'événement consacré à Mario Magnotta, entre émotions et rires »." } },
   { outlet:"Abruzzo Sera", year:"2026", url:"https://abruzzosera.it/cultura-e-societa/te-lo-ricordi-mario-risate-e-commozione-nel-pomeriggio-dedicato-a-magnotta/", img:"assets/press/te-lo-ricordi-abruzzosera.jpg",
     q:{ it:"«Te lo ricordi Mario?». Risate e commozione nel pomeriggio dedicato a Magnotta.", en:"'Te lo ricordi Mario?'. Laughter and emotion at the afternoon dedicated to Magnotta." } },
   { outlet:"Il Centro", year:"2026", url:"", img:"assets/press/te-lo-ricordi-ilcentro-testata.jpg",
