@@ -7,6 +7,11 @@
 <meta name="description" content="La diretta integrale, le foto e il resoconto del secondo Inno Talk di Inno99, «Dalla ricerca al prodotto», il 24 settembre 2026 all'Irish Pub Via Verdi dell'Aquila, con il prof. Michele Flammini e le imprese del Tecnopolo d'Abruzzo.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://mirkorocci.it/inno-talks-2.html">
+<link rel="alternate" hreflang="it" href="https://mirkorocci.it/inno-talks-2.html">
+<link rel="alternate" hreflang="en" href="https://mirkorocci.it/inno-talks-2.html?lang=en">
+<link rel="alternate" hreflang="es" href="https://mirkorocci.it/inno-talks-2.html?lang=es">
+<link rel="alternate" hreflang="fr" href="https://mirkorocci.it/inno-talks-2.html?lang=fr">
+<link rel="alternate" hreflang="x-default" href="https://mirkorocci.it/inno-talks-2.html">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="it_IT">
 <meta property="og:site_name" content="Mirko Rocci">
@@ -126,161 +131,172 @@
     .track{scroll-behavior:auto}
     .dot{transition:none}
   }
+  /* ---------- lingue ---------- */
+  .topbar{display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:1.6rem}
+  .topbar .back{margin-bottom:0}
+  .langs{display:flex; gap:.3rem}
+  .langs button{min-height:34px; padding:.25rem .7rem; border:1px solid var(--brd); border-radius:999px; background:none; color:var(--dim); font:600 .78rem/1 "Inter",system-ui,sans-serif; letter-spacing:.06em; cursor:pointer}
+  .langs button:hover{color:var(--txt); border-color:var(--acc)}
+  .langs button[aria-pressed="true"]{color:var(--txt); border-color:var(--acc); background:rgba(91,140,255,.16)}
+  .langs button:focus-visible{outline:2px solid var(--acc); outline-offset:2px}
 </style>
 </head>
 <body>
 
-<a class="back" href="index.html#inno99">← Torna al sito</a>
+<div class="topbar">
+  <a class="back" href="index.html#inno99" data-i18n="t1">← Torna al sito</a>
+  <nav class="langs" aria-label="Lingua / Language"><button type="button" data-l="it" aria-pressed="false" lang="it">IT</button><button type="button" data-l="en" aria-pressed="false" lang="en">EN</button><button type="button" data-l="es" aria-pressed="false" lang="es">ES</button><button type="button" data-l="fr" aria-pressed="false" lang="fr">FR</button></nav>
+</div>
 
-<p class="kicker">Inno99 · Inno Talks #2 · L'Aquila</p>
-<h1>Dalla ricerca al prodotto, com'è andato il secondo Inno Talk</h1>
-<p class="meta">Giovedì 24 settembre 2026 · Irish Pub Via Verdi, L'Aquila · conduce Mirko Rocci</p>
+<p class="kicker" data-i18n="t14">Inno99 · Inno Talks #2 · L'Aquila</p>
+<h1 data-i18n="t15">Dalla ricerca al prodotto, com'è andato il secondo Inno Talk</h1>
+<p class="meta" data-i18n="t16">Giovedì 24 settembre 2026 · Irish Pub Via Verdi, L'Aquila · conduce Mirko Rocci</p>
 
-<p>Giovedì 24 settembre l'Irish Pub Via Verdi ha ospitato il secondo Inno Talk di <strong>Inno99</strong>, gli aperitivi dell'innovazione ideati da <strong>Mirko Rocci</strong> e Federico Fioriti per Innovalley. Oltre 40 persone per una serata dedicata al passaggio dalla ricerca al prodotto, aperta e condotta da Mirko Rocci, fisico e curatore del ciclo. Qui trovate la diretta integrale, le foto e il resoconto degli interventi.</p>
+<p data-i18n="t17">Giovedì 24 settembre l'Irish Pub Via Verdi ha ospitato il secondo Inno Talk di <strong>Inno99</strong>, gli aperitivi dell'innovazione ideati da <strong>Mirko Rocci</strong> e Federico Fioriti per Innovalley. Oltre 40 persone per una serata dedicata al passaggio dalla ricerca al prodotto, aperta e condotta da Mirko Rocci, fisico e curatore del ciclo. Qui trovate la diretta integrale, le foto e il resoconto degli interventi.</p>
 
-<h2>La diretta</h2>
+<h2 data-i18n="t18">La diretta</h2>
 <div class="video">
   <iframe src="https://inno99.it/video/inno-talks-2/" title="Inno Talks #2 · Dalla ricerca al prodotto · La diretta integrale" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
 </div>
-<p class="note">La registrazione completa della serata, circa 85 minuti.</p>
+<p class="note" data-i18n="t19">La registrazione completa della serata, circa 85 minuti.</p>
 
-<h2>Le foto</h2>
+<h2 data-i18n="t20">Le foto</h2>
 <div class="car">
-  <button class="nav prev" type="button" aria-label="Foto precedente">‹</button>
-  <div class="track" id="track" tabindex="0" aria-label="Galleria fotografica di Inno Talks #2">
+  <button class="nav prev" type="button" aria-label="Foto precedente" data-i18n-aria="t63">‹</button>
+  <div class="track" id="track" tabindex="0" aria-label="Galleria fotografica di Inno Talks #2" data-i18n-aria="t64">
 
     <figure class="slide">
-      <img src="assets/inno-talks-2/sala.jpg" alt="La sala dell'Irish Pub Via Verdi piena di pubblico durante Inno Talks #2" width="1600" height="900" loading="eager">
-      <figcaption>Oltre 40 persone all'Irish Pub Via Verdi, giovedì 24 settembre.</figcaption>
+      <img src="assets/inno-talks-2/sala.jpg" alt="La sala dell'Irish Pub Via Verdi piena di pubblico durante Inno Talks #2" data-i18n-alt="t48" width="1600" height="900" loading="eager">
+      <figcaption data-i18n="t21">Oltre 40 persone all'Irish Pub Via Verdi, giovedì 24 settembre.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/inno-talks-2/ingresso-roll-up.jpg" alt="L'ingresso dell'Irish Pub Via Verdi con i roll-up di Innovalley e Inno99" width="1200" height="1600" loading="lazy">
-      <figcaption>L'ingresso in via Verdi, con i roll-up di Innovalley e Inno99.</figcaption>
+      <img src="assets/inno-talks-2/ingresso-roll-up.jpg" alt="L'ingresso dell'Irish Pub Via Verdi con i roll-up di Innovalley e Inno99" data-i18n-alt="t49" width="1200" height="1600" loading="lazy">
+      <figcaption data-i18n="t22">L'ingresso in via Verdi, con i roll-up di Innovalley e Inno99.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/inno-talks-2/ingresso.jpg" alt="Un'intervista davanti al roll-up di Inno99 all'ingresso dell'Irish Pub" width="900" height="1600" loading="lazy">
-      <figcaption>Le interviste all'ingresso, in Via Verdi 1.</figcaption>
+      <img src="assets/inno-talks-2/ingresso.jpg" alt="Un'intervista davanti al roll-up di Inno99 all'ingresso dell'Irish Pub" data-i18n-alt="t50" width="900" height="1600" loading="lazy">
+      <figcaption data-i18n="t23">Le interviste all'ingresso, in Via Verdi 1.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/inno-talks-2/intervista-rocci.jpg" alt="Mirko Rocci intervistato davanti al roll-up di Inno99 all'ingresso dell'Irish Pub" width="1200" height="1600" loading="lazy">
-      <figcaption>Mirko Rocci ai microfoni della stampa prima della serata.</figcaption>
+      <img src="assets/inno-talks-2/intervista-rocci.jpg" alt="Mirko Rocci intervistato davanti al roll-up di Inno99 all'ingresso dell'Irish Pub" data-i18n-alt="t51" width="1200" height="1600" loading="lazy">
+      <figcaption data-i18n="t24">Mirko Rocci ai microfoni della stampa prima della serata.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/inno-talks-2/apertura-rocci.jpg" alt="Mirko Rocci apre la serata con il microfono in mano" width="1600" height="900" loading="lazy">
-      <figcaption>Mirko Rocci apre la serata.</figcaption>
+      <img src="assets/inno-talks-2/apertura-rocci.jpg" alt="Mirko Rocci apre la serata con il microfono in mano" data-i18n-alt="t52" width="1600" height="900" loading="lazy">
+      <figcaption data-i18n="t25">Mirko Rocci apre la serata.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/inno-talks-2/verticali.jpg" alt="Il pubblico in sala mentre Mirko Rocci presenta le verticali di Inno99" width="1200" height="1600" loading="lazy">
-      <figcaption>Mirko Rocci presenta le verticali di Inno99, gli Inno Talks e gli Inno Podcast.</figcaption>
+      <img src="assets/inno-talks-2/verticali.jpg" alt="Il pubblico in sala mentre Mirko Rocci presenta le verticali di Inno99" data-i18n-alt="t53" width="1200" height="1600" loading="lazy">
+      <figcaption data-i18n="t26">Mirko Rocci presenta le verticali di Inno99, gli Inno Talks e gli Inno Podcast.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/inno-talks-2/pagliariccio.jpg" alt="Claudia Pagliariccio, consigliere comunale dell'Aquila, durante il suo saluto" width="1200" height="1600" loading="lazy">
-      <figcaption>Il saluto del consigliere comunale Claudia Pagliariccio, in apertura di serata.</figcaption>
+      <img src="assets/inno-talks-2/pagliariccio.jpg" alt="Claudia Pagliariccio, consigliere comunale dell'Aquila, durante il suo saluto" data-i18n-alt="t54" width="1200" height="1600" loading="lazy">
+      <figcaption data-i18n="t27">Il saluto del consigliere comunale Claudia Pagliariccio, in apertura di serata.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/inno-talks-2/dionisio.jpg" alt="Maurizio Dionisio, direttore generale di ARPA Abruzzo, durante il suo saluto" width="1200" height="1600" loading="lazy">
-      <figcaption>Il saluto di Maurizio Dionisio, direttore generale di ARPA Abruzzo.</figcaption>
+      <img src="assets/inno-talks-2/dionisio.jpg" alt="Maurizio Dionisio, direttore generale di ARPA Abruzzo, durante il suo saluto" data-i18n-alt="t55" width="1200" height="1600" loading="lazy">
+      <figcaption data-i18n="t28">Il saluto di Maurizio Dionisio, direttore generale di ARPA Abruzzo.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/inno-talks-2/fanfani.jpg" alt="Marco Fanfani, Amministratore Unico di FondAq, durante il suo saluto" width="1200" height="1600" loading="lazy">
-      <figcaption>Il saluto di Marco Fanfani, Amministratore Unico di FondAq.</figcaption>
+      <img src="assets/inno-talks-2/fanfani.jpg" alt="Marco Fanfani, Amministratore Unico di FondAq, durante il suo saluto" data-i18n-alt="t56" width="1200" height="1600" loading="lazy">
+      <figcaption data-i18n="t29">Il saluto di Marco Fanfani, Amministratore Unico di FondAq.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/inno-talks-2/keynote.jpg" alt="Il prof. Michele Flammini durante il keynote" width="1200" height="1600" loading="lazy">
-      <figcaption>Il keynote del prof. Michele Flammini, dalla ricerca teorica all'impresa.</figcaption>
+      <img src="assets/inno-talks-2/keynote.jpg" alt="Il prof. Michele Flammini durante il keynote" data-i18n-alt="t57" width="1200" height="1600" loading="lazy">
+      <figcaption data-i18n="t30">Il keynote del prof. Michele Flammini, dalla ricerca teorica all'impresa.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/inno-talks-2/west-aquila.jpg" alt="L'ing. Stefano Tennina presenta il sistema di monitoraggio strutturale di West Aquila" width="1600" height="900" loading="lazy">
-      <figcaption>L'ing. Stefano Tennina presenta il monitoraggio strutturale di West Aquila.</figcaption>
+      <img src="assets/inno-talks-2/west-aquila.jpg" alt="L'ing. Stefano Tennina presenta il sistema di monitoraggio strutturale di West Aquila" data-i18n-alt="t58" width="1600" height="900" loading="lazy">
+      <figcaption data-i18n="t31">L'ing. Stefano Tennina presenta il monitoraggio strutturale di West Aquila.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/inno-talks-2/pubblico.jpg" alt="Il pubblico seduto ai tavoli durante gli interventi" width="1600" height="900" loading="lazy">
-      <figcaption>Ricercatori, imprenditori e curiosi allo stesso tavolo.</figcaption>
+      <img src="assets/inno-talks-2/pubblico.jpg" alt="Il pubblico seduto ai tavoli durante gli interventi" data-i18n-alt="t59" width="1600" height="900" loading="lazy">
+      <figcaption data-i18n="t32">Ricercatori, imprenditori e curiosi allo stesso tavolo.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/inno-talks-2/in-ascolto.jpg" alt="Ospiti in ascolto accanto alla postazione tecnica" width="900" height="1600" loading="lazy">
-      <figcaption>Tra un intervento e l'altro.</figcaption>
+      <img src="assets/inno-talks-2/in-ascolto.jpg" alt="Ospiti in ascolto accanto alla postazione tecnica" data-i18n-alt="t60" width="900" height="1600" loading="lazy">
+      <figcaption data-i18n="t33">Tra un intervento e l'altro.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/inno-talks-2/dialogo.jpg" alt="Il dialogo con il pubblico tra i tavoli" width="1200" height="1600" loading="lazy">
-      <figcaption>Il dialogo con la sala.</figcaption>
+      <img src="assets/inno-talks-2/dialogo.jpg" alt="Il dialogo con il pubblico tra i tavoli" data-i18n-alt="t61" width="1200" height="1600" loading="lazy">
+      <figcaption data-i18n="t34">Il dialogo con la sala.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/inno-talks-2/chiusura.jpg" alt="Un intervento in chiusura, con L'AquiLive e inno99.it sullo schermo" width="1200" height="1600" loading="lazy">
-      <figcaption>La chiusura, con L'AquiLive e inno99.it sullo schermo.</figcaption>
+      <img src="assets/inno-talks-2/chiusura.jpg" alt="Un intervento in chiusura, con L'AquiLive e inno99.it sullo schermo" data-i18n-alt="t62" width="1200" height="1600" loading="lazy">
+      <figcaption data-i18n="t35">La chiusura, con L'AquiLive e inno99.it sullo schermo.</figcaption>
     </figure>
 
   </div>
-  <button class="nav next" type="button" aria-label="Foto successiva">›</button>
+  <button class="nav next" type="button" aria-label="Foto successiva" data-i18n-aria="t65">›</button>
 </div>
-<div class="dots" id="dots" role="tablist" aria-label="Scegli la foto"></div>
+<div class="dots" id="dots" role="tablist" aria-label="Scegli la foto" data-i18n-aria="t66"></div>
 <p class="count" id="count"></p>
 
-<h2>Com'è andata</h2>
-<p>In apertura hanno portato i loro saluti il consigliere comunale <strong>Claudia Pagliariccio</strong>, il direttore generale di ARPA Abruzzo <strong>Maurizio Dionisio</strong> e l'Amministratore Unico di FondAq <strong>Marco Fanfani</strong>. L'assessore regionale alla Cultura Roberto Santangelo, che non è potuto intervenire, ha fatto comunque pervenire i suoi saluti. <strong>Roberto Romanelli</strong>, direttore generale del Tecnopolo d'Abruzzo, ha raccontato come il polo, che oggi ospita 45 realtà e quasi 1.800 persone, accompagni le imprese dalla ricerca fino al mercato, anche all'estero.</p>
-<p>Il keynote è stato affidato al <strong>prof. Michele Flammini</strong>, che è stato anche docente di informatica di Mirko Rocci all'università. Rocci ha scelto di non presentarlo, per lasciare che fosse il suo percorso a parlare, dalla ricerca teorica al Gran Sasso Science Institute fino allo spin-off Gunpowder, che oggi dà lavoro a circa 70 persone all'Aquila. Ha mostrato anche come qualità della vita e innovazione di una città crescano insieme.</p>
-<blockquote>«La ricerca diventa prodotto quando persone e organizzazioni costruiscono fiducia, imparano a superare ostacoli e sfide e lavorano insieme su progetti di interesse comune.»<cite>Michele Flammini</cite></blockquote>
-<p>Romanelli ha poi introdotto due imprese del Tecnopolo. Con l'ing. <strong>Stefano Tennina</strong>, <strong>West Aquila</strong> ha presentato la SHM-BOARD per il monitoraggio strutturale degli edifici, nata dopo il terremoto del 2009 e oggi attiva in una trentina di siti, dalla Torre Civica dell'Aquila alle Etihad Towers di Abu Dhabi. Con il dott. <strong>Alejandro Chaparro Blanco</strong>, <strong>Accyourate Group</strong> ha mostrato dal vivo la maglietta YouCare per l'elettrocardiogramma continuo e ha raccontato otto anni di lavoro in tre lezioni. La tecnologia da sola non basta, per crescere servono i partner giusti e alla fine sono le persone a fare la differenza.</p>
-<p>In chiusura <strong>Mirko Rocci</strong> ha indicato il filo comune dei tre interventi, i dati raccolti dai sensori e l'intelligenza artificiale che li interpreta. <strong>Federico Fioriti</strong> ha poi ricordato come è nato Inno99, tre anni fa, da un foglietto su cui Rocci aveva scritto l'idea di incontri per raccontare le eccellenze dell'Aquila. Il format è già stato richiesto a Pescara e a Chieti.</p>
-<p>Rocci ha ringraziato il Tecnopolo d'Abruzzo e Roberto Romanelli, senza il cui supporto la serata non avrebbe avuto queste dimensioni, le imprese, il prof. Flammini e Federico Fioriti. Il prossimo Inno Talk è previsto per ottobre.</p>
+<h2 data-i18n="t36">Com'è andata</h2>
+<p data-i18n="t37">In apertura hanno portato i loro saluti il consigliere comunale <strong>Claudia Pagliariccio</strong>, il direttore generale di ARPA Abruzzo <strong>Maurizio Dionisio</strong> e l'Amministratore Unico di FondAq <strong>Marco Fanfani</strong>. L'assessore regionale alla Cultura Roberto Santangelo, che non è potuto intervenire, ha fatto comunque pervenire i suoi saluti. <strong>Roberto Romanelli</strong>, direttore generale del Tecnopolo d'Abruzzo, ha raccontato come il polo, che oggi ospita 45 realtà e quasi 1.800 persone, accompagni le imprese dalla ricerca fino al mercato, anche all'estero.</p>
+<p data-i18n="t38">Il keynote è stato affidato al <strong>prof. Michele Flammini</strong>, che è stato anche docente di informatica di Mirko Rocci all'università. Rocci ha scelto di non presentarlo, per lasciare che fosse il suo percorso a parlare, dalla ricerca teorica al Gran Sasso Science Institute fino allo spin-off Gunpowder, che oggi dà lavoro a circa 70 persone all'Aquila. Ha mostrato anche come qualità della vita e innovazione di una città crescano insieme.</p>
+<blockquote><span data-i18n="tq1">«La ricerca diventa prodotto quando persone e organizzazioni costruiscono fiducia, imparano a superare ostacoli e sfide e lavorano insieme su progetti di interesse comune.»</span><cite data-i18n="t39">Michele Flammini</cite></blockquote>
+<p data-i18n="t40">Romanelli ha poi introdotto due imprese del Tecnopolo. Con l'ing. <strong>Stefano Tennina</strong>, <strong>West Aquila</strong> ha presentato la SHM-BOARD per il monitoraggio strutturale degli edifici, nata dopo il terremoto del 2009 e oggi attiva in una trentina di siti, dalla Torre Civica dell'Aquila alle Etihad Towers di Abu Dhabi. Con il dott. <strong>Alejandro Chaparro Blanco</strong>, <strong>Accyourate Group</strong> ha mostrato dal vivo la maglietta YouCare per l'elettrocardiogramma continuo e ha raccontato otto anni di lavoro in tre lezioni. La tecnologia da sola non basta, per crescere servono i partner giusti e alla fine sono le persone a fare la differenza.</p>
+<p data-i18n="t41">In chiusura <strong>Mirko Rocci</strong> ha indicato il filo comune dei tre interventi, i dati raccolti dai sensori e l'intelligenza artificiale che li interpreta. <strong>Federico Fioriti</strong> ha poi ricordato come è nato Inno99, tre anni fa, da un foglietto su cui Rocci aveva scritto l'idea di incontri per raccontare le eccellenze dell'Aquila. Il format è già stato richiesto a Pescara e a Chieti.</p>
+<p data-i18n="t42">Rocci ha ringraziato il Tecnopolo d'Abruzzo e Roberto Romanelli, senza il cui supporto la serata non avrebbe avuto queste dimensioni, le imprese, il prof. Flammini e Federico Fioriti. Il prossimo Inno Talk è previsto per ottobre.</p>
 
-<h2>La rassegna stampa</h2>
-<p>Gli articoli usciti su Inno Talks #2, prima e dopo la serata.</p>
+<h2 data-i18n="t43">La rassegna stampa</h2>
+<p data-i18n="t44">Gli articoli usciti su Inno Talks #2, prima e dopo la serata.</p>
 <div class="press">
   <a class="pc" href="https://www.abruzzoweb.it/inno-talk-rocci-ecosistema-idee-per-laquila-romanelli-tecnopolo-fucina-innovazione/" target="_blank" rel="noopener noreferrer">
     <img src="assets/press/innotalk2-abruzzoweb-intervista.jpg" alt="" loading="lazy">
-    <span class="pb"><span class="src">AbruzzoWeb · intervista</span><span class="tt">Inno Talk, Rocci: «Ecosistema di idee per L'Aquila». Romanelli: «Tecnopolo fucina di innovazione»</span><span class="dt">28 settembre 2026</span></span>
+    <span class="pb"><span class="src" data-i18n="t4">AbruzzoWeb · intervista</span><span class="tt">Inno Talk, Rocci: «Ecosistema di idee per L'Aquila». Romanelli: «Tecnopolo fucina di innovazione»</span><span class="dt" data-i18n="t5">28 settembre 2026</span></span>
   </a>
   <a class="pc" href="assets/press/ilcentro-innotalk2-28set-pagina.jpg" target="_blank" rel="noopener noreferrer">
     <img src="assets/press/ilcentro-innotalk2-28set.jpg" alt="" loading="lazy">
-    <span class="pb"><span class="src">Il Centro · cartaceo</span><span class="tt">«Ricerca, innovazione e sviluppo: dal laboratorio fino al mercato»</span><span class="dt">28 settembre 2026</span></span>
+    <span class="pb"><span class="src" data-i18n="t6">Il Centro · cartaceo</span><span class="tt">«Ricerca, innovazione e sviluppo: dal laboratorio fino al mercato»</span><span class="dt" data-i18n="t5">28 settembre 2026</span></span>
   </a>
   <a class="pc" href="https://www.laquilablog.it/inno99-sala-piena-per-il-secondo-inno-talk/" target="_blank" rel="noopener noreferrer">
     <img src="assets/press/innotalk2-laquilablog-sala-piena.jpg" alt="" loading="lazy">
-    <span class="pb"><span class="src">L'Aquila Blog</span><span class="tt">Inno99, sala piena per il secondo Inno-Talk</span><span class="dt">26 settembre 2026</span></span>
+    <span class="pb"><span class="src" data-i18n="t7">L'Aquila Blog</span><span class="tt">Inno99, sala piena per il secondo Inno-Talk</span><span class="dt" data-i18n="t8">26 settembre 2026</span></span>
   </a>
   <a class="pc" href="https://www.abruzzoweb.it/inno-talk-flammini-ia-rivoluzione-da-gestire-visioni-futuro-in-aperitivo-innovazione-allaquila/" target="_blank" rel="noopener noreferrer">
     <img src="assets/press/innotalk2-abruzzoweb-flammini.jpg" alt="" loading="lazy">
-    <span class="pb"><span class="src">AbruzzoWeb</span><span class="tt">Inno Talk, Flammini: «IA rivoluzione da gestire». Visioni di futuro all'aperitivo dell'innovazione</span><span class="dt">25 settembre 2026</span></span>
+    <span class="pb"><span class="src" data-i18n="t9">AbruzzoWeb</span><span class="tt">Inno Talk, Flammini: «IA rivoluzione da gestire». Visioni di futuro all'aperitivo dell'innovazione</span><span class="dt" data-i18n="t10">25 settembre 2026</span></span>
   </a>
   <a class="pc" href="assets/press/ilcentro-innotalk2-pagina.jpg" target="_blank" rel="noopener noreferrer">
     <img src="assets/press/ilcentro-innotalk2.jpg" alt="" loading="lazy">
-    <span class="pb"><span class="src">Il Centro · cartaceo</span><span class="tt">«Il mondo della ricerca incontra le imprese»</span><span class="dt">24 settembre 2026</span></span>
+    <span class="pb"><span class="src" data-i18n="t6">Il Centro · cartaceo</span><span class="tt">«Il mondo della ricerca incontra le imprese»</span><span class="dt" data-i18n="t11">24 settembre 2026</span></span>
   </a>
   <a class="pc" href="https://www.laquilablog.it/dalla-ricerca-al-prodotto-il-24-settembre-il-secondo-inno-talk-di-inno99/" target="_blank" rel="noopener noreferrer">
     <img src="assets/press/innotalk2-laquilablog.jpg" alt="" loading="lazy">
-    <span class="pb"><span class="src">L'Aquila Blog</span><span class="tt">«Dalla ricerca al prodotto», il 24 settembre il secondo Inno-Talk di Inno99</span><span class="dt">22 settembre 2026</span></span>
+    <span class="pb"><span class="src" data-i18n="t7">L'Aquila Blog</span><span class="tt">«Dalla ricerca al prodotto», il 24 settembre il secondo Inno-Talk di Inno99</span><span class="dt" data-i18n="t12">22 settembre 2026</span></span>
   </a>
   <a class="pc" href="https://www.abruzzoweb.it/dalla-ricerca-al-prodotto-aperitivi-dellinnovazione-allaquila-il-secondo-inno-talk-di-inno99/" target="_blank" rel="noopener noreferrer">
     <img src="assets/press/innotalk2-abruzzoweb.jpg" alt="" loading="lazy">
-    <span class="pb"><span class="src">AbruzzoWeb</span><span class="tt">«Dalla ricerca al prodotto»: Aperitivi dell'Innovazione, all'Aquila il secondo Inno-Talk di Inno99</span><span class="dt">22 settembre 2026</span></span>
+    <span class="pb"><span class="src" data-i18n="t9">AbruzzoWeb</span><span class="tt">«Dalla ricerca al prodotto»: Aperitivi dell'Innovazione, all'Aquila il secondo Inno-Talk di Inno99</span><span class="dt" data-i18n="t12">22 settembre 2026</span></span>
   </a>
   <a class="pc" href="https://www.rete8.it/cronaca/laquila-dalla-ricerca-al-prodotto-secondo-inno-talk-di-inno99/" target="_blank" rel="noopener noreferrer">
     <img src="assets/press/innotalk2-rete8.jpg" alt="" loading="lazy">
-    <span class="pb"><span class="src">Rete8</span><span class="tt">L'Aquila, «Dalla ricerca al prodotto», secondo Inno-Talk di Inno99</span><span class="dt">22 settembre 2026</span></span>
+    <span class="pb"><span class="src" data-i18n="t13">Rete8</span><span class="tt">L'Aquila, «Dalla ricerca al prodotto», secondo Inno-Talk di Inno99</span><span class="dt" data-i18n="t12">22 settembre 2026</span></span>
   </a>
 </div>
 
-<h2>Il resoconto</h2>
-<p>Nel resoconto trovate i contenuti di ogni intervento, con le citazioni principali.</p>
-<p><a class="btn" href="https://inno99.it/docs/Inno99_InnoTalks2_resoconto_24settembre2026.pdf" target="_blank" rel="noopener noreferrer">Leggi il resoconto (PDF)</a><a class="btn" href="https://inno99.it/inno-talks/2/" target="_blank" rel="noopener noreferrer">La serata su inno99.it</a></p>
+<h2 data-i18n="t45">Il resoconto</h2>
+<p data-i18n="t46">Nel resoconto trovate i contenuti di ogni intervento, con le citazioni principali.</p>
+<p><a class="btn" href="https://inno99.it/docs/Inno99_InnoTalks2_resoconto_24settembre2026.pdf" target="_blank" rel="noopener noreferrer" data-i18n="t2">Leggi il resoconto (PDF)</a><a class="btn" href="https://inno99.it/inno-talks/2/" target="_blank" rel="noopener noreferrer" data-i18n="t3">La serata su inno99.it</a></p>
 
 <footer>
-  <p><a href="index.html">mirkorocci.it</a> · <a href="index.html#inno99">Inno99</a> · <a href="https://inno99.it/" target="_blank" rel="noopener noreferrer">inno99.it</a></p>
+  <p data-i18n="t47"><a href="index.html">mirkorocci.it</a> · <a href="index.html#inno99">Inno99</a> · <a href="https://inno99.it/" target="_blank" rel="noopener noreferrer">inno99.it</a></p>
 </footer>
 
 <script>
@@ -297,11 +313,17 @@
     b.className = 'dot';
     b.type = 'button';
     b.setAttribute('role','tab');
-    b.setAttribute('aria-label','Foto ' + (i+1) + ' di ' + slides.length);
     b.addEventListener('click', function(){ go(i); });
     dots.appendChild(b);
   });
   var dotEls = Array.prototype.slice.call(dots.children);
+  var WORDS = { it:['Foto','di'], en:['Photo','of'], es:['Foto','de'], fr:['Photo','sur'] };
+  function labelDots(){
+    var w = WORDS[document.documentElement.lang] || WORDS.it;
+    dotEls.forEach(function(d, i){ d.setAttribute('aria-label', w[0] + ' ' + (i+1) + ' ' + w[1] + ' ' + slides.length); });
+  }
+  labelDots();
+  document.addEventListener('mr-lang', labelDots);
 
   var calmo = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -342,5 +364,45 @@
 })();
 </script>
 
+<script id="i18n-engine">
+(function(){
+  var T = {"en": {"t1": "← Back to site", "t2": "Read the report (PDF)", "t3": "The evening on inno99.it", "t4": "AbruzzoWeb · interview", "t5": "28 September 2026", "t6": "Il Centro · print edition", "t7": "L'Aquila Blog", "t8": "26 September 2026", "t9": "AbruzzoWeb", "t10": "25 September 2026", "t11": "24 September 2026", "t12": "22 September 2026", "t13": "Rete8", "t14": "Inno99 · Inno Talks #2 · L'Aquila", "t15": "From research to product, how the second Inno Talk went", "t16": "Thursday 24 September 2026 · Irish Pub Via Verdi, L'Aquila · hosted by Mirko Rocci", "t17": "On Thursday 24 September the Irish Pub Via Verdi hosted the second Inno Talk of <strong>Inno99<\/strong>, the innovation aperitifs devised by <strong>Mirko Rocci<\/strong> and Federico Fioriti for Innovalley. Over 40 people for an evening dedicated to the transition from research to product, opened and hosted by Mirko Rocci, physicist and curator of the series. Here you will find the full live stream, photos and the report of the talks.", "t18": "The live stream", "t19": "The full recording of the evening, about 85 minutes.", "t20": "The photos", "t21": "Over 40 people at the Irish Pub Via Verdi, Thursday 24 September.", "t22": "The entrance on Via Verdi, with the Innovalley and Inno99 roll-ups.", "t23": "The interviews at the entrance, in Via Verdi 1.", "t24": "Mirko Rocci at the press microphones before the evening.", "t25": "Mirko Rocci opens the evening.", "t26": "Mirko Rocci presents Inno99's strands, the Inno Talks and the Inno Podcasts.", "t27": "The greeting from city councillor Claudia Pagliariccio, at the start of the evening.", "t28": "The greeting from Maurizio Dionisio, director general of ARPA Abruzzo.", "t29": "The greeting from Marco Fanfani, sole director of FondAq.", "t30": "The keynote by Prof. Michele Flammini, from theoretical research to enterprise.", "t31": "Eng. Stefano Tennina presents West Aquila's structural monitoring.", "t32": "Researchers, entrepreneurs and curious minds at the same table.", "t33": "Between one talk and the next.", "t34": "The dialogue with the audience.", "t35": "The closing, with L'AquiLive and inno99.it on the screen.", "t36": "How it went", "t37": "At the opening, city councillor <strong>Claudia Pagliariccio<\/strong>, ARPA Abruzzo director general <strong>Maurizio Dionisio<\/strong> and FondAq sole director <strong>Marco Fanfani<\/strong> delivered their greetings. Regional councillor for Culture Roberto Santangelo, who was unable to attend, nevertheless sent his greetings. <strong>Roberto Romanelli<\/strong>, director general of the Tecnopolo d'Abruzzo, described how the hub, which today hosts 45 organisations and almost 1,800 people, supports businesses from research to market, including abroad.", "t38": "The keynote was entrusted to <strong>Prof. Michele Flammini<\/strong>, who was also Mirko Rocci's computer science lecturer at university. Rocci chose not to introduce him, letting his career speak for itself, from theoretical research at the Gran Sasso Science Institute to the spin-off Gunpowder, which now employs around 70 people in L'Aquila. He also showed how a city's quality of life and innovation grow together.", "t39": "Michele Flammini", "t40": "Romanelli then introduced two Tecnopolo companies. With Eng. <strong>Stefano Tennina<\/strong>, <strong>West Aquila<\/strong> presented the SHM-BOARD for structural monitoring of buildings, created after the 2009 earthquake and now active in around thirty sites, from the Torre Civica in L'Aquila to the Etihad Towers in Abu Dhabi. With Dr <strong>Alejandro Chaparro Blanco<\/strong>, <strong>Accyourate Group<\/strong> gave a live demonstration of the YouCare shirt for continuous ECG monitoring and recounted eight years of work in three lessons. Technology alone is not enough. To grow you need the right partners, and in the end it is people who make the difference.", "t41": "In closing <strong>Mirko Rocci<\/strong> highlighted the common thread of the three talks: the data collected by sensors and the artificial intelligence that interprets it. <strong>Federico Fioriti<\/strong> then recalled how Inno99 was born three years ago, from a slip of paper on which Rocci had written the idea of meetings to showcase L'Aquila's excellences. The format has already been requested in Pescara and Chieti.", "t42": "Rocci thanked the Tecnopolo d'Abruzzo and Roberto Romanelli, without whose support the evening would not have had this scale, the companies, Prof. Flammini and Federico Fioriti. The next Inno Talk is scheduled for October.", "t43": "The press coverage", "t44": "The articles published on Inno Talks #2, before and after the evening.", "t45": "The report", "t46": "The report contains the content of each talk, with the main quotations.", "t47": "<a href=\"index.html\">mirkorocci.it<\/a> · <a href=\"index.html#inno99\">Inno99<\/a> · <a href=\"https://inno99.it/\" target=\"_blank\" rel=\"noopener noreferrer\">inno99.it<\/a>", "t48": "The Irish Pub Via Verdi hall full of audience during Inno Talks #2", "t49": "The Irish Pub Via Verdi entrance with the Innovalley and Inno99 roll-ups", "t50": "An interview in front of the Inno99 roll-up at the Irish Pub entrance", "t51": "Mirko Rocci interviewed in front of the Inno99 roll-up at the Irish Pub entrance", "t52": "Mirko Rocci opens the evening with microphone in hand", "t53": "The audience in the hall while Mirko Rocci presents Inno99's strands", "t54": "Claudia Pagliariccio, city councillor of L'Aquila, during her greeting", "t55": "Maurizio Dionisio, director general of ARPA Abruzzo, during his greeting", "t56": "Marco Fanfani, sole director of FondAq, during his greeting", "t57": "Prof. Michele Flammini during the keynote", "t58": "Eng. Stefano Tennina presents West Aquila's structural monitoring system", "t59": "The audience seated at tables during the talks", "t60": "Guests listening next to the technical station", "t61": "The dialogue with the audience among the tables", "t62": "A closing talk, with L'AquiLive and inno99.it on the screen", "t63": "Previous photo", "t64": "Photo gallery of Inno Talks #2", "t65": "Next photo", "t66": "Choose photo", "tq1": "“Research becomes product when people and organisations build trust, learn to overcome obstacles and challenges, and work together on projects of common interest.”", "title": "Inno Talks #2, how it went — Mirko Rocci", "desc": "The full live stream, photos and report of the second Inno Talk of Inno99, “From research to product”, 24 September 2026 at the Irish Pub Via Verdi in L'Aquila, with Prof. Michele Flammini and the Tecnopolo d'Abruzzo companies."}, "es": {"t1": "← Volver al sitio", "t2": "Leer el informe (PDF)", "t3": "La velada en inno99.it", "t4": "AbruzzoWeb · entrevista", "t5": "28 de septiembre de 2026", "t6": "Il Centro · edición impresa", "t7": "L'Aquila Blog", "t8": "26 de septiembre de 2026", "t9": "AbruzzoWeb", "t10": "25 de septiembre de 2026", "t11": "24 de septiembre de 2026", "t12": "22 de septiembre de 2026", "t13": "Rete8", "t14": "Inno99 · Inno Talks #2 · L'Aquila", "t15": "De la investigación al producto, cómo fue el segundo Inno Talk", "t16": "Jueves 24 de septiembre de 2026 · Irish Pub Via Verdi, L'Aquila · conduce Mirko Rocci", "t17": "El jueves 24 de septiembre, el Irish Pub Via Verdi acogió el segundo Inno Talk de <strong>Inno99<\/strong>, los aperitivos de la innovación ideados por <strong>Mirko Rocci<\/strong> y Federico Fioriti para Innovalley. Más de 40 personas para una velada dedicada al paso de la investigación al producto, abierta y conducida por Mirko Rocci, físico y curador del ciclo. Aquí encontraréis el directo íntegro, las fotos y el informe de las intervenciones.", "t18": "El directo", "t19": "La grabación completa de la velada, unos 85 minutos.", "t20": "Las fotos", "t21": "Más de 40 personas en el Irish Pub Via Verdi, jueves 24 de septiembre.", "t22": "La entrada en Via Verdi, con los roll-up de Innovalley e Inno99.", "t23": "Las entrevistas en la entrada, en Via Verdi 1.", "t24": "Mirko Rocci ante los micrófonos de la prensa antes de la velada.", "t25": "Mirko Rocci abre la velada.", "t26": "Mirko Rocci presenta las líneas de Inno99, los Inno Talks y los Inno Podcast.", "t27": "El saludo de la concejala Claudia Pagliariccio, en la apertura de la velada.", "t28": "El saludo de Maurizio Dionisio, director general de ARPA Abruzzo.", "t29": "El saludo de Marco Fanfani, administrador único de FondAq.", "t30": "El keynote del prof. Michele Flammini, de la investigación teórica a la empresa.", "t31": "El ing. Stefano Tennina presenta el monitorización estructural de West Aquila.", "t32": "Investigadores, emprendedores y curiosos en la misma mesa.", "t33": "Entre una intervención y otra.", "t34": "El diálogo con la sala.", "t35": "El cierre, con L'AquiLive e inno99.it en la pantalla.", "t36": "Cómo fue", "t37": "En la apertura ofrecieron sus saludos la concejala <strong>Claudia Pagliariccio<\/strong>, el director general de ARPA Abruzzo <strong>Maurizio Dionisio<\/strong> y el administrador único de FondAq <strong>Marco Fanfani<\/strong>. El consejero regional de Cultura Roberto Santangelo, que no pudo intervenir, hizo llegar igualmente sus saludos. <strong>Roberto Romanelli<\/strong>, director general del Tecnopolo d'Abruzzo, explicó cómo el polo, que hoy acoge 45 realidades y casi 1.800 personas, acompaña a las empresas desde la investigación hasta el mercado, también en el extranjero.", "t38": "El keynote fue confiado al <strong>prof. Michele Flammini<\/strong>, que también fue profesor de informática de Mirko Rocci en la universidad. Rocci optó por no presentarlo, para dejar que fuera su trayectoria la que hablara, desde la investigación teórica en el Gran Sasso Science Institute hasta la spin-off Gunpowder, que hoy da empleo a unas 70 personas en L'Aquila. Mostró también cómo la calidad de vida y la innovación de una ciudad crecen juntas.", "t39": "Michele Flammini", "t40": "Romanelli presentó a continuación dos empresas del Tecnopolo. Con el ing. <strong>Stefano Tennina<\/strong>, <strong>West Aquila<\/strong> presentó la SHM-BOARD para el monitorización estructural de los edificios, surgida tras el terremoto de 2009 y hoy activa en una treintena de sitios, desde la Torre Civica de L'Aquila hasta las Etihad Towers de Abu Dhabi. Con el Dr. <strong>Alejandro Chaparro Blanco<\/strong>, <strong>Accyourate Group<\/strong> mostró en directo la camiseta YouCare para el electrocardiograma continuo y relató ocho años de trabajo en tres lecciones. La tecnología por sí sola no basta. Para crecer hacen falta los socios adecuados, y al final son las personas las que marcan la diferencia.", "t41": "En el cierre <strong>Mirko Rocci<\/strong> señaló el hilo común de las tres intervenciones, los datos recogidos por los sensores y la inteligencia artificial que los interpreta. <strong>Federico Fioriti<\/strong> recordó luego cómo nació Inno99, hace tres años, a partir de un papelito en el que Rocci había escrito la idea de encuentros para contar las excelencias de L'Aquila. El formato ya se ha solicitado en Pescara y en Chieti.", "t42": "Rocci agradeció al Tecnopolo d'Abruzzo y a Roberto Romanelli, sin cuyo apoyo la velada no habría tenido esta envergadura, a las empresas, al prof. Flammini y a Federico Fioriti. El próximo Inno Talk está previsto para octubre.", "t43": "La repercusión en prensa", "t44": "Los artículos publicados sobre Inno Talks #2, antes y después de la velada.", "t45": "El informe", "t46": "En el informe encontraréis los contenidos de cada intervención, con las citas principales.", "t47": "<a href=\"index.html\">mirkorocci.it<\/a> · <a href=\"index.html#inno99\">Inno99<\/a> · <a href=\"https://inno99.it/\" target=\"_blank\" rel=\"noopener noreferrer\">inno99.it<\/a>", "t48": "La sala del Irish Pub Via Verdi llena de público durante Inno Talks #2", "t49": "La entrada del Irish Pub Via Verdi con los roll-up de Innovalley e Inno99", "t50": "Una entrevista delante del roll-up de Inno99 en la entrada del Irish Pub", "t51": "Mirko Rocci entrevistado delante del roll-up de Inno99 en la entrada del Irish Pub", "t52": "Mirko Rocci abre la velada con el micrófono en la mano", "t53": "El público en la sala mientras Mirko Rocci presenta las líneas de Inno99", "t54": "Claudia Pagliariccio, concejala de L'Aquila, durante su saludo", "t55": "Maurizio Dionisio, director general de ARPA Abruzzo, durante su saludo", "t56": "Marco Fanfani, administrador único de FondAq, durante su saludo", "t57": "El prof. Michele Flammini durante el keynote", "t58": "El ing. Stefano Tennina presenta el sistema de monitorización estructural de West Aquila", "t59": "El público sentado en las mesas durante las intervenciones", "t60": "Invitados escuchando junto a la posición técnica", "t61": "El diálogo con el público entre las mesas", "t62": "Una intervención en el cierre, con L'AquiLive e inno99.it en la pantalla", "t63": "Foto anterior", "t64": "Galería fotográfica de Inno Talks #2", "t65": "Foto siguiente", "t66": "Elige la foto", "tq1": "«La investigación se convierte en producto cuando personas y organizaciones construyen confianza, aprenden a superar obstáculos y retos y trabajan juntas en proyectos de interés común.»", "title": "Inno Talks #2, cómo fue — Mirko Rocci", "desc": "El directo íntegro, las fotos y el informe del segundo Inno Talk de Inno99, «De la investigación al producto», el 24 de septiembre de 2026 en el Irish Pub Via Verdi de L'Aquila, con el prof. Michele Flammini y las empresas del Tecnopolo d'Abruzzo."}, "fr": {"t1": "← Retour au site", "t2": "Lire le compte rendu (PDF)", "t3": "La soirée sur inno99.it", "t4": "AbruzzoWeb · interview", "t5": "28 septembre 2026", "t6": "Il Centro · édition papier", "t7": "L'Aquila Blog", "t8": "26 septembre 2026", "t9": "AbruzzoWeb", "t10": "25 septembre 2026", "t11": "24 septembre 2026", "t12": "22 septembre 2026", "t13": "Rete8", "t14": "Inno99 · Inno Talks #2 · L'Aquila", "t15": "De la recherche au produit, comment s'est passé le deuxième Inno Talk", "t16": "Jeudi 24 septembre 2026 · Irish Pub Via Verdi, L'Aquila · animé par Mirko Rocci", "t17": "Le jeudi 24 septembre, l'Irish Pub Via Verdi a accueilli le deuxième Inno Talk de <strong>Inno99<\/strong>, les apéritifs de l'innovation conçus par <strong>Mirko Rocci<\/strong> et Federico Fioriti pour Innovalley. Plus de 40 personnes pour une soirée dédiée au passage de la recherche au produit, ouverte et animée par Mirko Rocci, physicien et curateur du cycle. Vous trouverez ici le direct intégral, les photos et le compte rendu des interventions.", "t18": "Le direct", "t19": "L'enregistrement complet de la soirée, environ 85 minutes.", "t20": "Les photos", "t21": "Plus de 40 personnes à l'Irish Pub Via Verdi, jeudi 24 septembre.", "t22": "L'entrée dans la via Verdi, avec les roll-up d'Innovalley et d'Inno99.", "t23": "Les interviews à l'entrée, Via Verdi 1.", "t24": "Mirko Rocci aux micros de la presse avant la soirée.", "t25": "Mirko Rocci ouvre la soirée.", "t26": "Mirko Rocci présente les volets d'Inno99, les Inno Talks et les Inno Podcast.", "t27": "Le mot de bienvenue de la conseillère municipale Claudia Pagliariccio, en ouverture de soirée.", "t28": "Le mot de bienvenue de Maurizio Dionisio, directeur général d'ARPA Abruzzo.", "t29": "Le mot de bienvenue de Marco Fanfani, administrateur unique de FondAq.", "t30": "Le keynote du professeur Michele Flammini, de la recherche théorique à l'entreprise.", "t31": "L'ingénieur Stefano Tennina présente la surveillance structurelle de West Aquila.", "t32": "Chercheurs, entrepreneurs et curieux à la même table.", "t33": "Entre deux interventions.", "t34": "Le dialogue avec la salle.", "t35": "La clôture, avec L'AquiLive et inno99.it à l'écran.", "t36": "Comment s'est passée la soirée", "t37": "En ouverture, la conseillère municipale <strong>Claudia Pagliariccio<\/strong>, le directeur général d'ARPA Abruzzo <strong>Maurizio Dionisio<\/strong> et l'administrateur unique de FondAq <strong>Marco Fanfani<\/strong> ont adressé leurs salutations. L'adjoint régional à la Culture Roberto Santangelo, qui n'a pas pu intervenir, a néanmoins fait parvenir ses salutations. <strong>Roberto Romanelli<\/strong>, directeur général du Tecnopolo d'Abruzzo, a expliqué comment le pôle, qui accueille aujourd'hui 45 structures et près de 1 800 personnes, accompagne les entreprises de la recherche jusqu'au marché, y compris à l'étranger.", "t38": "Le keynote a été confié au <strong>professeur Michele Flammini<\/strong>, qui a également été enseignant d'informatique de Mirko Rocci à l'université. Rocci a choisi de ne pas le présenter, pour laisser son parcours parler de lui-même, de la recherche théorique au Gran Sasso Science Institute jusqu'à la spin-off Gunpowder, qui emploie aujourd'hui environ 70 personnes à L'Aquila. Il a également montré comment la qualité de vie et l'innovation d'une ville grandissent ensemble.", "t39": "Michele Flammini", "t40": "Romanelli a ensuite présenté deux entreprises du Tecnopolo. Avec l'ingénieur <strong>Stefano Tennina<\/strong>, <strong>West Aquila<\/strong> a présenté la SHM-BOARD pour la surveillance structurelle des bâtiments, née après le séisme de 2009 et aujourd'hui active sur une trentaine de sites, de la Torre Civica de L'Aquila aux Etihad Towers d'Abu Dhabi. Avec le Dr <strong>Alejandro Chaparro Blanco<\/strong>, <strong>Accyourate Group<\/strong> a montré en direct le t-shirt YouCare pour l'électrocardiogramme continu et a raconté huit ans de travail en trois leçons. La technologie seule ne suffit pas. Pour grandir, il faut les bons partenaires, et ce sont finalement les personnes qui font la différence.", "t41": "En clôture, <strong>Mirko Rocci<\/strong> a souligné le fil conducteur des trois interventions, les données collectées par les capteurs et l'intelligence artificielle qui les interprète. <strong>Federico Fioriti<\/strong> a ensuite rappelé comment est né Inno99, il y a trois ans, à partir d'un bout de papier sur lequel Rocci avait écrit l'idée de rencontres pour raconter les excellences de L'Aquila. Le format a déjà été demandé à Pescara et à Chieti.", "t42": "Rocci a remercié le Tecnopolo d'Abruzzo et Roberto Romanelli, sans le soutien desquels la soirée n'aurait pas eu cette ampleur, les entreprises, le professeur Flammini et Federico Fioriti. Le prochain Inno Talk est prévu pour octobre.", "t43": "La revue de presse", "t44": "Les articles parus sur Inno Talks #2, avant et après la soirée.", "t45": "Le compte rendu", "t46": "Dans le compte rendu, vous trouverez le contenu de chaque intervention, avec les principales citations.", "t47": "<a href=\"index.html\">mirkorocci.it<\/a> · <a href=\"index.html#inno99\">Inno99<\/a> · <a href=\"https://inno99.it/\" target=\"_blank\" rel=\"noopener noreferrer\">inno99.it<\/a>", "t48": "La salle de l'Irish Pub Via Verdi pleine de public pendant Inno Talks #2", "t49": "L'entrée de l'Irish Pub Via Verdi avec les roll-up d'Innovalley et d'Inno99", "t50": "Une interview devant le roll-up d'Inno99 à l'entrée de l'Irish Pub", "t51": "Mirko Rocci interviewé devant le roll-up d'Inno99 à l'entrée de l'Irish Pub", "t52": "Mirko Rocci ouvre la soirée avec le micro en main", "t53": "Le public en salle pendant que Mirko Rocci présente les volets d'Inno99", "t54": "Claudia Pagliariccio, conseillère municipale de L'Aquila, pendant son mot de bienvenue", "t55": "Maurizio Dionisio, directeur général d'ARPA Abruzzo, pendant son mot de bienvenue", "t56": "Marco Fanfani, administrateur unique de FondAq, pendant son mot de bienvenue", "t57": "Le professeur Michele Flammini pendant le keynote", "t58": "L'ingénieur Stefano Tennina présente le système de surveillance structurelle de West Aquila", "t59": "Le public assis aux tables pendant les interventions", "t60": "Invités en écoute à côté de la régie technique", "t61": "Le dialogue avec le public entre les tables", "t62": "Une intervention en clôture, avec L'AquiLive et inno99.it à l'écran", "t63": "Photo précédente", "t64": "Galerie photos d'Inno Talks #2", "t65": "Photo suivante", "t66": "Choisissez la photo", "tq1": "« La recherche devient produit lorsque des personnes et des organisations construisent la confiance, apprennent à surmonter obstacles et défis et travaillent ensemble sur des projets d'intérêt commun. »", "title": "Inno Talks #2, comment s'est passée la soirée — Mirko Rocci", "desc": "Le direct intégral, les photos et le compte rendu du deuxième Inno Talk d'Inno99, « De la recherche au produit », le 24 septembre 2026 à l'Irish Pub Via Verdi de L'Aquila, avec le professeur Michele Flammini et les entreprises du Tecnopolo d'Abruzzo."}};
+  var LANGS = ['it','en','es','fr'], BASE = 'https://mirkorocci.it/inno-talks-2.html';
+  var els = [].slice.call(document.querySelectorAll('[data-i18n]'));
+  var alts = [].slice.call(document.querySelectorAll('[data-i18n-alt]'));
+  var arias = [].slice.call(document.querySelectorAll('[data-i18n-aria]'));
+  var desc = document.querySelector('meta[name="description"]');
+  var orig = { title: document.title, desc: desc ? desc.content : '' };
+  els.forEach(function(el){ el.dataset.itHtml = el.innerHTML; });
+  alts.forEach(function(el){ el.dataset.itAlt = el.alt; });
+  arias.forEach(function(el){ el.dataset.itAria = el.getAttribute('aria-label'); });
+  function t(l, k){ return (T[l] && T[l][k] != null) ? T[l][k] : null; }
+  function apply(l){
+    if (LANGS.indexOf(l) < 0) l = 'it';
+    document.documentElement.lang = l;
+    els.forEach(function(el){ var v = l === 'it' ? el.dataset.itHtml : t(l, el.dataset.i18n); if (v != null) el.innerHTML = v; });
+    alts.forEach(function(el){ var v = l === 'it' ? el.dataset.itAlt : t(l, el.dataset.i18nAlt); if (v != null) el.alt = v; });
+    arias.forEach(function(el){ var v = l === 'it' ? el.dataset.itAria : t(l, el.dataset.i18nAria); if (v != null) el.setAttribute('aria-label', v); });
+    document.title = l === 'it' ? orig.title : (t(l, 'title') || orig.title);
+    if (desc) desc.content = l === 'it' ? orig.desc : (t(l, 'desc') || orig.desc);
+    [].forEach.call(document.querySelectorAll('.langs button'), function(b){ b.setAttribute('aria-pressed', String(b.dataset.l === l)); });
+    var href = l === 'it' ? BASE : BASE + '?lang=' + l;
+    var can = document.querySelector('link[rel="canonical"]'); if (can) can.href = href;
+    var og = document.querySelector('meta[property="og:url"]'); if (og) og.content = href;
+    try {
+      var q = new URLSearchParams(location.search);
+      if (l === 'it') q.delete('lang'); else q.set('lang', l);
+      var qs = q.toString();
+      history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+    } catch (e) {}
+    try { localStorage.setItem('mr-lang', l); } catch (e) {}
+    document.dispatchEvent(new CustomEvent('mr-lang', { detail: l }));
+  }
+  var start = 'it';
+  try { start = new URLSearchParams(location.search).get('lang') || localStorage.getItem('mr-lang') || 'it'; } catch (e) {}
+  apply(start);
+  [].forEach.call(document.querySelectorAll('.langs button'), function(b){ b.addEventListener('click', function(){ apply(b.dataset.l); }); });
+})();
+</script>
 </body>
 </html>

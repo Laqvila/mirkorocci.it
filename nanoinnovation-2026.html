@@ -7,6 +7,11 @@
 <meta name="description" content="Le foto e il racconto di NanoInnovation 2026 alla Sapienza di Roma, dal 14 al 18 settembre: il forum congiunto Thales Alenia Space e Leonardo sui materiali avanzati per lo spazio, il talk su nanomateriali e dispositivi quantistici, la sessione ENEA e il panel sulla supply chain spaziale europea.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://mirkorocci.it/nanoinnovation-2026.html">
+<link rel="alternate" hreflang="it" href="https://mirkorocci.it/nanoinnovation-2026.html">
+<link rel="alternate" hreflang="en" href="https://mirkorocci.it/nanoinnovation-2026.html?lang=en">
+<link rel="alternate" hreflang="es" href="https://mirkorocci.it/nanoinnovation-2026.html?lang=es">
+<link rel="alternate" hreflang="fr" href="https://mirkorocci.it/nanoinnovation-2026.html?lang=fr">
+<link rel="alternate" hreflang="x-default" href="https://mirkorocci.it/nanoinnovation-2026.html">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="it_IT">
 <meta property="og:site_name" content="Mirko Rocci">
@@ -108,105 +113,116 @@
     .track{scroll-behavior:auto}
     .dot{transition:none}
   }
+  /* ---------- lingue ---------- */
+  .topbar{display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:1.6rem}
+  .topbar .back{margin-bottom:0}
+  .langs{display:flex; gap:.3rem}
+  .langs button{min-height:34px; padding:.25rem .7rem; border:1px solid var(--brd); border-radius:999px; background:none; color:var(--dim); font:600 .78rem/1 "Inter",system-ui,sans-serif; letter-spacing:.06em; cursor:pointer}
+  .langs button:hover{color:var(--txt); border-color:var(--acc)}
+  .langs button[aria-pressed="true"]{color:var(--txt); border-color:var(--acc); background:rgba(91,140,255,.16)}
+  .langs button:focus-visible{outline:2px solid var(--acc); outline-offset:2px}
 </style>
 </head>
 <body>
 
-<a class="back" href="index.html#news">← Torna al sito</a>
+<div class="topbar">
+  <a class="back" href="index.html#news" data-i18n="t1">← Torna al sito</a>
+  <nav class="langs" aria-label="Lingua / Language"><button type="button" data-l="it" aria-pressed="false" lang="it">IT</button><button type="button" data-l="en" aria-pressed="false" lang="en">EN</button><button type="button" data-l="es" aria-pressed="false" lang="es">ES</button><button type="button" data-l="fr" aria-pressed="false" lang="fr">FR</button></nav>
+</div>
 
-<p class="kicker">NanoInnovation 2026 · Roma</p>
-<h1>Una settimana alla Sapienza, tra materiali avanzati e spazio</h1>
-<p class="meta">14–18 settembre 2026 · Sapienza Università di Roma, Facoltà di Ingegneria</p>
+<p class="kicker" data-i18n="t2">NanoInnovation 2026 · Roma</p>
+<h1 data-i18n="t3">Una settimana alla Sapienza, tra materiali avanzati e spazio</h1>
+<p class="meta" data-i18n="t4">14–18 settembre 2026 · Sapienza Università di Roma, Facoltà di Ingegneria</p>
 
-<p>NanoInnovation è l'appuntamento che ogni anno fa incontrare ricerca e industria sulle nanotecnologie. Quest'anno sono stato a Roma per tutta la settimana, con due inviti arrivati da persone diverse e alcuni momenti che valeva la pena raccogliere in un posto solo. Qui sotto trovate le foto, con una didascalia per ciascuna.</p>
+<p data-i18n="t5">NanoInnovation è l'appuntamento che ogni anno fa incontrare ricerca e industria sulle nanotecnologie. Quest'anno sono stato a Roma per tutta la settimana, con due inviti arrivati da persone diverse e alcuni momenti che valeva la pena raccogliere in un posto solo. Qui sotto trovate le foto, con una didascalia per ciascuna.</p>
 
 <div class="car">
-  <button class="nav prev" type="button" aria-label="Foto precedente">‹</button>
-  <div class="track" id="track" tabindex="0" aria-label="Galleria fotografica di NanoInnovation 2026">
+  <button class="nav prev" type="button" aria-label="Foto precedente" data-i18n-aria="t40">‹</button>
+  <div class="track" id="track" tabindex="0" aria-label="Galleria fotografica di NanoInnovation 2026" data-i18n-aria="t41">
 
     <figure class="slide">
-      <img src="assets/nanoinnovation/01-sapienza-ingresso.jpg" alt="Ingresso della Facoltà di Ingegneria della Sapienza con gli striscioni di NanoInnovation 2026" width="901" height="1600" loading="eager">
-      <figcaption>L'ingresso della Facoltà di Ingegneria, sede della conferenza dal 14 al 18 settembre.</figcaption>
+      <img src="assets/nanoinnovation/01-sapienza-ingresso.jpg" alt="Ingresso della Facoltà di Ingegneria della Sapienza con gli striscioni di NanoInnovation 2026" data-i18n-alt="t27" width="901" height="1600" loading="eager">
+      <figcaption data-i18n="t6">L'ingresso della Facoltà di Ingegneria, sede della conferenza dal 14 al 18 settembre.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/nanoinnovation/02-sapienza-facciata.jpg" alt="Facciata della Facoltà di Ingegneria con i due striscioni di NanoInnovation 2026" width="1600" height="901" loading="lazy">
-      <figcaption>La facciata con gli striscioni dell'edizione 2026.</figcaption>
+      <img src="assets/nanoinnovation/02-sapienza-facciata.jpg" alt="Facciata della Facoltà di Ingegneria con i due striscioni di NanoInnovation 2026" data-i18n-alt="t28" width="1600" height="901" loading="lazy">
+      <figcaption data-i18n="t7">La facciata con gli striscioni dell'edizione 2026.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/nanoinnovation/03-cartello-forum.jpg" alt="Il programma del forum affiliato esposto davanti alla Room 17" width="901" height="1600" loading="lazy">
-      <figcaption>Il programma della Room 17, lunedì 14 settembre, davanti alla porta della sala.</figcaption>
+      <img src="assets/nanoinnovation/03-cartello-forum.jpg" alt="Il programma del forum affiliato esposto davanti alla Room 17" data-i18n-alt="t29" width="901" height="1600" loading="lazy">
+      <figcaption data-i18n="t8">Il programma della Room 17, lunedì 14 settembre, davanti alla porta della sala.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/nanoinnovation/04-prima-del-forum.jpg" alt="Tre partecipanti al forum poco prima dell'inizio dei lavori" width="1600" height="739" loading="lazy">
-      <figcaption>Poco prima dell'inizio dei lavori.</figcaption>
+      <img src="assets/nanoinnovation/04-prima-del-forum.jpg" alt="Tre partecipanti al forum poco prima dell'inizio dei lavori" data-i18n-alt="t30" width="1600" height="739" loading="lazy">
+      <figcaption data-i18n="t9">Poco prima dell'inizio dei lavori.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/nanoinnovation/05-apertura-forum.jpg" alt="Apertura del forum congiunto Thales Alenia Space e Leonardo al tavolo dei relatori" width="901" height="1600" loading="lazy">
-      <figcaption>L'apertura del forum congiunto Thales Alenia Space e Leonardo, al tavolo con Alessandro Garibbo e Giorgio Busacca.</figcaption>
+      <img src="assets/nanoinnovation/05-apertura-forum.jpg" alt="Apertura del forum congiunto Thales Alenia Space e Leonardo al tavolo dei relatori" data-i18n-alt="t31" width="901" height="1600" loading="lazy">
+      <figcaption data-i18n="t10">L'apertura del forum congiunto Thales Alenia Space e Leonardo, al tavolo con Alessandro Garibbo e Giorgio Busacca.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/nanoinnovation/06-platea-1.jpg" alt="Il pubblico in aula durante gli interventi" width="1600" height="901" loading="lazy">
-      <figcaption>La platea durante gli interventi.</figcaption>
+      <img src="assets/nanoinnovation/06-platea-1.jpg" alt="Il pubblico in aula durante gli interventi" data-i18n-alt="t32" width="1600" height="901" loading="lazy">
+      <figcaption data-i18n="t11">La platea durante gli interventi.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/nanoinnovation/07-platea-2.jpg" alt="Altri partecipanti seduti in aula" width="1600" height="901" loading="lazy">
-      <figcaption>Buona parte della sala era fatta di dottorandi e giovani ricercatori.</figcaption>
+      <img src="assets/nanoinnovation/07-platea-2.jpg" alt="Altri partecipanti seduti in aula" data-i18n-alt="t33" width="1600" height="901" loading="lazy">
+      <figcaption data-i18n="t12">Buona parte della sala era fatta di dottorandi e giovani ricercatori.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/nanoinnovation/08-platea-3.jpg" alt="Il pubblico segue una presentazione" width="1600" height="901" loading="lazy">
-      <figcaption>Un altro momento dalla sala.</figcaption>
+      <img src="assets/nanoinnovation/08-platea-3.jpg" alt="Il pubblico segue una presentazione" data-i18n-alt="t34" width="1600" height="901" loading="lazy">
+      <figcaption data-i18n="t13">Un altro momento dalla sala.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/nanoinnovation/09-foto-di-gruppo.jpg" alt="Foto di gruppo dei relatori davanti alla slide del forum" width="1600" height="901" loading="lazy">
-      <figcaption>La foto di gruppo con i relatori del forum, dedicato ai materiali avanzati e alle tecnologie abilitanti per le nuove frontiere dello spazio.</figcaption>
+      <img src="assets/nanoinnovation/09-foto-di-gruppo.jpg" alt="Foto di gruppo dei relatori davanti alla slide del forum" data-i18n-alt="t35" width="1600" height="901" loading="lazy">
+      <figcaption data-i18n="t14">La foto di gruppo con i relatori del forum, dedicato ai materiali avanzati e alle tecnologie abilitanti per le nuove frontiere dello spazio.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/nanoinnovation/10-talk-nanomateriali.jpg" alt="Tre persone davanti alla slide del talk su nanomateriali avanzati e dispositivi quantistici" width="901" height="1600" loading="lazy">
-      <figcaption>Dopo il mio intervento del 16 settembre su nanomateriali avanzati e dispositivi quantistici come tecnologie abilitanti per le missioni spaziali future.</figcaption>
+      <img src="assets/nanoinnovation/10-talk-nanomateriali.jpg" alt="Tre persone davanti alla slide del talk su nanomateriali avanzati e dispositivi quantistici" data-i18n-alt="t36" width="901" height="1600" loading="lazy">
+      <figcaption data-i18n="t15">Dopo il mio intervento del 16 settembre su nanomateriali avanzati e dispositivi quantistici come tecnologie abilitanti per le missioni spaziali future.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/nanoinnovation/11-caratterizzazione.jpg" alt="Quattro persone davanti alla slide sulla caratterizzazione dei giunti di saldatura" width="1600" height="901" loading="lazy">
-      <figcaption>La presentazione sulla micro e nano-caratterizzazione dei giunti di saldatura, con e senza piombo, per applicazioni spaziali di frontiera.</figcaption>
+      <img src="assets/nanoinnovation/11-caratterizzazione.jpg" alt="Quattro persone davanti alla slide sulla caratterizzazione dei giunti di saldatura" data-i18n-alt="t37" width="1600" height="901" loading="lazy">
+      <figcaption data-i18n="t16">La presentazione sulla micro e nano-caratterizzazione dei giunti di saldatura, con e senza piombo, per applicazioni spaziali di frontiera.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/nanoinnovation/12-tavolo-panel.jpg" alt="Al tavolo dei relatori durante una sessione" width="1600" height="739" loading="lazy">
-      <figcaption>Al tavolo dei lavori, prima dell'inizio della sessione.</figcaption>
+      <img src="assets/nanoinnovation/12-tavolo-panel.jpg" alt="Al tavolo dei relatori durante una sessione" data-i18n-alt="t38" width="1600" height="739" loading="lazy">
+      <figcaption data-i18n="t17">Al tavolo dei lavori, prima dell'inizio della sessione.</figcaption>
     </figure>
 
     <figure class="slide">
-      <img src="assets/nanoinnovation/13-panel-supply-chain.jpg" alt="I partecipanti al panel sulla supply chain spaziale europea" width="1600" height="901" loading="lazy">
-      <figcaption>Il panel «Open collaboration, protected technology: securing Europe's space supply chain».</figcaption>
+      <img src="assets/nanoinnovation/13-panel-supply-chain.jpg" alt="I partecipanti al panel sulla supply chain spaziale europea" data-i18n-alt="t39" width="1600" height="901" loading="lazy">
+      <figcaption data-i18n="t18">Il panel «Open collaboration, protected technology: securing Europe's space supply chain».</figcaption>
     </figure>
 
   </div>
-  <button class="nav next" type="button" aria-label="Foto successiva">›</button>
+  <button class="nav next" type="button" aria-label="Foto successiva" data-i18n-aria="t42">›</button>
 </div>
-<div class="dots" id="dots" role="tablist" aria-label="Scegli la foto"></div>
+<div class="dots" id="dots" role="tablist" aria-label="Scegli la foto" data-i18n-aria="t43"></div>
 <p class="count" id="count"></p>
 
-<h2>Il forum con Thales Alenia Space e Leonardo</h2>
-<p>Lunedì 14 settembre, nella Room 17, si è tenuto il forum affiliato congiunto tra <strong>Thales Alenia Space</strong> e <strong>Leonardo</strong>, dedicato ai materiali avanzati e alle tecnologie abilitanti per le nuove frontiere dello spazio e della vita oltre la Terra. Al tavolo con me c'erano Alessandro Garibbo per Leonardo e Giorgio Busacca per Thales Alenia Space. Gran parte della giornata è ruotata attorno al lavoro dei dottorati industriali, quindi attorno a ricerca che nasce già con un piede nell'industria.</p>
+<h2 data-i18n="t19">Il forum con Thales Alenia Space e Leonardo</h2>
+<p data-i18n="t20">Lunedì 14 settembre, nella Room 17, si è tenuto il forum affiliato congiunto tra <strong>Thales Alenia Space</strong> e <strong>Leonardo</strong>, dedicato ai materiali avanzati e alle tecnologie abilitanti per le nuove frontiere dello spazio e della vita oltre la Terra. Al tavolo con me c'erano Alessandro Garibbo per Leonardo e Giorgio Busacca per Thales Alenia Space. Gran parte della giornata è ruotata attorno al lavoro dei dottorati industriali, quindi attorno a ricerca che nasce già con un piede nell'industria.</p>
 
-<h2>I due inviti</h2>
-<p>Il primo è arrivato dal <strong>prof. Danilo Dini</strong>, che mi ha chiesto di aprire come keynote speaker la sessione YoungInnovation <em>Space Missions and Nanotech</em>, dedicata ai giovani ricercatori. Ho parlato dell'ambiente spaziale e delle sue difficoltà, dalle temperature estreme alle radiazioni al vuoto, e di come le nanotecnologie aiutino ad affrontarle. Ho raccontato anche una parte del lavoro che facciamo in Thales Alenia Space sui nanomateriali avanzati e sui dispositivi quantistici per le missioni future.</p>
-<p>Il secondo è arrivato da <strong>Daniele Mirabile Gattia</strong>, che mi ha invitato il venerdì alla sessione organizzata dall'<strong>ENEA</strong> sui materiali di frontiera per le applicazioni energetiche. Lì ho presentato i nostri risultati sui compositi polimerici con filler 2D per la gestione termica nei sistemi spaziali.</p>
+<h2 data-i18n="t21">I due inviti</h2>
+<p data-i18n="t22">Il primo è arrivato dal <strong>prof. Danilo Dini</strong>, che mi ha chiesto di aprire come keynote speaker la sessione YoungInnovation <em>Space Missions and Nanotech</em>, dedicata ai giovani ricercatori. Ho parlato dell'ambiente spaziale e delle sue difficoltà, dalle temperature estreme alle radiazioni al vuoto, e di come le nanotecnologie aiutino ad affrontarle. Ho raccontato anche una parte del lavoro che facciamo in Thales Alenia Space sui nanomateriali avanzati e sui dispositivi quantistici per le missioni future.</p>
+<p data-i18n="t23">Il secondo è arrivato da <strong>Daniele Mirabile Gattia</strong>, che mi ha invitato il venerdì alla sessione organizzata dall'<strong>ENEA</strong> sui materiali di frontiera per le applicazioni energetiche. Lì ho presentato i nostri risultati sui compositi polimerici con filler 2D per la gestione termica nei sistemi spaziali.</p>
 
-<h2>Perché conta</h2>
-<p>NanoInnovation negli anni è diventata un punto di riferimento per l'innovazione in Italia, e ricevere due inviti nella stessa edizione significa parecchio per me. Il ringraziamento più sincero va a Danilo e a Daniele, e a chi organizza un evento che ogni anno rimette ricerca e industria nella stessa stanza. La parte più bella resta l'incontro con tanti giovani ricercatori e le conversazioni sul loro lavoro.</p>
+<h2 data-i18n="t24">Perché conta</h2>
+<p data-i18n="t25">NanoInnovation negli anni è diventata un punto di riferimento per l'innovazione in Italia, e ricevere due inviti nella stessa edizione significa parecchio per me. Il ringraziamento più sincero va a Danilo e a Daniele, e a chi organizza un evento che ogni anno rimette ricerca e industria nella stessa stanza. La parte più bella resta l'incontro con tanti giovani ricercatori e le conversazioni sul loro lavoro.</p>
 
 <footer>
-  <p><a href="index.html">mirkorocci.it</a> · <a href="index.html#news">Tutte le novità</a> · <a href="https://www.nanoinnovation2026.eu/" target="_blank" rel="noopener noreferrer">Sito della conferenza</a></p>
+  <p data-i18n="t26"><a href="index.html">mirkorocci.it</a> · <a href="index.html#news">Tutte le novità</a> · <a href="https://www.nanoinnovation2026.eu/" target="_blank" rel="noopener noreferrer">Sito della conferenza</a></p>
 </footer>
 
 <script>
@@ -223,11 +239,17 @@
     b.className = 'dot';
     b.type = 'button';
     b.setAttribute('role','tab');
-    b.setAttribute('aria-label','Foto ' + (i+1) + ' di ' + slides.length);
     b.addEventListener('click', function(){ go(i); });
     dots.appendChild(b);
   });
   var dotEls = Array.prototype.slice.call(dots.children);
+  var WORDS = { it:['Foto','di'], en:['Photo','of'], es:['Foto','de'], fr:['Photo','sur'] };
+  function labelDots(){
+    var w = WORDS[document.documentElement.lang] || WORDS.it;
+    dotEls.forEach(function(d, i){ d.setAttribute('aria-label', w[0] + ' ' + (i+1) + ' ' + w[1] + ' ' + slides.length); });
+  }
+  labelDots();
+  document.addEventListener('mr-lang', labelDots);
 
   var calmo = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -268,5 +290,45 @@
 })();
 </script>
 
+<script id="i18n-engine">
+(function(){
+  var T = {"en": {"t1": "← Back to site", "t2": "NanoInnovation 2026 · Rome", "t3": "A week at Sapienza, between advanced materials and space", "t4": "14–18 September 2026 · Sapienza University of Rome, Faculty of Engineering", "t5": "NanoInnovation is the annual event that brings research and industry together on nanotechnologies. This year I was in Rome for the whole week, with two invitations from different people and some moments worth gathering in one place. Below you will find the photos, each with a caption.", "t6": "The entrance of the Faculty of Engineering, the conference venue from 14 to 18 September.", "t7": "The facade with the 2026 edition banners.", "t8": "The Room 17 programme, Monday 14 September, in front of the room door.", "t9": "Shortly before the start of proceedings.", "t10": "The opening of the joint Thales Alenia Space and Leonardo forum, at the table with Alessandro Garibbo and Giorgio Busacca.", "t11": "The audience during the presentations.", "t12": "A large part of the audience consisted of PhD students and early-career researchers.", "t13": "Another moment from the room.", "t14": "The group photo with the forum speakers, dedicated to advanced materials and enabling technologies for new space frontiers.", "t15": "After my talk on 16 September on advanced nanomaterials and quantum devices as enabling technologies for future space missions.", "t16": "The presentation on micro and nano-characterisation of solder joints, lead and lead-free, for cutting-edge space applications.", "t17": "At the working table, before the start of the session.", "t18": "The panel “Open collaboration, protected technology: securing Europe's space supply chain”.", "t19": "The forum with Thales Alenia Space and Leonardo", "t20": "On Monday 14 September, in Room 17, the joint affiliated forum between <strong>Thales Alenia Space<\/strong> and <strong>Leonardo<\/strong> took place, dedicated to advanced materials and enabling technologies for new space frontiers and life beyond Earth. At the table with me were Alessandro Garibbo for Leonardo and Giorgio Busacca for Thales Alenia Space. Much of the day revolved around the work of industrial PhDs, meaning research that is born with one foot already in industry.", "t21": "The two invitations", "t22": "The first came from <strong>Prof. Danilo Dini<\/strong>, who asked me to open the YoungInnovation <em>Space Missions and Nanotech<\/em> session as keynote speaker, dedicated to early-career researchers. I spoke about the space environment and its challenges, from extreme temperatures to radiation and vacuum, and how nanotechnologies help address them. I also shared part of the work we do at Thales Alenia Space on advanced nanomaterials and quantum devices for future missions.", "t23": "The second came from <strong>Daniele Mirabile Gattia<\/strong>, who invited me on Friday to the session organised by <strong>ENEA<\/strong> on cutting-edge materials for energy applications. There I presented our results on polymer composites with 2D fillers for thermal management in space systems.", "t24": "Why it matters", "t25": "Over the years NanoInnovation has become a reference point for innovation in Italy, and receiving two invitations in the same edition means a great deal to me. My sincere thanks go to Danilo and Daniele, and to those who organise an event that every year brings research and industry back into the same room. The best part remains meeting so many early-career researchers and talking about their work.", "t26": "<a href=\"index.html\">mirkorocci.it<\/a> · <a href=\"index.html#news\">All news<\/a> · <a href=\"https://www.nanoinnovation2026.eu/\" target=\"_blank\" rel=\"noopener noreferrer\">Conference website<\/a>", "t27": "Entrance of the Sapienza Faculty of Engineering with NanoInnovation 2026 banners", "t28": "Facade of the Faculty of Engineering with the two NanoInnovation 2026 banners", "t29": "The affiliated forum programme displayed in front of Room 17", "t30": "Three forum participants shortly before the start of proceedings", "t31": "Opening of the joint Thales Alenia Space and Leonardo forum at the speakers' table", "t32": "The audience in the hall during the presentations", "t33": "Other participants seated in the hall", "t34": "The audience follows a presentation", "t35": "Group photo of the speakers in front of the forum slide", "t36": "Three people in front of the slide of the talk on advanced nanomaterials and quantum devices", "t37": "Four people in front of the slide on solder joint characterisation", "t38": "At the speakers' table during a session", "t39": "The participants in the panel on the European space supply chain", "t40": "Previous photo", "t41": "NanoInnovation 2026 photo gallery", "t42": "Next photo", "t43": "Choose photo", "title": "NanoInnovation 2026 — Mirko Rocci at Sapienza in Rome", "desc": "The photos and story of NanoInnovation 2026 at Sapienza in Rome, from 14 to 18 September: the joint Thales Alenia Space and Leonardo forum on advanced materials for space, the talk on nanomaterials and quantum devices, the ENEA session, and the panel on the European space supply chain."}, "es": {"t1": "← Volver al sitio", "t2": "NanoInnovation 2026 · Roma", "t3": "Una semana en la Sapienza, entre materiales avanzados y espacio", "t4": "14–18 de septiembre de 2026 · Universidad Sapienza de Roma, Facultad de Ingeniería", "t5": "NanoInnovation es la cita que cada año reúne a la investigación y la industria en torno a las nanotecnologías. Este año he estado en Roma toda la semana, con dos invitaciones llegadas de personas distintas y algunos momentos que valía la pena recopilar en un solo lugar. A continuación encontraréis las fotos, con una descripción para cada una.", "t6": "La entrada de la Facultad de Ingeniería, sede de la conferencia del 14 al 18 de septiembre.", "t7": "La fachada con los carteles de la edición 2026.", "t8": "El programa de la Room 17, lunes 14 de septiembre, delante de la puerta de la sala.", "t9": "Poco antes del inicio de los trabajos.", "t10": "La apertura del foro conjunto Thales Alenia Space y Leonardo, en la mesa con Alessandro Garibbo y Giorgio Busacca.", "t11": "El público durante las intervenciones.", "t12": "Gran parte de la sala estaba compuesta por doctorandos y jóvenes investigadores.", "t13": "Otro momento desde la sala.", "t14": "La foto de grupo con los ponentes del foro, dedicado a los materiales avanzados y las tecnologías habilitadoras para las nuevas fronteras del espacio.", "t15": "Después de mi intervención del 16 de septiembre sobre nanomateriales avanzados y dispositivos cuánticos como tecnologías habilitadoras para las futuras misiones espaciales.", "t16": "La presentación sobre la micro y nano-caracterización de las uniones de soldadura, con y sin plomo, para aplicaciones espaciales de frontera.", "t17": "En la mesa de trabajo, antes del inicio de la sesión.", "t18": "El panel «Open collaboration, protected technology: securing Europe's space supply chain».", "t19": "El foro con Thales Alenia Space y Leonardo", "t20": "El lunes 14 de septiembre, en la Room 17, se celebró el foro afiliado conjunto entre <strong>Thales Alenia Space<\/strong> y <strong>Leonardo<\/strong>, dedicado a los materiales avanzados y las tecnologías habilitadoras para las nuevas fronteras del espacio y de la vida más allá de la Tierra. En la mesa conmigo estaban Alessandro Garibbo por Leonardo y Giorgio Busacca por Thales Alenia Space. Gran parte de la jornada giró en torno al trabajo de los doctorados industriales, es decir, en torno a una investigación que nace ya con un pie en la industria.", "t21": "Las dos invitaciones", "t22": "La primera llegó del <strong>prof. Danilo Dini<\/strong>, que me pidió que abriera como keynote speaker la sesión YoungInnovation <em>Space Missions and Nanotech<\/em>, dedicada a los jóvenes investigadores. Hablé del entorno espacial y sus dificultades, desde las temperaturas extremas hasta la radiación y el vacío, y de cómo las nanotecnologías ayudan a afrontarlas. También conté una parte del trabajo que hacemos en Thales Alenia Space sobre nanomateriales avanzados y dispositivos cuánticos para las misiones futuras.", "t23": "La segunda llegó de <strong>Daniele Mirabile Gattia<\/strong>, que me invitó el viernes a la sesión organizada por <strong>ENEA<\/strong> sobre materiales de frontera para aplicaciones energéticas. Allí presenté nuestros resultados sobre compuestos poliméricos con relleno 2D para la gestión térmica en sistemas espaciales.", "t24": "Por qué importa", "t25": "NanoInnovation se ha convertido con los años en un referente de la innovación en Italia, y recibir dos invitaciones en la misma edición significa mucho para mí. El agradecimiento más sincero va para Danilo y para Daniele, y para quienes organizan un evento que cada año vuelve a poner a la investigación y a la industria en la misma sala. Lo más bonito sigue siendo el encuentro con tantos jóvenes investigadores y las conversaciones sobre su trabajo.", "t26": "<a href=\"index.html\">mirkorocci.it<\/a> · <a href=\"index.html#news\">Todas las novedades<\/a> · <a href=\"https://www.nanoinnovation2026.eu/\" target=\"_blank\" rel=\"noopener noreferrer\">Sitio de la conferencia<\/a>", "t27": "Entrada de la Facultad de Ingeniería de la Sapienza con los carteles de NanoInnovation 2026", "t28": "Fachada de la Facultad de Ingeniería con los dos carteles de NanoInnovation 2026", "t29": "El programa del foro afiliado expuesto delante de la Room 17", "t30": "Tres participantes en el foro poco antes del inicio de los trabajos", "t31": "Apertura del foro conjunto Thales Alenia Space y Leonardo en la mesa de los ponentes", "t32": "El público en el aula durante las intervenciones", "t33": "Otros participantes sentados en el aula", "t34": "El público sigue una presentación", "t35": "Foto de grupo de los ponentes delante de la diapositiva del foro", "t36": "Tres personas delante de la diapositiva de la charla sobre nanomateriales avanzados y dispositivos cuánticos", "t37": "Cuatro personas delante de la diapositiva sobre la caracterización de las uniones de soldadura", "t38": "En la mesa de los ponentes durante una sesión", "t39": "Los participantes en el panel sobre la cadena de suministro espacial europea", "t40": "Foto anterior", "t41": "Galería fotográfica de NanoInnovation 2026", "t42": "Foto siguiente", "t43": "Elige la foto", "title": "NanoInnovation 2026 — Mirko Rocci en la Sapienza de Roma", "desc": "Las fotos y el relato de NanoInnovation 2026 en la Sapienza de Roma, del 14 al 18 de septiembre: el foro conjunto Thales Alenia Space y Leonardo sobre materiales avanzados para el espacio, la charla sobre nanomateriales y dispositivos cuánticos, la sesión de ENEA y el panel sobre la cadena de suministro espacial europea."}, "fr": {"t1": "← Retour au site", "t2": "NanoInnovation 2026 · Rome", "t3": "Une semaine à la Sapienza, entre matériaux avancés et espace", "t4": "14–18 septembre 2026 · Université Sapienza de Rome, Faculté d'ingénierie", "t5": "NanoInnovation est le rendez-vous qui chaque année fait se rencontrer recherche et industrie sur les nanotechnologies. Cette année, j'étais à Rome toute la semaine, avec deux invitations venues de personnes différentes et certains moments qu'il valait la peine de rassembler en un seul endroit. Vous trouverez ci-dessous les photos, avec une légende pour chacune.", "t6": "L'entrée de la Faculté d'ingénierie, siège de la conférence du 14 au 18 septembre.", "t7": "La façade avec les banderoles de l'édition 2026.", "t8": "Le programme de la Room 17, lundi 14 septembre, devant la porte de la salle.", "t9": "Peu avant le début des travaux.", "t10": "L'ouverture du forum conjoint Thales Alenia Space et Leonardo, à la table avec Alessandro Garibbo et Giorgio Busacca.", "t11": "L'auditoire pendant les interventions.", "t12": "Une bonne partie de la salle était composée de doctorants et de jeunes chercheurs.", "t13": "Un autre moment depuis la salle.", "t14": "La photo de groupe avec les intervenants du forum, dédié aux matériaux avancés et aux technologies habilitantes pour les nouvelles frontières de l'espace.", "t15": "Après mon intervention du 16 septembre sur les nanomatériaux avancés et les dispositifs quantiques comme technologies habilitantes pour les futures missions spatiales.", "t16": "La présentation sur la micro- et nano-caractérisation des joints de soudure, avec et sans plomb, pour des applications spatiales de pointe.", "t17": "À la table des travaux, avant le début de la session.", "t18": "Le panel « Open collaboration, protected technology: securing Europe's space supply chain ».", "t19": "Le forum avec Thales Alenia Space et Leonardo", "t20": "Lundi 14 septembre, dans la Room 17, s'est tenu le forum affilié conjoint entre <strong>Thales Alenia Space<\/strong> et <strong>Leonardo<\/strong>, dédié aux matériaux avancés et aux technologies habilitantes pour les nouvelles frontières de l'espace et de la vie au-delà de la Terre. À la table avec moi se trouvaient Alessandro Garibbo pour Leonardo et Giorgio Busacca pour Thales Alenia Space. Une grande partie de la journée a tourné autour du travail des doctorats industriels, donc autour d'une recherche qui naît déjà avec un pied dans l'industrie.", "t21": "Les deux invitations", "t22": "La première est venue du <strong>professeur Danilo Dini<\/strong>, qui m'a demandé d'ouvrir en tant que keynote speaker la session YoungInnovation <em>Space Missions and Nanotech<\/em>, dédiée aux jeunes chercheurs. J'ai parlé de l'environnement spatial et de ses difficultés, des températures extrêmes aux radiations en passant par le vide, et de la façon dont les nanotechnologies aident à les affronter. J'ai aussi raconté une partie du travail que nous faisons chez Thales Alenia Space sur les nanomatériaux avancés et les dispositifs quantiques pour les missions futures.", "t23": "La seconde est venue de <strong>Daniele Mirabile Gattia<\/strong>, qui m'a invité le vendredi à la session organisée par l'<strong>ENEA<\/strong> sur les matériaux de pointe pour les applications énergétiques. J'y ai présenté nos résultats sur les composites polymères avec charges 2D pour la gestion thermique dans les systèmes spatiaux.", "t24": "Pourquoi cela compte", "t25": "Au fil des ans, NanoInnovation est devenue un point de référence pour l'innovation en Italie, et recevoir deux invitations dans la même édition signifie beaucoup pour moi. Mes remerciements les plus sincères vont à Danilo et à Daniele, ainsi qu'à ceux qui organisent un événement qui chaque année remet la recherche et l'industrie dans la même salle. La plus belle partie reste la rencontre avec tant de jeunes chercheurs et les conversations sur leur travail.", "t26": "<a href=\"index.html\">mirkorocci.it<\/a> · <a href=\"index.html#news\">Toutes les actualités<\/a> · <a href=\"https://www.nanoinnovation2026.eu/\" target=\"_blank\" rel=\"noopener noreferrer\">Site de la conférence<\/a>", "t27": "Entrée de la Faculté d'ingénierie de la Sapienza avec les banderoles de NanoInnovation 2026", "t28": "Façade de la Faculté d'ingénierie avec les deux banderoles de NanoInnovation 2026", "t29": "Le programme du forum affilié affiché devant la Room 17", "t30": "Trois participants au forum peu avant le début des travaux", "t31": "Ouverture du forum conjoint Thales Alenia Space et Leonardo à la table des intervenants", "t32": "Le public en salle pendant les interventions", "t33": "D'autres participants assis en salle", "t34": "Le public suit une présentation", "t35": "Photo de groupe des intervenants devant la diapositive du forum", "t36": "Trois personnes devant la diapositive de l'exposé sur les nanomatériaux avancés et les dispositifs quantiques", "t37": "Quatre personnes devant la diapositive sur la caractérisation des joints de soudure", "t38": "À la table des intervenants pendant une session", "t39": "Les participants au panel sur la chaîne d'approvisionnement spatiale européenne", "t40": "Photo précédente", "t41": "Galerie photographique de NanoInnovation 2026", "t42": "Photo suivante", "t43": "Choisissez la photo", "title": "NanoInnovation 2026 — Mirko Rocci à la Sapienza de Rome", "desc": "Les photos et le récit de NanoInnovation 2026 à la Sapienza de Rome, du 14 au 18 septembre : le forum conjoint Thales Alenia Space et Leonardo sur les matériaux avancés pour l'espace, l'exposé sur les nanomatériaux et les dispositifs quantiques, la session ENEA et le panel sur la chaîne d'approvisionnement spatiale européenne."}};
+  var LANGS = ['it','en','es','fr'], BASE = 'https://mirkorocci.it/nanoinnovation-2026.html';
+  var els = [].slice.call(document.querySelectorAll('[data-i18n]'));
+  var alts = [].slice.call(document.querySelectorAll('[data-i18n-alt]'));
+  var arias = [].slice.call(document.querySelectorAll('[data-i18n-aria]'));
+  var desc = document.querySelector('meta[name="description"]');
+  var orig = { title: document.title, desc: desc ? desc.content : '' };
+  els.forEach(function(el){ el.dataset.itHtml = el.innerHTML; });
+  alts.forEach(function(el){ el.dataset.itAlt = el.alt; });
+  arias.forEach(function(el){ el.dataset.itAria = el.getAttribute('aria-label'); });
+  function t(l, k){ return (T[l] && T[l][k] != null) ? T[l][k] : null; }
+  function apply(l){
+    if (LANGS.indexOf(l) < 0) l = 'it';
+    document.documentElement.lang = l;
+    els.forEach(function(el){ var v = l === 'it' ? el.dataset.itHtml : t(l, el.dataset.i18n); if (v != null) el.innerHTML = v; });
+    alts.forEach(function(el){ var v = l === 'it' ? el.dataset.itAlt : t(l, el.dataset.i18nAlt); if (v != null) el.alt = v; });
+    arias.forEach(function(el){ var v = l === 'it' ? el.dataset.itAria : t(l, el.dataset.i18nAria); if (v != null) el.setAttribute('aria-label', v); });
+    document.title = l === 'it' ? orig.title : (t(l, 'title') || orig.title);
+    if (desc) desc.content = l === 'it' ? orig.desc : (t(l, 'desc') || orig.desc);
+    [].forEach.call(document.querySelectorAll('.langs button'), function(b){ b.setAttribute('aria-pressed', String(b.dataset.l === l)); });
+    var href = l === 'it' ? BASE : BASE + '?lang=' + l;
+    var can = document.querySelector('link[rel="canonical"]'); if (can) can.href = href;
+    var og = document.querySelector('meta[property="og:url"]'); if (og) og.content = href;
+    try {
+      var q = new URLSearchParams(location.search);
+      if (l === 'it') q.delete('lang'); else q.set('lang', l);
+      var qs = q.toString();
+      history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+    } catch (e) {}
+    try { localStorage.setItem('mr-lang', l); } catch (e) {}
+    document.dispatchEvent(new CustomEvent('mr-lang', { detail: l }));
+  }
+  var start = 'it';
+  try { start = new URLSearchParams(location.search).get('lang') || localStorage.getItem('mr-lang') || 'it'; } catch (e) {}
+  apply(start);
+  [].forEach.call(document.querySelectorAll('.langs button'), function(b){ b.addEventListener('click', function(){ apply(b.dataset.l); }); });
+})();
+</script>
 </body>
 </html>
