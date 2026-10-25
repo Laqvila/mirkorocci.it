@@ -170,7 +170,7 @@ const NEWS = [
 const FEATURED = [
 
   { img:"assets/press/innovazioni2026-panel.jpg", tag:NTAG.conf,
-    video:"assets/innovazioni-2026/reel-sito.mp4?v=1", poster:"assets/innovazioni-2026/reel-sito.jpg?v=1",
+    video:"assets/innovazioni-2026/reel-sito.mp4?v=2", poster:"assets/innovazioni-2026/reel-sito.jpg?v=2",
     imgs:["assets/press/innovazioni2026-panel.jpg","assets/press/innovazioni2026-scheda-speaker.jpg"],
     date:{ it:"23 ottobre 2026", en:"23 October 2026", es:"23 de octubre de 2026", fr:"23 octobre 2026" },
     t:{ it:"Agenti IA per le imprese, il mio panel a InnovAzioni 2026", en:"AI agents for business, my panel at InnovAzioni 2026", es:"Agentes de IA para las empresas, mi panel en InnovAzioni 2026", fr:"Agents d'IA pour les entreprises, mon panel à InnovAzioni 2026" },
