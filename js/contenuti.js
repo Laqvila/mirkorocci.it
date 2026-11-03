@@ -66,6 +66,13 @@ const NEWS = [
   /* ▼▼▼ AGGIUNGI QUI LE NUOVE NOVITÀ (la più recente in alto) ▼▼▼
      (le notizie di Inno99 NON vanno qui: mettile nel blocco INNO99 più sotto) */
 
+  { date:{ it:"28 ottobre 2026", en:"28 October 2026", es:"28 de octubre de 2026", fr:"28 octobre 2026" }, tag:NTAG.award,
+    url:"innovation-award-2026.html",
+    img:"assets/innovation-award-2026/annuncio.jpg",
+    imgs:["assets/innovation-award-2026/annuncio.jpg","assets/innovation-award-2026/palco.jpg"],
+    t:{ it:"La mia videointervista proiettata alla cerimonia Innovation Award 2026", en:"My video interview screened at the Innovation Award 2026 ceremony", es:"Mi videoentrevista proyectada en la ceremonia Innovation Award 2026", fr:"Mon interview vidéo projetée à la cérémonie Innovation Award 2026" },
+    d:{ it:"Alla cerimonia del Thales Alenia Space Innovation Award 2026, davanti all'amministratore delegato, al CTO e a tutti i presenti, è stata proiettata la mia videointervista «Dopo il premio...», l'unica a un vincitore delle edizioni passate. Nella pagina trovate il reel e le foto.", en:"At the Thales Alenia Space Innovation Award 2026 ceremony, in front of the CEO, the CTO and everyone present, my video interview «Dopo il premio...» was screened, the only one with a winner from past editions. The reel and the photos are on the page.", es:"En la ceremonia del Thales Alenia Space Innovation Award 2026, delante del CEO, del CTO y de todos los presentes, se proyectó mi videoentrevista «Dopo il premio...», la única a un ganador de las ediciones pasadas. En la página encontráis el reel y las fotos.", fr:"Lors de la cérémonie du Thales Alenia Space Innovation Award 2026, devant le PDG, le CTO et toutes les personnes présentes, mon interview vidéo « Dopo il premio... » a été projetée. C'était la seule consacrée à un lauréat des éditions précédentes. Sur la page, vous trouverez le reel et les photos." } },
+
   { date:{ it:"23 ottobre 2026", en:"23 October 2026", es:"23 de octubre de 2026", fr:"23 octobre 2026" }, tag:NTAG.conf,
     url:"innovazioni-2026.html",
     img:"assets/press/innovazioni2026-panel.jpg",
@@ -169,6 +176,14 @@ const NEWS = [
    ============================================================================ */
 const FEATURED = [
 
+  { img:"assets/innovation-award-2026/annuncio.jpg", tag:NTAG.award,
+    video:"assets/innovation-award-2026/reel-card.mp4?v=1", poster:"assets/innovation-award-2026/reel-card.jpg?v=1",
+    imgs:["assets/innovation-award-2026/annuncio.jpg","assets/innovation-award-2026/palco.jpg"],
+    date:{ it:"28 ottobre 2026", en:"28 October 2026", es:"28 de octubre de 2026", fr:"28 octobre 2026" },
+    t:{ it:"La mia videointervista alla cerimonia Innovation Award 2026", en:"My video interview at the Innovation Award 2026 ceremony", es:"Mi videoentrevista en la ceremonia Innovation Award 2026", fr:"Mon interview vidéo à la cérémonie Innovation Award 2026" },
+    d:{ it:"Il 28 ottobre la mia videointervista «Dopo il premio...» è stata proiettata alla cerimonia del Thales Alenia Space Innovation Award, unica intervista a un vincitore delle edizioni passate. Racconta cosa significa per me l'innovazione e cosa viene dopo un premio. Nella pagina trovate il reel e le foto.", en:"On 28 October my video interview «Dopo il premio...» was screened at the Thales Alenia Space Innovation Award ceremony, the only interview with a winner from past editions. It explains what innovation means to me and what comes after an award. The reel and the photos are on the page.", es:"El 28 de octubre mi videoentrevista «Dopo il premio...» se proyectó en la ceremonia del Thales Alenia Space Innovation Award, única entrevista a un ganador de las ediciones pasadas. Cuenta qué significa para mí la innovación y qué viene después de un premio. En la página encontráis el reel y las fotos.", fr:"Le 28 octobre, mon interview vidéo « Dopo il premio... » a été projetée lors de la cérémonie du Thales Alenia Space Innovation Award, la seule consacrée à un lauréat des éditions précédentes. Elle raconte ce que l'innovation signifie pour moi et ce qui vient après un prix. Sur la page, vous trouverez le reel et les photos." },
+    url:"innovation-award-2026.html" },
+
   { img:"assets/press/innovazioni2026-panel.jpg", tag:NTAG.conf,
     video:"assets/innovazioni-2026/reel-sito.mp4?v=2", poster:"assets/innovazioni-2026/reel-sito.jpg?v=2",
     imgs:["assets/press/innovazioni2026-panel.jpg","assets/press/innovazioni2026-scheda-speaker.jpg"],
@@ -189,13 +204,7 @@ const FEATURED = [
     date:{ it:"24 settembre 2026", en:"24 September 2026", es:"24 de septiembre de 2026", fr:"24 septembre 2026" },
     t:{ it:"Inno Talk #2, com'è andata «Dalla ricerca al prodotto»", en:"Inno Talk #2: how 'From research to product' went", es:"Inno Talk #2: así fue «De la investigación al producto»", fr:"Inno Talk #2 : comment s'est passé « De la recherche au produit »" },
     d:{ it:"Oltre 40 persone all'Irish Pub di via Verdi per il secondo aperitivo dell'innovazione ideato e condotto da Mirko Rocci per Innovalley. Qui trovate la diretta integrale, le foto e il resoconto, dal keynote del prof. Michele Flammini alle imprese del Tecnopolo d'Abruzzo West Aquila e Accyourate Group.", en:"Over 40 people at the Irish Pub in via Verdi for the second innovation aperitif created and hosted by Mirko Rocci for Innovalley. Here you can find the full live stream, the photos and the report, from Prof. Michele Flammini's keynote to the Tecnopolo d'Abruzzo companies West Aquila and Accyourate Group.", es:"Más de 40 personas en el Irish Pub de via Verdi para el segundo aperitivo de la innovación ideado y conducido por Mirko Rocci para Innovalley. Aquí están la retransmisión completa, las fotos y el resumen, desde la ponencia del prof. Michele Flammini hasta las empresas del Tecnopolo d'Abruzzo West Aquila y Accyourate Group.", fr:"Plus de 40 personnes à l'Irish Pub de via Verdi pour le deuxième apéritif de l'innovation conçu et animé par Mirko Rocci pour Innovalley. Voici le direct intégral, les photos et le compte rendu, de la keynote du prof. Michele Flammini aux entreprises du Tecnopolo d'Abruzzo West Aquila et Accyourate Group." },
-    url:"inno-talks-2.html" },
-
-  { img:"assets/press/laquilive-icona.png", tag:NTAG.social,
-    date:{ it:"19 agosto 2026", en:"19 August 2026", es:"19 de agosto de 2026", fr:"19 août 2026" },
-    t:{ it:"È nata L'AquiLive: l'app gratuita degli eventi dell'Aquila", en:"Introducing L'AquiLive: the free events app for L'Aquila", es:"Nace L'AquiLive: la app gratuita de eventos de L'Aquila", fr:"Voici L'AquiLive : l'appli gratuite des événements de L'Aquila" },
-    d:{ it:"Ho ideato e costruito l'app che raccoglie tutti gli eventi dell'Aquila e provincia: concerti, teatro, sagre, cinema, Perdonanza, news locali, mappa e trasporti. Gratuita, in 6 lingue, senza pubblicità, ora su Google Play e App Store: il mio modo di restituire qualcosa alla città.", en:"I designed and built the app that gathers every event in L'Aquila and its province: concerts, theatre, festivals, cinema, Perdonanza, local news, map and transport. Free, in 6 languages, ad-free, now on Google Play and the App Store — my way of giving something back to the city.", es:"Ideé y construí la app que reúne todos los eventos de L'Aquila y su provincia: conciertos, teatro, fiestas, cine, Perdonanza, noticias locales, mapa y transporte. Gratuita, en 6 idiomas, sin publicidad, ya en Google Play y App Store.", fr:"J'ai conçu et développé l'appli qui rassemble tous les événements de L'Aquila et de sa province : concerts, théâtre, fêtes, cinéma, Perdonanza, actualités locales, carte et transports. Gratuite, en 6 langues, sans publicité, désormais sur Google Play et l'App Store." },
-    url:"laquilive/" }
+    url:"inno-talks-2.html" }
 ];
 
 
