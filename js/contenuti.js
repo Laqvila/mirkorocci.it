@@ -70,6 +70,9 @@ const NEWS = [
     url:"masterclass-2026.html",
     img:"assets/masterclass-2026/impianti.jpg",
     imgs:["assets/masterclass-2026/impianti.jpg","assets/masterclass-2026/sala.jpg"],
+    press:[
+      { outlet:"News-Town", url:"https://news-town.it/2026/11/04/eventi/laquila-al-via-la-masterclass-2026-percorso-formativo-rivolto-agli-studenti-delle-superiori/" }
+    ],
     t:{ it:"Al via la MasterClass 2026 al centro di formazione di e-distribuzione", en:"MasterClass 2026 gets under way at the e-distribuzione training centre", es:"Arranca la MasterClass 2026 en el centro de formación de e-distribuzione", fr:"Lancement de la MasterClass 2026 au centre de formation d'e-distribuzione" },
     d:{ it:"Quarta edizione della MasterClass, con un format più pratico dedicato alle infrastrutture elettriche, insieme all'IIS «Amedeo d'Aosta», all'Università degli Studi dell'Aquila e al CFA di e-distribuzione. Nella pagina trovate il programma e le foto.", en:"Fourth edition of the MasterClass, with a more practical format dedicated to electrical infrastructure, together with the IIS «Amedeo d'Aosta», the University of L'Aquila and the e-distribuzione CFA. The programme and the photos are on the page.", es:"Cuarta edición de la MasterClass, con un formato más práctico dedicado a las infraestructuras eléctricas, junto con el IIS «Amedeo d'Aosta», la Universidad de L'Aquila y el CFA de e-distribuzione. En la página encontraréis el programa y las fotos.", fr:"Quatrième édition de la MasterClass, avec un format plus pratique dédié aux infrastructures électriques, avec l'IIS « Amedeo d'Aosta », l'Université de L'Aquila et le CFA d'e-distribuzione. Le programme et les photos sont sur la page." } },
 
@@ -247,6 +250,9 @@ const PRESS = [
 
   /* ▼▼▼ AGGIUNGI QUI I NUOVI ARTICOLI (il più recente in alto) ▼▼▼
      (gli articoli su Inno99 NON vanno qui: mettili nel blocco INNO99 più sotto) */
+
+  { outlet:"News-Town", year:"2026", url:"https://news-town.it/2026/11/04/eventi/laquila-al-via-la-masterclass-2026-percorso-formativo-rivolto-agli-studenti-delle-superiori/", img:"assets/press/masterclass2026-newstown.jpg",
+    q:{ it:"«L'Aquila: al via la MasterClass 2026, percorso formativo rivolto agli studenti delle superiori». La quarta edizione del percorso ideato da Mirko Rocci e Claudia Pagliariccio parte dal centro di formazione di e-distribuzione.", en:"'L'Aquila: MasterClass 2026 gets under way, a training programme for upper secondary school students'. The fourth edition of the programme designed by Mirko Rocci and Claudia Pagliariccio begins at the e-distribuzione training centre.", es:"«L'Aquila: arranca la MasterClass 2026, recorrido formativo dirigido a los estudiantes de secundaria». La cuarta edición del programa ideado por Mirko Rocci y Claudia Pagliariccio comienza en el centro de formación de e-distribuzione.", fr:"« L'Aquila : lancement de la MasterClass 2026, parcours de formation destiné aux lycéens ». La quatrième édition du programme conçu par Mirko Rocci et Claudia Pagliariccio commence au centre de formation d'e-distribuzione." } },
 
   { outlet:"Abruzzo Popolare", year:"2026", url:"https://www.abruzzopopolare.com/2026/10/24/confindustria-innovazioni-chiude-con-le-premiazioni/", img:"assets/press/innovazioni2026-abruzzopopolare-24ott.jpg", ev:"innovazioni-2026",
     q:{ it:"«InnovAzioni chiude con le premiazioni». Nel resoconto della giornata conclusiva, il panel sugli agenti di intelligenza artificiale per le imprese con Mirko Rocci per il DAAB e Thales Alenia Space.", en:"'InnovAzioni closes with the awards'. The report on the final day covers the panel on AI agents for business with Mirko Rocci for DAAB and Thales Alenia Space." } },
