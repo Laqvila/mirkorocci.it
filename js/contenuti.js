@@ -66,6 +66,13 @@ const NEWS = [
   /* ▼▼▼ AGGIUNGI QUI LE NUOVE NOVITÀ (la più recente in alto) ▼▼▼
      (le notizie di Inno99 NON vanno qui: mettile nel blocco INNO99 più sotto) */
 
+  { date:{ it:"3 novembre 2026", en:"3 November 2026", es:"3 de noviembre de 2026", fr:"3 novembre 2026" }, tag:NTAG.social,
+    url:"masterclass-2026.html",
+    img:"assets/masterclass-2026/impianti.jpg",
+    imgs:["assets/masterclass-2026/impianti.jpg","assets/masterclass-2026/sala.jpg"],
+    t:{ it:"Al via la MasterClass 2026 al centro di formazione di e-distribuzione", en:"MasterClass 2026 gets under way at the e-distribuzione training centre", es:"Arranca la MasterClass 2026 en el centro de formación de e-distribuzione", fr:"Lancement de la MasterClass 2026 au centre de formation d'e-distribuzione" },
+    d:{ it:"Quarta edizione della MasterClass, con un format più pratico dedicato alle infrastrutture elettriche, insieme all'IIS «Amedeo d'Aosta», all'Università degli Studi dell'Aquila e al CFA di e-distribuzione. Nella pagina trovate il programma e le foto.", en:"Fourth edition of the MasterClass, with a more practical format dedicated to electrical infrastructure, together with the IIS «Amedeo d'Aosta», the University of L'Aquila and the e-distribuzione CFA. The programme and the photos are on the page.", es:"Cuarta edición de la MasterClass, con un formato más práctico dedicado a las infraestructuras eléctricas, junto con el IIS «Amedeo d'Aosta», la Universidad de L'Aquila y el CFA de e-distribuzione. En la página encontraréis el programa y las fotos.", fr:"Quatrième édition de la MasterClass, avec un format plus pratique dédié aux infrastructures électriques, avec l'IIS « Amedeo d'Aosta », l'Université de L'Aquila et le CFA d'e-distribuzione. Le programme et les photos sont sur la page." } },
+
   { date:{ it:"28 ottobre 2026", en:"28 October 2026", es:"28 de octubre de 2026", fr:"28 octobre 2026" }, tag:NTAG.award,
     url:"innovation-award-2026.html",
     img:"assets/innovation-award-2026/annuncio.jpg",
@@ -176,6 +183,13 @@ const NEWS = [
    ============================================================================ */
 const FEATURED = [
 
+  { img:"assets/masterclass-2026/impianti.jpg", tag:NTAG.social,
+    imgs:["assets/masterclass-2026/impianti.jpg","assets/masterclass-2026/sala.jpg","assets/masterclass-2026/presentazione.jpg"],
+    date:{ it:"3 novembre 2026", en:"3 November 2026", es:"3 de noviembre de 2026", fr:"3 novembre 2026" },
+    t:{ it:"La MasterClass 2026 parte dal centro di formazione di e-distribuzione", en:"MasterClass 2026 begins at the e-distribuzione training centre", es:"La MasterClass 2026 arranca en el centro de formación de e-distribuzione", fr:"La MasterClass 2026 commence au centre de formation d'e-distribuzione" },
+    d:{ it:"Il 3 novembre è partita la quarta edizione del percorso che ho ideato e curo con Claudia Pagliariccio per gli studenti dell'IIS «Amedeo d'Aosta», con l'Università degli Studi dell'Aquila ed e-distribuzione. Sei moduli pratici fino al 14 dicembre, dentro gli impianti del CFA dell'Aquila. Nella pagina trovate il programma e le foto.", en:"The fourth edition of the programme I designed and curate with Claudia Pagliariccio for students of the IIS «Amedeo d'Aosta» began on 3 November, with the University of L'Aquila and e-distribuzione. Six practical modules until 14 December, inside the facilities of the L'Aquila CFA. The programme and the photos are on the page.", es:"El 3 de noviembre comenzó la cuarta edición del programa que he ideado y dirijo con Claudia Pagliariccio para los estudiantes del IIS «Amedeo d'Aosta», con la Universidad de L'Aquila y e-distribuzione. Seis módulos prácticos hasta el 14 de diciembre, dentro de las instalaciones del CFA de L'Aquila. En la página encontraréis el programa y las fotos.", fr:"Le 3 novembre a démarré la quatrième édition du parcours que j'ai conçu et que j'anime avec Claudia Pagliariccio pour les élèves de l'IIS « Amedeo d'Aosta », avec l'Université de L'Aquila et e-distribuzione. Six modules pratiques jusqu'au 14 décembre, au sein des installations du CFA de L'Aquila. Le programme et les photos sont sur la page." },
+    url:"masterclass-2026.html" },
+
   { img:"assets/innovation-award-2026/annuncio.jpg", tag:NTAG.award,
     video:"assets/innovation-award-2026/reel-card.mp4?v=1", poster:"assets/innovation-award-2026/reel-card.jpg?v=1",
     imgs:["assets/innovation-award-2026/annuncio.jpg","assets/innovation-award-2026/palco.jpg"],
@@ -198,13 +212,7 @@ const FEATURED = [
     date:{ it:"18 ottobre 2026", en:"18 October 2026", es:"18 de octubre de 2026", fr:"18 octobre 2026" },
     t:{ it:"«Te lo ricordi Mario?», domenica 18 ottobre all'Aquila", en:"'Te lo ricordi Mario?', Sunday 18 October in L'Aquila", es:"«Te lo ricordi Mario?», domingo 18 de octubre en L'Aquila", fr:"« Te lo ricordi Mario? », dimanche 18 octobre à L'Aquila" },
     d:{ it:"Vi invito allo Spazio Rimediato, in via Fontesecco 24, per un pomeriggio di incontri, ricordi e risate dedicato a Mario Magnotta. Sarò tra gli ospiti insieme a Romina Magnotta, Paolo Totti, Maurizio Videtta, Antonio Recupero e Roberto Di Leo, con il live action painting di Roberto Pavoni e la conduzione di Ngulo che Strina. Si comincia alle 18:00 e l'ingresso è gratuito.", en:"You are invited to Spazio Rimediato, via Fontesecco 24, for an afternoon of encounters, memories and laughter dedicated to Mario Magnotta. I will be among the guests together with Romina Magnotta, Paolo Totti, Maurizio Videtta, Antonio Recupero and Roberto Di Leo, with live action painting by Roberto Pavoni, hosted by Ngulo che Strina. It starts at 6 pm and admission is free.", es:"Os invito a Spazio Rimediato, via Fontesecco 24, a una tarde de encuentros, recuerdos y risas dedicada a Mario Magnotta. Estaré entre los invitados junto a Romina Magnotta, Paolo Totti, Maurizio Videtta, Antonio Recupero y Roberto Di Leo, con el live action painting de Roberto Pavoni y la conducción de Ngulo che Strina. Empieza a las 18:00 y la entrada es gratuita.", fr:"Je vous invite au Spazio Rimediato, via Fontesecco 24, pour un après-midi de rencontres, de souvenirs et de rires consacré à Mario Magnotta. Je serai parmi les invités avec Romina Magnotta, Paolo Totti, Maurizio Videtta, Antonio Recupero et Roberto Di Leo, avec le live action painting de Roberto Pavoni et l'animation de Ngulo che Strina. Début à 18h, entrée gratuite." },
-    url:"assets/press/te-lo-ricordi-mario-locandina.jpg" },
-
-  { img:"assets/inno-talks-2/sala.jpg", tag:NTAG.social,
-    date:{ it:"24 settembre 2026", en:"24 September 2026", es:"24 de septiembre de 2026", fr:"24 septembre 2026" },
-    t:{ it:"Inno Talk #2, com'è andata «Dalla ricerca al prodotto»", en:"Inno Talk #2: how 'From research to product' went", es:"Inno Talk #2: así fue «De la investigación al producto»", fr:"Inno Talk #2 : comment s'est passé « De la recherche au produit »" },
-    d:{ it:"Oltre 40 persone all'Irish Pub di via Verdi per il secondo aperitivo dell'innovazione ideato e condotto da Mirko Rocci per Innovalley. Qui trovate la diretta integrale, le foto e il resoconto, dal keynote del prof. Michele Flammini alle imprese del Tecnopolo d'Abruzzo West Aquila e Accyourate Group.", en:"Over 40 people at the Irish Pub in via Verdi for the second innovation aperitif created and hosted by Mirko Rocci for Innovalley. Here you can find the full live stream, the photos and the report, from Prof. Michele Flammini's keynote to the Tecnopolo d'Abruzzo companies West Aquila and Accyourate Group.", es:"Más de 40 personas en el Irish Pub de via Verdi para el segundo aperitivo de la innovación ideado y conducido por Mirko Rocci para Innovalley. Aquí están la retransmisión completa, las fotos y el resumen, desde la ponencia del prof. Michele Flammini hasta las empresas del Tecnopolo d'Abruzzo West Aquila y Accyourate Group.", fr:"Plus de 40 personnes à l'Irish Pub de via Verdi pour le deuxième apéritif de l'innovation conçu et animé par Mirko Rocci pour Innovalley. Voici le direct intégral, les photos et le compte rendu, de la keynote du prof. Michele Flammini aux entreprises du Tecnopolo d'Abruzzo West Aquila et Accyourate Group." },
-    url:"inno-talks-2.html" }
+    url:"assets/press/te-lo-ricordi-mario-locandina.jpg" }
 ];
 
 
