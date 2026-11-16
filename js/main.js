@@ -10,7 +10,9 @@ const LANGS = ["it","en","es","fr"];
 
 /* ====== CONFIG ====== */
 /* Paste your GA4 Measurement ID here (e.g. "G-XXXXXXXXXX") to enable analytics.
-   Leave empty to keep analytics disabled. Analytics loads ONLY after consent. */
+   Leave empty to keep analytics disabled. Analytics loads ONLY after consent.
+   Con GA_ID vuoto il banner dei cookie non compare (il sito non usa cookie).
+   Se un giorno lo riempi, aggiorna anche privacy.html (sezioni Cookie e Destinatari). */
 const GA_ID = "";
 
 /* small HTML/attr escaper */
@@ -119,7 +121,8 @@ function renderSocial(){
 
 function renderFooterNav(){
   const f=$("#foot-nav"); if(!f||typeof SITE_PAGES==="undefined") return;
-  f.innerHTML = SITE_PAGES.map(s=>`<a href="${s.href}" ${L(s.t)}>${esc(s.t.it)}</a>`).join("");
+  const priv = { href:"privacy.html", t:{ it:"Privacy e cookie", en:"Privacy and cookies", es:"Privacidad y cookies", fr:"Confidentialité et cookies" } };
+  f.innerHTML = SITE_PAGES.concat([priv]).map(s=>`<a href="${s.href}" ${L(s.t)}>${esc(s.t.it)}</a>`).join("");
 }
 
 function renderPublications(){
@@ -610,14 +613,20 @@ function loadGA(){
 }
 function initCookies(){
   const banner=$("#cookie-banner");
+  /* senza Google Analytics il sito non usa cookie: niente banner e niente "Preferenze cookie" */
+  if(!GA_ID || !banner) return;
   let consent=null; try{consent=localStorage.getItem("mr-consent");}catch(e){}
   const set=v=>{try{localStorage.setItem("mr-consent",v);}catch(e){}};
   const show=()=>{banner.hidden=false;requestAnimationFrame(()=>banner.classList.add("show"));};
   const hide=()=>{banner.classList.remove("show");setTimeout(()=>banner.hidden=true,400);};
+  const reject=()=>{set("denied");hide();};
   if(consent==="granted"){ loadGA(); }
   else if(consent!=="denied"){ show(); }
   $("#cookie-accept").addEventListener("click",()=>{set("granted");hide();loadGA();});
-  $("#cookie-reject").addEventListener("click",()=>{set("denied");hide();});
+  $("#cookie-reject").addEventListener("click",reject);
+  /* la X chiude il banner come un rifiuto */
+  const close=$("#cookie-close"); if(close) close.addEventListener("click",reject);
+  const wrap=$("#cookie-prefs-wrap"); if(wrap) wrap.hidden=false;
   const prefs=$("#cookie-prefs"); if(prefs) prefs.addEventListener("click",e=>{e.preventDefault();show();});
 }
 

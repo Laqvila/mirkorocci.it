@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <title>Rassegna stampa — Mirko Rocci, Ph.D.</title>
 <meta name="description" content="Articoli, servizi TV e interviste su Mirko Rocci: ricerca e innovazione spaziale, Inno99 e Associazione 3:33. Archivio completo con filtri per argomento." />
@@ -27,10 +27,9 @@
 <link rel="icon" href="favicon-96.png?v=2" type="image/png" sizes="96x96" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2" />
 <link rel="manifest" href="site.webmanifest" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css?v=20261104b" />
+<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/sora-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="css/style.css?v=20261117" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1102,8 +1101,8 @@
 <footer id="footer">
   <div class="foot-inner">
     <span class="foot-brand">Mirko Rocci<span class="brand-dot">.</span></span>
-    <span class="foot-copy">© <span id="year"></span> Mirko Rocci — L'Aquila, Italia ·
-      <a href="#" id="cookie-prefs" data-en="Cookie preferences" data-es="Preferencias de cookies" data-fr="Préférences cookies">Preferenze cookie</a>
+    <span class="foot-copy">© <span id="year"></span> Mirko Rocci — L'Aquila, Italia<span id="cookie-prefs-wrap" hidden> ·
+      <a href="#" id="cookie-prefs" data-en="Cookie preferences" data-es="Preferencias de cookies" data-fr="Préférences cookies">Preferenze cookie</a></span>
     </span>
     <nav class="social-row" id="social-foot" aria-label="Profili social"><!--pre:social-foot--><a class="social-link" href="https://www.linkedin.com/in/mirko-rocci/" target="_blank" rel="noopener noreferrer me" title="LinkedIn" aria-label="LinkedIn">
       <svg viewbox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.6h.05c.53-.95 1.83-1.95 3.76-1.95C21.4 8.65 22 10.9 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2.02-3.3-2.02 0-2.33 1.57-2.33 3.2V21h-4V9z"></path></svg>
@@ -1114,25 +1113,25 @@
     </a><a class="social-link" href="https://x.com/mirko_rocci" target="_blank" rel="noopener noreferrer me" title="X" aria-label="X">
       <svg viewbox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-7.1 8.1L23 22h-6.5l-5.1-6.7L5.5 22H2.4l7.6-8.7L1.7 2h6.7l4.6 6.1L18.9 2zm-1.1 18h1.8L7.3 3.9H5.4L17.8 20z"></path></svg>
     </a><!--/pre:social-foot--></nav>
-    <nav class="foot-nav" id="foot-nav" aria-label="Pagine del sito"><!--pre:foot-nav--><a href="./" data-en="Home" data-es="Inicio" data-fr="Accueil" data-it="Home">Home</a><a href="pubblicazioni.html" data-en="Publications" data-es="Publicaciones" data-fr="Publications" data-it="Pubblicazioni">Pubblicazioni</a><a href="stampa.html" data-en="Press coverage" data-es="Prensa" data-fr="Revue de presse" data-it="Rassegna stampa">Rassegna stampa</a><a href="inno99.html" data-en="Inno99" data-es="Inno99" data-fr="Inno99" data-it="Inno99">Inno99</a><a href="associazione-333.html" data-en="Association 3:33" data-es="Asociación 3:33" data-fr="Association 3:33" data-it="Associazione 3:33">Associazione 3:33</a><a href="percorso.html" data-en="Career, map and awards" data-es="Trayectoria, mapa y premios" data-fr="Parcours, carte et prix" data-it="Percorso, mappa e premi">Percorso, mappa e premi</a><a href="laquilive/" data-en="L'AquiLive app" data-es="App L'AquiLive" data-fr="Appli L'AquiLive" data-it="App L'AquiLive">App L'AquiLive</a><!--/pre:foot-nav--></nav>
+    <nav class="foot-nav" id="foot-nav" aria-label="Pagine del sito"><!--pre:foot-nav--><a href="./" data-en="Home" data-es="Inicio" data-fr="Accueil" data-it="Home">Home</a><a href="pubblicazioni.html" data-en="Publications" data-es="Publicaciones" data-fr="Publications" data-it="Pubblicazioni">Pubblicazioni</a><a href="stampa.html" data-en="Press coverage" data-es="Prensa" data-fr="Revue de presse" data-it="Rassegna stampa">Rassegna stampa</a><a href="inno99.html" data-en="Inno99" data-es="Inno99" data-fr="Inno99" data-it="Inno99">Inno99</a><a href="associazione-333.html" data-en="Association 3:33" data-es="Asociación 3:33" data-fr="Association 3:33" data-it="Associazione 3:33">Associazione 3:33</a><a href="percorso.html" data-en="Career, map and awards" data-es="Trayectoria, mapa y premios" data-fr="Parcours, carte et prix" data-it="Percorso, mappa e premi">Percorso, mappa e premi</a><a href="laquilive/" data-en="L'AquiLive app" data-es="App L'AquiLive" data-fr="Appli L'AquiLive" data-it="App L'AquiLive">App L'AquiLive</a><a href="privacy.html" data-en="Privacy and cookies" data-es="Privacidad y cookies" data-fr="Confidentialité et cookies" data-it="Privacy e cookie">Privacy e cookie</a><!--/pre:foot-nav--></nav>
     <button class="to-top" id="to-top" aria-label="Back to top">↑</button>
   </div>
 </footer>
 
-<!-- COOKIE CONSENT -->
+<!-- COOKIE CONSENT: compare solo se in js/main.js GA_ID non è vuoto -->
 <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
-  <p class="cookie-text" data-en="This site uses only technical cookies. With your consent we also use Google Analytics to understand traffic. You can change your choice anytime." data-es="Este sitio usa solo cookies técnicas. Con tu consentimiento usamos también Google Analytics para entender el tráfico. Puedes cambiar tu elección cuando quieras." data-fr="Ce site n'utilise que des cookies techniques. Avec votre consentement, nous utilisons aussi Google Analytics pour comprendre le trafic. Vous pouvez modifier votre choix à tout moment.">
-    Questo sito usa solo cookie tecnici. Con il tuo consenso usiamo anche Google Analytics per capire il traffico. Puoi cambiare la tua scelta quando vuoi.
-  </p>
+  <button type="button" class="cookie-close" id="cookie-close" aria-label="Chiudi senza accettare">&times;</button>
+  <p class="cookie-text"><span data-en="This site uses only technical cookies. With your consent we also use Google Analytics to understand traffic. You can change your choice anytime." data-es="Este sitio usa solo cookies técnicas. Con tu consentimiento usamos también Google Analytics para entender el tráfico. Puedes cambiar tu elección cuando quieras." data-fr="Ce site n'utilise que des cookies techniques. Avec votre consentement, nous utilisons aussi Google Analytics pour comprendre le trafic. Vous pouvez modifier votre choix à tout moment.">Questo sito usa solo cookie tecnici. Con il tuo consenso usiamo anche Google Analytics per capire il traffico. Puoi cambiare la tua scelta quando vuoi.</span>
+    <a href="privacy.html" data-en="Privacy and cookies" data-es="Privacidad y cookies" data-fr="Confidentialité et cookies">Privacy e cookie</a></p>
   <div class="cookie-actions">
-    <button class="btn btn-ghost cookie-btn" id="cookie-reject" data-en="Reject" data-es="Rechazar" data-fr="Refuser">Rifiuta</button>
-    <button class="btn btn-primary cookie-btn" id="cookie-accept" data-en="Accept" data-es="Aceptar" data-fr="Accepter">Accetta</button>
+    <button class="btn cookie-btn" id="cookie-reject" data-en="Reject" data-es="Rechazar" data-fr="Refuser">Rifiuta</button>
+    <button class="btn cookie-btn" id="cookie-accept" data-en="Accept" data-es="Aceptar" data-fr="Accepter">Accetta</button>
   </div>
 </div>
 
 <!-- contenuti.js = il file da modificare per news, stampa e pubblicazioni -->
-<script src="js/contenuti.js?v=20261104b"></script>
-<script src="js/data.js?v=20261104b"></script>
-<script src="js/main.js?v=20261104b"></script>
+<script src="js/contenuti.js?v=20261117"></script>
+<script src="js/data.js?v=20261117"></script>
+<script src="js/main.js?v=20261117"></script>
 </body>
 </html>
