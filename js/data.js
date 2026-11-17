@@ -185,7 +185,7 @@ const NAV = [
   { href:"associazione-333.html", page:"associazione-333", t:{ it:"Associazione 3:33", en:"Association 3:33", es:"Asociación 3:33", fr:"Association 3:33" } },
   { href:"inno99.html",           page:"inno99",           t:{ it:"Inno99", en:"Inno99", es:"Inno99", fr:"Inno99" } },
   /* l'app, in evidenza: icona e pastiglia «App» (il nome è uguale in tutte le lingue) */
-  { href:"laquilive/",            app:true,                t:{ it:"L'AquiLive", en:"L'AquiLive", es:"L'AquiLive", fr:"L'AquiLive" } },
+  { href:"https://laquilive.it/",            app:true,                t:{ it:"L'AquiLive", en:"L'AquiLive", es:"L'AquiLive", fr:"L'AquiLive" } },
   { href:"stampa.html",           page:"stampa",           t:{ it:"Stampa", en:"Press", es:"Prensa", fr:"Presse" } },
   { href:"percorso.html",         page:"percorso",         t:{ it:"Percorso", en:"Career", es:"Trayectoria", fr:"Parcours" } },
   { href:"#contact", cta:true,    t:{ it:"Contatti",          en:"Contact",          es:"Contacto",         fr:"Contact" } }
@@ -199,7 +199,7 @@ const SITE_PAGES = [
   { href:"inno99.html",           t:{ it:"Inno99", en:"Inno99", es:"Inno99", fr:"Inno99" } },
   { href:"associazione-333.html", t:{ it:"Associazione 3:33", en:"Association 3:33", es:"Asociación 3:33", fr:"Association 3:33" } },
   { href:"percorso.html",         t:{ it:"Percorso, mappa e premi", en:"Career, map and awards", es:"Trayectoria, mapa y premios", fr:"Parcours, carte et prix" } },
-  { href:"laquilive/",            t:{ it:"App L'AquiLive", en:"L'AquiLive app", es:"App L'AquiLive", fr:"Appli L'AquiLive" } }
+  { href:"https://laquilive.it/",            t:{ it:"App L'AquiLive", en:"L'AquiLive app", es:"App L'AquiLive", fr:"Appli L'AquiLive" } }
 ];
 
 
