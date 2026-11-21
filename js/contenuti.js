@@ -58,13 +58,24 @@ const NTAG = {
   conf:   { it:"Conferenza",    en:"Conference",  es:"Conferencia",   fr:"Conférence" },
   pub:    { it:"Pubblicazione", en:"Publication", es:"Publicación",   fr:"Publication" },
   patent: { it:"Brevetto",      en:"Patent",      es:"Patente",       fr:"Brevet" },
-  social: { it:"Sociale",       en:"Outreach",    es:"Social",        fr:"Social" }
+  social: { it:"Sociale",       en:"Outreach",    es:"Social",        fr:"Social" },
+  press:  { it:"Stampa",        en:"Press",       es:"Prensa",        fr:"Presse" }
 };
 
 const NEWS = [
 
   /* ▼▼▼ AGGIUNGI QUI LE NUOVE NOVITÀ (la più recente in alto) ▼▼▼
      (le notizie di Inno99 NON vanno qui: mettile nel blocco INNO99 più sotto) */
+
+  { date:{ it:"21 novembre 2026", en:"21 November 2026", es:"21 de noviembre de 2026", fr:"21 novembre 2026" }, tag:NTAG.press,
+    url:"inno-talks-3.html",
+    imgs:["assets/press/ilcentro-innotalk3-21nov.jpg","assets/inno-talks-3/romanelli-rocci.jpg"],
+    press:[
+      { outlet:"Il Centro", url:"assets/press/ilcentro-innotalk3-21nov-pagina.jpg" },
+      { outlet:"AbruzzoWeb", url:"https://www.abruzzoweb.it/tecnopolo-romanelli-rocci-guida-scientifica-sala-piena-per-inno-talks/" }
+    ],
+    t:{ it:"Il Centro: «Il Tecnopolo punta su Mirko Rocci»", en:"Il Centro: 'The Tecnopolo bets on Mirko Rocci'", es:"Il Centro: «El Tecnopolo apuesta por Mirko Rocci»", fr:"Il Centro : « Le Tecnopolo mise sur Mirko Rocci »" },
+    d:{ it:"Sabato 21 novembre Il Centro ha raccontato a pagina 28 dell'edizione dell'Aquila il terzo Inno Talk a Palazzo Fibbioni e l'annuncio di Roberto Romanelli, direttore generale del Tecnopolo d'Abruzzo, che per me pensa a un ruolo di guida scientifica. Lo stesso giorno ne ha scritto anche AbruzzoWeb. Grazie a entrambe le redazioni. Nella pagina della serata trovate l'articolo, la rassegna stampa e il reel.", en:"On Saturday 21 November Il Centro covered, on page 28 of its L'Aquila edition, the third Inno Talk at Palazzo Fibbioni and the announcement by Roberto Romanelli, director general of the Tecnopolo d'Abruzzo, who is considering a scientific leadership role for me. AbruzzoWeb wrote about it the same day. Thanks to both newsrooms. The article, the press coverage and the reel are on the event page.", es:"El sábado 21 de noviembre Il Centro contó, en la página 28 de su edición de L'Aquila, el tercer Inno Talk en Palazzo Fibbioni y el anuncio de Roberto Romanelli, director general del Tecnopolo d'Abruzzo, que piensa para mí en un papel de guía científica. Ese mismo día también escribió sobre ello AbruzzoWeb. Gracias a ambas redacciones. En la página de la velada están el artículo, la reseña de prensa y el reel.", fr:"Le samedi 21 novembre, Il Centro a raconté en page 28 de son édition de L'Aquila le troisième Inno Talk au Palazzo Fibbioni et l'annonce de Roberto Romanelli, directeur général du Tecnopolo d'Abruzzo, qui envisage pour moi un rôle de guide scientifique. AbruzzoWeb en a aussi parlé le même jour. Merci aux deux rédactions. L'article, la revue de presse et le reel sont sur la page de la soirée." } },
 
   { date:{ it:"18 novembre 2026", en:"18 November 2026", es:"18 de noviembre de 2026", fr:"18 novembre 2026" }, tag:NTAG.social,
     url:"https://vinilesradio.it/puntate/umanita-aumentata-puntata-2",
@@ -192,6 +203,13 @@ const NEWS = [
    ============================================================================ */
 const FEATURED = [
 
+  { img:"assets/press/ilcentro-innotalk3-21nov.jpg", tag:NTAG.press,
+    imgs:["assets/press/ilcentro-innotalk3-21nov.jpg","assets/inno-talks-3/romanelli-rocci.jpg"],
+    date:{ it:"21 novembre 2026", en:"21 November 2026", es:"21 de noviembre de 2026", fr:"21 novembre 2026" },
+    t:{ it:"Il Centro: «Il Tecnopolo punta su Mirko Rocci»", en:"Il Centro: 'The Tecnopolo bets on Mirko Rocci'", es:"Il Centro: «El Tecnopolo apuesta por Mirko Rocci»", fr:"Il Centro : « Le Tecnopolo mise sur Mirko Rocci »" },
+    d:{ it:"Sabato 21 novembre Il Centro ha raccontato a pagina 28 dell'edizione dell'Aquila il terzo Inno Talk a Palazzo Fibbioni e l'annuncio di Roberto Romanelli, direttore generale del Tecnopolo d'Abruzzo, che per me pensa a un ruolo di guida scientifica. Lo stesso giorno ne ha scritto anche AbruzzoWeb. Grazie a entrambe le redazioni. Nella pagina della serata trovate l'articolo, la rassegna stampa e il reel.", en:"On Saturday 21 November Il Centro covered, on page 28 of its L'Aquila edition, the third Inno Talk at Palazzo Fibbioni and the announcement by Roberto Romanelli, director general of the Tecnopolo d'Abruzzo, who is considering a scientific leadership role for me. AbruzzoWeb wrote about it the same day. Thanks to both newsrooms. The article, the press coverage and the reel are on the event page.", es:"El sábado 21 de noviembre Il Centro contó, en la página 28 de su edición de L'Aquila, el tercer Inno Talk en Palazzo Fibbioni y el anuncio de Roberto Romanelli, director general del Tecnopolo d'Abruzzo, que piensa para mí en un papel de guía científica. Ese mismo día también escribió sobre ello AbruzzoWeb. Gracias a ambas redacciones. En la página de la velada están el artículo, la reseña de prensa y el reel.", fr:"Le samedi 21 novembre, Il Centro a raconté en page 28 de son édition de L'Aquila le troisième Inno Talk au Palazzo Fibbioni et l'annonce de Roberto Romanelli, directeur général du Tecnopolo d'Abruzzo, qui envisage pour moi un rôle de guide scientifique. AbruzzoWeb en a aussi parlé le même jour. Merci aux deux rédactions. L'article, la revue de presse et le reel sont sur la page de la soirée." },
+    url:"inno-talks-3.html" },
+
   { img:"assets/inno-talks-3/sala.jpg", tag:NTAG.conf,
     video:"assets/inno-talks-3/reel-card.mp4?v=1", poster:"assets/inno-talks-3/reel-card.jpg?v=1",
     imgs:["assets/inno-talks-3/sala.jpg","assets/inno-talks-3/rocci-santangelo-romanelli.jpg"],
@@ -213,15 +231,7 @@ const FEATURED = [
     date:{ it:"28 ottobre 2026", en:"28 October 2026", es:"28 de octubre de 2026", fr:"28 octobre 2026" },
     t:{ it:"La mia videointervista alla cerimonia Innovation Award 2026", en:"My video interview at the Innovation Award 2026 ceremony", es:"Mi videoentrevista en la ceremonia Innovation Award 2026", fr:"Mon interview vidéo à la cérémonie Innovation Award 2026" },
     d:{ it:"Il 28 ottobre la mia videointervista «Dopo il premio...» è stata proiettata alla cerimonia del Thales Alenia Space Innovation Award, unica intervista a un vincitore delle edizioni passate. Racconta cosa significa per me l'innovazione e cosa viene dopo un premio. Nella pagina trovate il reel e le foto.", en:"On 28 October my video interview «Dopo il premio...» was screened at the Thales Alenia Space Innovation Award ceremony, the only interview with a winner from past editions. It explains what innovation means to me and what comes after an award. The reel and the photos are on the page.", es:"El 28 de octubre mi videoentrevista «Dopo il premio...» se proyectó en la ceremonia del Thales Alenia Space Innovation Award, única entrevista a un ganador de las ediciones pasadas. Cuenta qué significa para mí la innovación y qué viene después de un premio. En la página encontráis el reel y las fotos.", fr:"Le 28 octobre, mon interview vidéo « Dopo il premio... » a été projetée lors de la cérémonie du Thales Alenia Space Innovation Award, la seule consacrée à un lauréat des éditions précédentes. Elle raconte ce que l'innovation signifie pour moi et ce qui vient après un prix. Sur la page, vous trouverez le reel et les photos." },
-    url:"innovation-award-2026.html" },
-
-  { img:"assets/press/innovazioni2026-panel.jpg", tag:NTAG.conf,
-    video:"assets/innovazioni-2026/reel-sito.mp4?v=2", poster:"assets/innovazioni-2026/reel-sito.jpg?v=2",
-    imgs:["assets/press/innovazioni2026-panel.jpg","assets/press/innovazioni2026-scheda-speaker.jpg"],
-    date:{ it:"23 ottobre 2026", en:"23 October 2026", es:"23 de octubre de 2026", fr:"23 octobre 2026" },
-    t:{ it:"Agenti IA per le imprese, il mio panel a InnovAzioni 2026", en:"AI agents for business, my panel at InnovAzioni 2026", es:"Agentes de IA para las empresas, mi panel en InnovAzioni 2026", fr:"Agents d'IA pour les entreprises, mon panel à InnovAzioni 2026" },
-    d:{ it:"Al Festival nazionale dell'Innovazione di Confindustria Abruzzo Medio Adriatico ho rappresentato il Distretto Aerospaziale Abruzzo (DAAB), come responsabile Open Innovation del Comitato Tecnico-Scientifico, e Thales Alenia Space. Ne hanno parlato quattordici articoli, raccolti con le foto e il reel nella pagina dell'evento.", en:"At the national innovation festival of Confindustria Abruzzo Medio Adriatico I represented the Abruzzo Aerospace District (DAAB), as head of Open Innovation on its Scientific and Technical Committee, and Thales Alenia Space. Fourteen articles covered it, collected with the photos and the reel on the event page.", es:"En el Festival nacional de la Innovación de Confindustria Abruzzo Medio Adriatico representé al Distrito Aeroespacial de los Abruzos (DAAB), como responsable de Open Innovation de su Comité Técnico-Científico, y a Thales Alenia Space. Catorce artículos lo contaron, reunidos con las fotos y el reel en la página del evento.", fr:"Au Festival national de l'Innovation de Confindustria Abruzzo Medio Adriatico, j'ai représenté le District aérospatial des Abruzzes (DAAB), en tant que responsable de l'Open Innovation de son Comité technique et scientifique, et Thales Alenia Space. Quatorze articles en ont parlé, réunis avec les photos et le reel sur la page de l'événement." },
-    url:"innovazioni-2026.html" }
+    url:"innovation-award-2026.html" }
 ];
 
 
@@ -356,6 +366,8 @@ const INNO99 = [
     q:{ it:"Inno Talks #3, com'è andata. Il reel, le foto e il racconto della serata del 19 novembre nella Sala Rivera di Palazzo Fibbioni, condotta da Mirko Rocci.", en:"Inno Talks #3, how it went. The reel, photos and account of the evening of 19 November in the Sala Rivera in Palazzo Fibbioni, hosted by Mirko Rocci.", es:"Inno Talks #3, cómo fue. El reel, las fotos y el relato de la velada del 19 de noviembre en la Sala Rivera de Palazzo Fibbioni, conducida por Mirko Rocci.", fr:"Inno Talks #3, comment ça s'est passé. Le reel, les photos et le récit de la soirée du 19 novembre dans la Sala Rivera du Palazzo Fibbioni, animée par Mirko Rocci." } },
   { outlet:"Il Centro", year:"2026", url:"assets/press/ilcentro-innotalk3-21nov-pagina.jpg", img:"assets/press/ilcentro-innotalk3-21nov.jpg",
     q:{ it:"«Il Tecnopolo punta su Mirko Rocci. Per lui un ruolo di guida scientifica», edizione cartacea del 21 novembre 2026.", en:"'The Tecnopolo bets on Mirko Rocci: a scientific leadership role for him', print edition, 21 November 2026.", es:"«El Tecnopolo apuesta por Mirko Rocci: para él, un papel de guía científica», edición impresa del 21 de noviembre de 2026.", fr:"« Le Tecnopolo mise sur Mirko Rocci : un rôle de guide scientifique pour lui », édition papier du 21 novembre 2026." } },
+  { outlet:"AbruzzoWeb", year:"2026", url:"https://www.abruzzoweb.it/tecnopolo-romanelli-rocci-guida-scientifica-sala-piena-per-inno-talks/", img:"assets/press/innotalk3-abruzzoweb-21nov.jpg",
+    q:{ it:"Tecnopolo: Romanelli, «Rocci guida scientifica», sala piena per Inno Talks.", en:"Tecnopolo: Romanelli, 'Rocci as scientific lead', a full house for Inno Talks.", es:"Tecnopolo: Romanelli, «Rocci, guía científica», sala llena para Inno Talks.", fr:"Tecnopolo : Romanelli, « Rocci guide scientifique », salle comble pour les Inno Talks." } },
   { outlet:"Il Centro", year:"2026", url:"assets/press/ilcentro-innotalk3-19nov-pagina.jpg", img:"assets/press/ilcentro-innotalk3-19nov.jpg",
     q:{ it:"«Innovazione, oggi appuntamento con due eccellenze del Tecnopolo», edizione cartacea del 19 novembre 2026.", en:"'Innovation: today's event with two Tecnopolo companies of excellence', print edition, 19 November 2026.", es:"«Innovación: hoy la cita con dos empresas de excelencia del Tecnopolo», edición impresa del 19 de noviembre de 2026.", fr:"« Innovation : aujourd'hui, rendez-vous avec deux fleurons du Tecnopolo », édition papier du 19 novembre 2026." } },
   { outlet:"AbruzzoWeb", year:"2026", url:"https://www.turismo.abruzzoweb.it/le-imprese-del-tecnopolo-a-palazzo-fibbioni-terzo-inno-talks-con-clair-clinique-e-r13-technology/", img:"assets/press/innotalk3-abruzzoweb.jpg",
